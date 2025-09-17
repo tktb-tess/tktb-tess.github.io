@@ -1,4 +1,9 @@
-# リンク集
+---
+layout: ../layouts/Layout.astro
+title: tktb-tess.github.io
+---
+
+## リンク集
 
 - [悠久肆方体](https://tktb-tess.dev)
 - [終末式ローマ字](https://shuuro.tktb-tess.dev)
