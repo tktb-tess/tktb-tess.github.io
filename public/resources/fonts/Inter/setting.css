@@ -62,3 +62,14 @@
     squared-characters: 6; /* Squared characters */
   }
 }
+
+html {
+  font-variation-settings: 'case';
+  font-variant-alternates: character-variant(
+      alt-1,
+      uc-i-with-serif,
+      uc-g-with-spur,
+      alt-double-s
+    ),
+    styleset(round-quotes-and-commas);
+}
