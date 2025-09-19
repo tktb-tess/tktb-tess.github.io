@@ -64,7 +64,7 @@
 }
 
 html {
-  font-variation-settings: 'case';
+  font-feature-settings: 'case';
   font-variant-alternates: character-variant(
       alt-1,
       uc-i-with-serif,
