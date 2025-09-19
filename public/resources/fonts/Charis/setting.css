@@ -9,6 +9,7 @@ Open Font License, Version 1.1 (https://openfontlicense.org).
   font-family: 'Charis-Web';
   font-weight: 100 400;
   font-display: swap;
+  font-size: 120%;
   src: local('Charis'), local('Charis SIL'), url('./Charis-Regular.woff2');
 }
 
@@ -16,6 +17,7 @@ Open Font License, Version 1.1 (https://openfontlicense.org).
   font-family: 'Charis-Web';
   font-weight: 500;
   font-display: swap;
+  font-size: 120%;
   src: local('Charis Medium'), local('Charis SIL'), url('./Charis-Medium.woff2');
 }
 
@@ -23,6 +25,7 @@ Open Font License, Version 1.1 (https://openfontlicense.org).
   font-family: 'Charis-Web';
   font-weight: 600;
   font-display: swap;
+  font-size: 120%;
   src: local('Charis SemiBold'), local('Charis SIL Bold'),
     url('Charis-SemiBold.woff2');
 }
@@ -31,6 +34,7 @@ Open Font License, Version 1.1 (https://openfontlicense.org).
   font-family: 'Charis-Web';
   font-weight: 700 900;
   font-display: swap;
+  font-size: 120%;
   src: local('Charis Bold'), local('Charis SIL Bold'), url('Charis-Bold.woff2');
 }
 
@@ -39,6 +43,7 @@ Open Font License, Version 1.1 (https://openfontlicense.org).
   font-weight: 100 400;
   font-style: italic;
   font-display: swap;
+  font-size: 120%;
   src: local('Charis Italic'), local('Charis SIL Italic'),
     url('Charis-Italic.woff2');
 }
@@ -48,6 +53,7 @@ Open Font License, Version 1.1 (https://openfontlicense.org).
   font-weight: 500;
   font-style: italic;
   font-display: swap;
+  font-size: 120%;
   src: local('Charis Medium Italic'), local('Charis SIL Italic'),
     url('Charis-MediumItalic.woff2');
 }
@@ -57,6 +63,7 @@ Open Font License, Version 1.1 (https://openfontlicense.org).
   font-weight: 600;
   font-style: italic;
   font-display: swap;
+  font-size: 120%;
   src: local('Charis SemiBold Italic'), local('Charis SIL Bold Italic'),
     url('Charis-SemiBoldItalic.woff2');
 }
@@ -66,6 +73,7 @@ Open Font License, Version 1.1 (https://openfontlicense.org).
   font-weight: 700 900;
   font-style: italic;
   font-display: swap;
+  font-size: 120%;
   src: local('Charis Bold Italic'), local('Charis SIL Bold Italic'),
     url('Charis-BoldItalic.woff2');
 }
