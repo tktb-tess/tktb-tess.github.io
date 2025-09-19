@@ -1,8 +1,13 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+@import 'https://tktb-tess.github.io/resources/fonts/Inter/setting.css';
+@import 'https://tktb-tess.github.io/resources/fonts/Charis/setting.css';
 
 @theme {
-  --font-sans: 'Inter', 'Arial', 'Helvetica Neue', 'Noto Sans JP', 'Source Han Sans',
-    'Yu Gothic UI', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif,
+  --font-sans: 'Inter-Variable', 'Arial', 'Helvetica Neue', 'Noto Sans JP', 'Source Han Sans',
+    'BIZ UDPGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif,
+    system-ui;
+  --font-serif: 'Charis-Web', 'Times New Roman', 'Noto Serif JP', 'Source Han Serif',
+    'BIZ UDPMincho', 'Hiragino Mincho ProN', 'Hiragino Serif', serif,
     system-ui;
 }
