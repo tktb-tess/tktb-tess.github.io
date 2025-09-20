@@ -15,7 +15,7 @@ console.log(message);
 
 ## Links
 
-- [古ヤスニエル語 データ](./old-jas.md)
-- [??? データ](./sxl.md)
+- [古ヤスニエル語 データ](memo/old-jas)
+- [??? データ](memo/sxl)
 
 
