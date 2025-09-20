@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+@import '../../public/resources/fonts/Inter/setting.css';
+@import '../../public/resources/fonts/Charis/setting.css';
 
 @theme {
   --font-sans: 'Inter-Variable', 'Arial', 'Helvetica Neue', 'Noto Sans JP', 'Source Han Sans',

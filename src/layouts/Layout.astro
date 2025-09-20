@@ -15,16 +15,16 @@ const { frontmatter } = Astro.props;
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/svg+xml' href='/favicon.ico' />
     <meta name='generator' content={Astro.generator} />
-    <link rel='stylesheet' href='/resources/fonts/Inter/setting.css' />
-    <link rel='stylesheet' href='/resources/fonts/Charis/setting.css' />
     <title>{frontmatter.title}</title>
   </head>
   <body class='bg-slate-50 dark:bg-slate-950'>
-    <div
-      class='prose prose-slate lg:prose-lg dark:prose-invert prose-h1:font-extralight prose-h1:text-center prose-h1:my-12 w-full max-w-320 px-4 mx-auto prose-a:hover:opacity-60'
+    <header>
+      <h1 class='font-extralight text-center my-12'>{frontmatter.title}</h1>
+    </header>
+    <main
+      class='prose prose-slate prose-sm lg:prose-base dark:prose-invert w-full max-w-320 px-4 mx-auto prose-a:hover:opacity-60 font-serif prose-headings:font-sans prose-headings:font-normal'
     >
-      <h1>{frontmatter.title}</h1>
       <slot />
-    </div>
+    </main>
   </body>
 </html>
