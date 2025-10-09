@@ -19,5 +19,5 @@ title: tktb-tess.github.io
   コンマ(微小な周波数比)のデータをJSONにしたもの
 - [memo](/memo)  
   めも。
-- [bf-playground](/bf-playground)  
+- [BF Playground](/bf-playground)  
   Brainf\*ck の簡易実行環境

@@ -12,6 +12,7 @@
 
 @layer base {
   #md-root {
-    @apply prose prose-slate prose-sm lg:prose-base dark:prose-invert w-full max-w-320 px-4 mx-auto prose-a:hover:opacity-60 prose-headings:font-normal;
+    @apply prose prose-slate prose-sm lg:prose-base dark:prose-invert w-full max-w-320 px-4
+    mx-auto prose-a:hover:opacity-60 prose-headings:font-normal;
   }
 }
