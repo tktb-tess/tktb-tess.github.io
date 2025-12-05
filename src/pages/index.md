@@ -15,8 +15,6 @@ title: tktb-tess.github.io
   HTML と Markdown の相互変換
 - [cotec-json-data](/cotec-json-data)  
   Cotec を独自形式の JSON にしたもの
-- [commas](/commas)  
-  コンマ(微小な周波数比)のデータをJSONにしたもの
 - [memo](/memo)  
   めも。
 - [BF Playground](/bf-playground)  
