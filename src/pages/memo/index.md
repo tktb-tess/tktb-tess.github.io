@@ -6,7 +6,7 @@ title: Memos
 [戻る](../)
 
 ```typescript
-const message = 'Welcome to my page!';
+const message: string = 'Welcome to my page!';
 console.log(message);
 ```
 
@@ -15,6 +15,7 @@ console.log(message);
 
 ## Links
 
+- [ヴェッセンズラン語 データ](/memo/vess)
 - [古ヤスニエル語 データ](/memo/old-jas)
 - [??? データ](/memo/sxl)
 
