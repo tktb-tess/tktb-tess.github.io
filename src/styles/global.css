@@ -8,6 +8,7 @@
   --font-serif: 'Charis-Web', 'Times New Roman', 'Noto Serif JP',
     'Source Han Serif', 'BIZ UDPMincho', 'Hiragino Mincho ProN',
     'Hiragino Serif', serif, system-ui;
+  --font-ipa: 'Charis-Web', serif, system-ui;
 }
 
 @layer base {
