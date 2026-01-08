@@ -76,7 +76,7 @@ i, y がつくと硬口蓋化を引き起こし、 ci, cy, ti, ty は <span clas
 
 #### ラテン文字表記
 
-Ninginau taa n ʻnmarejageenaa giju jaji, mata, doo taisecy ni omoyuru cimo to doo mamoranderu cimau, taa jaten junugoto sadiacatauru mon jan.  
+Ninginau taa n ʻnmarejageenaa giju jaji, mata, doo taisecy ni omojuru cimo to doo mamoranderu cimau, taa jaten junugoto sadiacatauru mon jan.  
 Ninginau mooto cara ii cane no sonawataucoto, tagai ni ciaudaijanderu cangaisaa ni coto ni atarandarai naran.
 
 ### 琉歌（かじゃでぃ風節）
