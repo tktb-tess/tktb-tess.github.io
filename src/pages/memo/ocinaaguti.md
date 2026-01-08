@@ -95,7 +95,7 @@ Ninginau mooto cara ii cane no sonawataucoto, tagai ni ciaudaijanderu cangaisaa 
 莟(つぃぶ)でぃ居(う)る花ぬ  
 露(ちゆ)行逢(ちゃ)たぐとぅ
 
-Ceju no hocora siaja  
-nawu ni gianatateru  
+Ceju no hocorasia ja  
+nawu ni giana tateru  
 cybo de oru hana no  
 cyju ciata goto
