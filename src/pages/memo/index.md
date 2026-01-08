@@ -17,5 +17,6 @@ console.log(message);
 - [ヴェッセンズラン語 データ](/memo/vess)
 - [古ヤスニエル語 データ](/memo/old-jas)
 - [??? データ](/memo/sxl)
+- [沖縄語 ラテン文字表記](/memo/ocinaaguti)
 
 

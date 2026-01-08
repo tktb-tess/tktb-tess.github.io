@@ -5,19 +5,33 @@ title: ??? データ
 
 [戻る](/memo)
 
+## 母音
+
+<div class="[&_:where(tbody_td:not(:first-child))]:font-ipa">
+
+| ＼  | 前舌 | 中舌 | 後舌 |
+| --- | ---- | ---- | ---- |
+| 狭  | i    | ʉ    | u    |
+| 中  | e    |      | o    |
+| 広  |      | a    |      |
+
+</div>
+
+## 子音
+
 <div class="[&_:where(tbody_td:not(:first-child,:nth-child(2)))]:font-ipa">
 
-| ＼          |           | bilabial - labio-dental | alveolar | post-alveolar - palatal | lateral | velar | uvular - epiglottal |
-| ----------- | --------- | ----------------------- | -------- | ----------------------- | ------- | ----- | ------------------- |
-| stop        | voiced    | b                       | d        |                         |         | ɡ     |                     |
-|             | aspirated |                         | tʰ       |                         |         | kʰ    | qʰ                  |
-|             | ejective  |                         | tʼ       |                         |         | kʼ    | qʼ                  |
-| affricate   | voiced    |                         | dz       | dʒ                      | dɮ      |       |                     |
-|             | aspirated |                         | tsʰ      | tʃʰ                     | tɬʰ     |       |                     |
-|             | ejective  |                         | tsʼ      | tʃʼ                     | tɬʼ     |       |                     |
-| fricative   |           | f                       | s        | ʃ                       | ɬ       |       | χ                   |
-| nasal       |           | m                       | n        |                         |         | ŋ     |                     |
-| trill       |           | dʙ                      | r        |                         |         |       | ʜ                   |
-| approximant |           | w                       |          | j                       |         |       |                     |
+| ＼     |      | 両唇 〜 唇歯 | 歯茎 | 後部歯茎 〜 硬口蓋 | 側面 | 軟口蓋 | 口蓋垂 〜 喉頭蓋 |
+| ------ | ---- | ------------ | ---- | ------------------ | ---- | ------ | ---------------- |
+| 破裂   | 有声 | b            | d    |                    |      | ɡ      |                  |
+|        | 有気 |              | tʰ   |                    |      | kʰ     | qʰ               |
+|        | 放出 |              | tʼ   |                    |      | kʼ     | qʼ               |
+| 破擦   | 有声 |              | d͡z   | d͡ʒ                 | d͡ɮ   |        |                  |
+|        | 有気 |              | t͡sʰ  | t͡ʃʰ                | t͡ɬʰ  |        |                  |
+|        | 放出 |              | t͡sʼ  | t͡ʃʼ                | t͡ɬʼ  |        |                  |
+| 摩擦   |      | f            | s    | ʃ                  | ɬ    |        | χ                |
+| 鼻     |      | m            | n    |                    |      | ŋ      |                  |
+| ふるえ |      | d͡ʙ           | r    |                    |      |        | ʜ                |
+| 接近   |      | w            |      | j                  |      |        |                  |
 
 </div>
