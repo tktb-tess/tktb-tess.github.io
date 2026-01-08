@@ -12,16 +12,20 @@ title: ヴェッセンズラン語 正書法
 
 主な母音字の *tense, lax* の音は以下の通り。
 
-| 母音字 |               tense                |                lax                |
-| :----: | :--------------------------------: | :-------------------------------: |
-|   a    | <span class="font-ipa">/ɑː/</span> | <span class="font-ipa">/ä/</span> |
-|   e    | <span class="font-ipa">/ɛː/</span> | <span class="font-ipa">/ɛ/</span> |
-|   é    | <span class="font-ipa">/eː/</span> | <span class="font-ipa">/e/</span> |
-|  i, y  | <span class="font-ipa">/iː/</span> | <span class="font-ipa">/ɪ/</span> |
-|   o    | <span class="font-ipa">/oː/</span> | <span class="font-ipa">/ɔ/</span> |
-|   ó    | <span class="font-ipa">/uː/</span> | <span class="font-ipa">/ʊ/</span> |
-|   œ    | <span class="font-ipa">/øː/</span> | <span class="font-ipa">/œ/</span> |
-|   u    | <span class="font-ipa">/yː/</span> | <span class="font-ipa">/ʏ/</span> |
+<div class="[&_:where(tbody_td:not(:first-child))]:font-ipa">
+
+| 母音字 | tense | lax |
+| ------ | ----- | --- |
+| a      | /ɑː/  | /ä/ |
+| e      | /ɛː/  | /ɛ/ |
+| é      | /eː/  | /e/ |
+| i, y   | /iː/  | /ɪ/ |
+| o      | /oː/  | /ɔ/ |
+| ó      | /uː/  | /ʊ/ |
+| œ      | /øː/  | /œ/ |
+| u      | /yː/  | /ʏ/ |
+
+</div>
 
 基本原則は、
 
@@ -34,8 +38,8 @@ title: ヴェッセンズラン語 正書法
 である。
 
 e.g.  
-tense: fnut <span class="font-ipa">/fnyːtʰ/</span>  
-lax: hund <span class="font-ipa">/ɦʏn/</span>
+fnut <span class="font-ipa">/fnyːtʰ/</span>  
+hund <span class="font-ipa">/ɦʏn/</span>
 
 ただし、前置詞や代名詞など使用頻度の高い機能語はこの限りではない。また、 ‹gh› 等の digraph が後ろに続く場合、必ずしも *lax* とは限らない。
 

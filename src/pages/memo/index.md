@@ -10,7 +10,6 @@ const message: string = 'Welcome to my page!';
 console.log(message);
 ```
 
-
 メモ置き場。
 
 ## Links
