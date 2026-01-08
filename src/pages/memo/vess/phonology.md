@@ -11,31 +11,40 @@ title: ヴェッセンズラン語 音韻論
 
 #### 短母音
 
-|    ＼     |              front               |                                 |              center              |                                 |               back               |                                 |
-| :-------: | :------------------------------: | :-----------------------------: | :------------------------------: | :-----------------------------: | :------------------------------: | :-----------------------------: |
-|    \-     |              tense               |               lax               |              tense               |               lax               |              tense               |               lax               |
-|   close   | <span class="font-ipa">iː</span> | <span class="font-ipa">ɪ</span> | <span class="font-ipa">yː</span> | <span class="font-ipa">ʏ</span> | <span class="font-ipa">uː</span> | <span class="font-ipa">ʊ</span> |
-| close-mid | <span class="font-ipa">eː</span> | <span class="font-ipa">e</span> | <span class="font-ipa">øː</span> |                                 | <span class="font-ipa">oː</span> |                                 |
-| open-mid  | <span class="font-ipa">ɛː</span> | <span class="font-ipa">ɛ</span> |                                  | <span class="font-ipa">œ</span> |                                  | <span class="font-ipa">ɔ</span> |
-|   open    |                                  |                                 |                                  | <span class="font-ipa">ä</span> | <span class="font-ipa">ɑː</span> |                                 |
+<div class="[&_:where(tbody>tr:not(:first-child)>td:not(:first-child))]:font-ipa">
 
+| ＼        | front |     | center |     | back  |     |
+| --------- | ----- | --- | ------ | --- | ----- | --- |
+| \-        | tense | lax | tense  | lax | tense | lax |
+| close     | iː    | ɪ   | yː     | ʏ   | uː    | ʊ   |
+| close-mid | eː    | e   | øː     |     | oː    |     |
+| open-mid  | ɛː    | ɛ   |        | œ   |       | ɔ   |
+| open      |       |     |        | ä   | ɑː    |     |
 
+</div>
 
 
 
 #### 二重母音
 
-| ↓nucleus＼offglide→ |               /ɪ/                |               /ʏ/                |               /ʊ/                |
-| :-----------------: | :------------------------------: | :------------------------------: | :------------------------------: |
-|      open-mid       | <span class="font-ipa">ɛɪ</span> | <span class="font-ipa">œʏ</span> |                                  |
-|        open         | <span class="font-ipa">aɪ</span> |                                  | <span class="font-ipa">ɑʊ</span> |
+<div class="[&_:where(:is(td,th):not(:first-child))]:font-ipa">
 
+| nucleus＼offglide | /ɪ/ | /ʏ/ | /ʊ/ |
+| ----------------- | --- | --- | --- |
+| open-mid          | ɛɪ  | œʏ  |     |
+| open              | aɪ  |     | ɑʊ  |
+
+</div>
 
 ### 鼻母音
 
-|    ＼     |              front               |              center              |               back               |
-| :-------: | :------------------------------: | :------------------------------: | :------------------------------: |
-| close-mid | <span class="font-ipa">ẽː</span> | <span class="font-ipa">ø̃ː</span> | <span class="font-ipa">õː</span> |
-| open-mid  | <span class="font-ipa">ɛ̃ː</span> |                                  | <span class="font-ipa">ɑ̃ː</span> |
+<div class="[&_:where(tbody_td:not(:first-child))]:font-ipa">
+
+| ＼        | front | center | back |
+| --------- | ----- | ------ | ---- |
+| close-mid | ẽː    | ø̃ː     | õː   |
+| open-mid  | ɛ̃ː    |        | ɑ̃ː   |
+
+</div>
 
 \* N = m or n
