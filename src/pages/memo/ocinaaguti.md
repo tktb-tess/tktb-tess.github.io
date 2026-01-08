@@ -69,7 +69,10 @@ i, y がつくと硬口蓋化を引き起こし、 ci, cy, ti, ty は <span clas
 
 |単語|表記|
 |--|--|
+|うちなーぐち(沖縄口)|ocinaaguti|
 |シークヮーサー|syyquaasaa|
+|サーターアンダーギー|saataaandaagee|
+|ゴーヤー|gaujaa|
 
 ## 例文
 
