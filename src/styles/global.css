@@ -16,7 +16,10 @@
     @apply prose prose-slate prose-sm lg:prose-base dark:prose-invert w-full max-w-7xl px-4
     mx-auto prose-a:hover:opacity-60 prose-headings:font-normal;
 
-    :where(th, td) {
+    table {
+      @apply xl:max-w-max xl:me-auto text-sm;
+    }
+    td, th {
       @apply text-center;
     }
   }
