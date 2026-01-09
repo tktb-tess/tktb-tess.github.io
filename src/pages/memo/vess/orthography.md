@@ -18,10 +18,10 @@ title: Vessenzlendisç 正書法
 | ------ | ----- | --- |
 | a      | /ɑː/  | /ä/ |
 | e      | /ɛː/  | /ɛ/ |
-| é      | /eː/  | /e/ |
+| ê      | /eː/  | /e/ |
 | i, y   | /iː/  | /ɪ/ |
 | o      | /oː/  | /ɔ/ |
-| ó      | /uː/  | /ʊ/ |
+| ô      | /uː/  | /ʊ/ |
 | œ      | /øː/  | /œ/ |
 | u      | /yː/  | /ʏ/ |
 
@@ -45,3 +45,13 @@ fnut <span class="font-ipa">/fnyːtʰ/</span> vs. hund <span class="font-ipa">/�
 e.g.  
 iç <span class="font-ipa">/ɪɕ/</span>, hvat <span class="font-ipa">/fätʰ/</span>
 
+| 綴り   | 発音 |
+| ------ | ---- |
+| aa     | /ɑː/ |
+| ae     | /ɛː/ |
+| ee     | /eː/ |
+| ie, ye | /iː/ |
+| ao     | /oː/ |
+| oo     | /uː/ |
+| œu     | /øː/ |
+| ue     | /yː/ |
