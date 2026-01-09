@@ -1,6 +1,6 @@
 ---
 layout: ../../../layouts/Layout.astro
-title: ヴェッセンズラン語 正書法
+title: Vessenzlendisç 正書法
 ---
 
 [戻る](/memo/vess)

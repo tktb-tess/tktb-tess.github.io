@@ -19,7 +19,7 @@ title: ??? データ
 
 ## 子音
 
-<div class="[&_:where(tbody_td:not(:first-child,:nth-child(2)))]:font-ipa overflow-auto max-w-full text-nowrap">
+<div class="[&_:where(tbody_td:not(:first-child,:nth-child(2)))]:font-ipa table-scrollable">
 
 | ＼     |      | 両唇〜唇歯 | 歯茎 | 後部歯茎〜硬口蓋 | 側面 | 軟口蓋 | 口蓋垂〜喉頭蓋 |
 | ------ | ---- | ---------- | ---- | ---------------- | ---- | ------ | -------------- |

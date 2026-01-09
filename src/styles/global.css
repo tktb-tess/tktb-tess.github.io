@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
-@theme {
+@theme inline {
   --font-sans: 'Inter-Variable', 'Arial', 'Helvetica Neue', 'Noto Sans JP',
     'Source Han Sans', 'BIZ UDPGothic', 'Hiragino Kaku Gothic ProN',
     'Hiragino Sans', sans-serif, system-ui;
@@ -17,10 +17,16 @@
     mx-auto prose-a:hover:opacity-60 prose-headings:font-normal;
 
     table {
-      @apply xl:max-w-max xl:me-auto text-sm;
+      @apply lg:max-w-max lg:me-auto text-sm;
     }
-    td, th {
+
+    td,
+    th {
       @apply text-center;
     }
   }
+}
+
+@utility table-scrollable {
+  @apply text-nowrap overflow-auto max-w-full;
 }
