@@ -45,6 +45,10 @@ fnut <span class="font-ipa">/fnyːtʰ/</span> vs. hund <span class="font-ipa">/�
 e.g.  
 iç <span class="font-ipa">/ɪɕ/</span>, hvat <span class="font-ipa">/fätʰ/</span>
 
+*tense* 母音の対応する二重音字も存在する。
+
+<div class="[&_:where(tbody_td:not(:first-child))]:font-ipa">
+
 | 綴り   | 発音 |
 | ------ | ---- |
 | aa     | /ɑː/ |
@@ -55,3 +59,20 @@ iç <span class="font-ipa">/ɪɕ/</span>, hvat <span class="font-ipa">/fätʰ/</
 | oo     | /uː/ |
 | œu     | /øː/ |
 | ue     | /yː/ |
+
+</div>
+
+二重母音は以下の通りに綴る。
+
+<div class="[&_:where(tbody_td:not(:first-child))]:font-ipa">
+
+| 綴り | 発音  |
+| ---- | ----- |
+| aw   | /ɑʊ/  |
+| aj   | /aɪ/  |
+| ej   | /ɛɪ/  |
+| uj   | /œʏ/  |
+| ia   | /jɑː/ |
+| ew   | /joː/ |
+
+</div>

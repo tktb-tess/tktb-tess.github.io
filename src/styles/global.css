@@ -12,6 +12,10 @@
 }
 
 @layer base {
+  html {
+    font-display: swap;
+  }
+
   #md-root {
     @apply prose prose-slate prose-sm lg:prose-base dark:prose-invert w-full max-w-7xl px-4
     mx-auto prose-a:hover:opacity-60 prose-headings:font-normal;
