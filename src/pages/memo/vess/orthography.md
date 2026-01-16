@@ -12,18 +12,14 @@ title: Vessenzlendisç 正書法
 
 主な母音字の *tense, lax* の音は以下の通り。
 
-<div class="[&_:where(tbody_td:not(:first-child))]:font-ipa">
+<div class="[&_:where(tbody_td:not(:first-child,:nth-child(4)))]:font-ipa">
 
-| 母音字 | tense | lax |
-| ------ | ----- | --- |
-| a      | /ɑː/  | /ä/ |
-| e      | /ɛː/  | /ɛ/ |
-| ê      | /eː/  | /e/ |
-| i, y   | /iː/  | /ɪ/ |
-| o      | /oː/  | /ɔ/ |
-| ô      | /uː/  | /ʊ/ |
-| œ      | /øː/  | /œ/ |
-| u      | /yː/  | /ʏ/ |
+| 母音字 | tense | lax | 母音字 | tense | lax |
+| ------ | ----- | --- | ------ | ----- | --- |
+| a      | /ɑː/  | /ä/ | o      | /oː/  | /ɔ/ |
+| e      | /ɛː/  | /ɛ/ | ô      | /uː/  | /ʊ/ |
+| ê      | /eː/  | /e/ | œ      | /øː/  | /œ/ |
+| i, y   | /iː/  | /ɪ/ | u      | /yː/  | /ʏ/ |
 
 </div>
 
@@ -37,42 +33,38 @@ title: Vessenzlendisç 正書法
 
 である。
 
-e.g.  
-fnut <span class="font-ipa">/fnyːtʰ/</span> vs. hund <span class="font-ipa">/ɦʏn/</span>
+- e.g.
+  
+  fnut <span class="font-ipa">/fnyːtʰ/</span> vs. hund <span class="font-ipa">/ɦʏn/</span>
 
 ただし、前置詞や代名詞など使用頻度の高い機能語はこの限りではない。また、 ‹gh› 等の digraph が後ろに続く場合、必ずしも *lax* とは限らない。
 
-e.g.  
-iç <span class="font-ipa">/ɪɕ/</span>, hvat <span class="font-ipa">/fätʰ/</span>
+- e.g.
+  
+  iç <span class="font-ipa">/ɪɕ/</span>, hvat <span class="font-ipa">/fätʰ/</span>
 
 *tense* 母音の対応する二重音字も存在する。
 
-<div class="[&_:where(tbody_td:not(:first-child))]:font-ipa">
+<div class="[&_:where(tbody_td:nth-child(even))]:font-ipa">
 
-| 綴り   | 発音 |
-| ------ | ---- |
-| aa     | /ɑː/ |
-| ae     | /ɛː/ |
-| ee     | /eː/ |
-| ie, ye | /iː/ |
-| ao     | /oː/ |
-| oo     | /uː/ |
-| œu     | /øː/ |
-| ue     | /yː/ |
+| 綴り   | 発音 | 綴り | 発音 |
+| ------ | ---- | ---- | ---- |
+| aa     | /ɑː/ | ao   | /oː/ |
+| ae     | /ɛː/ | oo   | /uː/ |
+| ee     | /eː/ | œu   | /øː/ |
+| ie, ye | /iː/ | ue   | /yː/ |
 
 </div>
 
 二重母音は以下の通りに綴る。
 
-<div class="[&_:where(tbody_td:not(:first-child))]:font-ipa">
+<div class="[&_:where(tbody_td:nth-child(even))]:font-ipa">
 
-| 綴り | 発音  |
-| ---- | ----- |
-| aw   | /ɑʊ/  |
-| aj   | /aɪ/  |
-| ej   | /ɛɪ/  |
-| uj   | /œʏ/  |
-| ia   | /jɑː/ |
-| ew   | /joː/ |
+| 綴り | 発音 | 綴り | 発音  |
+| ---- | ---- | ---- | ----- |
+| aw   | /ɑʊ/ | uj   | /œʏ/  |
+| aj   | /aɪ/ | ia   | /jɑː/ |
+| ej   | /ɛɪ/ | ew   | /joː/ |
+
 
 </div>
