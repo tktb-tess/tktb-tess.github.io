@@ -3,7 +3,7 @@ layout: ../../layouts/Layout.astro
 title: 沖縄語 ラテン文字表記
 ---
 
-[戻る](/memo)
+[戻る](/memo/)
 
 
 ## 母音

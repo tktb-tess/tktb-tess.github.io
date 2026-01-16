@@ -1,5 +1,8 @@
 ---
 import '../styles/global.css';
+import 'katex/dist/katex.min.css';
+
+import Preloads from '../components/Preloads.astro';
 
 interface Props {
   frontmatter: {
@@ -15,6 +18,7 @@ const { frontmatter } = Astro.props;
   <head>
     <meta charset='utf-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <Preloads />
     <link rel='icon' href='/favicon.ico' />
     <link
       rel='stylesheet'
@@ -29,16 +33,17 @@ const { frontmatter } = Astro.props;
     <meta name='generator' content={Astro.generator} />
     <title>{frontmatter.title}</title>
   </head>
-  <body class='bg-slate-50 dark:bg-slate-950'>
-    <header>
-      <h1
-        class='font-extralight text-center dark:text-white my-12 text-4xl lg:text-5xl'
-      >
-        {frontmatter.title}
-      </h1>
-    </header>
-    <main id='md-root'>
-      <slot />
-    </main>
+  <body>
+    <div id='md-root'>
+      <header>
+        <h1 id='title'>
+          {frontmatter.title}
+        </h1>
+      </header>
+      <hr />
+      <main>
+        <slot />
+      </main>
+    </div>
   </body>
 </html>

@@ -3,7 +3,7 @@ layout: ../../../layouts/Layout.astro
 title: Vessenzlendisç 正書法
 ---
 
-[戻る](/memo/vess)
+[戻る](/memo/vess/)
 
 
 ## 母音
