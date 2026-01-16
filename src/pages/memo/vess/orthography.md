@@ -66,5 +66,4 @@ title: Vessenzlendisç 正書法
 | aj   | /aɪ/ | ia   | /jɑː/ |
 | ej   | /ɛɪ/ | ew   | /joː/ |
 
-
 </div>
