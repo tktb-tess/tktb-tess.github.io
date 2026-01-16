@@ -1,14 +1,10 @@
 ---
 layout: ../../layouts/MdLayout.astro
 title: Memos
+description: めも。
 ---
 
 [戻る](/)
-
-```typescript
-const message: string = 'Welcome to my page!';
-console.log(message);
-```
 
 メモ置き場。
 

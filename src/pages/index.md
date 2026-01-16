@@ -3,6 +3,11 @@ layout: ../layouts/MdLayout.astro
 title: tktb-tess.github.io
 ---
 
+```typescript
+const gruss: string = 'Willkommen auf meiner Webseite!';
+console.log(gruss);
+```
+
 ## リンク
 
 - [悠久肆方体](https://tktb-tess.dev)
