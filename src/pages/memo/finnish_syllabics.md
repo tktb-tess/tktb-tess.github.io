@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Layout.astro
+layout: ../../layouts/MdLayout.astro
 title: フィンランド語 syllabics 表記
 ---
 

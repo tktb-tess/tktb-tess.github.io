@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/Layout.astro
+layout: ../../../layouts/MdLayout.astro
 title: Vessenzlendisç 正書法
 ---
 

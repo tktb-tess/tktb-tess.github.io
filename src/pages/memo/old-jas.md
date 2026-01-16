@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Layout.astro
+layout: ../../layouts/MdLayout.astro
 title: 古ヤスニエル語 データ
 ---
 

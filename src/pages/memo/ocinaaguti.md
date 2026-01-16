@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Layout.astro
+layout: ../../layouts/MdLayout.astro
 title: 沖縄語 ラテン文字表記
 ---
 
