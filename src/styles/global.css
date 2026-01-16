@@ -4,7 +4,7 @@
 @theme inline {
   --font-sans: 'Inter-Variable', 'Arial', 'Helvetica Neue', 'Noto Sans JP',
     'Source Han Sans', 'BIZ UDPGothic', 'Hiragino Kaku Gothic ProN',
-    'Hiragino Sans', sans-serif, system-ui;
+    'Hiragino Sans', 'Noto Sans Canadian Aboriginal', sans-serif, system-ui;
   --font-serif: 'Charis-Web', 'Times New Roman', 'Noto Serif JP',
     'Source Han Serif', 'BIZ UDPMincho', 'Hiragino Mincho ProN',
     'Hiragino Serif', serif, system-ui;
@@ -45,7 +45,7 @@
       @apply text-center;
     }
 
-    :where(ul > li) > p {
+    :where(ul > li, ol > li) > p {
       @apply my-2;
     }
 
