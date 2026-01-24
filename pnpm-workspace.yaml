@@ -1,6 +1,12 @@
+minimumReleaseAge: 2880
+
 onlyBuiltDependencies:
   - '@tailwindcss/oxide'
   - esbuild
   - sharp
 
-minimumReleaseAge: 2880
+overrides:
+  devalue@>=5.1.0 <5.6.2: '>=5.6.2'
+  devalue@>=5.3.0 <=5.6.1: '>=5.6.2'
+  diff@>=5.0.0 <5.2.2: '>=5.2.2'
+  h3@<=1.15.4: '>=1.15.5'

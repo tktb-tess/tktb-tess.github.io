@@ -61,18 +61,18 @@ title: 沖縄語 ラテン文字表記
 
 
 
-i, y, e はいずれも <span class="font-ipa">/i/</span> だが、 c, g, t, d の後ろにくる場合少し異なる発音となる。
-i, y がつくと硬口蓋化を引き起こし、 ci, cy, ti, ty は <span class="font-ipa">/tɕi/</span>「チ」、 gi, gy, di, dy は <span class="font-ipa">/dʑi/</span> 「ジ」となる。
-しかし e がついた場合は硬口蓋化せず ce <span class="font-ipa">/ki/</span>「キ」、 ge <span class="font-ipa">/ɡi/</span>「ギ」、 te <span class="font-ipa">/ti/</span>「ティ」、 de <span class="font-ipa">/di/</span>「ディ」などとなる。
+i, y, e はいずれも :ipa[/i/] だが、 c, g, t, d の後ろにくる場合少し異なる発音となる。
+i, y がつくと硬口蓋化を引き起こし、 ci, cy, ti, ty は :ipa[/tɕi/]「チ」、 gi, gy, di, dy は :ipa[/dʑi/] 「ジ」となる。
+しかし e がついた場合は硬口蓋化せず ce :ipa[/ki/]「キ」、 ge :ipa[/ɡi/]「ギ」、 te :ipa[/ti/]「ティ」、 de :ipa[/di/]「ディ」などとなる。
 
 ## 単語例
 
-|単語|表記|
-|--|--|
-|うちなーぐち(沖縄口)|ocinaaguti|
-|シークヮーサー|syyquaasaa|
-|サーターアンダーギー|saataaandaagee|
-|ゴーヤー|gaujaa|
+| 単語                 | 表記           |
+| -------------------- | -------------- |
+| うちなーぐち(沖縄口) | ocinaaguti     |
+| シークヮーサー       | syyquaasaa     |
+| サーターアンダーギー | saataaandaagee |
+| ゴーヤー             | gaujaa         |
 
 ## 例文
 

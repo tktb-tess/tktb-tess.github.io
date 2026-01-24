@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import 'katex/dist/katex.min.css';
 import Preloads from '../components/Preloads.astro';
 import OGP from '../components/OGP.astro';
 
@@ -21,22 +20,24 @@ const { frontmatter, url } = Astro.props;
     <meta charset='utf-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <Preloads />
-    <OGP title={frontmatter.title} description={frontmatter.description} {url} />
+    <OGP
+      title={frontmatter.title}
+      description={frontmatter.description}
+      {url}
+    />
     <link rel='icon' href='/favicon.ico' />
     <meta name='generator' content={Astro.generator} />
     <title>{frontmatter.title}</title>
   </head>
   <body>
-    <div id='md-root'>
-      <header>
-        <h1 id='title'>
-          {frontmatter.title}
-        </h1>
-      </header>
-      <hr />
-      <main>
-        <slot />
-      </main>
-    </div>
+    <header>
+      <h1 id='title'>
+        {frontmatter.title}
+      </h1>
+    </header>
+    <hr />
+    <main>
+      <slot />
+    </main>
   </body>
 </html>

@@ -1,14 +1,61 @@
 @import 'tailwindcss';
-@plugin '@tailwindcss/typography';
 
-@theme inline {
-  --font-sans: 'Inter-Variable', 'Arial', 'Helvetica Neue', 'Noto Sans JP',
+@theme {
+  --font-sans:
+    'Inter-Variable', 'Arial', 'Helvetica Neue', 'Noto Sans JP',
     'Source Han Sans', 'BIZ UDPGothic', 'Hiragino Kaku Gothic ProN',
     'Hiragino Sans', 'Noto Sans Canadian Aboriginal', sans-serif, system-ui;
-  --font-serif: 'Charis-Web', 'Times New Roman', 'Noto Serif JP',
-    'Source Han Serif', 'BIZ UDPMincho', 'Hiragino Mincho ProN',
-    'Hiragino Serif', serif, system-ui;
+  --font-serif:
+    'Charis-Web', 'Times New Roman', 'Noto Serif JP', 'Source Han Serif',
+    'BIZ UDPMincho', 'Hiragino Mincho ProN', 'Hiragino Serif', serif, system-ui;
   --font-ipa: 'Charis-Web', serif, system-ui;
+
+  --default-transition-duration: 110ms;
+
+  --color-side: var(--color-slate-50);
+  --color-d-side: var(--color-slate-900);
+  --color-main: #fff;
+  --color-d-main: var(--color-slate-950);
+  --color-text: #000;
+  --color-d-text: #fff;
+  --color-border: var(--color-slate-300);
+  --color-d-border: var(--color-slate-600);
+  --color-border-2: var(--color-slate-400);
+  --color-d-border-2: var(--color-slate-500);
+  --color-link: var(--color-blue-700);
+  --color-d-link: var(--color-sky-300);
+}
+
+@utility cbg-* {
+  background-color: --value(--color-*);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: --value(--color-d- *);
+  }
+}
+
+@utility gbg-* {
+  background-image: --value(--grad-*);
+
+  @media (prefers-color-scheme: dark) {
+    background-image: --value(--grad-d- *);
+  }
+}
+
+@utility cborder-* {
+  border-color: --value(--color-*);
+
+  @media (prefers-color-scheme: dark) {
+    border-color: --value(--color-d- *);
+  }
+}
+
+@utility ctext-* {
+  color: --value(--color-*);
+
+  @media (prefers-color-scheme: dark) {
+    color: --value(--color-d- *);
+  }
 }
 
 @layer base {
@@ -17,44 +64,90 @@
   }
 
   body {
-    @apply bg-slate-50 dark:bg-slate-950;
+    @apply flow-root cbg-side ctext-text;
   }
 
-  #md-root {
-    @apply flow-root prose prose-slate prose-sm lg:prose-base dark:prose-invert
-      w-full max-w-7xl px-4 mx-auto
-      prose-a:hover:opacity-60;
+  main {
+    @apply flow-root w-full max-w-7xl px-4 mx-auto cbg-main min-h-lvh;
 
-    #title {
-      @apply font-extralight text-center my-8;
-    }
-
-    :is(h2, h3, h4) {
-      @apply font-normal;
-    }
-
-    :is(h5, h6) {
-      @apply font-semibold;
-    }
-
-    table {
-      @apply lg:max-w-max lg:me-auto text-sm;
-    }
-
-    :is(td, th) {
-      @apply text-center;
-    }
-
-    :where(ul > li, ol > li) > p {
-      @apply my-2;
-    }
-
-    hr {
-      @apply my-8;
+    > :first-child {
+      @apply mt-6;
     }
   }
-}
 
-@utility table-scrollable {
-  @apply text-nowrap overflow-auto max-w-full;
+  h1#title {
+    @apply text-4xl font-extralight text-balance my-10 text-center;
+  }
+
+  :is(h2, h3, h4) {
+    @apply font-normal;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-lg;
+  }
+
+  :is(h5, h6) {
+    @apply font-semibold text-base;
+  }
+
+  :is(h2, h3, h4, h5, h6, p, ul, ol, pre) {
+    @apply mb-4;
+  }
+
+  :is(ul, ol) {
+    @apply ps-7;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  li > :is(p, ul, ol) {
+    @apply mb-0;
+  }
+
+  a {
+    @apply ctext-link hover:underline;
+  }
+
+  table {
+    @apply lg:max-w-max lg:me-auto;
+
+    :where(& > thead > tr:last-child) {
+      @apply border-b cborder-border-2;
+    }
+
+    :where(& > :is(thead, tbody, tfoot) > tr:not(:last-child)) {
+      @apply border-b cborder-border;
+    }
+
+    :where(td, th) {
+      @apply text-base py-1.25 px-2.5;
+    }
+  }
+
+  .table-container:has(> table) {
+    @apply text-nowrap overflow-auto max-w-full;
+  }
+
+  hr {
+    @apply my-6 mx-auto w-full max-w-160 cborder-border;
+  }
+
+  .astro-code {
+    @apply px-3 py-2 rounded;
+  }
 }
