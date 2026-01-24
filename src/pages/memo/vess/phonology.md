@@ -60,7 +60,7 @@ title: Vessenzlendisç 音韻論
 
 ## 子音
 
-<div class="[&_:where(td:not(:first-child,:nth-child(2)))]:font-ipa table-scrollable">
+<div class="[&_:where(td:not(:first-child,:nth-child(2)))]:font-ipa">
 
 | ＼     |        | 両唇〜唇歯 | 歯〜歯茎 | 後部歯茎〜硬口蓋〜そり舌 | 軟口蓋 | 声門 |
 | ------ | ------ | ---------- | -------- | ------------------------ | ------ | ---- |

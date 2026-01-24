@@ -35,13 +35,13 @@ title: Vessenzlendisç 正書法
 
 - e.g.
   
-  fnut <span class="font-ipa">/fnyːtʰ/</span> vs. hund <span class="font-ipa">/ɦʏn/</span>
+  fnut :ipa[/fnyːtʰ/] vs. hund :ipa[/ɦʏn/]
 
 ただし、前置詞や代名詞など使用頻度の高い機能語はこの限りではない。また、 ‹gh› 等の digraph が後ろに続く場合、必ずしも *lax* とは限らない。
 
 - e.g.
   
-  iç <span class="font-ipa">/ɪɕ/</span>, hvat <span class="font-ipa">/fätʰ/</span>
+  iç :ipa[/ɪɕ/], hvat :ipa[/fätʰ/]
 
 *tense* 母音の対応する二重音字も存在する。
 
