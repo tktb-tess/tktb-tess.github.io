@@ -78,12 +78,10 @@ i, y がつくと硬口蓋化を引き起こし、 ci, cy, ti, ty は :ipa[/tɕi
 
 ### 世界人権宣言 第1条
 
-#### 漢字仮名混淆文
-
 人間ー(にんじのー)誰(たー)ん生(ん)まりやぎーなー自由(じゆ)やい、また、胴(どぅー)大切(てーしち)に思(うむ)ゆる肝(ちむ)とぅ胴守(まむ)らんでぃる肝ー(ちもー)、誰やてぃんゆぬ如(ぐとぅ)授(さじゃ)かとーるむんやん。  
 人間ー元(むーとぅ)からいー矩(かに)ぬ備(すな)わとーくとぅ、互ー(たげー)に兄弟(ちょーでー)やんでぃる考ー(かんげー)さーに事(くとぅ)に当たらんだれーならん。
 
-#### ラテン文字表記
+----
 
 Ninginau taa n ʻnmarejageenaa giju jaji, mata, doo taisecy ni omojuru cimo to doo mamoranderu cimau, taa jaten junugoto sadiacatauru mon jan.  
 Ninginau mooto cara ii cane no sonawataucoto, tagai ni ciaudaijanderu cangaisaa ni coto ni atarandarai naran.
@@ -94,6 +92,8 @@ Ninginau mooto cara ii cane no sonawataucoto, tagai ni ciaudaijanderu cangaisaa 
 何(なう)にぢゃな譬(たてぃ)る  
 莟(つぃぶ)でぃ居(う)る花ぬ  
 露(ちゆ)行逢(ちゃ)たぐとぅ
+
+----
 
 ceju no hocorasia ja  
 nawu ni giana tateru  
