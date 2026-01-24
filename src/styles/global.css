@@ -8,7 +8,7 @@
   --font-serif:
     'Charis-Web', 'Times New Roman', 'Noto Serif JP', 'Source Han Serif',
     'BIZ UDPMincho', 'Hiragino Mincho ProN', 'Hiragino Serif', serif, system-ui;
-  --font-ipa: 'Charis-Web', serif, system-ui;
+  --font-ipa: var(--font-serif);
 
   --default-transition-duration: 110ms;
   --color-mein-5: oklch(5% 0.0282 296.54);
