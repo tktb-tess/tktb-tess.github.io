@@ -1,0 +1,57 @@
+---
+interface Props {
+  readonly url: string;
+}
+
+interface MdProps {
+  readonly url: string;
+  readonly frontmatter: {
+    readonly title: string;
+    readonly description?: string;
+  };
+}
+const mds = Object.values(
+  import.meta.glob<MdProps>('../pages/**/*.md', { eager: true }),
+).map((md) => ({ url: md.url, title: md.frontmatter.title }) as const);
+
+const { url } = Astro.props;
+const dirs = url.split('/').filter((s) => s !== '');
+const pages: (readonly [string, string])[] = [['/', 'Top']];
+
+for (let i = 0; i < dirs.length; ++i) {
+  const sliced = dirs.slice(0, i + 1);
+  const path = `/${sliced.join('/')}/`;
+  const title = mds.find((m) => m.url === path)?.title ?? '???';
+  pages.push([path, title]);
+}
+---
+
+<ol id='bread-crumb'>
+  {
+    pages.map(([path, title]) => {
+      return (
+        <li>
+          <a href={path}>{title}</a>
+        </li>
+      );
+    })
+  }
+</ol>
+
+<style lang="postcss">
+  @reference '../styles/global.css';
+  @layer components {
+    #bread-crumb {
+      @apply list-none flex gap-2 ps-0 [&>*>*]:min-w-0;
+
+      > li {
+        @apply contents;
+      }
+
+      > :where(li:not(:last-child))::after {
+        content: '>';
+        @apply ms-0;
+      }
+    }
+  }
+</style>

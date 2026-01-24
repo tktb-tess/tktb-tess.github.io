@@ -11,11 +11,29 @@
   --font-ipa: 'Charis-Web', serif, system-ui;
 
   --default-transition-duration: 110ms;
-
-  --color-side: var(--color-slate-50);
-  --color-d-side: var(--color-slate-900);
+  --color-mein-5: oklch(5% 0.0282 296.54);
+  --color-mein-10: oklch(10% 0.0544 296.54);
+  --color-mein-15: oklch(15% 0.0816 296.54);
+  --color-mein-20: oklch(20% 0.1088 296.54);
+  --color-mein-25: oklch(25% 0.1360 296.54);
+  --color-mein-30: oklch(30% 0.1632 296.54);
+  --color-mein-35: oklch(35% 0.1904 296.54);
+  --color-mein-40: oklch(40% 0.2176 296.54);
+  --color-mein-45: oklch(45% 0.2448 296.54);
+  --color-mein-50: oklch(50% 0.2720 296.54);
+  --color-mein-55: oklch(55% 0.2851 296.54);
+  --color-mein-60: oklch(60% 0.2481 296.54);
+  --color-mein-65: oklch(65% 0.2132 296.54);
+  --color-mein-70: oklch(70% 0.1784 296.54);
+  --color-mein-75: oklch(75% 0.1458 296.54);
+  --color-mein-80: oklch(80% 0.1142 296.54);
+  --color-mein-85: oklch(85% 0.0837 296.54);
+  --color-mein-90: oklch(90% 0.0544 296.54);
+  --color-mein-95: oklch(95% 0.0261 296.54);
+  --color-side: var(--color-mein-95);
+  --color-d-side: var(--color-mein-15);
   --color-main: #fff;
-  --color-d-main: var(--color-slate-950);
+  --color-d-main: var(--color-mein-10);
   --color-text: #000;
   --color-d-text: #fff;
   --color-border: var(--color-slate-300);
@@ -23,7 +41,9 @@
   --color-border-2: var(--color-slate-400);
   --color-d-border-2: var(--color-slate-500);
   --color-link: var(--color-blue-700);
-  --color-d-link: var(--color-sky-300);
+  --color-d-link: var(--color-blue-400);
+  --color-heading: var(--color-mein-20);
+  --color-d-heading: var(--color-mein-90);
 }
 
 @utility cbg-* {
@@ -70,7 +90,7 @@
   main {
     @apply flow-root w-full max-w-7xl px-4 mx-auto cbg-main min-h-lvh;
 
-    > :first-child {
+    > :where(:first-child) {
       @apply mt-6;
     }
   }
@@ -80,7 +100,7 @@
   }
 
   :is(h2, h3, h4) {
-    @apply font-normal;
+    @apply font-normal ctext-heading;
   }
 
   h2 {
@@ -100,7 +120,7 @@
   }
 
   :is(h2, h3, h4, h5, h6, p, ul, ol, pre) {
-    @apply mb-4;
+    @apply mb-5;
   }
 
   :is(ul, ol) {
@@ -115,8 +135,8 @@
     @apply list-decimal;
   }
 
-  li > :is(p, ul, ol) {
-    @apply mb-0;
+  li > :where(p, ul, ol) {
+    @apply mb-1;
   }
 
   a {
@@ -140,7 +160,7 @@
   }
 
   .table-container:has(> table) {
-    @apply text-nowrap overflow-auto max-w-full;
+    @apply text-nowrap overflow-auto max-w-full my-8;
   }
 
   hr {
@@ -148,6 +168,6 @@
   }
 
   .astro-code {
-    @apply px-3 py-2 rounded;
+    @apply px-3 py-2 rounded my-8;
   }
 }

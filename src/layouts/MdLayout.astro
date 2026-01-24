@@ -2,16 +2,16 @@
 import '../styles/global.css';
 import Preloads from '../components/Preloads.astro';
 import OGP from '../components/OGP.astro';
+import BreadCrumb from '../components/BreadCrumb.astro';
+import type { MarkdownLayoutProps } from 'astro';
 
-interface Props {
-  frontmatter: {
-    readonly title: string;
-    readonly description?: string;
-  };
-  readonly url: string;
-}
+type Props = MarkdownLayoutProps<{
+  readonly title: string;
+  readonly description?: string;
+}>;
 
-const { frontmatter, url } = Astro.props;
+const { frontmatter, url = '/' } = Astro.props;
+const isTop = url === '';
 ---
 
 <!doctype html>
@@ -37,6 +37,7 @@ const { frontmatter, url } = Astro.props;
     </header>
     <hr />
     <main>
+      {!isTop && <BreadCrumb {url} />}
       <slot />
     </main>
   </body>
