@@ -144,7 +144,7 @@
   }
 
   table {
-    @apply lg:max-w-max lg:me-auto;
+    @apply w-full lg:max-w-max lg:me-auto;
 
     :where(& > thead > tr:last-child) {
       @apply border-b cborder-border-2;
