@@ -11,6 +11,7 @@ type Props = MarkdownLayoutProps<{
 }>;
 
 const { frontmatter, url = '/' } = Astro.props;
+const { title, description } = frontmatter;
 const isTop = url === '';
 ---
 
@@ -20,19 +21,15 @@ const isTop = url === '';
     <meta charset='utf-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <Preloads />
-    <OGP
-      title={frontmatter.title}
-      description={frontmatter.description}
-      {url}
-    />
+    <OGP {title} {description} {url} />
     <link rel='icon' href='/favicon.ico' />
     <meta name='generator' content={Astro.generator} />
-    <title>{frontmatter.title}</title>
+    <title>{title}</title>
   </head>
   <body>
     <header>
       <h1 id='title'>
-        {frontmatter.title}
+        {title}
       </h1>
     </header>
     <main>

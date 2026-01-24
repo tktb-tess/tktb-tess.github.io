@@ -8,7 +8,7 @@ interface Props {
 const { title, description = title, url } = Astro.props;
 const base = 'https://tktb-tess.github.io';
 const pageUrl = new URL(url, base).href;
-const linkCardUrl = new URL('/link_card.png', base);
+const linkCardUrl = new URL('/link_card.png', base).href;
 ---
 
 <meta name='description' content={description} />
