@@ -48,11 +48,11 @@ for (let i = 0; i < dirs.length; ++i) {
         @apply contents;
       }
 
-      :where(a, li:not(:last-child)::after) {
+      :where(a), :where(li:not(:last-child))::after {
         @apply flex-[0_0_max-content] min-w-0;
       }
 
-      :where(li:not(:last-child)::after) {
+      :where(li:not(:last-child))::after {
         content: '>';
       }
     }

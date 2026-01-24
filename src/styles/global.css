@@ -158,6 +158,10 @@
     :where(td, th) {
       @apply text-base py-1.25 px-2.5 text-center;
     }
+
+    :where(th) {
+      @apply font-semibold;
+    }
   }
 
   .table-container:has(> table) {
