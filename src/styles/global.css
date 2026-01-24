@@ -81,6 +81,7 @@
 @layer base {
   html {
     -webkit-tap-highlight-color: revert;
+    @apply max-sm:text-sm;
   }
 
   body {
@@ -155,7 +156,7 @@
     }
 
     :where(td, th) {
-      @apply text-base py-1.25 px-2.5;
+      @apply text-base py-1.25 px-2.5 text-center;
     }
   }
 
@@ -164,7 +165,7 @@
   }
 
   hr {
-    @apply my-6 mx-auto w-full max-w-160 cborder-border;
+    @apply my-6 mx-auto w-full max-w-160 cborder-border-2;
   }
 
   .astro-code {

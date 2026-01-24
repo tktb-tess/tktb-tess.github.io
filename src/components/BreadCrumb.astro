@@ -42,10 +42,14 @@ for (let i = 0; i < dirs.length; ++i) {
   @reference '../styles/global.css';
   @layer components {
     #bread-crumb {
-      @apply list-none flex gap-2 ps-0 [&>*>*]:min-w-0;
+      @apply list-none flex flex-wrap gap-2 ps-0 [&>*>*]:min-w-0;
 
-      > li {
+      :where(li) {
         @apply contents;
+      }
+
+      :where(a, li:not(:last-child)::after) {
+        @apply flex-[0_0_max-content];
       }
 
       > :where(li:not(:last-child))::after {
