@@ -9,7 +9,7 @@ title: ??? データ
 
 ## 母音
 
-<div class="[&_:where(tbody_td:not(:first-child))]:font-ipa">
+<div class="contents [&_:where(tbody_td:not(:first-child))]:font-ipa">
 
 | ＼  | 前舌 | 中舌 | 後舌 |
 | --- | ---- | ---- | ---- |
@@ -21,9 +21,9 @@ title: ??? データ
 
 母音調和が存在する。「前」グループと「後」グループの母音は一単語内で同時に出てくることはない。
 
-*i, e* はどちらのグループの母音とも同時に出てこれる。
+:ipa[/i, e/] はどちらのグループの母音とも同時に出てこれる。
 
-<div class="[&_:where(tbody_td)]:font-ipa">
+<div class="contents [&_:where(tbody_td)]:font-ipa">
 
 | 前  | 後  |
 | --- | --- |
@@ -35,7 +35,7 @@ title: ??? データ
 
 ## 子音
 
-<div class="[&_:where(tbody_td:not(:first-child,:nth-child(2)))]:font-ipa">
+<div class="contents [&_:where(tbody_td:not(:first-child,:nth-child(2)))]:font-ipa text-nowrap">
 
 | ＼     |      | 両唇 〜 唇歯 | 歯茎 | 後部歯茎 〜 硬口蓋 | 側面 | 軟口蓋 | 口蓋垂 | 咽頭 |
 | ------ | ---- | ------------ | ---- | ------------------ | ---- | ------ | ------ | ---- |

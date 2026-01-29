@@ -13,7 +13,7 @@ title: Vessenzlendisç 音韻論
 
 #### 単母音
 
-<div class="[&_:where(tbody>tr:not(:first-child)>td:not(:first-child))]:font-ipa">
+<div class="contents [&_:where(tbody>tr:not(:first-child)>td:not(:first-child))]:font-ipa">
 
 | ＼   | 前舌  |     | 中舌  |     | 後舌  |     |
 | ---- | ----- | --- | ----- | --- | ----- | --- |
@@ -27,7 +27,7 @@ title: Vessenzlendisç 音韻論
 
 #### 二重母音
 
-<div class="[&_:where(:is(td,th):not(:first-child))]:font-ipa">
+<div class="contents [&_:where(:is(td,th):not(:first-child))]:font-ipa">
 
 | 核母音 ＼ オフグライド | /ɪ/ | /ʏ/ | /ʊ/ |
 | ---------------------- | --- | --- | --- |
@@ -40,7 +40,7 @@ title: Vessenzlendisç 音韻論
 
 #### 単母音
 
-<div class="[&_:where(tbody_td:not(:first-child))]:font-ipa">
+<div class="contents [&_:where(tbody_td:not(:first-child))]:font-ipa">
 
 | ＼   | 前舌 | 中舌 | 後舌 |
 | ---- | ---- | ---- | ---- |
@@ -51,7 +51,7 @@ title: Vessenzlendisç 音韻論
 
 #### 二重母音
 
-<div class="[&_:where(:is(td,th):not(:first-child))]:font-ipa">
+<div class="contents [&_:where(:is(td,th):not(:first-child))]:font-ipa">
 
 | 核母音 ＼ オフグライド | /ɪ/ | /ʏ/ | /ʊ/ |
 | ---------------------- | --- | --- | --- |
@@ -62,7 +62,7 @@ title: Vessenzlendisç 音韻論
 
 ## 子音
 
-<div class="[&_:where(td:not(:first-child,:nth-child(2)))]:font-ipa">
+<div class="contents [&_:where(td:not(:first-child,:nth-child(2)))]:font-ipa">
 
 | ＼     |        | 両唇〜唇歯 | 歯〜歯茎 | 後部歯茎〜硬口蓋〜そり舌 | 軟口蓋 | 声門 |
 | ------ | ------ | ---------- | -------- | ------------------------ | ------ | ---- |

@@ -64,7 +64,7 @@ i, e のみの単語にも front 記号が付く。外来語などで途中で�
 
 また、opening 二重母音 :ipa[/ie̯/], :ipa[/uo̯/], :ipa[/yø̯/] はそれぞれ Ce と Co の文字の右上に「ᐦ」（U\+1426）を置いて表す。
 
-<div class="[&_:where(td:first-child)]:font-ipa">
+<div class="contents [&_:where(td:first-child)]:font-ipa">
 
 | IPA          | 記号    |
 | ------------ | ------- |

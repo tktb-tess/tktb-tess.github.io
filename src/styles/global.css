@@ -143,6 +143,10 @@
     @apply ps-7;
   }
 
+  li > :is(ul, ol) {
+    @apply ps-4;
+  }
+
   ul {
     @apply list-disc;
   }

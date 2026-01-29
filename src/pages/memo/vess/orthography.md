@@ -13,7 +13,7 @@ title: Vessenzlendisç 正書法
 
 主な母音字の *tense, lax* の音は以下の通り。
 
-<div class="[&_:where(tbody_td:not(:first-child,:nth-child(4)))]:font-ipa">
+<div class="contents [&_:where(tbody_td:not(:first-child,:nth-child(4)))]:font-ipa">
 
 | 母音字 | tense | lax | 母音字 | tense | lax |
 | ------ | ----- | --- | ------ | ----- | --- |
@@ -46,7 +46,7 @@ title: Vessenzlendisç 正書法
 
 *tense* 母音の対応する二重音字も存在する。
 
-<div class="[&_:where(tbody_td:nth-child(even))]:font-ipa">
+<div class="contents [&_:where(tbody_td:nth-child(even))]:font-ipa">
 
 | 綴り   | 発音 | 綴り | 発音 |
 | ------ | ---- | ---- | ---- |
@@ -59,7 +59,7 @@ title: Vessenzlendisç 正書法
 
 二重母音は以下の通りに綴る。
 
-<div class="[&_:where(tbody_td:nth-child(even))]:font-ipa">
+<div class="contents [&_:where(tbody_td:nth-child(even))]:font-ipa">
 
 | 綴り | 発音 | 綴り | 発音  |
 | ---- | ---- | ---- | ----- |

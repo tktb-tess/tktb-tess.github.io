@@ -9,7 +9,7 @@ title: 沖縄語 ラテン文字表記
 
 ## 母音
 
-<div class="[&_:where(td:first-child)]:font-ipa">
+<div class="contents [&_:where(td:first-child)]:font-ipa">
 
 | 発音記号 | 文字       |
 | -------- | ---------- |
@@ -28,7 +28,7 @@ title: 沖縄語 ラテン文字表記
 
 ## 子音
 
-<div class="[&_:where(td:first-child)]:font-ipa">
+<div class="contents [&_:where(td:first-child)]:font-ipa">
 
 | 発音記号 | 文字   |
 | -------- | ------ |
