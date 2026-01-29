@@ -18,18 +18,24 @@ const ipaRender = (mdNode: TextDirective): Element => ({
   children: mdNode.children.map(phrasingToHast),
 });
 
+const _textDirectiveHandler = (node: TextDirective) => {
+  if (node.name === 'ipa') {
+    return ipaRender(node);
+  } else {
+    const hast = toHast(node, { allowDangerousHtml: true });
+    if (hast.type === 'root' || hast.type === 'doctype') {
+      return emptyText;
+    } else if (hast.type === 'element' && hast.tagName === 'script') {
+      return emptyText;
+    } else {
+      return hast;
+    }
+  }
+};
+
 const phrasingToHast = (mdNode: PhrasingContent): ElementContent => {
   if (mdNode.type === 'textDirective') {
-    if (mdNode.name === 'ipa') {
-      return ipaRender(mdNode);
-    } else {
-      return {
-        type: 'element',
-        tagName: 'span',
-        properties: {},
-        children: mdNode.children.map(phrasingToHast),
-      };
-    }
+    return _textDirectiveHandler(mdNode);
   } else {
     const hast = toHast(mdNode, { allowDangerousHtml: true });
 
@@ -41,6 +47,10 @@ const phrasingToHast = (mdNode: PhrasingContent): ElementContent => {
       return hast;
     }
   }
+};
+
+export const textDirectiveHandler: Handler = (_, node: TextDirective) => {
+  return _textDirectiveHandler(node);
 };
 
 export const tableHandler: Handler = (_, node: Table) => {
@@ -108,19 +118,4 @@ export const tableHandler: Handler = (_, node: Table) => {
     },
     children: [table],
   };
-};
-
-export const textDirectiveHandler: Handler = (_, node: TextDirective) => {
-  if (node.name === 'ipa') {
-    return ipaRender(node);
-  } else {
-    const hast = toHast(node, { allowDangerousHtml: true });
-    if (hast.type === 'root' || hast.type === 'doctype') {
-      return emptyText;
-    } else if (hast.type === 'element' && hast.tagName === 'script') {
-      return emptyText;
-    } else {
-      return hast;
-    }
-  }
 };
