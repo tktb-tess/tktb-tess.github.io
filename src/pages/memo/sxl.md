@@ -5,6 +5,8 @@ title: ??? データ
 
 [戻る](/memo/)
 
+## 目次
+
 ## 母音
 
 <div class="[&_:where(tbody_td:not(:first-child))]:font-ipa">
