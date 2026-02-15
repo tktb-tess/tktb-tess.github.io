@@ -38,10 +38,10 @@
   --color-d-main: var(--color-violet-dark);
   --color-text: #000;
   --color-d-text: #fff;
-  --color-border: var(--color-slate-400);
-  --color-d-border: var(--color-slate-500);
-  --color-border-2: var(--color-slate-500);
-  --color-d-border-2: var(--color-slate-400);
+  --color-border: hsl(0 0 0 / 25%);
+  --color-d-border: hsl(0 0 100 / 25%);
+  --color-border-2: hsl(0 0 0 / 40%);
+  --color-d-border-2: hsl(0 0 100 / 40%);
   --color-link: var(--color-blue-700);
   --color-d-link: var(--color-blue-400);
   --color-heading: var(--color-violet-950);
@@ -180,10 +180,10 @@
     @apply w-max max-w-full me-auto;
 
     :where(& > thead > tr:last-child) {
-      @apply border-b cborder-border-2;
+      @apply border-b-3 border-double cborder-border-2;
     }
 
-    :where(& > :is(thead, tbody, tfoot) > tr:not(:last-child)) {
+    :where(& > :is(thead, tbody) > tr:not(:last-child)) {
       @apply border-b cborder-border;
     }
 
