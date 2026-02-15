@@ -3,8 +3,6 @@ layout: ../../layouts/MdLayout.astro
 title: フィンランド語 syllabics 表記
 ---
 
-[戻る](/memo/)
-
 ## 目次
 
 ## 短母音

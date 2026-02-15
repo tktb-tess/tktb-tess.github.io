@@ -4,8 +4,10 @@ title: tktb-tess.github.io
 ---
 
 ```typescript
-const gruss: string = 'Willkommen auf meiner Webseite!';
-console.log(gruss);
+const gruss = localStorage.getItem('gruss');
+if (gruss != null) {
+  console.log(atob(gruss));
+}
 ```
 
 ## リンク
