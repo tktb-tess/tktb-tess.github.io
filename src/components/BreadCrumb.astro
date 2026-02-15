@@ -1,4 +1,6 @@
 ---
+import HomeIcon from '../assets/HomeIcon.svg';
+
 interface Props {
   readonly url: string;
 }
@@ -10,32 +12,45 @@ interface MdProps {
     readonly description?: string;
   };
 }
+
 const mds = Object.values(
   import.meta.glob<MdProps>('../pages/**/*.md', { eager: true }),
 ).map((md) => ({ url: md.url, title: md.frontmatter.title }) as const);
 
+const getTitle = (href: string) => {
+  if (href !== '/') {
+    return mds.find((m) => m.url === href)?.title ?? '???';
+  } else {
+    return;
+  }
+};
+
 const { url } = Astro.props;
 const dirs = url.split('/').filter((s) => s !== '');
-const pages: (readonly [string, string])[] = [['/', 'Top']];
 
-for (let i = 0; i < dirs.length; ++i) {
-  const sliced = dirs.slice(0, i + 1);
-  const path = `/${sliced.join('/')}/`;
-  const title = mds.find((m) => m.url === path)?.title ?? '???';
-  pages.push([path, title]);
-}
+const pages = dirs.map((_, i) => {
+  const h_ = dirs.slice(0, i).join('/');
+  const href = h_ === '' ? '/' : `/${h_}/`;
+  const title = getTitle(href);
+  return { href, title } as const;
+});
+
+const currentText = getTitle(url);
 ---
 
 <ol id='bread-crumb'>
   {
-    pages.map(([path, title]) => {
+    pages.map(({ href, title }) => {
       return (
         <li>
-          <a href={path}>{title}</a>
+          <a {href} title={title ?? 'Home'}>{title ?? <HomeIcon class='inline-block size-4 align-baseline' />}</a>
         </li>
       );
     })
   }
+  <li>
+    <b>{currentText}</b>
+  </li>
 </ol>
 
 <style lang="postcss">
@@ -48,8 +63,8 @@ for (let i = 0; i < dirs.length; ++i) {
         @apply contents;
       }
 
-      :where(a), :where(li:not(:last-child))::after {
-        @apply flex-[0_0_max-content] min-w-0;
+      :where(a, b), :where(li:not(:last-child))::after {
+        @apply flex-[0_0_max-content] grid place-content-center;
       }
 
       :where(li:not(:last-child))::after {

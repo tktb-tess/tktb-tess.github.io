@@ -3,8 +3,6 @@ layout: ../../../layouts/MdLayout.astro
 title: Vessenzlendisç 正書法
 ---
 
-[戻る](/memo/vess/)
-
 ## 目次
 
 ## 母音
@@ -13,16 +11,18 @@ title: Vessenzlendisç 正書法
 
 主な母音字の *tense, lax* の音は以下の通り。
 
-<div class="contents [&_:where(tbody_td:not(:first-child,:nth-child(4)))]:font-ipa">
+<div class="contents [&_:where(tbody_td:not(:nth-child(3n+1)))]:font-ipa">
 
 | 母音字 | tense | lax | 母音字 | tense | lax |
 | ------ | ----- | --- | ------ | ----- | --- |
-| a      | /ɑː/  | /ä/ | o      | /oː/  | /ɔ/ |
-| e      | /ɛː/  | /ɛ/ | ô      | /uː/  | /ʊ/ |
-| ê      | /eː/  | /e/ | œ      | /øː/  | /œ/ |
-| i, y   | /iː/  | /ɪ/ | u      | /yː/  | /ʏ/ |
+| a      | ɑː    | ä   | o      | oː    | ɔ   |
+| e      | ɛː    | ɛ   | ó      | uː    | ʊ   |
+| é      | eː    | e   | œ      | øː    | œ   |
+| i, y   | iː    | ɪ   | u      | yː    | ʏ   |
 
 </div>
+
+u, ó の発音に注意。
 
 基本原則は、
 

@@ -84,15 +84,19 @@
   }
 }
 
-@layer base {
-  * {
-    @apply wrap-anywhere hyphens-auto;
-    line-break: strict;
+@custom-variant any-hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @slot;
+    }
   }
+}
 
-  html {
+@layer base {
+  :root {
     -webkit-tap-highlight-color: revert;
-    @apply max-sm:text-sm;
+    line-break: strict;
+    @apply max-sm:text-sm wrap-anywhere hyphens-auto font-sans;
   }
 
   body {
@@ -115,7 +119,9 @@
     @apply text-4xl font-extralight text-balance my-10 text-center;
   }
 
-  :is(h2, h3, h4) {
+  h2,
+  h3,
+  h4 {
     @apply font-normal ctext-heading mt-(--s-heading);
   }
 
@@ -131,15 +137,22 @@
     @apply text-xl;
   }
 
-  :is(h5, h6) {
+  h5,
+  h6 {
     @apply font-semibold text-base;
   }
 
-  :is(h5, h6, p, ul, ol, pre) {
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  pre {
     @apply mt-(--s-paragraph);
   }
 
-  :is(ul, ol) {
+  ul,
+  ol {
     @apply ps-7;
   }
 
@@ -160,7 +173,7 @@
   }
 
   a {
-    @apply ctext-link hover:underline;
+    @apply ctext-link any-hover:underline;
   }
 
   table {
@@ -177,10 +190,6 @@
     :where(td, th) {
       @apply text-base py-1.25 px-2.5 text-center;
     }
-
-    :where(th) {
-      @apply font-semibold;
-    }
   }
 
   .table-container:has(> table) {
@@ -195,7 +204,7 @@
     @apply px-3 py-2 rounded my-(--s-heading);
   }
 
-  :is(strong, b) {
+  :is(strong, b, th) {
     @apply font-semibold;
   }
 }

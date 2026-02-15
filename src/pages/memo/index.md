@@ -4,8 +4,6 @@ title: Memos
 description: めも。
 ---
 
-[戻る](/)
-
 メモ置き場。
 
 ## Links

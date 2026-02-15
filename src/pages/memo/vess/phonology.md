@@ -3,8 +3,6 @@ layout: ../../../layouts/MdLayout.astro
 title: Vessenzlendisç 音韻論
 ---
 
-[戻る](/memo/vess/)
-
 ## 目次
 
 ## 母音

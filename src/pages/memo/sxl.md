@@ -3,8 +3,6 @@ layout: ../../layouts/MdLayout.astro
 title: ??? データ
 ---
 
-[戻る](/memo/)
-
 ## 目次
 
 ## 母音
