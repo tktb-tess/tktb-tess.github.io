@@ -44,6 +44,8 @@
   --color-d-border-2: hsl(0 0 100 / 40%);
   --color-link: var(--color-blue-700);
   --color-d-link: var(--color-blue-400);
+  --color-link-disabled: hsl(0 0 0 / 60%);
+  --color-d-link-disabled: hsl(0 0 100 / 40%);
   --color-heading: var(--color-violet-950);
   --color-d-heading: var(--color-violet-100);
 
@@ -188,6 +190,10 @@
 
   a {
     @apply ctext-link any-hover:underline;
+
+    &[aria-disabled='true'] {
+      @apply ctext-link-disabled pointer-events-none;
+    }
   }
 
   table {
