@@ -19,7 +19,7 @@ const mds = Object.values(
 
 const getTitle = (href: string) => {
   if (href !== '/') {
-    return mds.find((m) => m.url === href)?.title ?? '???';
+    return mds.find((m) => m.url === href)?.title ?? '[NO DATA]';
   } else {
     return;
   }
@@ -38,7 +38,7 @@ const pages = dirs.map((_, i) => {
 const currentText = getTitle(url);
 ---
 
-<ol id='bread-crumb'>
+<ol id='breadcrumb' title='パンくずリスト'>
   {
     pages.map(({ href, title }) => {
       return (
@@ -58,7 +58,7 @@ const currentText = getTitle(url);
 <style lang="postcss">
   @reference '../styles/global.css';
   @layer components {
-    #bread-crumb {
+    #breadcrumb {
       @apply list-none flex flex-wrap gap-2 ps-0;
 
       > :where(li) {
@@ -67,7 +67,7 @@ const currentText = getTitle(url);
 
       > :where(li) > :where(a, b),
       > :where(li:not(:first-child))::before {
-        @apply flex-[0_0_max-content] grid place-content-center;
+        @apply flex-[0_0_auto] w-max grid place-content-center;
       }
 
       > :where(li:not(:first-child))::before {

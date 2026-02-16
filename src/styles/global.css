@@ -84,6 +84,20 @@
   }
 }
 
+@utility cols-auto-fill-* {
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(calc(var(--spacing) * --value(integer)), 100%), 1fr)
+  );
+}
+
+@utility cols-auto-fit-* {
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(calc(var(--spacing) * --value(integer)), 100%), 1fr)
+  );
+}
+
 @custom-variant any-hover {
   @media (any-hover: hover) {
     &:hover {
@@ -156,7 +170,7 @@
     @apply ps-7;
   }
 
-  li > :is(ul, ol) {
+  li > :where(ul, ol) {
     @apply ps-4;
   }
 
@@ -204,7 +218,9 @@
     @apply px-3 py-2 rounded my-(--s-heading);
   }
 
-  :is(strong, b, th) {
+  strong,
+  b,
+  th {
     @apply font-semibold;
   }
 }

@@ -41,9 +41,10 @@ const isTop = url === '';
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    localStorage.setItem(
-      'gruss',
-      'V2lsbGtvbW1lbiBhdWYgbWVpbmVyIFdlYnNlaXRlIQ==',
-    );
+    const key = 'gruss';
+    if (!localStorage.getItem(key)) {
+      const value = 'V2lsbGtvbW1lbiBhdWYgbWVpbmVyIFdlYnNlaXRlIQ==';
+      localStorage.setItem(key, value);
+    }
   });
 </script>
