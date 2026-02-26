@@ -67,7 +67,7 @@ const currentText = getTitle(url);
 
       > :where(li) > :where(a, b),
       > :where(li:not(:first-child))::before {
-        @apply flex-[0_0_auto] w-max grid place-content-center;
+        @apply flex-[0_1_auto] w-max grid place-content-center min-w-0;
       }
 
       > :where(li:not(:first-child))::before {
