@@ -52,6 +52,10 @@
   --default-transition-duration: 110ms;
   --s-paragraph: 0.75rem;
   --s-heading: 2.5rem;
+
+  --spacing-paragraph: 0.75rem;
+  --spacing-heading: 2.75rem;
+  --spacing-figure: 2.25rem;
 }
 
 @utility cbg-* {
@@ -101,10 +105,22 @@
 }
 
 @custom-variant any-hover {
-  @media (any-hover: hover) {
+  @media (hover-focus: hover) {
     &:hover {
       @slot;
     }
+  }
+}
+
+@custom-variant hover-focus {
+  @media (hover-focus: hover) {
+    &:hover {
+      @slot;
+    }
+  }
+
+  &:focus-visible {
+    @slot;
   }
 }
 
@@ -112,7 +128,13 @@
   :root {
     -webkit-tap-highlight-color: revert;
     line-break: strict;
-    @apply max-sm:text-sm wrap-anywhere hyphens-auto font-sans;
+    @apply max-sm:text-sm wrap-anywhere hyphens-auto font-sans break-normal;
+  }
+
+  @supports (word-break: auto-phrase) {
+    [lang='ja'] {
+      word-break: auto-phrase;
+    }
   }
 
   body {
@@ -132,13 +154,13 @@
   }
 
   h1#title {
-    @apply text-4xl font-extralight text-balance my-10 text-center;
+    @apply text-4xl font-extralight text-balance my-heading text-center;
   }
 
   h2,
   h3,
   h4 {
-    @apply font-normal ctext-heading mt-(--s-heading);
+    @apply font-normal ctext-heading mt-heading;
   }
 
   h2 {
@@ -164,7 +186,7 @@
   ul,
   ol,
   pre {
-    @apply mt-(--s-paragraph);
+    @apply mt-paragraph;
   }
 
   ul,
@@ -188,12 +210,12 @@
     @apply mt-0;
   }
 
-  a {
-    @apply ctext-link any-hover:underline;
+  a:where(:any-link:not([aria-disabled='true'])) {
+    @apply ctext-link hover-focus:underline;
+  }
 
-    &[aria-disabled='true'] {
-      @apply ctext-link-disabled pointer-events-none;
-    }
+  a:where([aria-disabled='true']) {
+    @apply ctext-link-disabled pointer-events-none;
   }
 
   table {
@@ -213,15 +235,15 @@
   }
 
   .table-container:has(> table) {
-    @apply overflow-auto max-w-full my-(--s-heading);
+    @apply overflow-auto max-w-full my-figure;
   }
 
   hr {
-    @apply my-5 mx-auto w-full max-w-160 cborder-border-2;
+    @apply my-figure mx-auto w-full max-w-160 cborder-border-2;
   }
 
   .astro-code {
-    @apply px-3 py-2 rounded my-(--s-heading);
+    @apply px-3 py-2 rounded my-figure;
   }
 
   strong,
