@@ -105,7 +105,7 @@
 }
 
 @custom-variant any-hover {
-  @media (hover-focus: hover) {
+  @media (any-hover: hover) {
     &:hover {
       @slot;
     }
@@ -113,7 +113,7 @@
 }
 
 @custom-variant hover-focus {
-  @media (hover-focus: hover) {
+  @media (any-hover: hover) {
     &:hover {
       @slot;
     }
