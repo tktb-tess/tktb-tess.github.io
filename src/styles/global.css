@@ -49,7 +49,7 @@
   --color-heading: var(--color-violet-950);
   --color-d-heading: var(--color-violet-100);
 
-  --default-transition-duration: 110ms;
+  --default-transition-duration: 80ms;
   --s-paragraph: 0.75rem;
   --s-heading: 2.5rem;
 
@@ -254,7 +254,7 @@
   }
 
   .anchor-link {
-    @apply absolute -inset-s-5 inset-bs-[calc(50%-8px)] opacity-0 transition-colors ctext-text;
+    @apply absolute -inset-s-5 inset-bs-[calc(50%-8px)] opacity-0 transition-opacity ctext-text;
 
     :where(svg) {
       @apply w-4 h-auto fill-current;
