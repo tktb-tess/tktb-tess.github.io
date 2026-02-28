@@ -144,7 +144,7 @@
   h2,
   h3,
   h4 {
-    @apply font-normal ctext-heading mt-heading;
+    @apply font-normal ctext-heading;
   }
 
   h2 {
@@ -160,13 +160,19 @@
     @apply text-xl;
   }
 
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply mt-heading;
+  }
+
   h5,
   h6 {
     @apply font-semibold text-base;
   }
 
-  h5,
-  h6,
   p,
   ul,
   ol,
@@ -235,5 +241,23 @@
   b,
   th {
     @apply font-semibold;
+  }
+
+  :has(> .anchor-link) {
+    @apply relative;
+
+    @media (any-hover: hover) {
+      &:hover > .anchor-link {
+        @apply opacity-100;
+      }
+    }
+  }
+
+  .anchor-link {
+    @apply absolute -inset-s-5 inset-bs-[calc(50%-8px)] opacity-0 transition-colors ctext-text;
+
+    :where(svg) {
+      @apply w-4 h-auto fill-current;
+    }
   }
 }
