@@ -32,7 +32,7 @@
   --color-vivid-95: oklch(95% 0.2172 116.2);
 
   --color-violet-dark: oklch(from var(--color-violet-950) 20% 0.06 h);
-  --color-side: var(--color-violet-50);
+  --color-side: var(--color-violet-100);
   --color-d-side: var(--color-violet-950);
   --color-main: #fff;
   --color-d-main: var(--color-violet-dark);
@@ -137,26 +137,6 @@
     }
   }
 
-  body {
-    @apply flow-root cbg-side ctext-text;
-  }
-
-  main {
-    @apply flow-root w-full max-w-7xl px-4 mx-auto cbg-main min-h-lvh;
-
-    > :where(:first-child) {
-      @apply mt-3;
-    }
-
-    > :where(:last-child) {
-      @apply mb-3;
-    }
-  }
-
-  h1#title {
-    @apply text-4xl font-extralight text-balance my-heading text-center;
-  }
-
   h2,
   h3,
   h4 {
@@ -164,7 +144,8 @@
   }
 
   h2 {
-    @apply text-3xl;
+    @apply text-3xl border-s-3 border-b border-current ps-1 pe-4;
+    width: fit-content;
   }
 
   h3 {

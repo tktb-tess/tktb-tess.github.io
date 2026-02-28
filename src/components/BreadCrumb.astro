@@ -38,41 +38,51 @@ const pages = dirs.map((_, i) => {
 const currentText = getTitle(url);
 ---
 
-<ol id='breadcrumb' title='パンくずリスト'>
-  {
-    pages.map(({ href, title }) => {
-      return (
-        <li>
-          <a {href} title={title ?? 'Home'}>
-            {title ?? <HomeIcon class='size-4' />}
-          </a>
-        </li>
-      );
-    })
-  }
-  <li>
-    <b>{currentText}</b>
-  </li>
-</ol>
+<nav class='breadcrumb' aria-label='パンくずリスト'>
+  <ol>
+    {
+      pages.map(({ href, title }) => {
+        return (
+          <li>
+            <a {href} title={title ?? 'Home'}>
+              {title ?? <HomeIcon class='size-4' />}
+            </a>
+          </li>
+        );
+      })
+    }
+    <li>
+      <a href='#' aria-current='page' tabindex='-1'>{currentText}</a>
+    </li>
+  </ol>
+</nav>
 
 <style lang="postcss">
   @reference '../styles/global.css';
   @layer components {
-    #breadcrumb {
-      @apply list-none flex flex-wrap gap-2 ps-0;
+    .breadcrumb {
+      @apply my-4 block;
+    }
 
-      > :where(li) {
-        @apply contents;
-      }
+    ol {
+      @apply list-none flex flex-wrap gap-2 ps-0 m-0;
+    }
 
-      > :where(li) > :where(a, b),
-      > :where(li:not(:first-child))::before {
-        @apply flex-[0_1_auto] w-max grid place-content-center min-w-0;
-      }
+    li {
+      @apply contents;
+    }
 
-      > :where(li:not(:first-child))::before {
-        content: '>';
-      }
+    a,
+    li:not(:first-child)::before {
+      @apply flex-[unset] w-max min-w-0 leading-none;
+    }
+
+    a[aria-current="page"] {
+      @apply font-semibold pointer-events-none ctext-text;
+    }
+
+    li:not(:first-child)::before {
+      content: '>';
     }
   }
 </style>
