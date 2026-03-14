@@ -1,9 +1,16 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'Local-Noto-Sans-JP';
+  src:
+    local('Noto Sans JP'), local('Noto Sans CJK JP'),
+    local('Source Han Sans JP');
+}
+
 @theme {
   --font-sans:
-    'Inter-Variable', 'Arial', 'Helvetica Neue', 'Noto Sans JP',
-    'Noto Sans CJK JP', 'Source Han Sans', 'BIZ UDPGothic',
+    'Inter-Variable', 'Arial', 'Helvetica Neue', 'Local-Noto-Sans-JP',
+    'Noto Sans JP', 'Source Han Sans', 'BIZ UDPGothic',
     'Hiragino Kaku Gothic ProN', 'Hiragino Sans',
     'Noto Sans Canadian Aboriginal', sans-serif, system-ui;
   --font-serif:
@@ -34,10 +41,8 @@
   --color-violet-dark: oklch(from var(--color-violet-950) 20% 0.06 h);
   --color-side: var(--color-violet-100);
   --color-d-side: var(--color-violet-950);
-  --color-main: #fff;
-  --color-d-main: var(--color-violet-dark);
-  --color-text: #000;
-  --color-d-text: #fff;
+  --color-main: canvas;
+  --color-text: canvasText;
   --color-border: hsl(0 0 0 / 25%);
   --color-d-border: hsl(0 0 100 / 25%);
   --color-border-2: hsl(0 0 0 / 40%);
@@ -50,12 +55,13 @@
   --color-d-heading: var(--color-violet-100);
 
   --default-transition-duration: 80ms;
-  --s-paragraph: 0.75rem;
-  --s-heading: 2.5rem;
 
   --spacing-paragraph: 0.75rem;
   --spacing-heading: 2.75rem;
   --spacing-figure: 2.25rem;
+  --spacing-title-mb: 3rem;
+  --spacing-min-side: 14rem;
+  --spacing-max-main: 72rem;
 }
 
 @utility cbg-* {
@@ -95,6 +101,11 @@
     auto-fill,
     minmax(min(calc(var(--spacing) * --value(integer)), 100%), 1fr)
   );
+
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(--value([*]), 100%), 1fr)
+  );
 }
 
 @utility cols-auto-fit-* {
@@ -102,6 +113,8 @@
     auto-fit,
     minmax(min(calc(var(--spacing) * --value(integer)), 100%), 1fr)
   );
+
+  grid-template-columns: repeat(auto-fit, minmax(min(--value([*]), 100%), 1fr));
 }
 
 @custom-variant any-hover {
@@ -126,19 +139,64 @@
 
 @layer base {
   :root {
+    @apply max-sm:text-sm wrap-anywhere hyphens-auto font-sans;
     -webkit-tap-highlight-color: revert;
     line-break: strict;
-    @apply max-sm:text-sm wrap-anywhere hyphens-auto font-sans;
+    scrollbar-gutter: stable;
   }
 
-  * {
+  :root,
+  [lang] {
     word-break: normal;
   }
 
   @supports (word-break: auto-phrase) {
-    :lang(ja) {
+    [lang^='ja'] {
       word-break: auto-phrase;
     }
+  }
+
+  :disabled,
+  [aria-disabled='true'],
+  [inert] {
+    @apply pointer-events-none cursor-default;
+  }
+
+  body {
+    @apply max-lg:flow-root lg:grid cbg-side ctext-text;
+
+    grid-template-areas:
+      'h h h'
+      '. m .'
+      'f f f';
+
+    grid-template-columns:
+      minmax(min(var(--spacing-min-side), 100%), 1fr)
+      minmax(0, var(--spacing-max-main))
+      minmax(min(var(--spacing-min-side), 100%), 1fr);
+
+    grid-template-rows: auto 1fr auto;
+  }
+
+  body > :where(:not(script)) {
+    @apply flow-root;
+  }
+
+  header {
+    grid-area: h;
+  }
+
+  main {
+    @apply px-4 pbe-36 cbg-main min-h-lvh;
+    grid-area: m;
+  }
+
+  footer {
+    grid-area: f;
+  }
+
+  h1 {
+    @apply text-5xl font-extralight text-balance my-title-mb text-center;
   }
 
   h2,
@@ -148,8 +206,7 @@
   }
 
   h2 {
-    @apply text-3xl border-s-3 border-b border-current ps-1 pe-4;
-    width: fit-content;
+    @apply text-3xl border-s-3 border-b border-current ps-1 pe-4 w-fit;
   }
 
   h3 {
@@ -165,7 +222,7 @@
   h4,
   h5,
   h6 {
-    @apply mt-heading;
+    @apply mbs-heading;
   }
 
   h5,
@@ -173,15 +230,11 @@
     @apply font-semibold text-base;
   }
 
-  p,
-  ul,
-  ol,
-  pre {
-    @apply mt-paragraph;
+  :not(li) > :where(p, ul, ol, pre) {
+    @apply mbs-paragraph;
   }
 
-  ul,
-  ol {
+  :not(li) > :where(ul, ol) {
     @apply ps-7;
   }
 
@@ -195,10 +248,6 @@
 
   ol {
     @apply list-decimal;
-  }
-
-  li > :where(p, ul, ol) {
-    @apply mt-0;
   }
 
   a:where(:any-link:not([aria-disabled='true'])) {

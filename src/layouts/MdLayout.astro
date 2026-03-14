@@ -39,38 +39,6 @@ const isTop = url === '';
   </body>
 </html>
 
-<style lang="postcss">
-  @reference '../styles/global.css';
-  @layer components {
-    body {
-      @apply max-lg:flow-root lg:grid cbg-side ctext-text;
-      --min-side: 14rem;
-      --max-main: 72rem;
-      grid-template-areas:
-        'h h h' 
-        'l m r';
-      grid-template-columns: 
-        minmax(min(var(--min-side), 100%), 1fr)
-        minmax(0, var(--max-main))
-        minmax(min(var(--min-side), 100%), 1fr);
-      grid-template-rows: auto 1fr;
-    }
-
-    header {
-      grid-area: h;
-    }
-
-    main {
-      @apply flow-root px-4 pb-36 cbg-main min-h-lvh;
-      grid-area: m;
-    }
-
-    #title {
-      @apply text-4xl font-extralight text-balance my-heading text-center;
-    }
-  }
-</style>
-
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const key = 'gruss';
