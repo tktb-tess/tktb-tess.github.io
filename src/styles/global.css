@@ -2,22 +2,20 @@
 
 @font-face {
   font-family: 'Local-Noto-Sans-JP';
-  src:
-    local('Noto Sans JP'), local('Noto Sans CJK JP'),
-    local('Source Han Sans JP');
+  font-display: swap;
+  src: local('Noto Sans JP');
 }
 
 @theme {
   --font-sans:
     'Inter-Variable', 'Arial', 'Helvetica Neue', 'Local-Noto-Sans-JP',
-    'Noto Sans JP', 'Source Han Sans', 'BIZ UDPGothic',
-    'Hiragino Kaku Gothic ProN', 'Hiragino Sans',
-    'Noto Sans Canadian Aboriginal', sans-serif, system-ui;
+    'Noto Sans JP', 'BIZ UDPGothic', 'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans', 'Noto Sans Canadian Aboriginal', sans-serif, system-ui;
   --font-serif:
     'Charis-Web', 'Times New Roman', 'Noto Serif JP', 'Noto Serif CJK JP',
-    'Source Han Serif', 'BIZ UDPMincho', 'Hiragino Mincho ProN',
-    'Hiragino Serif', serif, system-ui;
+    'BIZ UDPMincho', 'Hiragino Mincho ProN', 'Hiragino Serif', serif, system-ui;
   --font-ipa: var(--font-serif);
+
   --color-vivid-5: oklch(5% 0.0352 263.14);
   --color-vivid-10: oklch(10% 0.0689 264.19);
   --color-vivid-15: oklch(15% 0.1037 264.19);
