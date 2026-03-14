@@ -197,7 +197,7 @@
   }
 
   h1 {
-    @apply text-5xl font-extralight text-balance my-title-mb text-center;
+    @apply text-5xl font-extralight font-title text-balance my-title-mb text-center;
   }
 
   h2,
