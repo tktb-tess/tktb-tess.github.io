@@ -9,11 +9,14 @@
 @theme {
   --font-sans:
     'Inter-Variable', 'Arial', 'Helvetica Neue', 'Local-Noto-Sans-JP',
-    'Noto Sans JP', 'BIZ UDPGothic', 'Hiragino Kaku Gothic ProN',
-    'Hiragino Sans', 'Noto Sans Canadian Aboriginal', sans-serif, system-ui;
+    'BIZ UDPGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans',
+    'Noto Sans Canadian Aboriginal', sans-serif, 'Segoe UI';
+  --font-title:
+    'Inter-Variable', 'Arial', 'Helvetica Neue', 'Local-Noto-Sans-JP',
+    'Noto Sans JP', sans-serif, 'Segoe UI';
   --font-serif:
     'Charis-Web', 'Times New Roman', 'Noto Serif JP', 'Noto Serif CJK JP',
-    'BIZ UDPMincho', 'Hiragino Mincho ProN', 'Hiragino Serif', serif, system-ui;
+    'BIZ UDPMincho', 'Hiragino Mincho ProN', 'Hiragino Serif', serif, 'Segoe UI';
   --font-ipa: var(--font-serif);
 
   --color-vivid-5: oklch(5% 0.0352 263.14);
