@@ -1,5 +1,6 @@
 ---
 import HomeIcon from '../assets/HomeIcon.svg';
+import { pageData, type PageData } from '../modules/data';
 
 interface Props {
   readonly url: string;
@@ -13,16 +14,22 @@ interface MdProps {
   };
 }
 
-const mds = Object.values(
+const values = Object.values(
   import.meta.glob<MdProps>('../pages/**/*.md', { eager: true }),
-).map((md) => ({ url: md.url, title: md.frontmatter.title }) as const);
+);
+
+const mds: ReadonlyMap<string, PageData> = new Map(
+  values.map((md) => {
+    const { title, description } = md.frontmatter;
+    return [md.url || '/', { title, description }];
+  }),
+);
 
 const getTitle = (href: string) => {
   if (href !== '/') {
-    return mds.find((m) => m.url === href)?.title ?? '[NO DATA]';
-  } else {
-    return;
+    return mds.get(href)?.title ?? pageData.get(href)?.title ?? '[NO DATA]';
   }
+  return null;
 };
 
 const { url } = Astro.props;
@@ -35,7 +42,7 @@ const pages = dirs.map((_, i) => {
   return { href, title } as const;
 });
 
-const currentText = getTitle(url);
+const currentText = getTitle(url) ?? '[NO DATA]';
 ---
 
 <nav class='breadcrumb' aria-label='パンくずリスト'>
@@ -45,7 +52,7 @@ const currentText = getTitle(url);
         return (
           <li>
             <a {href} title={title ?? 'Home'}>
-              {title ?? <HomeIcon class='size-4' />}
+              {title ?? <HomeIcon class='w-4 h-auto' />}
             </a>
           </li>
         );
