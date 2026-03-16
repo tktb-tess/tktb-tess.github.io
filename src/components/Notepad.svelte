@@ -47,7 +47,7 @@
         timer = setTimeout(async () => {
           outputHTML = (await processor.process(input)).toString();
           const compressed = await compress(input);
-          const params = new URLSearchParams([['data', compressed]]);
+          const params = new URLSearchParams({ data: compressed });
           history.replaceState(null, '', `?${params}`);
           timer = null;
         }, 500);
@@ -56,8 +56,11 @@
   ></textarea>
 </div>
 
-<div class="output-html">
-  {@html outputHTML}
+<div>
+  <h2>output</h2>
+  <div class="output-html">
+    {@html outputHTML}
+  </div>
 </div>
 
 <style lang="postcss">
@@ -65,7 +68,6 @@
 
   @layer base {
     .output-html {
-      &,
       :global(*) {
         all: revert !important;
       }
@@ -75,6 +77,14 @@
   @layer components {
     .input {
       @apply flex flex-col gap-2 *:block;
+
+      > label {
+        @apply text-center self-center text-xl;
+      }
+
+      > textarea {
+        @apply h-120;
+      }
     }
   }
 </style>

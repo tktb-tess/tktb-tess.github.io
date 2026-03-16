@@ -259,6 +259,10 @@
     @apply ctext-link-disabled pointer-events-none;
   }
 
+  input:where(:not([type]), [type='text']), textarea {
+    @apply font-mono px-1 border cborder-border rounded;
+  }
+
   table {
     @apply w-max max-w-full me-auto;
 
