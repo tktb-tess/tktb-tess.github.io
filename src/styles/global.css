@@ -44,6 +44,7 @@
   --color-d-side: var(--color-violet-950);
   --color-main: canvas;
   --color-text: canvasText;
+  --color-textinv: canvas;
   --color-border: hsl(0 0 0 / 25%);
   --color-d-border: hsl(0 0 100 / 25%);
   --color-border-2: hsl(0 0 0 / 40%);
@@ -52,10 +53,11 @@
   --color-d-link: var(--color-blue-400);
   --color-link-disabled: hsl(0 0 0 / 60%);
   --color-d-link-disabled: hsl(0 0 100 / 40%);
-  --color-heading: var(--color-violet-950);
-  --color-d-heading: var(--color-violet-100);
+  --color-accent: var(--color-violet-950);
+  --color-d-accent: var(--color-violet-100);
 
   --default-transition-duration: 80ms;
+  --default-transition-timing-function: cubic-bezier(0.25, 0, 0.1, 1);
 
   --spacing-paragraph: 0.75rem;
   --spacing-heading: 2.75rem;
@@ -95,6 +97,10 @@
   @media (prefers-color-scheme: dark) {
     color: --value(--color-d- *);
   }
+}
+
+@utility grid-cols-auto-* {
+  grid-template-columns: repeat(--value(integer), auto);
 }
 
 @utility cols-auto-fill-* {
@@ -144,16 +150,17 @@
     -webkit-tap-highlight-color: revert;
     line-break: strict;
     scrollbar-gutter: stable;
-  }
-
-  :root,
-  [lang] {
+    text-spacing-trim: trim-start;
     word-break: normal;
   }
 
   @supports (word-break: auto-phrase) {
-    [lang^='ja'] {
+    :lang(ja) {
       word-break: auto-phrase;
+    }
+
+    :not(:lang(ja)) {
+      word-break: normal;
     }
   }
 
@@ -164,7 +171,7 @@
   }
 
   body {
-    @apply max-lg:flow-root lg:grid cbg-side ctext-text;
+    @apply max-lg:flow-root lg:grid cbg-side text-text;
 
     grid-template-areas:
       'h h h'
@@ -179,7 +186,9 @@
     grid-template-rows: auto 1fr auto;
   }
 
-  body > :where(:not(script)) {
+  header,
+  main,
+  footer {
     @apply flow-root;
   }
 
@@ -188,7 +197,7 @@
   }
 
   main {
-    @apply px-4 pbe-36 cbg-main min-h-lvh;
+    @apply px-4 pbe-36 bg-main min-h-lvh;
     grid-area: m;
   }
 
@@ -203,7 +212,7 @@
   h2,
   h3,
   h4 {
-    @apply font-normal ctext-heading;
+    @apply font-normal ctext-accent;
   }
 
   h2 {
@@ -259,8 +268,13 @@
     @apply ctext-link-disabled pointer-events-none;
   }
 
-  input:where(:not([type]), [type='text']), textarea {
+  input:where(:not([type]), [type='text']),
+  textarea {
     @apply font-mono px-1 border cborder-border rounded;
+  }
+
+  button, input:where([type='button']) {
+    @apply cursor-pointer;
   }
 
   table {

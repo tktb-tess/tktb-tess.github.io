@@ -1,12 +1,17 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import type { Proc } from '../modules/convert';
-  import { processor } from '../modules/convert';
   import { compress, decompress } from '../modules/compress';
 
   let input = $state('');
-  let outputHTML = $state('');
   let timer: ReturnType<typeof setTimeout> | null = null;
+  let isPreview = $state(false);
+
+  const toHTML = async (md: string) => {
+    const { getProcessor } = await import('../modules/convert');
+    const p = await getProcessor();
+    const v = await p.process(md);
+    return v.toString();
+  };
 
   onMount(() => {
     timer = setTimeout(async () => {
@@ -17,7 +22,6 @@
         input = await decompress(data);
       }
 
-      outputHTML = (await processor.process(input)).toString();
       timer = null;
     }, 500);
 
@@ -30,10 +34,21 @@
   });
 </script>
 
-<div class="input">
-  <label for="notepad-input">input</label>
+<div class="toggle-btn">
+  <button
+    onclick={(ev) => {
+      ev.preventDefault();
+      isPreview = !isPreview;
+    }}
+  >
+    {isPreview ? 'edit' : 'preview'}
+  </button>
+</div>
+
+<div class="edit {isPreview ? 'hidden' : 'flex'}">
+  <label for="ntpd-input">Input</label>
   <textarea
-    id="notepad-input"
+    id="ntpd-input"
     bind:value={
       () => input,
       (ii) => {
@@ -45,7 +60,6 @@
         }
 
         timer = setTimeout(async () => {
-          outputHTML = (await processor.process(input)).toString();
           const compressed = await compress(input);
           const params = new URLSearchParams({ data: compressed });
           history.replaceState(null, '', `?${params}`);
@@ -56,35 +70,53 @@
   ></textarea>
 </div>
 
-<div>
-  <h2>output</h2>
-  <div class="output-html">
-    {@html outputHTML}
+{#if isPreview}
+  <div class="preview">
+    <h3>Preview</h3>
+    <div class="output-html">
+      {#await toHTML(input) then outputHTML}
+        {@html outputHTML}
+      {/await}
+    </div>
   </div>
-</div>
+{/if}
 
 <style lang="postcss">
   @reference '../styles/global.css';
 
-  @layer base {
-    .output-html {
-      :global(*) {
-        all: revert !important;
+  @layer components {
+    .toggle-btn {
+      @apply mbs-paragraph flex justify-center-safe;
+
+      > button {
+        @apply border-2 cborder-accent ctext-accent rounded-full px-4
+          hover-focus:text-textinv hover-focus:cbg-accent
+          transition-colors;
       }
     }
-  }
 
-  @layer components {
-    .input {
-      @apply flex flex-col gap-2 *:block;
+    .edit {
+      @apply flex-col gap-2 *:block;
 
       > label {
-        @apply text-center self-center text-xl;
+        @apply text-center text-2xl mbs-heading ctext-accent;
       }
 
       > textarea {
-        @apply h-120;
+        @apply h-120 min-w-0;
       }
+    }
+
+    .preview {
+      @apply flex flex-col gap-2;
+
+      > h3 {
+        @apply text-center;
+      }
+    }
+
+    .output-html {
+      @apply flow-root;
     }
   }
 </style>

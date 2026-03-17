@@ -20,8 +20,8 @@ export const compress = async (plain: string) => {
   return toBase64URL(comp);
 };
 
-export const decompress = (comped: string) => {
-  const bin = fromBase64URL(comped);
+export const decompress = (base64URL: string) => {
+  const bin = fromBase64URL(base64URL);
   const stream = new Blob([bin])
     .stream()
     .pipeThrough(new DecompressionStream('gzip'));
