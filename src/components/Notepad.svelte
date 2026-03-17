@@ -5,6 +5,7 @@
   let input = $state('');
   let timer: ReturnType<typeof setTimeout> | null = null;
   let isPreview = $state(false);
+  const key = 'd';
 
   const toHTML = async (md: string) => {
     const { getProcessor } = await import('../modules/convert');
@@ -16,7 +17,7 @@
   onMount(() => {
     timer = setTimeout(async () => {
       const params = new URL(document.URL).searchParams;
-      const data = params.get('data');
+      const data = params.get(key);
 
       if (data) {
         input = await decompress(data);
@@ -61,7 +62,7 @@
 
         timer = setTimeout(async () => {
           const compressed = await compress(input);
-          const params = new URLSearchParams({ data: compressed });
+          const params = new URLSearchParams([[key, compressed]]);
           history.replaceState(null, '', `?${params}`);
           timer = null;
         }, 500);
