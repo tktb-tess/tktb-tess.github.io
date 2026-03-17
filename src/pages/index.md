@@ -3,7 +3,7 @@ layout: ../layouts/MdLayout.astro
 title: tktb-tess.github.io
 ---
 
-```typescript
+```javascript
 const gruss = localStorage.getItem('gruss');
 if (gruss != null) {
   console.log(atob(gruss));
@@ -34,12 +34,16 @@ if (gruss != null) {
 
 - [commas](/commas/)
 
-  コンマのデータ。
+  コンマのデータ
 
 - [memo](/memo/)
 
-  めも。
+  めも
 
 - [BF Playground](/bf-playground/)
 
   Brainf\*ck の簡易実行環境
+
+- [Notepad](/notepad/)
+
+  メモ帳
