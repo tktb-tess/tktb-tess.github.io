@@ -152,22 +152,23 @@
     scrollbar-gutter: stable;
     text-spacing-trim: trim-start;
     word-break: normal;
+    text-autospace: normal;
+  }
+
+  [lang] {
+    word-break: normal;
   }
 
   @supports (word-break: auto-phrase) {
-    :lang(ja) {
+    [lang^='ja'] {
       word-break: auto-phrase;
-    }
-
-    :not(:lang(ja)) {
-      word-break: normal;
     }
   }
 
   :disabled,
   [aria-disabled='true'],
   [inert] {
-    @apply pointer-events-none cursor-default;
+    @apply opacity-60 pointer-events-none cursor-default;
   }
 
   body {
@@ -273,7 +274,8 @@
     @apply font-mono px-1 border cborder-border rounded;
   }
 
-  button, input:where([type='button']) {
+  button,
+  input:where([type='button']) {
     @apply cursor-pointer;
   }
 
@@ -322,7 +324,7 @@
   }
 
   .anchor-link {
-    @apply absolute -inset-s-5 inset-bs-[calc(50%-8px)] opacity-0 transition-opacity ctext-text;
+    @apply absolute -inset-s-5 inset-bs-[calc(50%-0.5rem)] opacity-0 transition-opacity ctext-text;
 
     :where(svg) {
       @apply w-4 h-auto fill-current;
