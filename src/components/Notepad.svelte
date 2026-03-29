@@ -1,14 +1,19 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { compress, decompress } from '../modules/compress';
+  import NotepadPreview from './NotepadPreview.svelte';
+  import type { Proc } from '../modules/convert';
 
   let input = $state('');
   let timer: ReturnType<typeof setTimeout> | null = null;
   let isPreview = $state(false);
   const key = 'd';
 
+  const getProcessor = async () => {
+    return (await import('../modules/convert')).processor;
+  };
+
   const toHTML = async (md: string) => {
-    const { getProcessor } = await import('../modules/convert');
     const p = await getProcessor();
     const v = await p.process(md);
     return v.toString();
@@ -61,9 +66,20 @@
         }
 
         timer = setTimeout(async () => {
-          const compressed = await compress(input);
-          const params = new URLSearchParams([[key, compressed]]);
-          history.replaceState(null, '', `?${params}`);
+          const formatted = input
+            .replace(/\x20{3,}/, '  ')
+            .replace(/\n{3,}/, '\n\n')
+            .trim()
+            .concat('\n');
+
+          if (formatted !== '\n') {
+            const compressed = await compress(formatted);
+            const params = new URLSearchParams([[key, compressed]]);
+            history.replaceState(null, '', `?${params}`);
+          } else {
+            history.replaceState(null, '', './');
+          }
+
           timer = null;
         }, 500);
       }
@@ -74,11 +90,9 @@
 {#if isPreview}
   <div class="preview">
     <h3>Preview</h3>
-    <div class="output-html">
-      {#await toHTML(input) then outputHTML}
-        {@html outputHTML}
-      {/await}
-    </div>
+    {#await toHTML(input) then rawHTML}
+      <NotepadPreview {rawHTML} />
+    {/await}
   </div>
 {/if}
 
@@ -104,7 +118,7 @@
       }
 
       > textarea {
-        @apply blobk-120 min-inline-0;
+        @apply block-120 min-inline-0;
       }
     }
 
@@ -114,10 +128,6 @@
       > h3 {
         @apply text-center;
       }
-    }
-
-    .output-html {
-      @apply flow-root;
     }
   }
 </style>

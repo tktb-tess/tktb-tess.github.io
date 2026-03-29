@@ -26,10 +26,10 @@ const mds: ReadonlyMap<string, PageData> = new Map(
 );
 
 const getTitle = (href: string) => {
-  if (href !== '/') {
-    return mds.get(href)?.title ?? pageData.get(href)?.title ?? '[NO DATA]';
+  if (href === '/') {
+    return null;
   }
-  return null;
+  return mds.get(href)?.title ?? pageData.get(href)?.title ?? '[NO DATA]';
 };
 
 const { url } = Astro.props;
@@ -52,14 +52,14 @@ const currentText = getTitle(url) ?? '[NO DATA]';
         return (
           <li>
             <a {href} title={title ?? 'Home'}>
-              {title ?? <HomeIcon class='w-4 h-auto' />}
+              {title ?? <HomeIcon class='inline-4 block-auto' />}
             </a>
           </li>
         );
       })
     }
     <li>
-      <a href='#' aria-current='page' tabindex='-1'>{currentText}</a>
+      <a href='./' aria-current='page' tabindex='-1'>{currentText}</a>
     </li>
   </ol>
 </nav>
