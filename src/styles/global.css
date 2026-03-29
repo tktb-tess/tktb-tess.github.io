@@ -1,18 +1,24 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'Local-Noto-Sans-JP';
+  font-family: 'noto-sans-jp';
+  font-display: swap;
+  src: local('Noto Sans JP'), local('Noto Sans CJK JP');
+}
+
+@font-face {
+  font-family: 'noto-for-title';
   font-display: swap;
   src: local('Noto Sans JP');
 }
 
 @theme {
   --font-sans:
-    'Inter-Variable', 'Arial', 'Helvetica Neue', 'Local-Noto-Sans-JP',
+    'Inter-Variable', 'Arial', 'Helvetica Neue', 'noto-sans-jp',
     'BIZ UDPGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans',
     'Noto Sans Canadian Aboriginal', sans-serif, 'Segoe UI';
   --font-title:
-    'Inter-Variable', 'Arial', 'Helvetica Neue', 'Local-Noto-Sans-JP',
+    'Inter-Variable', 'Arial', 'Helvetica Neue', 'noto-for-title',
     'Noto Sans JP', sans-serif, 'Segoe UI';
   --font-serif:
     'Charis-Web', 'Times New Roman', 'Noto Serif JP', 'Noto Serif CJK JP',
