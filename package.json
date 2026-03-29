@@ -11,7 +11,7 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/markdown-remark": "^6.3.11",
+    "@astrojs/markdown-remark": "^7.1.0",
     "@astrojs/svelte": "^8.0.4",
     "@tailwindcss/vite": "^4.2.2",
     "@types/hast": "^3.0.4",
@@ -41,5 +41,5 @@
   "volta": {
     "node": "24.13.0"
   },
-  "packageManager": "pnpm@10.28.2"
+  "packageManager": "pnpm@10.33.0"
 }
