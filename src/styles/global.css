@@ -151,7 +151,6 @@
     line-break: strict;
     scrollbar-gutter: stable;
     text-spacing-trim: trim-start;
-    word-break: normal;
     text-autospace: normal;
   }
 
@@ -162,6 +161,7 @@
   @supports (word-break: auto-phrase) {
     [lang^='ja'] {
       word-break: auto-phrase;
+      text-align: justify;
     }
   }
 
@@ -324,7 +324,7 @@
   }
 
   .anchor-link {
-    @apply absolute -inset-s-5 inset-bs-[calc(50%-0.5rem)] opacity-0 transition-opacity ctext-text;
+    @apply absolute -inset-s-6 inset-bs-[calc(50%-0.5rem)] opacity-0 transition-opacity ctext-text;
 
     :where(svg) {
       @apply inline-4 block-auto fill-current;

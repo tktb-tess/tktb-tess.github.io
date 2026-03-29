@@ -17,21 +17,14 @@ export type Proc = Processor<
   string
 >;
 
-let processor: Proc | null = null;
+const rehypeKatex = (await import('rehype-katex')).default;
 
-export const getProcessor = async () => {
-  if (!processor) {
-    const rehypeKatex = (await import('rehype-katex')).default;
-    processor = unified()
-      .use(remarkParse)
-      .use(remarkGfm)
-      .use(remarkMath)
-      .use(remarkRehype, { allowDangerousHtml: true })
-      .use(rehypeKatex)
-      .use(rehypeSanitize)
-      .use(rehypeStringify)
-      .freeze();
-  }
-
-  return processor;
-};
+export const processor = unified()
+  .use(remarkParse)
+  .use(remarkGfm)
+  .use(remarkMath)
+  .use(remarkRehype, { allowDangerousHtml: true })
+  .use(rehypeSanitize)
+  .use(rehypeKatex)
+  .use(rehypeStringify)
+  .freeze();
