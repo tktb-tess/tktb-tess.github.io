@@ -198,7 +198,7 @@
   }
 
   main {
-    @apply px-4 pbe-36 bg-main min-h-lvh;
+    @apply px-4 pbe-36 bg-main min-block-lvh;
     grid-area: m;
   }
 
@@ -217,7 +217,7 @@
   }
 
   h2 {
-    @apply text-3xl border-s-3 border-b border-current ps-1 pe-4 w-fit;
+    @apply text-3xl border-s-3 border-be border-current ps-2 pe-4 leading-snug inline-fit;
   }
 
   h3 {
@@ -280,14 +280,14 @@
   }
 
   table {
-    @apply w-max max-w-full me-auto;
+    @apply inline-max max-inline-full me-auto;
 
     :where(& > thead > tr:last-child) {
-      @apply border-b-3 border-double cborder-border-2;
+      @apply border-be-3 border-double cborder-border-2;
     }
 
     :where(& > :is(thead, tbody) > tr:not(:last-child)) {
-      @apply border-b cborder-border;
+      @apply border-be cborder-border;
     }
 
     :where(td, th) {
@@ -296,11 +296,11 @@
   }
 
   .table-container:has(> table) {
-    @apply overflow-auto max-w-full my-figure;
+    @apply overflow-auto max-inline-full my-figure;
   }
 
   hr {
-    @apply my-figure mx-auto w-full max-w-160 cborder-border-2;
+    @apply my-figure mx-auto inline-full max-inline-160 cborder-border-2;
   }
 
   .astro-code {
@@ -327,7 +327,7 @@
     @apply absolute -inset-s-5 inset-bs-[calc(50%-0.5rem)] opacity-0 transition-opacity ctext-text;
 
     :where(svg) {
-      @apply w-4 h-auto fill-current;
+      @apply inline-4 block-auto fill-current;
     }
   }
 }
