@@ -104,7 +104,7 @@
       }
 
       > textarea {
-        @apply h-120 min-w-0;
+        @apply blobk-120 min-inline-0;
       }
     }
 
