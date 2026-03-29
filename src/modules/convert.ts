@@ -1,4 +1,4 @@
-import { unified, type Processor } from 'unified';
+import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
@@ -7,6 +7,7 @@ import rehypeSanitize from 'rehype-sanitize';
 import rehypeStringify from 'rehype-stringify';
 import type * as Mdast from 'mdast';
 import type * as Hast from 'hast';
+import type { Processor } from 'unified';
 
 export type Proc = Processor<
   Mdast.Root,
