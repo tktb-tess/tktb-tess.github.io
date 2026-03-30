@@ -5,7 +5,7 @@
   const { rawHTML }: Props = $props();
 </script>
 
-<div class="html-preview">
+<div class="html-preview-root">
   {@html rawHTML}
 </div>
 
@@ -13,11 +13,11 @@
   @reference '../styles/global.css';
 
   @layer components {
-    .html-preview {
+    .html-preview-root {
       @apply flow-root border-2 border-border rounded p-4;
     }
 
-    .html-preview :global(*) {
+    .html-preview-root :global(*) {
       font: revert;
       border: revert;
       background: revert;
