@@ -1,14 +1,20 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { compress, decompress } from '../modules/compress';
+  import type { Proc } from '../modules/convert';
 
   let input = $state('');
   let timer: ReturnType<typeof setTimeout> | null = null;
   let isPreview = $state(false);
+  let pro: Proc | null = null;
   const key = 'd';
 
   const getProcessor = async () => {
-    return (await import('../modules/convert')).processor;
+    if (!pro) {
+      pro = (await import('../modules/convert')).processor;
+    }
+
+    return pro;
   };
 
   const toHTML = async (md: string) => {
@@ -129,6 +135,7 @@
         @apply text-center;
       }
     }
+
     .html-preview-root {
       @apply flow-root border-2 border-border rounded p-4;
     }
