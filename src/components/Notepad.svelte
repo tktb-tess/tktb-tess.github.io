@@ -104,8 +104,8 @@
       @apply mbs-paragraph flex justify-center-safe;
 
       > button {
-        @apply border-2 cborder-accent ctext-accent rounded-full px-4
-          hover-focus:text-textinv hover-focus:cbg-accent
+        @apply border-2 border-accent text-accent rounded-full px-4
+          hover-focus:text-textinv hover-focus:bg-accent
           transition-colors;
       }
     }
@@ -114,7 +114,7 @@
       @apply flex-col gap-2 *:block;
 
       > label {
-        @apply text-center text-2xl mbs-heading ctext-accent;
+        @apply text-center text-2xl mbs-heading text-accent;
       }
 
       > textarea {
