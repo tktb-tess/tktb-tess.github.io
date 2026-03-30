@@ -250,7 +250,7 @@
   }
 
   table {
-    @apply inline-max max-inline-full me-auto;
+    @apply inline-max max-inline-full me-auto wrap-normal;
 
     :where(& > thead > tr:last-child) {
       @apply border-be-3 border-double border-border-2;

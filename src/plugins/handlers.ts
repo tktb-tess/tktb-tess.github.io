@@ -1,51 +1,39 @@
-import type { PhrasingContent, Table } from 'mdast';
-import type { Element, ElementContent, Text } from 'hast';
+import type * as Mdast from 'mdast';
+import type * as Hast from 'hast';
 import type { TextDirective } from 'mdast-util-directive';
 import type { Handler } from 'mdast-util-to-hast';
 import { toHast } from 'mdast-util-to-hast';
+import { h } from 'hastscript';
 
-const emptyText: Text = {
+const emptyText: Hast.Text = {
   type: 'text',
   value: '',
 };
 
-const ipaRender = (mdNode: TextDirective): Element => ({
-  type: 'element',
-  tagName: 'span',
-  properties: {
-    class: ['font-ipa'],
-  },
-  children: mdNode.children.map(phrasingToHast),
-});
+const safeToHast = (tree: Mdast.Nodes) => {
+  const hast = toHast(tree, { allowDangerousHtml: true });
+  if (hast.type === 'root' || hast.type === 'doctype') {
+    return emptyText;
+  }
+  if (hast.type === 'element' && hast.tagName === 'script') {
+    return emptyText;
+  }
+  return hast;
+};
 
 const _textDirectiveHandler = (node: TextDirective) => {
   if (node.name === 'ipa') {
-    return ipaRender(node);
+    return h('span.font-ipa', node.children.map(phrasingToHast));
   } else {
-    const hast = toHast(node, { allowDangerousHtml: true });
-    if (hast.type === 'root' || hast.type === 'doctype') {
-      return emptyText;
-    } else if (hast.type === 'element' && hast.tagName === 'script') {
-      return emptyText;
-    } else {
-      return hast;
-    }
+    return safeToHast(node);
   }
 };
 
-const phrasingToHast = (mdNode: PhrasingContent): ElementContent => {
+const phrasingToHast = (mdNode: Mdast.PhrasingContent): Hast.ElementContent => {
   if (mdNode.type === 'textDirective') {
     return _textDirectiveHandler(mdNode);
   } else {
-    const hast = toHast(mdNode, { allowDangerousHtml: true });
-
-    if (hast.type === 'root' || hast.type === 'doctype') {
-      return emptyText;
-    } else if (hast.type === 'element' && hast.tagName === 'script') {
-      return emptyText;
-    } else {
-      return hast;
-    }
+    return safeToHast(mdNode);
   }
 };
 
@@ -53,71 +41,75 @@ export const textDirectiveHandler: Handler = (_, node: TextDirective) => {
   return _textDirectiveHandler(node);
 };
 
-export const tableHandler: Handler = (_, node: Table) => {
+const tableCellHandler = (tc: Mdast.TableCell, tag: 'td' | 'th') => {
+  if (tc.children.length !== 1) {
+    return h(tag, tc.children.map(phrasingToHast));
+  }
+
+  const ph = tc.children[0];
+
+  if (!ph) {
+    return h(tag, tc.children.map(phrasingToHast));
+  }
+
+  if (ph.type !== 'textDirective') {
+    return h(tag, tc.children.map(phrasingToHast));
+  }
+
+  if (ph.name === 's') {
+    const parse = (v: string | null | undefined) => {
+      const n = Number.parseInt(v ?? '1');
+      return Number.isFinite(n) && n >= 0 ? n : 1;
+    };
+
+    const row = parse(ph.attributes?.r);
+    const col = parse(ph.attributes?.c);
+
+    if (row === 0 || col === 0) {
+      return null;
+    }
+
+    return h(
+      tag,
+      { rowspan: row, colspan: col },
+      ph.children.map(phrasingToHast),
+    );
+  }
+
+  if (ph.name === 'e') {
+    return null;
+  }
+
+  return h(tag, tc.children.map(phrasingToHast));
+};
+
+export const tableHandler: Handler = (_, node: Mdast.Table) => {
   const [head, ...body] = node.children;
-  const ths = head?.children.map(
-    (th): Element => ({
-      type: 'element',
-      tagName: 'th',
-      properties: {},
-      children: th.children.map(phrasingToHast),
-    }),
-  );
 
-  const cond = ths != null && ths.some((th) => th.children.length > 0);
+  if (head == null) {
+    throw TypeError('`head` is undefined');
+  }
 
-  const thead: Element | null = cond
-    ? {
-        type: 'element',
-        tagName: 'thead',
-        properties: {},
-        children: [
-          {
-            type: 'element',
-            tagName: 'tr',
-            properties: {},
-            children: ths,
-          },
-        ],
-      }
-    : null;
+  const ths = head.children
+    .map((th) => tableCellHandler(th, 'th'))
+    .filter((e) => e != null);
 
-  const bodyTrs = body.map(
-    (row): Element => ({
-      type: 'element',
-      tagName: 'tr',
-      properties: {},
-      children: row.children.map((td) => ({
-        type: 'element',
-        tagName: 'td',
-        properties: {},
-        children: td.children.map(phrasingToHast),
-      })),
-    }),
-  );
+  const cond = ths.some((th) => th.children.length > 0);
 
-  const tbody: Element = {
-    type: 'element',
-    tagName: 'tbody',
-    properties: {},
-    children: bodyTrs,
-  };
+  const thead: Hast.Element | null = cond ? h('thead', [h('tr', ths)]) : null;
 
-  const table: Element = {
-    type: 'element',
-    tagName: 'table',
-    properties: {},
-    children: thead ? [thead, tbody] : [tbody],
-  };
+  const bodyTrs = body.map((row): Hast.Element => {
+    const children = row.children
+      .map((td) => tableCellHandler(td, 'td'))
+      .filter((e) => e != null);
 
-  return {
-    type: 'element',
-    tagName: 'div',
-    properties: {
-      class: ['table-container'],
-    },
-    children: [table],
-  };
+    return h('tr', children);
+  });
+
+  const tbody: Hast.Element = h('tbody', bodyTrs);
+  const table: Hast.Element = h('table', thead ? [thead, tbody] : [tbody]);
+
+  return h('div.table-container', [table]);
 };
 
 export const linkSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
