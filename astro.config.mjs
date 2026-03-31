@@ -11,7 +11,7 @@ import { fromHtmlIsomorphic } from 'hast-util-from-html-isomorphic';
 import { rehypeHeadingIds } from '@astrojs/markdown-remark';
 import {
   tableHandler,
-  textDirectiveHandler,
+  tdHandler,
   linkSvg,
 } from './src/plugins/handlers';
 
@@ -51,7 +51,7 @@ export default defineConfig({
     remarkRehype: {
       handlers: {
         table: tableHandler,
-        textDirective: textDirectiveHandler,
+        textDirective: tdHandler,
       },
     },
   },

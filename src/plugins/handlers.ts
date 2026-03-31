@@ -21,7 +21,7 @@ const safeToHast = (tree: Mdast.Nodes) => {
   return hast;
 };
 
-const _textDirectiveHandler = (node: TextDirective) => {
+const _tdHandler = (node: TextDirective) => {
   if (node.name === 'ipa') {
     return h('span.font-ipa', node.children.map(phrasingToHast));
   } else {
@@ -31,17 +31,17 @@ const _textDirectiveHandler = (node: TextDirective) => {
 
 const phrasingToHast = (mdNode: Mdast.PhrasingContent): Hast.ElementContent => {
   if (mdNode.type === 'textDirective') {
-    return _textDirectiveHandler(mdNode);
+    return _tdHandler(mdNode);
   } else {
     return safeToHast(mdNode);
   }
 };
 
-export const textDirectiveHandler: Handler = (_, node: TextDirective) => {
-  return _textDirectiveHandler(node);
+export const tdHandler: Handler = (_, node: TextDirective) => {
+  return _tdHandler(node);
 };
 
-const tableCellHandler = (tc: Mdast.TableCell, tag: 'td' | 'th') => {
+const tcHandler = (tc: Mdast.TableCell, tag: 'td' | 'th') => {
   if (tc.children.length !== 1) {
     return h(tag, tc.children.map(phrasingToHast));
   }
@@ -91,25 +91,25 @@ export const tableHandler: Handler = (_, node: Mdast.Table) => {
   }
 
   const ths = head.children
-    .map((th) => tableCellHandler(th, 'th'))
+    .map((th) => tcHandler(th, 'th'))
     .filter((e) => e != null);
 
   const cond = ths.some((th) => th.children.length > 0);
 
-  const thead: Hast.Element | null = cond ? h('thead', [h('tr', ths)]) : null;
+  const thead: Hast.Element | null = cond ? h('thead', h('tr', ths)) : null;
 
   const bodyTrs = body.map((row): Hast.Element => {
     const children = row.children
-      .map((td) => tableCellHandler(td, 'td'))
+      .map((td) => tcHandler(td, 'td'))
       .filter((e) => e != null);
 
     return h('tr', children);
   });
 
   const tbody: Hast.Element = h('tbody', bodyTrs);
-  const table: Hast.Element = h('table', thead ? [thead, tbody] : [tbody]);
+  const table: Hast.Element = h('table', thead ? [thead, tbody] : tbody);
 
-  return h('div.table-container', [table]);
+  return h('div.table-container', table);
 };
 
 export const linkSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
