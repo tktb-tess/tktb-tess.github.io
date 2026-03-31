@@ -17,6 +17,7 @@ import {
 
 // https://astro.build/config
 export default defineConfig({
+  output: 'static',
   trailingSlash: 'always',
   integrations: [svelte()],
   vite: {
