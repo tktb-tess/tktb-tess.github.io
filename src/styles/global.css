@@ -60,9 +60,10 @@
   --default-transition-duration: 80ms;
   --default-transition-timing-function: cubic-bezier(0.25, 0, 0.1, 1);
   --default-font-feature-settings:
-    'case', 'cv01', 'cv05', 'cv08', 'cv10', 'cv07', 'ss03';
+    'calt' 1, 'cv01' 1, 'cv05' 1, 'cv08' 1, 'cv10' 1, 'cv07' 1, 'ss03' 1;
+  /* contextual-alt, alt-1, l-with-tail, I-with-serif, G-with-spur, alt-eszet, round-quotes-commas */
 
-  --features-tnum: var(--default-font-feature-settings), 'tnum';
+  --features-tnum: var(--default-font-feature-settings), 'tnum' 1; /* tabular-figures */
 
   --spacing-paragraph: 0.75rem;
   --spacing-heading: 2.75rem;
