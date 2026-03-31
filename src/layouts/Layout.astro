@@ -18,12 +18,12 @@ const { title, description } = Astro.props.pageData ??
   <Head {url} {title} {description} />
   <body>
     <header>
-      <h1 id='title'>
+      <h1 class='title'>
         {title}
       </h1>
     </header>
     <main>
-      {url !== '' && <BreadCrumb {url} />}
+      {url !== '/' && <BreadCrumb {url} />}
       <slot />
     </main>
   </body>
@@ -41,4 +41,46 @@ const { title, description } = Astro.props.pageData ??
 
 <style lang="postcss">
   @reference '../styles/global.css';
+
+  @layer components {
+    body {
+      @apply max-xl:flow-root xl:grid bg-side text-text;
+
+      grid-template-areas:
+        'h h h'
+        '. m .'
+        'f f f';
+
+      grid-template-columns:
+        minmax(min(var(--spacing-min-side), 100%), 1fr)
+        minmax(0, var(--spacing-max-main))
+        minmax(min(var(--spacing-min-side), 100%), 1fr);
+
+      grid-template-rows: auto 1fr auto;
+    }
+
+    header,
+    main,
+    footer {
+      @apply flow-root;
+    }
+
+    header {
+      grid-area: h;
+    }
+
+    main {
+      @apply px-4 pbe-36 bg-main min-block-lvh;
+      grid-area: m;
+    }
+
+    footer {
+      grid-area: f;
+    }
+
+    .title {
+      @apply max-sm:text-4xl sm:text-5xl font-extralight font-title 
+        text-balance my-title-mb text-center;
+    }
+  }
 </style>

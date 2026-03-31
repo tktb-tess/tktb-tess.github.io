@@ -18,11 +18,16 @@
     return pro;
   };
 
-  const toHTML = async (md: string) => {
+  const rawHTMLPromise = $derived.by(async () => {
+    const inp = input;
+    await new Promise<void>((r) => setTimeout(r, 500));
+    if (!inp) {
+      return '';
+    }
     const p = await getProcessor();
-    const v = await p.process(md);
+    const v = await p.process(inp);
     return v.toString();
-  };
+  });
 
   onMount(() => {
     timer = setTimeout(async () => {
@@ -92,14 +97,10 @@
   ></textarea>
 </div>
 
-{#if isPreview}
-  <div class="preview">
-    <h3>Preview</h3>
-    {#await toHTML(input) then rawHTML}
-      <NotepadPreview {rawHTML} />
-    {/await}
-  </div>
-{/if}
+<div class="preview {isPreview ? 'flex' : 'hidden'}">
+  <h3>Preview</h3>
+  <NotepadPreview {rawHTMLPromise} />
+</div>
 
 <style lang="postcss">
   @reference '../styles/global.css';
@@ -128,7 +129,7 @@
     }
 
     .preview {
-      @apply flex flex-col gap-2;
+      @apply flex-col gap-2;
 
       > h3 {
         @apply text-center;

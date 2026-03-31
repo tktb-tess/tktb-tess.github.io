@@ -9,11 +9,7 @@ import remarkToc from 'remark-toc';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { fromHtmlIsomorphic } from 'hast-util-from-html-isomorphic';
 import { rehypeHeadingIds } from '@astrojs/markdown-remark';
-import {
-  tableHandler,
-  tdHandler,
-  linkSvg,
-} from './src/plugins/handlers';
+import { tableHandler, tdHandler, linkSvg } from './src/plugins/handlers';
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,6 +21,9 @@ export default defineConfig({
   },
   server: {
     port: 8000,
+  },
+  build: {
+    inlineStylesheets: 'auto',
   },
   markdown: {
     shikiConfig: {

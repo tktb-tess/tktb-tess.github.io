@@ -1,27 +1,32 @@
 <script lang="ts">
   interface Props {
-    rawHTML: string;
+    rawHTMLPromise: Promise<string>;
   }
 
-  const { rawHTML }: Props = $props();
-  $effect(() => {
-    console.log(rawHTML);
-  });
+  const { rawHTMLPromise }: Props = $props();
 </script>
 
-<div class="html-preview-root">
-  {@html rawHTML}
+<div class="xhtml-preview-root">
+  {#await rawHTMLPromise}
+    <p>Loading…</p>
+  {:then rawHTML}
+    {#if rawHTML}
+      {@html rawHTML}
+    {/if}
+  {:catch}
+    <p class="text-caution">An error has occured</p>
+  {/await}
 </div>
 
 <style lang="postcss">
   @reference '../styles/global.css';
 
   @layer components {
-    .html-preview-root {
+    .xhtml-preview-root {
       @apply flow-root border-2 border-border rounded p-4;
     }
 
-    .html-preview-root :global(*) {
+    .xhtml-preview-root :global(*) {
       font: revert;
       border: revert;
       background: revert;

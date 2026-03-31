@@ -166,29 +166,6 @@
     grid-template-rows: auto 1fr auto;
   }
 
-  header,
-  main,
-  footer {
-    @apply flow-root;
-  }
-
-  header {
-    grid-area: h;
-  }
-
-  main {
-    @apply px-4 pbe-36 bg-main min-block-lvh;
-    grid-area: m;
-  }
-
-  footer {
-    grid-area: f;
-  }
-
-  h1 {
-    @apply max-sm:text-4xl sm:text-5xl font-extralight font-title text-balance my-title-mb text-center;
-  }
-
   h2,
   h3,
   h4 {
@@ -207,11 +184,7 @@
     @apply text-xl;
   }
 
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  * + :is(h2, h3, h4, h5, h6) {
     @apply mbs-heading;
   }
 
@@ -220,7 +193,7 @@
     @apply font-semibold text-base;
   }
 
-  :not(li) > :where(p, ul, ol, pre) {
+  :not(li) > * + :where(p, ul, ol, pre) {
     @apply mbs-paragraph;
   }
 

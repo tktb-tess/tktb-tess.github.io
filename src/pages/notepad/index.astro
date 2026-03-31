@@ -1,8 +1,5 @@
 ---
-import '../../styles/global.css';
-import Preloads from '../../components/Preloads.astro';
-import OGP from '../../components/OGP.astro';
-import BreadCrumb from '../../components/BreadCrumb.astro';
+import Layout from '../../layouts/Layout.astro';
 import Notepad from '../../components/Notepad.svelte';
 import { pageData } from '../../modules/data';
 
@@ -11,31 +8,10 @@ const url = Astro.originPathname;
 const { title, description } = pageData.get(url) ?? { title: '[NO DATA]' };
 ---
 
-<!doctype html>
-<html lang='ja'>
-  <head>
-    <meta charset='utf-8' />
-    <Preloads />
-    <OGP {title} {description} {url} />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <meta name='color-scheme' content='light dark' />
-    <link rel='icon' href='/favicon.ico' />
-    <meta name='generator' content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body>
-    <header>
-      <h1 id='title'>
-        {title}
-      </h1>
-    </header>
-    <main>
-      <BreadCrumb {url} />
-      <p>
-        メモ帳です。Markdown形式で書いてPreviewをクリックすると、HTMLプレビューが表示されます。
-        内容はURLに随時保存されるので、リンク共有で他の人も見ることができます。ただし、あまり長い内容は保存できないかもしれません。
-      </p>
-      <Notepad client:load />
-    </main>
-  </body>
-</html>
+<Layout pageData={{ title, description }}>
+  <p>
+    メモ帳です。Markdown形式で書いてPreviewをクリックすると、HTMLプレビューが表示されます。
+    内容はURLに随時保存されるので、リンク共有で他の人も見ることができます。ただし、あまり長い内容は保存できないかもしれません。
+  </p>
+  <Notepad client:load />
+</Layout>
