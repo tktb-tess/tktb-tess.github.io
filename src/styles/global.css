@@ -145,7 +145,7 @@
   }
 
   body {
-    @apply max-lg:flow-root lg:grid bg-side text-text;
+    @apply max-xl:flow-root xl:grid bg-side text-text;
 
     grid-template-areas:
       'h h h'
@@ -253,7 +253,7 @@
   }
 
   table {
-    @apply inline-max max-inline-full me-auto wrap-normal;
+    @apply inline-max max-inline-full me-auto whitespace-nowrap wrap-normal;
 
     :where(& > thead > tr:last-child) {
       @apply border-be-3 border-double border-border-2;
