@@ -59,6 +59,10 @@
 
   --default-transition-duration: 80ms;
   --default-transition-timing-function: cubic-bezier(0.25, 0, 0.1, 1);
+  --default-font-feature-settings:
+    'case', 'cv01', 'cv05', 'cv08', 'cv10', 'cv07', 'ss03';
+
+  --features-tnum: var(--default-font-feature-settings), 'tnum';
 
   --spacing-paragraph: 0.75rem;
   --spacing-heading: 2.75rem;
@@ -66,6 +70,10 @@
   --spacing-title-mb: 3rem;
   --spacing-min-side: 14rem;
   --spacing-max-main: 72rem;
+}
+
+@utility font-features-* {
+  font-feature-settings: --value(--features-*);
 }
 
 @utility grid-cols-auto-* {
@@ -138,10 +146,8 @@
     }
   }
 
-  :disabled,
-  [aria-disabled='true'],
-  [inert] {
-    @apply opacity-60 pointer-events-none cursor-default;
+  :where(:disabled, [aria-disabled='true'], [inert]) {
+    @apply opacity-60! pointer-events-none! cursor-default!;
   }
 
   body {
@@ -158,29 +164,6 @@
       minmax(min(var(--spacing-min-side), 100%), 1fr);
 
     grid-template-rows: auto 1fr auto;
-  }
-
-  header,
-  main,
-  footer {
-    @apply flow-root;
-  }
-
-  header {
-    grid-area: h;
-  }
-
-  main {
-    @apply px-4 pbe-36 bg-main min-block-lvh;
-    grid-area: m;
-  }
-
-  footer {
-    grid-area: f;
-  }
-
-  h1 {
-    @apply max-sm:text-4xl sm:text-5xl font-extralight font-title text-balance my-title-mb text-center;
   }
 
   h2,
@@ -201,11 +184,7 @@
     @apply text-xl;
   }
 
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  * + :is(h2, h3, h4, h5, h6) {
     @apply mbs-heading;
   }
 
@@ -214,7 +193,7 @@
     @apply font-semibold text-base;
   }
 
-  :not(li) > :where(p, ul, ol, pre) {
+  :not(li) > * + :where(p, ul, ol, pre) {
     @apply mbs-paragraph;
   }
 
