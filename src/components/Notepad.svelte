@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import { compress, decompress } from '../modules/compress';
   import type { Proc } from '../modules/convert';
+  import NotepadPreview from './NotepadPreview.svelte';
 
   let input = $state('');
   let timer: ReturnType<typeof setTimeout> | null = null;
@@ -95,9 +96,7 @@
   <div class="preview">
     <h3>Preview</h3>
     {#await toHTML(input) then rawHTML}
-      <div class="html-preview-root">
-        {@html rawHTML}
-      </div>
+      <NotepadPreview {rawHTML} />
     {/await}
   </div>
 {/if}
@@ -134,19 +133,6 @@
       > h3 {
         @apply text-center;
       }
-    }
-
-    .html-preview-root {
-      @apply flow-root border-2 border-border rounded p-4;
-    }
-
-    .html-preview-root :global(*) {
-      font: revert;
-      border: revert;
-      background: revert;
-      color: revert;
-      text-align: revert;
-      word-break: revert;
     }
   }
 </style>
