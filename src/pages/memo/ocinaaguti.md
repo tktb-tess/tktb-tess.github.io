@@ -50,7 +50,7 @@ title: 沖縄語 ラテン文字表記
 | /h/      | h      |
 | /ɸ/      | f      |
 | /m/      | m      |
-| /j/      | j      |
+| /j/      | i      |
 | /r/      | r      |
 | /w/      | w      |
 
@@ -82,8 +82,8 @@ i, y がつくと硬口蓋化を引き起こし、 ci, cy, ti, ty は :ipa[/tɕi
 
 ----
 
-Ninginau taa n ʻnmarejageenaa giju jaji, mata, doo taisecy ni omojuru cimo to doo mamoranderu cimau, taa jaten junugoto sadiacatauru mon jan.  
-Ninginau mooto cara ii cane no sonawataucoto, tagai ni ciaudaijanderu cangaisaa ni coto ni atarandarai naran.
+Ninginau taa n ʻnmareiageenaa giïu iai, mata, doo taisecy ni omoiuru cimo to doo mamoranderu cimau, taa iaten iunugoto sadiacatauru mon ian.  
+Ninginau mooto cara ii cane no sonawataucoto, tagai ni ciaudaiianderu cangaisaa ni coto ni atarandarai naran.
 
 ### 琉歌（かじゃでぃ風節）
 
@@ -94,7 +94,7 @@ Ninginau mooto cara ii cane no sonawataucoto, tagai ni ciaudaijanderu cangaisaa 
 
 ----
 
-ceju no hocorasia ja  
+ceiu no hocorasia ia  
 nawu ni giana tateru  
-cybo de oru hana no  
-cyju ciata goto
+tybo de oru hana no  
+cyiu ciata goto
