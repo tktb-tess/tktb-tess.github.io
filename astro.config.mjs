@@ -9,7 +9,7 @@ import remarkToc from 'remark-toc';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { fromHtmlIsomorphic } from 'hast-util-from-html-isomorphic';
 import { rehypeHeadingIds } from '@astrojs/markdown-remark';
-import { tableHandler, tdHandler, linkSvg } from './src/plugins/handlers';
+import * as H from './src/plugins/handlers';
 
 // https://astro.build/config
 export default defineConfig({
@@ -44,14 +44,14 @@ export default defineConfig({
           properties: {
             className: ['anchor-link'],
           },
-          content: fromHtmlIsomorphic(linkSvg, { fragment: true }).children,
+          content: fromHtmlIsomorphic(H.linkSvg, { fragment: true }).children,
         },
       ],
     ],
     remarkRehype: {
       handlers: {
-        table: tableHandler,
-        textDirective: tdHandler,
+        table: H.tableHandler,
+        textDirective: H.tdHandler,
       },
     },
   },

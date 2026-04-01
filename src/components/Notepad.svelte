@@ -5,8 +5,10 @@
   import NotepadPreview from './NotepadPreview.svelte';
 
   let input = $state('');
-  let timer: ReturnType<typeof setTimeout> | null = null;
   let isPreview = $state(false);
+  let output = $state('');
+
+  let timer: ReturnType<typeof setTimeout> | null = null;
   let pro: Proc | null = null;
   const key = 'd';
 
@@ -14,28 +16,49 @@
     if (!pro) {
       pro = (await import('../modules/convert')).processor;
     }
-
     return pro;
   };
 
-  const rawHTMLPromise = $derived.by(async () => {
-    const inp = input;
-    await new Promise<void>((r) => setTimeout(r, 500));
-    if (!inp) {
-      return '';
+  const updateOutput = async (input: string) => {
+    if (!input.trim()) {
+      output = '';
+      return;
     }
+
     const p = await getProcessor();
-    const v = await p.process(inp);
-    return v.toString();
-  });
+    const v = await p.process(input);
+    output = v.toString();
+  };
+
+  const updateURL = async (input: string) => {
+    const formatted = input
+      .replace(/\x20{3,}/, '  ')
+      .replace(/\n{3,}/, '\n\n')
+      .trim();
+
+    if (!formatted) {
+      history.replaceState(null, '', './');
+      return;
+    }
+
+    const comp = await compress(`${formatted}\n`);
+    const params = new URLSearchParams([[key, comp]]);
+    history.replaceState(null, '', `?${params}`);
+  };
 
   onMount(() => {
     timer = setTimeout(async () => {
-      const params = new URL(document.URL).searchParams;
-      const data = params.get(key);
+      try {
+        const params = new URL(document.URL).searchParams;
+        const data = params.get(key);
 
-      if (data) {
-        input = await decompress(data);
+        if (data) {
+          input = await decompress(data);
+        }
+
+        await updateOutput(input);
+      } catch (e) {
+        console.error(e);
       }
 
       timer = null;
@@ -76,20 +99,15 @@
         }
 
         timer = setTimeout(async () => {
-          const formatted = input
-            .replace(/\x20{3,}/, '  ')
-            .replace(/\n{3,}/, '\n\n')
-            .trim()
-            .concat('\n');
-
-          if (formatted !== '\n') {
-            const compressed = await compress(formatted);
-            const params = new URLSearchParams([[key, compressed]]);
-            history.replaceState(null, '', `?${params}`);
-          } else {
-            history.replaceState(null, '', './');
-          }
-
+          const res = await Promise.allSettled([
+            updateOutput(input),
+            updateURL(input),
+          ]);
+          res.forEach((r) => {
+            if (r.status === 'rejected') {
+              console.error(r.reason);
+            }
+          });
           timer = null;
         }, 500);
       }
@@ -99,7 +117,7 @@
 
 <div class="preview {isPreview ? 'flex' : 'hidden'}">
   <h3>Preview</h3>
-  <NotepadPreview {rawHTMLPromise} />
+  <NotepadPreview rawHTML={output} />
 </div>
 
 <style lang="postcss">
@@ -132,7 +150,7 @@
       @apply flex-col gap-2;
 
       > h3 {
-        @apply text-center;
+        @apply text-center mbs-heading;
       }
     }
   }

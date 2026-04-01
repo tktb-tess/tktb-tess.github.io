@@ -48,32 +48,24 @@ const tcHandler = (tc: Mdast.TableCell, tag: 'td' | 'th') => {
 
   const ph = tc.children[0];
 
-  if (!ph) {
-    return h(tag, tc.children.map(phrasingToHast));
-  }
-
-  if (ph.type !== 'textDirective') {
+  if (!ph || ph.type !== 'textDirective') {
     return h(tag, tc.children.map(phrasingToHast));
   }
 
   if (ph.name === 's') {
-    const parse = (v: string | null | undefined) => {
-      const n = Number.parseInt(v ?? '1');
+    const parse = (v: string) => {
+      const n = Number.parseInt(v);
       return Number.isFinite(n) && n >= 0 ? n : 1;
     };
 
-    const row = parse(ph.attributes?.r);
-    const col = parse(ph.attributes?.c);
+    const rowspan = parse(ph.attributes?.r ?? '1');
+    const colspan = parse(ph.attributes?.c ?? '1');
 
-    if (row === 0 || col === 0) {
+    if (rowspan === 0 || colspan === 0) {
       return null;
     }
 
-    return h(
-      tag,
-      { rowspan: row, colspan: col },
-      ph.children.map(phrasingToHast),
-    );
+    return h(tag, { rowspan, colspan }, ph.children.map(phrasingToHast));
   }
 
   if (ph.name === 'e') {
@@ -87,7 +79,7 @@ export const tableHandler: Handler = (_, node: Mdast.Table) => {
   const [head, ...body] = node.children;
 
   if (head == null) {
-    throw TypeError('`head` is undefined');
+    throw TypeError('unexpected: `head` is undefined');
   }
 
   const ths = head.children
@@ -98,7 +90,7 @@ export const tableHandler: Handler = (_, node: Mdast.Table) => {
 
   const thead: Hast.Element | null = cond ? h('thead', h('tr', ths)) : null;
 
-  const bodyTrs = body.map((row): Hast.Element => {
+  const bodyTrs = body.map((row) => {
     const children = row.children
       .map((td) => tcHandler(td, 'td'))
       .filter((e) => e != null);
@@ -106,12 +98,10 @@ export const tableHandler: Handler = (_, node: Mdast.Table) => {
     return h('tr', children);
   });
 
-  const tbody: Hast.Element = h('tbody', bodyTrs);
-  const table: Hast.Element = h('table', thead ? [thead, tbody] : tbody);
+  const tbody = h('tbody', bodyTrs);
+  const table = h('table', thead ? [thead, tbody] : tbody);
 
   return h('div.table-container', table);
 };
 
-export const linkSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-    <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path>
-  </svg>`;
+export const linkSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>`;
