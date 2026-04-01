@@ -1,21 +1,15 @@
 <script lang="ts">
   interface Props {
-    rawHTMLPromise: Promise<string>;
+    rawHTML: string;
   }
 
-  const { rawHTMLPromise }: Props = $props();
+  const { rawHTML }: Props = $props();
 </script>
 
 <div class="xhtml-preview-root">
-  {#await rawHTMLPromise}
-    <p>Loading…</p>
-  {:then rawHTML}
-    {#if rawHTML}
-      {@html rawHTML}
-    {/if}
-  {:catch}
-    <p class="text-caution">An error has occured</p>
-  {/await}
+  {#if rawHTML}
+    {@html rawHTML}
+  {/if}
 </div>
 
 <style lang="postcss">
@@ -33,6 +27,9 @@
       color: revert;
       text-align: revert;
       word-break: revert;
+      padding-inline: revert;
+      margin-inline: revert;
+      inline-size: revert;
     }
   }
 </style>
