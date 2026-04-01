@@ -139,10 +139,9 @@
   }
 
   @supports (word-break: auto-phrase) {
-    [lang^='ja'] {
-      word-break: auto-phrase;
-
-      @media (width >= 40rem) {
+    @media (width >= 40rem) {
+      [lang^='ja'] {
+        word-break: auto-phrase;
         text-align: justify;
       }
     }
