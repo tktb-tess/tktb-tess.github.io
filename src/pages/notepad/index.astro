@@ -1,14 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Notepad from '../../components/Notepad.svelte';
-import { pageData } from '../../modules/data';
 
 interface Props {}
-const url = Astro.originPathname;
-const { title, description } = pageData.get(url) ?? { title: '[NO DATA]' };
 ---
 
-<Layout pageData={{ title, description }}>
+<Layout>
   <p>
     メモ帳です。Markdown形式で書いてPreviewをクリックすると、HTMLプレビューが表示されます。
     内容はURLに随時保存されるので、リンク共有で他の人も見ることができます。ただし、あまり長い内容は保存できないかもしれません。
