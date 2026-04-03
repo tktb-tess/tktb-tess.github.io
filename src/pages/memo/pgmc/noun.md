@@ -3,6 +3,7 @@ layout: ../../../layouts/MdLayout.astro
 title: ゲルマン祖語 名詞
 ---
 
+<div class="sr-only"></div>
 <div class="contents [&_:where(table_td)]:text-start">
 
 ## 目次
@@ -280,16 +281,16 @@ PIEの様々な種類の *n*-幹から派生した一般的な名詞群で、そ
 | 与格   | \*namin-i  | \*namn-amaz |
 | 具格   | \*namin-ē? | \*namn-amiz |
 
-controversialなKlugeの法則を認めれば、より複雑な末子音と幹母音の交替パラダイムが再構される。Kroonenによれば[^1][^2]、*\*hrīþô* (Kroonenによる再構形だと *\*hrīþę̄, \*hrīþǭ*)「熱」において、語尾の元のPIE amphikineticまたはhysterokinetic *n*-幹の単数属格・複数属格・複数対格(*\*-n-ós, \*-nóm, \*-n-ń̥s*)で、語幹の直後に続いた *n* によって子音の長化が引き起こされ、重子音化した。PIE単数処格(*\*-én-i*)由来の単数与格、また複数主格(*\*-(é/ó)n-es*)ではこれは起こらず、Vernerの法則が起こった。複数与格(*\*-n̥-mis*)では、*n* は隣接していたものの成節子音であったため、前段階で *\*-un-* に変化し、重子音化を回避した。
+controversialなKlugeの法則を認めれば、より複雑な末子音と幹母音の交替パラダイムが再構される。Kroonenによれば[^1]<sup>,</sup>[^2]、*\*hrīþô* (Kroonenによる再構形だと *\*hrīþę̄, \*hrīþǭ*)「熱」において、語尾の元のPIE amphikineticまたはhysterokinetic *n*-幹の単数属格・複数属格・複数対格(*\*-n-ós, \*-nóm, \*-n-ń̥s*)で、語幹の直後に続いた *n* によって子音の長化が引き起こされ、重子音化した。PIE単数処格(*\*-én-i*)由来の単数与格、また複数主格(*\*-(é/ó)n-es*)ではこれは起こらず、Vernerの法則が起こった。複数与格(*\*-n̥-mis*)では、*n* は隣接していたものの成節子音であったため、前段階で *\*-un-* に変化し、重子音化を回避した。
 
 ### *\*hrīþô* m.「熱」(Kroonen(2009)による再構)
 
-|      | 単数                               | 複数                           |
-| ---- | ---------------------------------- | ------------------------------ |
-| 主格 | \*hrīþ(ę̄/ǭ) < \*kréyt-ō, \*krit-ḗn | \*hridaniz  < \*krit-(é/ó)n-es |
-| 対格 | \*hridanų < \*krit-(é/ó)n-m̥        | \*hrittanunz < \*krit-n-ń̥s     |
-| 属格 | \*hrittaz < \*krit-n-ós            | \*hrittą   < \*krit-n-óm       |
-| 与格 | \*hridini  < \*krit-én-i           | \*hrītummiz < \*kréyt-n̥-mis    |
+|      | 単数                        | 複数                           |
+| ---- | --------------------------- | ------------------------------ |
+| 主格 | \*hrīþ(ę̄/ǭ) < \*kréyt-ō     | \*hridaniz  < \*krit-(é/ó)n-es |
+| 対格 | \*hridanų < \*krit-(é/ó)n-m̥ | \*hrittanunz < \*krit-n-ń̥s     |
+| 属格 | \*hrittaz < \*krit-n-ós     | \*hrittą   < \*krit-n-óm       |
+| 与格 | \*hridini  < \*krit-én-i    | \*hrītummiz < \*kréyt-n̥-mis    |
 
 ## *ōn*-幹
 

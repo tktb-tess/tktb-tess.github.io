@@ -171,7 +171,7 @@
   }
 
   * + :is(h2, h3, h4, h5, h6) {
-    @apply mbs-heading;
+    @apply mbs-heading scroll-mbs-2;
   }
 
   h5,
@@ -262,7 +262,7 @@
   }
 
   .anchor-link {
-    @apply absolute -inset-e-6 inset-bs-[calc(50%-0.5rem)] opacity-0 transition-opacity duration-140 text-text;
+    @apply max-md:hidden absolute -inset-e-6 inset-bs-[calc(50%-0.5rem)] opacity-0 transition-opacity duration-140 text-text;
 
     :where(svg) {
       @apply inline-4 block-auto fill-current;
