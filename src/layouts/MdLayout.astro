@@ -14,13 +14,3 @@ const { title, description } = frontmatter;
 <Layout pageData={{ title, description }}>
   <slot />
 </Layout>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const key = 'gruss';
-    if (!localStorage.getItem(key)) {
-      const value = 'V2lsbGtvbW1lbiBhdWYgbWVpbmVyIFdlYnNlaXRlIQ==';
-      localStorage.setItem(key, value);
-    }
-  });
-</script>
