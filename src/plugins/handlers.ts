@@ -88,7 +88,7 @@ export const tableHandler: Handler = (_, node: Mdast.Table) => {
 
   const cond = ths.some((th) => th.children.length > 0);
 
-  const thead: Hast.Element | null = cond ? h('thead', h('tr', ths)) : null;
+  const thead = cond ? h('thead', h('tr', ths)) : null;
 
   const bodyTrs = body.map((row) => {
     const children = row.children
