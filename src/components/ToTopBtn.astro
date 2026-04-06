@@ -27,28 +27,35 @@ interface Props {}
 </style>
 
 <script>
-  const btn = document.querySelector('.to-top-btn');
-  if (!(btn instanceof HTMLButtonElement)) {
-    throw TypeError('`btn` is undefined');
-  }
-
-  btn.addEventListener(
-    'click',
-    (ev) => {
-      ev.preventDefault();
-      scroll({ top: 0, behavior: 'smooth' });
-    },
-    false,
-  );
-
   window.addEventListener(
-    'scroll',
+    'DOMContentLoaded',
     () => {
-      if (scrollY >= 600) {
-        btn.setAttribute('data-visible', '');
-      } else {
-        btn.removeAttribute('data-visible');
+      const btn = document.querySelector('.to-top-btn');
+
+      if (!(btn instanceof HTMLButtonElement)) {
+        throw TypeError('`btn` is undefined');
       }
+
+      btn.addEventListener(
+        'click',
+        (ev) => {
+          ev.preventDefault();
+          scroll({ top: 0, behavior: 'smooth' });
+        },
+        false,
+      );
+
+      window.addEventListener(
+        'scroll',
+        () => {
+          if (scrollY >= 600) {
+            btn.setAttribute('data-visible', '');
+          } else {
+            btn.removeAttribute('data-visible');
+          }
+        },
+        false,
+      );
     },
     false,
   );
