@@ -10,13 +10,15 @@ interface Props {
 }
 
 const url = Astro.originPathname;
-const { title, description } = Astro.props.pageData ??
+const { title: title, description } = Astro.props.pageData ??
   pageData.get(url) ?? { title: '[NO DATA]' };
+
+const tabTitle = url === '/' ? title : `${title} | tktb-tess.github.io`;
 ---
 
 <!doctype html>
 <html lang='ja'>
-  <Head {url} {title} {description} />
+  <Head {url} title={tabTitle} {description} />
   <body>
     <header>
       <h1 class='title'>
