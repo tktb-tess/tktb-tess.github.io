@@ -1,0 +1,55 @@
+---
+interface Props {}
+---
+
+<button class='to-top-btn' aria-label='ページトップにスクロール'></button>
+
+<style lang="postcss">
+  @reference '../styles/global.css';
+
+  @layer components {
+    .to-top-btn {
+      @apply hidden data-visible:grid place-items-center fixed inset-e-6 inset-be-6 p-4 rounded
+      bg-accent hover-focus:bg-accent-lighter text-textinv
+      hover-focus:[&::before]:-translate-y-px
+      opacity-0 data-visible:opacity-100 data-visible:starting:opacity-0
+      transition-[background-color,display,opacity] allow-discrete duration-240;
+
+      &::before {
+        content: '';
+        @apply block border-t-2 border-l-2 border-current size-2 translate-y-0.5 transition-transform;
+        rotate: 45deg;
+      }
+
+
+    }
+  }
+</style>
+
+<script>
+  const btn = document.querySelector('.to-top-btn');
+  if (!(btn instanceof HTMLButtonElement)) {
+    throw TypeError('`btn` is undefined');
+  }
+
+  btn.addEventListener(
+    'click',
+    (ev) => {
+      ev.preventDefault();
+      scroll({ top: 0, behavior: 'smooth' });
+    },
+    false,
+  );
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (scrollY >= 600) {
+        btn.setAttribute('data-visible', '');
+      } else {
+        btn.removeAttribute('data-visible');
+      }
+    },
+    false,
+  );
+</script>

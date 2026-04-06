@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Head from '../components/Head.astro';
 import BreadCrumb from '../components/BreadCrumb.astro';
+import ToTopBtn from '../components/ToTopBtn.astro';
 import { pageData, type PageData } from '../modules/data';
 
 interface Props {
@@ -26,6 +27,7 @@ const { title, description } = Astro.props.pageData ??
       {url !== '/' && <BreadCrumb {url} />}
       <slot />
     </main>
+    <ToTopBtn />
   </body>
 </html>
 
