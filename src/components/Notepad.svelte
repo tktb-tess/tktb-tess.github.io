@@ -9,8 +9,9 @@
   let output = $state('');
 
   let timer: ReturnType<typeof setTimeout> | null = null;
-  let pro: Proc | null = null;
+  let pro: Proc | undefined;
   const key = 'd';
+  const delay = 500;
 
   const getProcessor = async () => {
     if (!pro) {
@@ -62,7 +63,7 @@
       }
 
       timer = null;
-    }, 500);
+    }, delay);
 
     return () => {
       if (timer != null) {
@@ -103,13 +104,15 @@
             updateOutput(input),
             updateURL(input),
           ]);
+
           res.forEach((r) => {
             if (r.status === 'rejected') {
               console.error(r.reason);
             }
           });
+
           timer = null;
-        }, 500);
+        }, delay);
       }
     }
   ></textarea>
