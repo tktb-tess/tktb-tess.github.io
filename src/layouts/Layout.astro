@@ -43,8 +43,12 @@ const tabTitle = url === '/' ? title : `${title} | tktb-tess.github.io`;
 
 <script>
   import * as U from '@tktb-tess/util-fns';
+  const N = 'UtilFns';
+  const value = { ...U, [Symbol.toStringTag]: N, __proto__: null };
+
+  Object.freeze(value);
   Object.defineProperty(window, 'UtilFns', {
-    value: U,
+    value,
     enumerable: true,
   });
 </script>
@@ -58,7 +62,7 @@ const tabTitle = url === '/' ? title : `${title} | tktb-tess.github.io`;
 
       grid-template-areas:
         'h h h'
-        '. m .'
+        'l m r'
         'f f f';
 
       grid-template-columns:
