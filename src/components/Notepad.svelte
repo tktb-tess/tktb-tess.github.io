@@ -4,14 +4,14 @@
   import type { Proc } from '../modules/convert';
   import NotepadPreview from './NotepadPreview.svelte';
 
-  let input = $state('');
-  let isPreview = $state(false);
-  let output = $state('');
-
   let timer: ReturnType<typeof setTimeout> | null = null;
   let pro: Proc | undefined;
   const key = 'd';
   const delay = 500;
+
+  let input = $state('');
+  let isPreview = $state(false);
+  let output = $state('');
 
   const getProcessor = async () => {
     if (!pro) {
@@ -20,7 +20,7 @@
     return pro;
   };
 
-  const updateOutput = async (input: string) => {
+  const updateOutput = async () => {
     if (!input.trim()) {
       output = '';
       return;
@@ -31,7 +31,7 @@
     output = v.toString();
   };
 
-  const updateURL = async (input: string) => {
+  const updateURL = async () => {
     const formatted = input
       .replace(/\x20{3,}/, '  ')
       .replace(/\n{3,}/, '\n\n')
@@ -57,7 +57,7 @@
           input = await decompress(data);
         }
 
-        await updateOutput(input);
+        await updateOutput();
       } catch (e) {
         console.error(e);
       }
@@ -91,8 +91,8 @@
     id="ntpd-input"
     bind:value={
       () => input,
-      (ii) => {
-        input = ii;
+      (_in) => {
+        input = _in;
 
         if (timer != null) {
           clearTimeout(timer);
@@ -100,16 +100,11 @@
         }
 
         timer = setTimeout(async () => {
-          const res = await Promise.allSettled([
-            updateOutput(input),
-            updateURL(input),
-          ]);
+          const res = await Promise.allSettled([updateOutput(), updateURL()]);
 
-          res.forEach((r) => {
-            if (r.status === 'rejected') {
-              console.error(r.reason);
-            }
-          });
+          res
+            .filter((r) => r.status === 'rejected')
+            .forEach((r) => console.log(r.reason));
 
           timer = null;
         }, delay);
@@ -120,7 +115,11 @@
 
 <div class="preview {isPreview ? 'flex' : 'hidden'}">
   <h3>Preview</h3>
-  <NotepadPreview rawHTML={output} />
+  <div class="xhtml-preview-root">
+    {#if output}
+      {@html output}
+    {/if}
+  </div>
 </div>
 
 <style lang="postcss">
@@ -155,6 +154,22 @@
       > h3 {
         @apply text-center mbs-heading;
       }
+    }
+
+    .xhtml-preview-root {
+      @apply flow-root border-2 border-border rounded p-4;
+    }
+
+    .xhtml-preview-root :global(*) {
+      font: revert;
+      border: revert;
+      background: revert;
+      color: revert;
+      text-align: revert;
+      word-break: revert;
+      padding-inline: revert;
+      margin-inline: revert;
+      inline-size: revert;
     }
   }
 </style>
