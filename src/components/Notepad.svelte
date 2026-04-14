@@ -1,8 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { compress, decompress } from '../modules/compress';
+  import { compressString, decompressString } from '@tktb-tess/util-fns/util';
   import type { Proc } from '../modules/convert';
-  import NotepadPreview from './NotepadPreview.svelte';
 
   let timer: ReturnType<typeof setTimeout> | null = null;
   let pro: Proc | undefined;
@@ -42,7 +41,7 @@
       return;
     }
 
-    const comp = await compress(`${formatted}\n`);
+    const comp = await compressString(`${formatted}\n`, 'gzip');
     const params = new URLSearchParams([[key, comp]]);
     history.replaceState(null, '', `?${params}`);
   };
@@ -54,7 +53,7 @@
         const data = params.get(key);
 
         if (data) {
-          input = await decompress(data);
+          input = await decompressString(data, 'gzip');
         }
 
         await updateOutput();

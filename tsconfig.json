@@ -3,7 +3,8 @@
   "compilerOptions": {
     "erasableSyntaxOnly": true,
     "noUncheckedIndexedAccess": true,
-    "noImplicitOverride": true
+    "noImplicitOverride": true,
+    "verbatimModuleSyntax": true,
   },
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"]

@@ -24,8 +24,8 @@ importers:
         specifier: ^4.2.2
         version: 4.2.2(vite@7.3.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0))
       '@tktb-tess/util-fns':
-        specifier: ^0.12.5
-        version: 0.12.5
+        specifier: ^0.13.0
+        version: 0.13.0
       '@types/hast':
         specifier: ^3.0.4
         version: 3.0.4
@@ -773,8 +773,8 @@ packages:
     peerDependencies:
       vite: ^5.2.0 || ^6 || ^7 || ^8
 
-  '@tktb-tess/util-fns@0.12.5':
-    resolution: {integrity: sha512-cS1e9qFRl3lmwZn7VUSWcok8ZUTJKP0uMU9c7vc1XlcdrWqDNIFWUJ804Cr28afBynf3YbDFed899LSoqvjmOA==}
+  '@tktb-tess/util-fns@0.13.0':
+    resolution: {integrity: sha512-l2GdKTP6K3n4gV9Eox4izSeIUddaagwiu8QlEiPsuw5FrdoIUOgEf3z1Kd6wA19GcWzt1ehdbyDUkvwWD3gbRA==}
     engines: {node: '>=22', pnpm: '>=10'}
 
   '@types/debug@4.1.13':
@@ -2406,7 +2406,7 @@ snapshots:
       tailwindcss: 4.2.2
       vite: 7.3.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0)
 
-  '@tktb-tess/util-fns@0.12.5': {}
+  '@tktb-tess/util-fns@0.13.0': {}
 
   '@types/debug@4.1.13':
     dependencies:
