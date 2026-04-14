@@ -3,6 +3,11 @@ layout: ../../../layouts/MdLayout.astro
 title: Hopf fibration
 ---
 
+*Hopf fibration* $S^3 \to S^2$ の構築方法。
+
+## 目次
+
+## Riemann球面を用いた方法
 
 3次元球面
 
@@ -16,7 +21,7 @@ $$
 S^3=\left\lbrace(z_0,z_1)\in\mathbb{C}^2 \ |\ |z_0|^2+|z_1|^2=1\right\rbrace
 $$
 
-となる。 $\mathbb{C}^2 \setminus \{(0,0)\}$ からリーマン球面 $\mathbb{C}\mathrm{P}^1 \simeq \mathbb{C} \cup \lbrace\infty\rbrace$ への写像
+となる。 $\mathbb{C}^2 \setminus \{(0,0)\}$ からRiemann球面 $\mathbb{C}\mathrm{P}^1 \simeq \mathbb{C} \cup \lbrace\infty\rbrace$ への写像
 
 $$
 (z_0, z_1) \mapsto [z_0 : z_1]
@@ -52,8 +57,7 @@ $z_1 \neq 0$ のとき
 $$
 \begin{alignedat}{1}
 \frac{z_0}{z_1}
-&\mapsto
-\frac{1}{|z_0/z_1|^2+1}\left(2\text{Re}{\frac{z_0}{z_1}},2\text{Im}{\frac{z_0}{z_1}},\left|\frac{z_0}{z_1}\right|^2-1\right) \\ \\
+&\mapsto \frac{1}{|z_0/z_1|^2+1}\left(2\text{Re}{\frac{z_0}{z_1}},2\text{Im}{\frac{z_0}{z_1}},\left|\frac{z_0}{z_1}\right|^2-1\right) \\ \\
 &= \frac{1}{|z_0|^2+|z_1|^2}\left(2\text{Re}{\left(|z_1|^2 \cdot \frac{z_0}{z_1}\right)},2\text{Im}{\left(|z_1|^2 \cdot \frac{z_0}{z_1}\right)},|z_0|^2-|z_1|^2\right) \\ \\
 &= \left(2\text{Re}{\left(z_1z_1^* \cdot \frac{z_0}{z_1}\right)},2\text{Im}{\left(z_1z_1^* \cdot \frac{z_0}{z_1}\right)},|z_0|^2-|z_1|^2\right) \\ \\
 &= \left(2\text{Re}\ z_0z_1^*, 2\text{Im}\ z_0z_1^*,|z_0|^2-|z_1|^2\right)
@@ -62,7 +66,7 @@ $$
 
 となる。 $z_1=0$ のときもこの式を満たす。
 
-よって、Hopf fibration $S^3 \to S^2$ の明示的な写像は
+よって、*Hopf fibration* $S^3 \to S^2$ の明示的な写像は
 
 $$
 (z_0,z_1) \mapsto \left(2\text{Re}\ z_0z_1^*,\ 2\text{Im}\ z_0z_1^*,\ |z_0|^2-|z_1|^2\right)
@@ -84,3 +88,42 @@ $$
 $$
 (x_0,y_0,x_1,y_1) \mapsto \left(2(x_0x_1+y_0y_1),\ 2(y_0x_1-x_0y_1),\ x_0^2+y_0^2-x_1^2-y_1^2\right)
 $$
+
+## 四元数を用いた方法
+
+4次元空間上の各点 $(x_0,x_1,x_2,x_3)$ を四元数 $x_0+x_1\mathbf{i}+x_2\mathbf{j}+x_3\mathbf{k}$ と同一視する。3次元球面は単位四元数全体の集合となり、また乗法に関して群となる。つまり
+
+$$
+S^3 = \left\{q \in \mathbb{H}\,|\,|q|^2=1\right\}
+$$
+
+である。
+
+また、3次元実空間上の点 $(x_0,x_1,x_2)$ を純四元数 $x_0\mathbf{i}+x_1\mathbf{j}+x_2\mathbf{k}$ と同一視する。
+
+$$
+\mathbb{R}^3 = \left\{\,p \in \mathbb{H}\,|\,\operatorname{Re}{p}=0\right\}
+$$
+
+$S^3$ から3次回転群への写像 $\rho$ を以下のように定義する。
+
+$$
+\rho : S^3 \to \text{SO}(3)
+$$
+
+$$
+\rho_q(p) = qpq^{*} \quad (p \in \mathbb{R}^3,\,q \in S^3)
+$$
+
+ただし $q^{*}$ は $q$ の四元共役。
+
+この $p$ を $\mathbf{i}$ に固定すれば、像もまた $S^2$ 上になる。この写像
+
+$$
+\begin{gather*}
+h : S^3 \to S^2 \\
+q \mapsto \rho_q(\mathbf{i}) = q\mathbf{i}q^{*}
+\end{gather*}
+$$
+
+が *Hopf fibration* である。
