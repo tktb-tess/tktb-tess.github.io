@@ -1,10 +1,10 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { compressString, decompressString } from '@tktb-tess/util-fns/util';
-  import type { Proc } from '../modules/convert';
+  import type { MtoH } from '../modules/convert';
 
   let timer: ReturnType<typeof setTimeout> | null = null;
-  let pro: Proc | undefined;
+  let pro: MtoH | undefined;
   const key = 'd';
   const delay = 500;
 

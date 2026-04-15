@@ -9,7 +9,7 @@ import type * as Mdast from 'mdast';
 import type * as Hast from 'hast';
 import type { Processor } from 'unified';
 
-export type Proc = Processor<
+export type MtoH = Processor<
   Mdast.Root,
   Mdast.Root,
   Hast.Root,

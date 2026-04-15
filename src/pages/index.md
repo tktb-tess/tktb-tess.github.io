@@ -48,4 +48,4 @@ if (gruss != null) {
 
   メモ帳
 
-- [実験場](/xprmnt/)
+- [Experiment](/xprmnt/)
