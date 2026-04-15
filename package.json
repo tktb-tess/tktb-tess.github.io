@@ -19,6 +19,7 @@
     "@astrojs/svelte": "^8.0.4",
     "@tailwindcss/vite": "^4.2.2",
     "@tktb-tess/util-fns": "^0.13.0",
+    "@tktb-tess/xenharmonic-tool": "^0.5.6",
     "@types/hast": "^3.0.4",
     "@types/mdast": "^4.0.4",
     "@types/node": "^24.12.2",

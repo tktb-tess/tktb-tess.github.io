@@ -43,13 +43,24 @@ const tabTitle = url === '/' ? title : `${title} | tktb-tess.github.io`;
 
 <script>
   import * as U from '@tktb-tess/util-fns';
-  const N = 'UtilFns';
-  const value = { ...U, [Symbol.toStringTag]: N, __proto__: null };
+  import * as X from '@tktb-tess/xenharmonic-tool';
 
-  Object.freeze(value);
-  Object.defineProperty(window, 'UtilFns', {
-    value,
-    enumerable: true,
+  const N = 'UtilFns';
+  const N2 = 'XenTool';
+  const mod1 = { ...U, [Symbol.toStringTag]: N, __proto__: null };
+  const mod2 = { ...X, [Symbol.toStringTag]: N2, __proto__: null };
+
+  Object.freeze(mod1);
+  Object.freeze(mod2);
+  Object.defineProperties(window, {
+    [N]: {
+      value: mod1,
+      enumerable: true,
+    },
+    [N2]: {
+      value: mod2,
+      enumerable: true,
+    },
   });
 </script>
 
