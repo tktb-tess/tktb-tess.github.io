@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { pageData } from '../../modules/data';
+
+const path = Astro.url.pathname;
+const pag = pageData.get(path) ?? { title: '[NO DATA]' };
+---
+
+<Layout pageData={pag}>
+  <p>?????</p>
+</Layout>
+
+<style></style>
+
+<script>
+  import * as U from '@tktb-tess/util-fns';
+  import * as X from '@tktb-tess/xenharmonic-tool';
+
+  const N = 'UtilFns';
+  const N2 = 'XenTool';
+  const mod1 = { ...U, [Symbol.toStringTag]: N, __proto__: null } as const;
+  const mod2 = { ...X, [Symbol.toStringTag]: N2, __proto__: null } as const;
+  const f = (o: unknown) => Object.prototype.toString.call(o);
+
+  Object.defineProperties(window, {
+    [N]: {
+      value: Object.freeze(mod1),
+      enumerable: true,
+    },
+    [N2]: {
+      value: Object.freeze(mod2),
+      enumerable: true,
+    },
+  });
+
+  [mod1, mod2].forEach((m) => {
+    console.log(f(m) + ':\n', m);
+  });
+</script>
