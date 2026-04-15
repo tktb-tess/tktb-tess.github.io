@@ -33,37 +33,6 @@ const tabTitle = url === '/' ? title : `${title} | tktb-tess.github.io`;
   </body>
 </html>
 
-<script>
-  const key = 'gruss';
-  if (!localStorage.getItem(key)) {
-    const value = 'V2lsbGtvbW1lbiBhdWYgbWVpbmVyIFdlYnNlaXRlIQ==';
-    localStorage.setItem(key, value);
-  }
-</script>
-
-<script>
-  import * as U from '@tktb-tess/util-fns';
-  import * as X from '@tktb-tess/xenharmonic-tool';
-
-  const N = 'UtilFns';
-  const N2 = 'XenTool';
-  const mod1 = { ...U, [Symbol.toStringTag]: N, __proto__: null };
-  const mod2 = { ...X, [Symbol.toStringTag]: N2, __proto__: null };
-
-  Object.freeze(mod1);
-  Object.freeze(mod2);
-  Object.defineProperties(window, {
-    [N]: {
-      value: mod1,
-      enumerable: true,
-    },
-    [N2]: {
-      value: mod2,
-      enumerable: true,
-    },
-  });
-</script>
-
 <style lang="postcss">
   @reference '../styles/global.css';
 
@@ -109,3 +78,11 @@ const tabTitle = url === '/' ? title : `${title} | tktb-tess.github.io`;
     }
   }
 </style>
+
+<script>
+  const key = 'gruss';
+  if (!localStorage.getItem(key)) {
+    const value = 'V2lsbGtvbW1lbiBhdWYgbWVpbmVyIFdlYnNlaXRlIQ==';
+    localStorage.setItem(key, value);
+  }
+</script>
