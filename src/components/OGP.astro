@@ -7,18 +7,18 @@ interface Props {
 
 const { title, description = title, url } = Astro.props;
 const base = 'https://tktb-tess.github.io';
-const pageUrl = new URL(url, base).href;
-const linkCardUrl = new URL('/link_card.png', base).href;
+const pageURL = new URL(url, base).href;
+const linkCardURL = new URL('/link_card.png', base).href;
 ---
 
 <meta name='description' content={description} />
 <meta property='og:title' content={title} />
 <meta property='og:description' content={description} />
 <meta property='og:type' content='website' />
-<meta property='og:url' content={pageUrl} />
+<meta property='og:url' content={pageURL} />
 <meta property='og:site_name' content='tktb-tess.github.io' />
-<meta property='og:image' content={linkCardUrl} />
+<meta property='og:image' content={linkCardURL} />
 <meta name='twitter:card' content='summary' />
 <meta name='twitter:title' content={title} />
 <meta name='twitter:description' content={description} />
-<meta name='twitter:image' content={linkCardUrl} />
+<meta name='twitter:image' content={linkCardURL} />
