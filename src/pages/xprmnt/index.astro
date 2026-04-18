@@ -1,12 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { pageData } from '../../modules/data';
-
-const path = Astro.url.pathname;
-const pag = pageData.get(path) ?? { title: '[NO DATA]' };
 ---
 
-<Layout pageData={pag}>
+<Layout>
   <p>?????</p>
 </Layout>
 
