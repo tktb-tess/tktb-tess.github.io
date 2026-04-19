@@ -1,13 +1,13 @@
 ---
 interface Props {
   readonly title: string;
-  readonly url: string;
+  readonly path: string;
   readonly description?: string;
 }
 
-const { title, description = title, url } = Astro.props;
+const { title, description = title, path } = Astro.props;
 const base = 'https://tktb-tess.github.io';
-const pageURL = new URL(url, base).href;
+const pageURL = new URL(path, base).href;
 const linkCardURL = new URL('/link_card.png', base).href;
 ---
 

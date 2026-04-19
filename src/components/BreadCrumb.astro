@@ -3,7 +3,7 @@ import HomeIcon from '../assets/HomeIcon.svg';
 import { pageData, type PageData } from '../modules/data';
 
 interface Props {
-  readonly url: string;
+  readonly path: string;
 }
 
 interface MdProps {
@@ -32,8 +32,8 @@ const getTitle = (href: string) => {
   return mds.get(href)?.title ?? pageData.get(href)?.title ?? '[NO DATA]';
 };
 
-const { url } = Astro.props;
-const dirs = url.split('/').filter((s) => s !== '');
+const { path } = Astro.props;
+const dirs = path.split('/').filter((s) => s !== '');
 
 const pages = dirs.map((_, i) => {
   const h_ = dirs.slice(0, i).join('/');
@@ -42,7 +42,7 @@ const pages = dirs.map((_, i) => {
   return { href, title } as const;
 });
 
-const currentText = getTitle(url) ?? '[NO DATA]';
+const currentText = getTitle(path) ?? '[NO DATA]';
 ---
 
 <nav class='breadcrumb' aria-label='パンくずリスト'>

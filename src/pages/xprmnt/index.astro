@@ -12,9 +12,39 @@ import Layout from '../../layouts/Layout.astro';
   import * as U from '@tktb-tess/util-fns';
   import * as X from '@tktb-tess/xenharmonic-tool';
 
+  const createWorker = <T,>(
+    onmessage: (ev: MessageEvent<T>) => unknown,
+    onerror?: (ev: ErrorEvent) => unknown,
+  ): [worker: Worker, revoke: () => void] => {
+    const msgStr = `self.onmessage=${onmessage};`;
+    const errStr = onerror ? `self.onerror=${onerror};` : '';
+    const str = `(()=>{${msgStr}${errStr}})();`;
+    const blob = new Blob([str], { type: 'text/javascript' });
+    const burl = URL.createObjectURL(blob);
+    const worker = new Worker(burl);
+    const revoke = () => URL.revokeObjectURL(burl);
+    return [worker, revoke];
+  };
+
+  const getPrimeBase64URL = (bits: number) => {
+    const p = U.getRandPrimeByBitLength(bits, true);
+    const s = p.toString(16);
+    const s2 = s.length & 1 ? '0' + s : s;
+    const bin = Uint8Array.from(s2.matchAll(/.{2}/g), (match) =>
+      Number.parseInt(match[0], 16),
+    );
+    return U.toBase64URL(bin);
+  };
+
   const N = 'UtilFns';
   const N2 = 'XenTool';
-  const mod1 = { ...U, [Symbol.toStringTag]: N, __proto__: null } as const;
+  const mod1 = {
+    ...U,
+    getPrimeBase64URL,
+    createWorker,
+    [Symbol.toStringTag]: N,
+    __proto__: null,
+  } as const;
   const mod2 = { ...X, [Symbol.toStringTag]: N2, __proto__: null } as const;
   const f = (o: unknown) => Object.prototype.toString.call(o);
 
