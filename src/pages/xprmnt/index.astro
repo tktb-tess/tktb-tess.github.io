@@ -15,15 +15,15 @@ import Layout from '../../layouts/Layout.astro';
   const createWorker = <T,>(
     onmessage: (ev: MessageEvent<T>) => unknown,
     onerror?: (ev: ErrorEvent) => unknown,
-  ): [worker: Worker, revoke: () => void] => {
+  ) => {
     const msgStr = `self.onmessage=${onmessage};`;
     const errStr = onerror ? `self.onerror=${onerror};` : '';
     const str = `(()=>{${msgStr}${errStr}})();`;
     const blob = new Blob([str], { type: 'text/javascript' });
     const burl = URL.createObjectURL(blob);
     const worker = new Worker(burl);
-    const revoke = () => URL.revokeObjectURL(burl);
-    return [worker, revoke];
+    setTimeout(() => URL.revokeObjectURL(burl), 30000);
+    return worker;
   };
 
   const getPrimeBase64URL = (bits: number) => {
