@@ -12,6 +12,20 @@ import Layout from '../../layouts/Layout.astro';
   import * as U from '@tktb-tess/util-fns';
   import * as X from '@tktb-tess/xenharmonic-tool';
 
+  const createWorker = <T,>(
+    onmessage: (ev: MessageEvent<T>) => unknown,
+    onerror?: (ev: ErrorEvent) => unknown,
+  ): [worker: Worker, revoke: () => void] => {
+    const msgStr = `self.onmessage=${onmessage};`;
+    const errStr = onerror ? `self.onerror=${onerror};` : '';
+    const str = `(()=>{${msgStr}${errStr}})();`;
+    const blob = new Blob([str], { type: 'text/javascript' });
+    const burl = URL.createObjectURL(blob);
+    const worker = new Worker(burl);
+    const revoke = () => URL.revokeObjectURL(burl);
+    return [worker, revoke];
+  };
+
   const N = 'UtilFns';
   const N2 = 'XenTool';
   const mod1 = { ...U, [Symbol.toStringTag]: N, __proto__: null } as const;
@@ -27,9 +41,13 @@ import Layout from '../../layouts/Layout.astro';
       value: Object.freeze(mod2),
       enumerable: true,
     },
+    createWorker: {
+      value: createWorker,
+      enumerable: true,
+    },
   });
 
-  [mod1, mod2].forEach((m) => {
+  [mod1, mod2, createWorker].forEach((m) => {
     console.log(f(m) + ':\n', m);
   });
 </script>
