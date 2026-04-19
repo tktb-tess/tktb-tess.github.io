@@ -26,9 +26,25 @@ import Layout from '../../layouts/Layout.astro';
     return [worker, revoke];
   };
 
+  const getPrimeBase64URL = (bits: number) => {
+    const p = U.getRandPrimeByBitLength(bits, true);
+    const s = p.toString(16);
+    const s2 = s.length & 1 ? '0' + s : s;
+    const bin = Uint8Array.from(s2.matchAll(/.{2}/g), (match) =>
+      Number.parseInt(match[0], 16),
+    );
+    return U.toBase64URL(bin);
+  };
+
   const N = 'UtilFns';
   const N2 = 'XenTool';
-  const mod1 = { ...U, [Symbol.toStringTag]: N, __proto__: null } as const;
+  const mod1 = {
+    ...U,
+    getPrimeBase64URL,
+    createWorker,
+    [Symbol.toStringTag]: N,
+    __proto__: null,
+  } as const;
   const mod2 = { ...X, [Symbol.toStringTag]: N2, __proto__: null } as const;
   const f = (o: unknown) => Object.prototype.toString.call(o);
 
@@ -41,13 +57,9 @@ import Layout from '../../layouts/Layout.astro';
       value: Object.freeze(mod2),
       enumerable: true,
     },
-    createWorker: {
-      value: createWorker,
-      enumerable: true,
-    },
   });
 
-  [mod1, mod2, createWorker].forEach((m) => {
+  [mod1, mod2].forEach((m) => {
     console.log(f(m) + ':\n', m);
   });
 </script>
