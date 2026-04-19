@@ -3,7 +3,7 @@ layout: ../../layouts/MdLayout.astro
 title: ??? データ
 ---
 
-## 目次
+### 目次
 
 ## 母音
 

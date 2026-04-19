@@ -3,7 +3,7 @@ layout: ../../../layouts/MdLayout.astro
 title: Vessenzlendisç 音韻論
 ---
 
-## 目次
+### 目次
 
 ## 母音
 

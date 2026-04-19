@@ -5,7 +5,7 @@ title: Hopf fibration
 
 *Hopf fibration* $S^3 \to S^2$ の構築方法。
 
-## 目次
+### 目次
 
 ## Riemann球面を用いた方法
 

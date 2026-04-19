@@ -5,7 +5,7 @@ title: S₅ → S₆ exotic map
 
 5次の対称群 $\mathfrak{S}_5$ から6次の対称群 $\mathfrak{S}_6$ への例外的な推移的写像の構築方法。
 
-## 目次
+### 目次
 
 ## Sylow 5-部分群の利用
 

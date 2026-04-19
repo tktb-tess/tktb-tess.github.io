@@ -3,7 +3,7 @@ layout: ../../layouts/MdLayout.astro
 title: フィンランド語 syllabics 表記
 ---
 
-## 目次
+### 目次
 
 ## 短母音
 
