@@ -3,7 +3,7 @@ layout: ../../../layouts/MdLayout.astro
 title: ゲルマン祖語 動詞
 ---
 
-## 目次
+### 目次
 
 ## 概要
 

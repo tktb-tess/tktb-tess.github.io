@@ -3,7 +3,7 @@ layout: ../../../layouts/MdLayout.astro
 title: Vessenzlendisç 正書法
 ---
 
-## 目次
+### 目次
 
 ## 母音
 

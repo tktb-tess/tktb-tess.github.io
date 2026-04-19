@@ -5,7 +5,7 @@ title: ゲルマン祖語 名詞
 
 <div class="contents [&_:where(table_td)]:text-start">
 
-## 目次
+### 目次
 
 ## 概要
 

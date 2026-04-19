@@ -3,7 +3,7 @@ layout: ../../layouts/MdLayout.astro
 title: 沖縄語 ラテン文字表記
 ---
 
-## 目次
+### 目次
 
 ## 母音
 
