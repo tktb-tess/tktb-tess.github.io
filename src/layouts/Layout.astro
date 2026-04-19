@@ -9,16 +9,16 @@ interface Props {
   pageData?: PageData;
 }
 
-const url = Astro.originPathname;
+const path = Astro.originPathname;
 const { title: title, description } = Astro.props.pageData ??
-  pageData.get(url) ?? { title: '[NO DATA]' };
+  pageData.get(path) ?? { title: '[NO DATA]' };
 
-const tabTitle = url === '/' ? title : `${title} | tktb-tess.github.io`;
+const tabTitle = path === '/' ? title : `${title} | tktb-tess.github.io`;
 ---
 
 <!doctype html>
 <html lang='ja'>
-  <Head {url} title={tabTitle} {description} />
+  <Head {path} title={tabTitle} {description} />
   <body>
     <header>
       <h1 class='title'>
@@ -26,7 +26,7 @@ const tabTitle = url === '/' ? title : `${title} | tktb-tess.github.io`;
       </h1>
     </header>
     <main>
-      {url !== '/' && <BreadCrumb {url} />}
+      {path !== '/' && <BreadCrumb {path} />}
       <slot />
     </main>
     <ToTopBtn />

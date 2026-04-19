@@ -3,18 +3,18 @@ import OGP from './OGP.astro';
 import Preloads from './Preloads.astro';
 
 interface Props {
-  url: string;
+  path: string;
   title: string;
   description?: string;
 }
 
-const { title, url, description } = Astro.props;
+const { title, path, description } = Astro.props;
 ---
 
 <head>
   <meta charset='utf-8' />
   <Preloads />
-  <OGP {title} {description} {url} />
+  <OGP {title} {description} {path} />
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <link rel='icon' href='/favicon.ico' />
   <meta name='generator' content={Astro.generator} />
