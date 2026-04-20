@@ -73,9 +73,28 @@ pnpm run dev
 
 を実行の後、`localhost:4321` にアクセスして、テンプレートが表示されたら環境構築は完了。
 
+## ファイルを置く場所
+
+既に `src` ディレクトリ内に色々おかれていると思う。エントリポイントとなるページは `pages` 内におく。それ以外は好きにおいていいが、`components`, `modules`, `styles`, `assets` などと分けると良いのかも。
+
 ## config
 
 Astroの各種設定は主に `astro.config.mjs` 内に記述する。
+
+例えば、devサーバーのポート番号はデフォルトで `4321` だが、これを `8000` とかに変えたいときは
+
+```js
+import { defineConfig } from 'astro/config';
+
+export default defineConfig({
+  server: {     // [!code ++]
+    port: 8000, // [!code ++]
+  }             // [!code ++]
+});
+```
+
+を追加すればよい。
+
 
 ## Tailwind CSS を入れる(オプション)
 
