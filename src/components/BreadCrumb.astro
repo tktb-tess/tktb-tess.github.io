@@ -21,7 +21,7 @@ const values = Object.values(
 const mds: ReadonlyMap<string, PageData> = new Map(
   values.map((md) => {
     const { title, description } = md.frontmatter;
-    return [md.url || '/', { title, description }];
+    return [`${md.url}/`, { title, description }];
   }),
 );
 
