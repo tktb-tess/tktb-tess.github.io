@@ -77,6 +77,8 @@ pnpm run dev
 
 既に `src` ディレクトリ内に色々おかれていると思う。エントリポイントとなるページは `pages` 内におく。それ以外は好きにおいていいが、`components`, `modules`, `styles`, `assets` などと分けると良いのかも。
 
+ディレクトリ構造がそのままパスになる。例えば `pages/foo/bar.html` は `<basepath>/foo/bar` になる。ただし、`index.html` という名前の場合は、`index` を抜いた部分がパスになる。つまり `pages/foo/bar/index.html` も同じパスになる。また、HTMLの代わりにMarkdownを置くだけで、自動でビルド時にHTMLに変換してくれる。パスのルールはHTMLの場合と同じ。
+
 ## config
 
 Astroの各種設定は主に `astro.config.mjs` 内に記述する。
