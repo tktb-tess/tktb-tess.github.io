@@ -17,6 +17,7 @@
   "devDependencies": {
     "@astrojs/markdown-remark": "^7.1.0",
     "@astrojs/svelte": "^8.0.4",
+    "@shikijs/transformers": "^4.0.2",
     "@tailwindcss/vite": "^4.2.2",
     "@tktb-tess/util-fns": "^0.13.0",
     "@tktb-tess/xenharmonic-tool": "^0.6.0",

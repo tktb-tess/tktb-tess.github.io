@@ -58,7 +58,7 @@
   --color-link: light-dark(var(--color-blue-700), #10ff10);
   --color-link-disabled: light-dark(hsl(0 0 0 / 60%), hsl(0 0 100 / 40%));
   --color-caution: light-dark(var(--color-red-600), var(--color-yellow-300));
-  --color-code-bg: light-dark(hsl(210 10 90), hsl(210 10 10));
+  --color-code-bg: light-dark(hsl(210 10 90), hsl(210 10 20));
   --default-transition-duration: 80ms;
   --default-transition-timing-function: cubic-bezier(0.25, 0, 0.1, 1);
   --default-font-feature-settings:
@@ -231,7 +231,7 @@
   }
 
   code:where(:not(.astro-code code)) {
-    @apply bg-code-bg rounded px-1;
+    @apply bg-code-bg rounded px-1 dark:border dark:border-border-2;
   }
 
   table {
@@ -260,6 +260,30 @@
 
   .astro-code {
     @apply p-4 rounded-lg my-figure;
+
+    .line {
+      @apply inline-block;
+    }
+  }
+
+  .astro-code.has-diff .line.diff {
+    &.add {
+      @apply bg-lime-400/15;
+
+      &::before {
+        content: ' + ';
+        @apply text-lime-400;
+      }
+    }
+
+    &.remove {
+      @apply bg-red-600/15;
+
+      &::before {
+        content: ' - ';
+        @apply text-red-600;
+      }
+    }
   }
 
   strong,
