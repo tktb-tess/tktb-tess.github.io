@@ -1,6 +1,9 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { compressString, decompressString } from '@tktb-tess/util-fns/util';
+  import {
+    compressString,
+    decompressString,
+  } from '@tktb-tess/util-fns/compression';
   import type { MtoH } from '../modules/convert';
 
   let timer: ReturnType<typeof setTimeout> | null = null;
