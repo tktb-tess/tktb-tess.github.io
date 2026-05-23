@@ -44,7 +44,7 @@
       return;
     }
 
-    const comp = await compressString(`${formatted}\n`, 'gzip');
+    const comp = await compressString(`${formatted}\n`, 'deflate-raw');
     const params = new URLSearchParams([[key, comp]]);
     history.replaceState(null, '', `?${params}`);
   };
@@ -56,7 +56,7 @@
         const data = params.get(key);
 
         if (data) {
-          input = await decompressString(data, 'gzip');
+          input = await decompressString(data, 'deflate-raw');
         }
 
         await updateOutput();
