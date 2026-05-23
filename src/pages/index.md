@@ -44,8 +44,4 @@ if (gruss != null) {
 
   Brainf\*ck の簡易実行環境
 
-- [Notepad](/notepad/)
-
-  メモ帳
-
 - [Experiment](/xprmnt/)
