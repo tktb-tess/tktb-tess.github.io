@@ -98,7 +98,6 @@
 
         if (timer != null) {
           clearTimeout(timer);
-          timer = null;
         }
 
         timer = setTimeout(async () => {
