@@ -8,7 +8,7 @@ import remarkDirective from 'remark-directive';
 import remarkToc from 'remark-toc';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { fromHtmlIsomorphic } from 'hast-util-from-html-isomorphic';
-import { rehypeHeadingIds } from '@astrojs/markdown-remark';
+import { rehypeHeadingIds, unified } from '@astrojs/markdown-remark';
 import * as H from './plugins/handlers';
 import { transformerNotationDiff } from '@shikijs/transformers';
 
@@ -28,34 +28,36 @@ export default defineConfig({
     inlineStylesheets: 'never',
   },
   markdown: {
+    processor: unified({
+      remarkPlugins: [
+        remarkMath,
+        remarkDirective,
+        [remarkToc, { heading: '目次' }],
+      ],
+      rehypePlugins: [
+        rehypeKatex,
+        rehypeHeadingIds,
+        [
+          rehypeAutolinkHeadings,
+          {
+            behavior: 'append',
+            properties: {
+              className: ['anchor-link'],
+            },
+            content: fromHtmlIsomorphic(linkSvg, { fragment: true }).children,
+          },
+        ],
+      ],
+      remarkRehype: {
+        handlers: {
+          table: H.tableHandler,
+          textDirective: H.tdHandler,
+        },
+      },
+    }),
     shikiConfig: {
       theme: 'github-dark',
       transformers: [transformerNotationDiff()],
-    },
-    remarkPlugins: [
-      remarkMath,
-      remarkDirective,
-      [remarkToc, { heading: '目次' }],
-    ],
-    rehypePlugins: [
-      rehypeKatex,
-      rehypeHeadingIds,
-      [
-        rehypeAutolinkHeadings,
-        {
-          behavior: 'append',
-          properties: {
-            className: ['anchor-link'],
-          },
-          content: fromHtmlIsomorphic(linkSvg, { fragment: true }).children,
-        },
-      ],
-    ],
-    remarkRehype: {
-      handlers: {
-        table: H.tableHandler,
-        textDirective: H.tdHandler,
-      },
     },
   },
 });
