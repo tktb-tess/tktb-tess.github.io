@@ -22,7 +22,6 @@ import Layout from '../../layouts/Layout.astro';
     [Symbol.toStringTag]: N2,
     __proto__: null,
   } as const);
-  const f = (o: unknown) => Object.prototype.toString.call(o);
 
   Object.defineProperties(window, {
     [N]: {
@@ -34,7 +33,8 @@ import Layout from '../../layouts/Layout.astro';
       enumerable: true,
     },
   });
-
+  Function.prototype.call.bind(Object.prototype.toString)
+  const f = (o: unknown) => Object.prototype.toString.call(o);
   [mod1, mod2].forEach((m) => {
     console.log(f(m) + ':\n', m);
   });

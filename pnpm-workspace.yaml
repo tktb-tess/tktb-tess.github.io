@@ -1,4 +1,8 @@
-minimumReleaseAge: 2880
+allowBuilds:
+  esbuild: true
+  sharp: true
+
+minimumReleaseAge: 4320
 
 minimumReleaseAgeExclude:
   - '@tktb-tess/*'
