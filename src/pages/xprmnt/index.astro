@@ -33,7 +33,7 @@ import Layout from '../../layouts/Layout.astro';
       enumerable: true,
     },
   });
-  Function.prototype.call.bind(Object.prototype.toString)
+  
   const f = (o: unknown) => Object.prototype.toString.call(o);
   [mod1, mod2].forEach((m) => {
     console.log(f(m) + ':\n', m);
