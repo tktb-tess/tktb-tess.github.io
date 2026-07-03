@@ -17,14 +17,14 @@
   "devDependencies": {
     "@astrojs/markdown-remark": "^7.2.0",
     "@astrojs/svelte": "^8.1.2",
-    "@shikijs/transformers": "^4.1.0",
-    "@tailwindcss/vite": "^4.3.0",
+    "@shikijs/transformers": "^4.3.0",
+    "@tailwindcss/vite": "^4.3.2",
     "@tktb-tess/util-fns": "^0.13.6",
     "@tktb-tess/xenharmonic-tool": "^0.6.1",
     "@types/hast": "^3.0.4",
     "@types/mdast": "^4.0.4",
-    "@types/node": "^24.12.4",
-    "astro": "^6.4.2",
+    "@types/node": "^24.13.2",
+    "astro": "^6.4.8",
     "hast-util-from-html-isomorphic": "^2.0.0",
     "hastscript": "^9.0.1",
     "mdast-util-directive": "^3.1.0",
@@ -39,8 +39,8 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "remark-toc": "^9.0.0",
-    "svelte": "^5.56.1",
-    "tailwindcss": "^4.3.0",
+    "svelte": "^5.56.4",
+    "tailwindcss": "^4.3.2",
     "type-fest": "^5.7.0",
     "typescript": "^5.9.3",
     "unified": "^11.0.5"
@@ -48,7 +48,7 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "11.5.2",
+      "version": "11.9.0",
       "onFail": "download"
     }
   }
