@@ -43,5 +43,3 @@ if (gruss != null) {
 - [BF Playground](/bf-playground/)
 
   Brainf\*ck の簡易実行環境
-
-- [Experiment](/xprmnt/)
