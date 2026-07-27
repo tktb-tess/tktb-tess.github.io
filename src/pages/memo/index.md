@@ -14,3 +14,4 @@ description: めも。
 - [フィンランド語 syllabics 表記](/memo/finnish_syllabics/)
 - [ゲルマン祖語 データ](/memo/pgmc/)
 - [数学など](/memo/math/)
+- [いろんなヨーロッパの言語でラトビア・リトアニア](/memo/lv_lt/)
