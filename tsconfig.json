@@ -5,6 +5,7 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
     "verbatimModuleSyntax": true,
+    // "moduleResolution": "bundler"
   },
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"]
