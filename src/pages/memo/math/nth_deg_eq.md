@@ -3,6 +3,8 @@ layout: ../../../layouts/MdLayout.astro
 title: n 次方程式 (n ≤ 4) の解法まとめ
 ---
 
+### 目次
+
 以降、最高次係数は常に非零とする。
 
 ## 1次方程式
@@ -25,11 +27,13 @@ $$
 $a_2$ で割り、平方完成する。
 
 $$
-\begin{alignedat}{2}
-x^2 + \frac{a_1}{a_2} x + \frac{a_0}{a_2} &= 0 \\ \\
-\left( x + \frac{a_1}{2 a_2} \right)^2 - \frac{a_1^2}{4a_2^2} + \frac{a_0}{a_2} &= 0 \\ \\
-\left( x + \frac{a_1}{2 a_2} \right)^2 &= \frac{a_1^2 - 4a_0a_2}{4a_2^2}
-\end{alignedat}
+\begin{gather*}
+  \begin{alignedat}{2}
+  x^2 + \frac{a_1}{a_2} x + \frac{a_0}{a_2} &= 0 \\ \\
+  \left( x + \frac{a_1}{2 a_2} \right)^2 - \frac{a_1^2}{4a_2^2} + \frac{a_0}{a_2} &= 0
+  \end{alignedat} \\ \\
+\left( x + \frac{a_1}{2 a_2} \right)^2 = \frac{a_1^2 - 4a_0a_2}{4a_2^2}
+\end{gather*}
 $$
 
 平方根をとり、整理する。
@@ -68,7 +72,10 @@ $$
 が得られ、
 
 $$
-c_0 = b_0 + \frac{2b_2^3}{27} - \frac{b_1b_2}{3}, \quad c_1 = b_1 - \frac{b_2^2}{3}
+\begin{alignedat}{2}
+c_0 &= b_0 + \frac{2b_2^3}{27} - \frac{b_1b_2}{3} \\ \\
+c_1 &= b_1 - \frac{b_2^2}{3}
+\end{alignedat}
 $$
 
 とおけば、$t^3 + c_1t + c_0 = 0$ を得る。
@@ -99,7 +106,7 @@ $$
 $$
 \left\{
 \begin{alignedat}{2}
-u^3 + v^3 &= -c_0 \\ \\
+u^3 + v^3 &= -c_0 \\
 u^3v^3 &= -\left(\frac{c_1}{3}\right)^3
 \end{alignedat}
 \right.
@@ -114,22 +121,25 @@ $$
 の解になる。これを解いて、
 
 $$
-\begin{alignedat}{2}
-s &= \frac{1}{2}\left(-c_0 \pm \sqrt{c_0^2 + 4\left(\frac{c_1}{3}\right)^3} \right) \\ \\
-&= -\frac{c_0}{2} \pm \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}
-\end{alignedat}
+s = -\frac{c_0}{2} \pm \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}
 $$
 
 $u, v$ は対称なので、2つの解の片方を一方の変数に固定しても問題ない。よって
 
 $$
-u^3 = -\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}, \quad v^3 = -\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}
+\begin{alignedat}{2}
+u^3 &= -\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3} \\ \\
+v^3 &= -\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}
+\end{alignedat}
 $$
 
-とする。1の原始3乗根 $\dfrac{-1 + \sqrt{3}i}{2}$ を $\omega$ とおいて、3乗根をとると、
+とする。1の原始3乗根 $-\dfrac{1}{2} + \dfrac{\sqrt{3}}{2}i$ を $\omega$ とおいて、3乗根をとると、
 
 $$
-u = \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}}, \quad v = \omega^k \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \qquad (k = 0, 1, 2)
+\begin{alignedat}{2}
+u &= \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \\ \\
+v &= \omega^k \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \qquad (k = 0, 1, 2)
+\end{alignedat}
 $$
 
 のように、それぞれ3つの解が得られる。
@@ -149,16 +159,25 @@ $$
 であり、また $\omega^3 = 1$ であることを踏まえると、
 
 $$
-t = u + v = \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} + \omega^{-k} \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \qquad (k = 0, 1, 2)
+t = \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} + \omega^{-k} \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \qquad (k = 0, 1, 2)
 $$
 
-となる。よって解は、
+となる。よって3次方程式 $a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0$ の解は、
 
 $$
 \begin{gather*}
 x = \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} + \omega^{-k} \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} -\frac{b_2}{3} \quad (k = 0, 1, 2) \\ \\
-b_l = \frac{a_l}{a_3} \ (l = 0, 1, 2), \quad c_0 = b_0 + \frac{2b_2^3}{27} - \frac{b_1b_2}{3}, \quad c_1 = b_1 - \frac{b_2^2}{3}
 \end{gather*}
+$$
+
+ただし、
+
+$$
+\begin{alignedat}{2}
+b_l &= \frac{a_l}{a_3} \ \ (l = 0, 1, 2) \\ \\
+c_0 &= b_0 + \frac{2b_2^3}{27} - \frac{b_1b_2}{3} \\ \\
+c_1 &= b_1 - \frac{b_2^2}{3}
+\end{alignedat}
 $$
 
 ## 4次方程式
@@ -187,12 +206,16 @@ $$
 となり、
 
 $$
-c_0 = b_0 - \frac{3b_3^4}{256} + \frac{b_2b_3^2}{16} - \frac{b_1b_3}{4}, \quad c_1 = b_1 + \frac{b_3^3}{8} - \frac{b_2b_3}{2}, \quad c_2 = b_2 - \frac{3b_3^2}{8}
+\begin{alignedat}{2}
+c_0 &= b_0 - \frac{3b_3^4}{256} + \frac{b_2b_3^2}{16} - \frac{b_1b_3}{4} \\ \\
+c_1 &= b_1 + \frac{b_3^3}{8} - \frac{b_2b_3}{2} \\ \\
+c_2 &= b_2 - \frac{3b_3^2}{8}
+\end{alignedat}
 $$
 
 とおけば、$t^4 + c_2 t^2 + c_1 t + c_0 = 0$ を得る。
 
-$\mu$ をある (後で決める) 実数として、$2\mu t^2 +\mu^2 - 2\mu t^2 -\mu^2$ を加える。$t^4 + 2\mu t^2 +\mu^2 = (t^2 + \mu)^2$ であることを使って変形すると
+$\mu$ をある実数（具体的な値は後で求める）として、$2\mu t^2 +\mu^2 - 2\mu t^2 -\mu^2$ を加える。$t^4 + 2\mu t^2 +\mu^2 = (t^2 + \mu)^2$ であることを使って変形すると
 
 $$
 \begin{alignedat}{2}
@@ -202,18 +225,23 @@ t^4 + 2\mu t^2 + \mu^2 - 2\mu t^2 - \mu^2 + c_2 t^2 + c_1 t + c_0 &= 0 \\
 \end{alignedat}
 $$
 
-ここで、左辺が (2乗) - (2乗) の形になれば、左辺は2つの2次式に因数分解出来て2次方程式に帰着できる。よって第2項 $(2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0$ が $(\alpha t + \beta)^2$ の形で表せるように $\mu$ の値を決める。これは2次方程式 (第2項) = 0 が重解をもつこと、またその判別式が0であることと同値。したがって、
+ここで、左辺が (2乗) - (2乗) の形になれば、左辺は2つの2次式に因数分解出来て2次方程式に帰着できる。よって第2項 $(2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0$ が $(\alpha t + \beta)^2$ の形で表せるように $\mu$ の値を決める。これは2次方程式 (第2項) = 0 が重解をもつこと、またその判別式が0であることと同値。判別式は
 
 $$
-\begin{alignedat}{2}
-(-c_1)^2 - 4(2\mu - c_2)(\mu^2 - c_0) &= 0 \\
-4(2\mu^3 - c_2\mu^2 - 2c_0\mu + c_0c_2) - c_1^2 &= 0 \\
-8\mu^3 - 4c_2\mu^2 - 8c_0\mu + 4c_0c_2 - c_1^2 &= 0 \\ \\
-\mu^3 - \frac{c_2}{2} \mu^2 - c_0\mu + \frac{c_0c_2}{2} - \frac{c_1^2}{8} &= 0
-\end{alignedat}
+\begin{gather*}
+(-c_1)^2 - 4(2\mu - c_2)(\mu^2 - c_0) \\
+= - 4(2\mu^3 - c_2\mu^2 - 2c_0\mu + c_0c_2) + c_1^2 \\
+= -8\mu^3 + 4c_2\mu^2 + 8c_0\mu - 4c_0c_2 + c_1^2 \\
+\end{gather*}
 $$
 
-このような3次方程式が得られる。これを解いて $\mu$ を得る。
+であるので、$\mu$ は3次方程式
+
+$$
+8\mu^3 - 4c_2\mu^2 - 8c_0\mu + 4c_0c_2 - c_1^2 = 0
+$$
+
+を満たす。これを解いて $\mu$ を求める。
 
 2次方程式 $ax^2 + bx + c = 0$ が重解をもつとき、
 
@@ -230,26 +258,56 @@ $$
 (2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0 = \left(\sqrt{2\mu - c_2}t - \frac{c_1}{2\sqrt{2\mu - c_2}}\right)^2
 $$
 
-であり、4次方程式は
+である。
+
+$$
+\begin{alignedat}{2}
+d_1 &= \sqrt{2\mu - c_2} \\ \\
+d_2 &= -\frac{c_1}{2d_1}
+\end{alignedat}
+$$
+
+とおけば、4次方程式は
 
 $$
 \begin{alignedat}{2}
 (t^2 + \mu)^2 - ((2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0) &= 0 \\ \\
 (t^2 + \mu)^2 - \left(\sqrt{2\mu - c_2}t - \frac{c_1}{2\sqrt{2\mu - c_2}}\right)^2 &= 0 \\ \\
-\left\{t^2 + \mu + \left(\sqrt{2\mu - c_2}t - \frac{c_1}{2\sqrt{2\mu - c_2}}\right)\right\} \left\{t^2 + \mu - \left(\sqrt{2\mu - c_2}t - \frac{c_1}{2\sqrt{2\mu - c_2}}\right)\right\} &= 0 \\ \\
-\left(t^2 + \sqrt{2\mu - c_2}t + \mu - \frac{c_1}{2\sqrt{2\mu - c_2}}\right) \left(t^2 - \sqrt{2\mu - c_2}t + \mu + \frac{c_1}{2\sqrt{2\mu - c_2}}\right) &= 0 \\ \\
+(t^2 + \mu)^2 - \left(d_1t + d_2\right)^2 &= 0 \\ \\
+\{(t^2 + \mu) + (d_1 t + d_2)\}\{(t^2 + \mu) - (d_1 t + d_2)\} &= 0 \\ \\
+(t^2 + d_1 t + \mu + d_2)(t^2 - d_1 t + \mu - d_2) &= 0
 \end{alignedat}
 $$
 
-と分解できる。
+と分解できる。$t^2 + d_1 t + \mu + d_2 = 0$ の解は
 
 $$
-\begin{gather*}
-t^2 + \sqrt{2\mu - c_2}t + \mu - \frac{c_1}{2\sqrt{2\mu - c_2}} = 0 \\ \\
-2\sqrt{2\mu - c_2}t^2 + 2(2\mu - c_2)t + 2\mu\sqrt{2\mu - c_2} - c_1 = 0 \\ \\
-t = \frac{-2\mu + c_2 \pm \sqrt{(2\mu-c_2)^2 - 2\sqrt{2\mu - c_2} \times (2\mu\sqrt{2\mu - c_2} - c_1)}}{2\sqrt{2\mu - c_2}} \\ \\
-t = \frac{-2\mu + c_2 \pm \sqrt{4\mu^2 - 4c_2\mu + c_2^2 -4\mu(2\mu - c_2) + 2c_1\sqrt{2\mu - c_2}}}{2\sqrt{2\mu - c_2}} \\ \\
-\end{gather*}
+t = \frac{-d_1 \pm \sqrt{d_1^2 - 4(\mu + d_2)}}{2}
 $$
 
-工事中……
+$t^2 - d_1 t + \mu - d_2 = 0$ の解も同様に求めて、
+
+$$
+t = \frac{d_1 \pm \sqrt{d_1^2 - 4(\mu - d_2)}}{2}
+$$
+
+よって、4次方程式 $a_4 x^4 + a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0$ の解は
+
+$$
+x = \frac{-d_1 \pm \sqrt{d_1^2 - 4(\mu + d_2)}}{2} - \frac{b_3}{4}, \quad \frac{d_1 \pm \sqrt{d_1^2 - 4(\mu - d_2)}}{2} - \frac{b_3}{4}
+$$
+
+ただし、$\mu$ は3次方程式 $8\mu^3 - 4c_2\mu^2 - 8c_0\mu + 4c_0c_2 - c_1^2 = 0$ の解であり、
+
+$$
+\begin{alignedat}{2}
+b_l &= \frac{a_l}{a_4} \ \ (l = 0, 1, 2, 3) \\ \\
+c_0 &= b_0 - \frac{3b_3^4}{256} + \frac{b_2b_3^2}{16} - \frac{b_1b_3}{4} \\ \\
+c_1 &= b_1 + \frac{b_3^3}{8} - \frac{b_2b_3}{2} \\ \\
+c_2 &= b_2 - \frac{3b_3^2}{8} \\ \\
+d_1 &= \sqrt{2\mu - c_2} \\ \\
+d_2 &= -\frac{c_1}{2d_1}
+\end{alignedat}
+$$
+
+である。
