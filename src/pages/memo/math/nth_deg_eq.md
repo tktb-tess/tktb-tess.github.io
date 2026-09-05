@@ -186,7 +186,7 @@ $$
 $$
 \begin{alignedat}{2}
 \left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3 &< 0 \\ \\
-\frac{c_0^2}{4} + \frac{c_1^3}{27} &< 0 \\ \\
+27c_0^2 + 4c_1^3 &< 0 \\ \\
 - 4c_1^3 - 27c_0^2 &> 0
 \end{alignedat}
 $$
@@ -273,7 +273,7 @@ v^3 &= -3 - 2\sqrt{29} i
 \end{alignedat}
 $$
 
-よって、1の原始3乗根 $-\dfrac{1}{2} + \dfrac{\sqrt{3}}{2}i$ を $\omega$ とおくと、
+とする。1の原始3乗根 $-\dfrac{1}{2} + \dfrac{\sqrt{3}}{2}i$ を $\omega$ とおくと、$t$ は
 
 $$
 t = u + v = \omega^k \sqrt[3]{-3 + 2\sqrt{29} i} + \omega^{-k} \sqrt[3]{-3 - 2\sqrt{29} i} \quad (k = 0, 1, 2)
@@ -285,7 +285,7 @@ $$
 x = t + 2 = \omega^k \sqrt[3]{-3 + 2\sqrt{29} i} + \omega^{-k} \sqrt[3]{-3 - 2\sqrt{29} i} + 2 \quad (k = 0, 1, 2)
 $$
 
-である。
+である。3つの解は全て実数であるが、この式から虚数単位 $i$ を除去することはできない（還元不能）。
 
 ## 4次方程式
 
