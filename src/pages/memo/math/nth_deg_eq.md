@@ -1,12 +1,10 @@
 ---
 layout: ../../../layouts/MdLayout.astro
-title: n 次方程式 (n ≤ 4) の解法まとめ
+title: n 次方程式 (n ≤ 4) の解法まとめ
 description: 'よくクソ長い解みたいな感じで話題になる 3, 4 次方程式の解ですけど、一つ一つ順を追っていけば別にそこまで難しいものでもなくないですか?'
 ---
 
-以降、最高次係数は常に非零とする。
-
-### 目次
+最高次係数は常に非零とする。
 
 ## 1次方程式
 
@@ -17,7 +15,7 @@ x = -\frac{a_0}{a_1}
 \end{gather*}
 $$
 
-ただの式変形、特筆すべきことはない。
+ただの式変形。特筆すべきことはない。
 
 ## 2次方程式
 
@@ -29,11 +27,9 @@ $a_2$ で割り、平方完成する。
 
 $$
 \begin{gather*}
-  \begin{alignedat}{2}
-  x^2 + \frac{a_1}{a_2} x + \frac{a_0}{a_2} &= 0 \\ \\
-  \left( x + \frac{a_1}{2 a_2} \right)^2 - \frac{a_1^2}{4a_2^2} + \frac{a_0}{a_2} &= 0
-  \end{alignedat} \\ \\
-\left( x + \frac{a_1}{2 a_2} \right)^2 = \frac{a_1^2 - 4a_0a_2}{4a_2^2}
+&x^2 + \frac{a_1}{a_2} x + \frac{a_0}{a_2} = 0 \\ \\
+& \left( x + \frac{a_1}{2 a_2} \right)^2 - \frac{a_1^2}{4a_2^2} + \frac{a_0}{a_2} = 0 \\ \\
+& \left( x + \frac{a_1}{2 a_2} \right)^2 = \frac{a_1^2 - 4a_0a_2}{4a_2^2}
 \end{gather*}
 $$
 
@@ -63,10 +59,10 @@ $$
 
 $$
 \begin{alignedat}{2}
-x^3 + b_2 x^2 + b_1 x + b_0 &= 0 \\ \\
-\left(t - \frac{b_2}{3}\right)^3 + b_2 \left(t - \frac{b_2}{3}\right)^2 + b_1 \left(t - \frac{b_2}{3}\right) + b_0 &= 0 \\ \\
-t^3 - b_2 t^2 + \frac{b_2^2}{3} t - \frac{b_2^3}{27} + b_2 \left(t^2 - \frac{2b_2}{3} t + \frac{b_2^2}{9} \right) + b_1 \left(t - \frac{b_2}{3}\right) + b_0 &= 0 \\ \\
-t^3 + \left(b_1 - \frac{b_2^2}{3} \right) t + b_0 + \frac{2b_2^3}{27} - \frac{b_1b_2}{3} &= 0 \\ \\
+& x^3 + b_2 x^2 + b_1 x + b_0 = 0 \\ \\
+& \left(t - \frac{b_2}{3}\right)^3 + b_2 \left(t - \frac{b_2}{3}\right)^2 + b_1 \left(t - \frac{b_2}{3}\right) + b_0 = 0 \\ \\
+& t^3 - b_2 t^2 + \frac{b_2^2}{3} t - \frac{b_2^3}{27} + b_2 \left(t^2 - \frac{2b_2}{3} t + \frac{b_2^2}{9} \right) + b_1 \left(t - \frac{b_2}{3}\right) + b_0 = 0 \\ \\
+& t^3 + \left(b_1 - \frac{b_2^2}{3} \right) t + b_0 + \frac{2b_2^3}{27} - \frac{b_1b_2}{3} = 0 \\ \\
 \end{alignedat}
 $$
 
@@ -167,7 +163,7 @@ $$
 
 $$
 \begin{gather*}
-x = \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} + \omega^{-k} \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} -\frac{b_2}{3} \quad (k = 0, 1, 2) \\ \\
+x = \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} + \omega^{-k} \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} -\frac{b_2}{3} \quad (k = 0, 1, 2)
 \end{gather*}
 $$
 
@@ -197,10 +193,10 @@ $$
 
 $$
 \begin{alignedat}{2}
-x^4 + b_3 x^3 + b_2 x^2 + b_1 x + b_0 = 0 &= 0 \\ \\
-\left( t - \frac{b_3}{4} \right)^4 + b_3 \left( t - \frac{b_3}{4} \right)^3 + b_2 \left( t - \frac{b_3}{4} \right)^2 + b_1 \left( t - \frac{b_3}{4} \right) + b_0 &= 0 \\ \\
-t^4 - b_3 t^3 + \frac{3b_3^2}{8} t^2 - \frac{b_3^3}{16} t + \frac{b_3^4}{256} + b_3 \left(t^3 - \frac{3b_3}{4} t^2 + \frac{3b_3^2}{16} t - \frac{b_3^3}{64}\right) + b_2 \left(t^2 - \frac{b_3}{2}t + \frac{b_3^2}{16} \right) + b_1 \left( t - \frac{b_3}{4} \right) + b_0 &= 0 \\ \\
-t^4 + \left(b_2 - \frac{3b_3^2}{8}\right) t^2 + \left(b_1 + \frac{b_3^3}{8} - \frac{b_2b_3}{2}\right) t  + b_0 - \frac{3b_3^4}{256} + \frac{b_2b_3^2}{16} - \frac{b_1b_3}{4} &= 0
+& x^4 + b_3 x^3 + b_2 x^2 + b_1 x + b_0 = 0 \\ \\
+& \left( t - \frac{b_3}{4} \right)^4 + b_3 \left( t - \frac{b_3}{4} \right)^3 + b_2 \left( t - \frac{b_3}{4} \right)^2 + b_1 \left( t - \frac{b_3}{4} \right) + b_0 = 0 \\ \\
+& t^4 - b_3 t^3 + \frac{3b_3^2}{8} t^2 - \frac{b_3^3}{16} t + \frac{b_3^4}{256} + b_3 \left(t^3 - \frac{3b_3}{4} t^2 + \frac{3b_3^2}{16} t - \frac{b_3^3}{64}\right) + b_2 \left(t^2 - \frac{b_3}{2}t + \frac{b_3^2}{16} \right) + b_1 \left( t - \frac{b_3}{4} \right) + b_0 = 0 \\ \\
+& t^4 + \left(b_2 - \frac{3b_3^2}{8}\right) t^2 + \left(b_1 + \frac{b_3^3}{8} - \frac{b_2b_3}{2}\right) t  + b_0 - \frac{3b_3^4}{256} + \frac{b_2b_3^2}{16} - \frac{b_1b_3}{4} = 0
 \end{alignedat}
 $$
 
@@ -216,7 +212,7 @@ $$
 
 とおけば、$t^4 + c_2 t^2 + c_1 t + c_0 = 0$ を得る。
 
-$\mu$ をある実数（具体的な値は後で求める）として、$2\mu t^2 +\mu^2 - 2\mu t^2 -\mu^2$ を加える。$t^4 + 2\mu t^2 +\mu^2 = (t^2 + \mu)^2$ であることを使って変形すると
+$\mu$ をある複素数（具体的な値は後で求める）として、$2\mu t^2 +\mu^2 - 2\mu t^2 -\mu^2$ を加える。$t^4 + 2\mu t^2 +\mu^2 = (t^2 + \mu)^2$ であることを使って変形すると
 
 $$
 \begin{alignedat}{2}
@@ -253,7 +249,7 @@ ax^2 + bx + c = a\left(x + \frac{b}{2a}\right)^2 \\ \\
 \end{gather*}
 $$
 
-よって第2項は
+と変形できる。よって第2項は
 
 $$
 (2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0 = \left(\sqrt{2\mu - c_2}t - \frac{c_1}{2\sqrt{2\mu - c_2}}\right)^2
@@ -275,30 +271,29 @@ $$
 (t^2 + \mu)^2 - ((2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0) &= 0 \\ \\
 (t^2 + \mu)^2 - \left(\sqrt{2\mu - c_2}t - \frac{c_1}{2\sqrt{2\mu - c_2}}\right)^2 &= 0 \\ \\
 (t^2 + \mu)^2 - \left(d_1t + d_2\right)^2 &= 0 \\ \\
-\{(t^2 + \mu) + (d_1 t + d_2)\}\{(t^2 + \mu) - (d_1 t + d_2)\} &= 0 \\ \\
-(t^2 + d_1 t + \mu + d_2)(t^2 - d_1 t + \mu - d_2) &= 0
+(t^2 + d_1 t + d_2 + \mu)(t^2 - d_1 t - d_2 + \mu) &= 0
 \end{alignedat}
 $$
 
 と分解できる。$t^2 + d_1 t + \mu + d_2 = 0$ の解は
 
 $$
-t = \frac{-d_1 \pm \sqrt{d_1^2 - 4(\mu + d_2)}}{2}
+t = -\frac{d_1}{2} \pm \sqrt{\frac{d_1^2}{4} - d_2 - \mu}
 $$
 
 $t^2 - d_1 t + \mu - d_2 = 0$ の解も同様に求めて、
 
 $$
-t = \frac{d_1 \pm \sqrt{d_1^2 - 4(\mu - d_2)}}{2}
+t = \frac{d_1}{2} \pm \sqrt{\frac{d_1^2}{4} + d_2 - \mu}
 $$
 
 よって、4次方程式 $a_4 x^4 + a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0$ の解は
 
 $$
-x = \frac{-d_1 \pm \sqrt{d_1^2 - 4(\mu + d_2)}}{2} - \frac{b_3}{4}, \quad \frac{d_1 \pm \sqrt{d_1^2 - 4(\mu - d_2)}}{2} - \frac{b_3}{4}
+x = -\frac{d_1}{2} - \frac{b_3}{4} \pm \sqrt{\frac{d_1^2}{4} - d_2 - \mu}, \quad \frac{d_1}{2} - \frac{b_3}{4} \pm \sqrt{\frac{d_1^2}{4} + d_2 - \mu}
 $$
 
-ただし、$\mu$ は3次方程式 $8\mu^3 - 4c_2\mu^2 - 8c_0\mu + 4c_0c_2 - c_1^2 = 0$ の解であり、
+ただし、$\mu$ は3次方程式 $8\mu^3 - 4c_2\mu^2 - 8c_0\mu + 4c_0c_2 - c_1^2 = 0$ の解であり、また
 
 $$
 \begin{alignedat}{2}
@@ -312,3 +307,9 @@ d_2 &= -\frac{c_1}{2d_1}
 $$
 
 である。
+
+## 5次方程式
+
+皆さんご存知の通り、5次以降の方程式には任意の方程式に対して使える代数的解法は存在しない。だが代数的解法に拘らなければ解く方法はある。
+
+工事中……
