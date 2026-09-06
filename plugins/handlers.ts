@@ -12,12 +12,14 @@ const emptyText: Hast.Text = {
 
 const safeToHast = (tree: Mdast.Nodes) => {
   const hast = toHast(tree, { allowDangerousHtml: true });
-  if (hast.type === 'root' || hast.type === 'doctype') {
+  if (
+    hast.type === 'root' ||
+    hast.type === 'doctype' ||
+    (hast.type === 'element' && hast.tagName === 'script')
+  ) {
     return emptyText;
   }
-  if (hast.type === 'element' && hast.tagName === 'script') {
-    return emptyText;
-  }
+
   return hast;
 };
 
@@ -48,7 +50,7 @@ const tcHandler = (tc: Mdast.TableCell, tag: 'td' | 'th') => {
 
   const ph = tc.children[0];
 
-  if (!ph || ph.type !== 'textDirective') {
+  if (ph == null || ph.type !== 'textDirective') {
     return h(tag, tc.children.map(phrasingToHast));
   }
 
@@ -103,4 +105,3 @@ export const tableHandler: Handler = (_, node: Mdast.Table) => {
 
   return h('div.table-container', table);
 };
-
