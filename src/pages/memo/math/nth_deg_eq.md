@@ -143,7 +143,7 @@ $$
 
 のように、それぞれ3つの解が得られる。
 
-$uv = -\dfrac{b_1}{3}$ となるように組み合わせを選ぶ。
+$uv = -\dfrac{c_1}{3}$ となるように組み合わせを選ぶ。
 
 $$
 \begin{alignedat}{2}
@@ -163,7 +163,7 @@ $$
 
 $$
 \begin{gather*}
-x = - \frac{b_3}{3} + t = -\frac{b_2}{3} + \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} + \omega^{-k} \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \quad (k = 0, 1, 2)
+x = - \frac{b_2}{3} + t = -\frac{b_2}{3} + \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} + \omega^{-k} \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \quad (k = 0, 1, 2)
 \end{gather*}
 $$
 
