@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/MdLayout.astro
-title: n 次方程式 (n ≤ 4) の解法まとめ
-description: 'よくクソ長い解みたいな感じで話題になる 3, 4 次方程式の解ですけど、一つ一つ順を追っていけば別にそこまで難しいものでもなくないですか?'
+title: n次方程式 (n ≤ 4) の解法まとめ
+description: よくクソ長い解みたいな感じで話題になる 3, 4 次方程式の解ですけど、一つ一つ順を追っていけば別にそこまで難しいものでもなくないですか?
 ---
 
 最高次係数は常に非零とする。
@@ -83,9 +83,9 @@ $$
 
 $$
 \begin{alignedat}{2}
-(u + v)^3 + c_1(u + v) + c_0 &= 0 \\
-u^3 + v^3 + 3uv(u + v) + c_1(u + v) + c_0 &= 0 \\
-u^3 + v^3 + c_0 + (3uv + c_1)(u + v) &= 0 \quad \cdots \text{(A)}
+& (u + v)^3 + c_1(u + v) + c_0 = 0 \\
+& u^3 + v^3 + 3uv(u + v) + c_1(u + v) + c_0 = 0 \\
+& u^3 + v^3 + c_0 + (3uv + c_1)(u + v) = 0 \quad \cdots \text{(A)}
 \end{alignedat}
 $$
 
@@ -123,7 +123,7 @@ $$
 s = -\frac{c_0}{2} \pm \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}
 $$
 
-$u, v$ は対称なので、2つの解の片方を一方の変数に固定しても問題ない。よって
+$u, v$ は対称なので、2つの解をそれぞれに割り当てても問題ない。よって
 
 $$
 \begin{alignedat}{2}
@@ -146,26 +146,24 @@ $$
 $uv = -\dfrac{b_1}{3}$ となるように組み合わせを選ぶ。
 
 $$
-\begin{gather*}
-  \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \times \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \\ \\
-  \begin{alignedat}{2}
-    &= \sqrt[3]{\left(-\frac{c_0}{2}\right)^2 - \left(\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3\right)} \\ \\
-    &= \sqrt[3]{-\left(\frac{c_1}{3}\right)^3} = -\frac{c_1}{3}
-  \end{alignedat}
-\end{gather*}
+\begin{alignedat}{2}
+&  \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \times \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \\ \\
+&= \sqrt[3]{\left(-\frac{c_0}{2}\right)^2 - \left(\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3\right)} \\ \\
+&= \sqrt[3]{-\left(\frac{c_1}{3}\right)^3} = -\frac{c_1}{3}
+\end{alignedat}
 $$
 
-であり、また $\omega^3 = 1$ であることを踏まえると、
+であるので、
 
 $$
-t = \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} + \omega^{-k} \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \qquad (k = 0, 1, 2)
+t = u + v = \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} + \omega^{-k} \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \qquad (k = 0, 1, 2)
 $$
 
 となる。よって3次方程式 $a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0$ の解は、
 
 $$
 \begin{gather*}
-x = \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} + \omega^{-k} \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} -\frac{b_2}{3} \quad (k = 0, 1, 2)
+x = - \frac{b_3}{3} + t = -\frac{b_2}{3} + \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} + \omega^{-k} \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \quad (k = 0, 1, 2)
 \end{gather*}
 $$
 
@@ -205,9 +203,7 @@ $$
 D = -4c_1^3 - 27c_0^2
 $$
 
-つまり $u^3, v^3$ が虚数であることと、$D > 0$ すなわち3次方程式が3つの実数解をもつことは、実は同値なのである。さらに3次方程式が既約な場合、虚数を避けて代数的な解を書き下すことはできないことが分かっており、これを **還元不能** という。
-
-解が全て実数解なのに虚数の立方根の和でしか書けないというのはなかなか不思議であると私は思う。
+つまり $u^3, v^3$ が虚数であることと、$D > 0$ すなわち3次方程式が3つの実数解をもつことは、実は同値なのである。さらに3次方程式が既約な場合、虚数を避けて代数的な解を書き下すことはできないことが分かっており、これを **還元不能** という。解が全て実数解なのに虚数の立方根の和でしか書けないというのはなかなか不思議であると私は思う。
 
 ### 例
 
@@ -221,9 +217,9 @@ $x = t + 2$ とおいて2次の項を消す。
 
 $$
 \begin{alignedat}{2}
-(t + 2)^3 - 6(t + 2)^2 - 3(t + 2) + 28 &= 0 \\
-t^3 + 6t^2 + 12t + 8 - 6t^2 - 24t - 24 - 3t - 6 + 28 &= 0 \\
-t^3 - 15t + 6 &= 0
+& (t + 2)^3 - 6(t + 2)^2 - 3(t + 2) + 28 = 0 \\
+& t^3 + 6t^2 + 12t + 8 - 6t^2 - 24t - 24 - 3t - 6 + 28 = 0 \\
+& t^3 - 15t + 6 = 0
 \end{alignedat}
 $$
 
@@ -231,8 +227,8 @@ $t = u + v$ とおいて整理。
 
 $$
 \begin{alignedat}{2}
-(u + v)^3 - 15(u + v) + 6 &= 0 \\
-u^3 + v^3 + 6 + (3uv - 15)(u + v) &= 0
+& (u + v)^3 - 15(u + v) + 6 = 0 \\
+& u^3 + v^3 + 6 + (3uv - 15)(u + v) = 0
 \end{alignedat}
 $$
 
@@ -282,7 +278,7 @@ $$
 よって解は
 
 $$
-x = t + 2 = \omega^k \sqrt[3]{-3 + 2\sqrt{29} i} + \omega^{-k} \sqrt[3]{-3 - 2\sqrt{29} i} + 2 \quad (k = 0, 1, 2)
+x = 2 + t = 2 + \omega^k \sqrt[3]{-3 + 2\sqrt{29} i} + \omega^{-k} \sqrt[3]{-3 - 2\sqrt{29} i} \quad (k = 0, 1, 2)
 $$
 
 である。3つの解は全て実数であるが、この式から虚数単位 $i$ を除去することはできない（還元不能）。
@@ -299,7 +295,7 @@ $$
 x^4 + b_3 x^3 + b_2 x^2 + b_1 x + b_0 = 0
 $$
 
-3次方程式の場合と同様の方法で3次の項を消す。4次の項は $\left( x + \dfrac{b_3}{4} \right)^4$ となるので $x = t - \dfrac{b_3}{4}$ と変換する。代入して整理すると、
+3次方程式と同様の方法で3次の項を消す。4次の項は $\left( x + \dfrac{b_3}{4} \right)^4$ となるので $x = t - \dfrac{b_3}{4}$ と変換する。代入して整理すると、
 
 $$
 \begin{alignedat}{2}
@@ -326,20 +322,20 @@ $\mu$ をある複素数（具体的な値は後で求める）として、$2\mu
 
 $$
 \begin{alignedat}{2}
-t^4 + 2\mu t^2 + \mu^2 - 2\mu t^2 - \mu^2 + c_2 t^2 + c_1 t + c_0 &= 0 \\
-(t^2 + \mu)^2 + (c_2 - 2\mu) t^2 + c_1 t + c_0 - \mu^2 &= 0 \\
-(t^2 + \mu)^2 - ((2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0) &= 0
+& t^4 + 2\mu t^2 + \mu^2 - 2\mu t^2 - \mu^2 + c_2 t^2 + c_1 t + c_0 = 0 \\
+& (t^2 + \mu)^2 + (c_2 - 2\mu) t^2 + c_1 t + c_0 - \mu^2 = 0 \\
+& (t^2 + \mu)^2 - ((2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0) = 0
 \end{alignedat}
 $$
 
 ここで、左辺が (2乗) - (2乗) の形になれば、左辺は2つの2次式に因数分解出来て2次方程式に帰着できる。よって第2項 $(2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0$ が $(\alpha t + \beta)^2$ の形で表せるように $\mu$ の値を決める。これは2次方程式 (第2項) = 0 が重解をもつこと、またその判別式が0であることと同値。判別式は
 
 $$
-\begin{gather*}
-(-c_1)^2 - 4(2\mu - c_2)(\mu^2 - c_0) \\
-= - 4(2\mu^3 - c_2\mu^2 - 2c_0\mu + c_0c_2) + c_1^2 \\
-= -8\mu^3 + 4c_2\mu^2 + 8c_0\mu - 4c_0c_2 + c_1^2 \\
-\end{gather*}
+\begin{alignedat}{2}
+&(-c_1)^2 - 4(2\mu - c_2)(\mu^2 - c_0) \\
+&= - 4(2\mu^3 - c_2\mu^2 - 2c_0\mu + c_0c_2) + c_1^2 \\
+&= -8\mu^3 + 4c_2\mu^2 + 8c_0\mu - 4c_0c_2 + c_1^2 \\
+\end{alignedat}
 $$
 
 であるので、$\mu$ は3次方程式
@@ -353,16 +349,19 @@ $$
 2次方程式 $ax^2 + bx + c = 0$ が重解をもつとき、
 
 $$
-\begin{gather*}
-ax^2 + bx + c = a\left(x + \frac{b}{2a}\right)^2 \\ \\
-= \left(\sqrt{a}x + \frac{b}{2\sqrt{a}}\right)^2
-\end{gather*}
+\begin{alignedat}{2}
+ax^2 + bx + c &= a\left(x + \frac{b}{2a}\right)^2 \\ \\
+&= \left(\sqrt{a}x + \frac{b}{2\sqrt{a}}\right)^2
+\end{alignedat}
 $$
 
 と変形できる。よって第2項は
 
 $$
-(2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0 = \left(\sqrt{2\mu - c_2}t - \frac{c_1}{2\sqrt{2\mu - c_2}}\right)^2
+\begin{alignedat}{2}
+&(2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0 \\ \\
+&= \left(\sqrt{2\mu - c_2}t - \frac{c_1}{2\sqrt{2\mu - c_2}}\right)^2
+\end{alignedat}
 $$
 
 である。
@@ -378,10 +377,10 @@ $$
 
 $$
 \begin{alignedat}{2}
-(t^2 + \mu)^2 - ((2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0) &= 0 \\ \\
-(t^2 + \mu)^2 - \left(\sqrt{2\mu - c_2}t - \frac{c_1}{2\sqrt{2\mu - c_2}}\right)^2 &= 0 \\ \\
-(t^2 + \mu)^2 - \left(d_1t + d_2\right)^2 &= 0 \\ \\
-(t^2 + d_1 t + d_2 + \mu)(t^2 - d_1 t - d_2 + \mu) &= 0
+&(t^2 + \mu)^2 - ((2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0) = 0 \\
+&(t^2 + \mu)^2 - \left(d_1t + d_2\right)^2 = 0 \\
+&\{(t^2 + \mu) + (d_1 t + d_2)\}\{(t^2 + \mu) - (d_1 t + d_2)\} = 0 \\
+&(t^2 + d_1 t + d_2 + \mu)(t^2 - d_1 t - d_2 + \mu) = 0
 \end{alignedat}
 $$
 
@@ -400,7 +399,10 @@ $$
 よって、4次方程式 $a_4 x^4 + a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0$ の解は
 
 $$
-x = -\frac{d_1}{2} - \frac{b_3}{4} \pm \sqrt{\frac{d_1^2}{4} - d_2 - \mu}, \quad \frac{d_1}{2} - \frac{b_3}{4} \pm \sqrt{\frac{d_1^2}{4} + d_2 - \mu}
+\begin{alignedat}{2}
+x = - &\frac{d_1}{2} - \frac{b_3}{4} \pm \sqrt{\frac{d_1^2}{4} - d_2 - \mu}, \\ \\
+&\frac{d_1}{2} - \frac{b_3}{4} \pm \sqrt{\frac{d_1^2}{4} + d_2 - \mu}
+\end{alignedat}
 $$
 
 ただし、$\mu$ は3次方程式 $8\mu^3 - 4c_2\mu^2 - 8c_0\mu + 4c_0c_2 - c_1^2 = 0$ の解であり、また
