@@ -1,14 +1,12 @@
 ---
 layout: ../../../layouts/MdLayout.astro
-title: n次方程式 (n ≤ 4) の解法まとめ
+title: n次方程式の解法まとめ
 description: よくクソ長い解みたいな感じで話題になる 3, 4 次方程式の解ですけど、一つ一つ順を追っていけば別にそこまで難しいものでもなくないですか?
 ---
 
-### 目次
-
-## 備考
-
 最高次係数は常に非零とする。
+
+### 目次
 
 ## 1次方程式
 
@@ -32,8 +30,8 @@ $a_2$ で割り、平方完成する。
 $$
 \begin{gather*}
 &x^2 + \frac{a_1}{a_2} x + \frac{a_0}{a_2} = 0 \\ \\
-& \left( x + \frac{a_1}{2 a_2} \right)^2 - \frac{a_1^2}{4a_2^2} + \frac{a_0}{a_2} = 0 \\ \\
-& \left( x + \frac{a_1}{2 a_2} \right)^2 = \frac{a_1^2 - 4a_0a_2}{4a_2^2}
+& \left(x + \frac{a_1}{2 a_2} \right)^2 - \frac{a_1^2}{4a_2^2} + \frac{a_0}{a_2} = 0 \\ \\
+& \left(x + \frac{a_1}{2 a_2} \right)^2 = \frac{a_1^2 - 4a_0a_2}{4a_2^2}
 \end{gather*}
 $$
 
@@ -214,7 +212,7 @@ $$
 
 ### Vièteの解法
 
-代数的な解法に拘らなければ、$D > 0$ の場合に虚数を避けることもできる。立方完成までは同じなので $t^3 + c_1 t + c_0 = 0$ の形から始める。$c_1 \ge 0$ のときは $D = -4c_1^3 - 27c_0^2 \le 0$ なので $c_1 < 0$ とする。
+代数的な解法に拘らなければ、$D > 0$ の場合に虚数を避けることもできる。立方完成までは同じなので $t^3 + c_1 t + c_0 = 0$ の形から始める。$c_0, c_1$ は実数とし、また $c_1 \ge 0$ のときは $D = -4c_1^3 - 27c_0^2 \le 0$ となるので $c_1 < 0$ とする。
 
 $\cos$ の3倍角の公式 $\cos{3\theta} = 4\cos^3{\theta} - 3\cos{\theta}$ を変形して
 
@@ -278,13 +276,13 @@ $$
 さて、上で求めた $\theta$ は無限個あるが、$\cos$ の周期性と偶関数性から、複数の $\theta$ が同じ $t$ の値に対応する場合がある。そのような $\theta$ を除きつつ、 $t = A \cos{\theta}$ を求めると次の3つになる。
 
 $$
-t = A \cos{\left(\frac{1}{3}\operatorname{Arccos}{\left(\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}\right) + \frac{2k}{3}}\pi\right)} \quad (k = 0, 1, 2)
+t = 2\sqrt{-\dfrac{c_1}{3}} \cos{\left(\frac{1}{3}\operatorname{Arccos}{\left(\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}\right) + \frac{2k}{3}}\pi\right)} \quad (k = 0, 1, 2)
 $$
 
 よって、3次方程式 $a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0$ の解は
 
 $$
-x = -\frac{b_2}{3} + t = -\frac{b_2}{3} + 2\sqrt{-\frac{c_1}{3}} \cos{\left(\frac{1}{3}\operatorname{Arccos}{\left(\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}\right) + \frac{2n}{3}}\pi\right)} \quad (n = 0, 1, 2)
+x = -\frac{b_2}{3} + t = -\frac{b_2}{3} + 2\sqrt{-\dfrac{c_1}{3}} \cos{\left(\frac{1}{3}\operatorname{Arccos}{\left(\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}\right) + \frac{2n}{3}}\pi\right)} \quad (n = 0, 1, 2)
 $$
 
 ただし、
@@ -389,10 +387,10 @@ $$
 $\dfrac{15}{A^2} = \dfrac{3}{4}$ より、 $A = 2\sqrt{5}$ である。したがって、
 
 $$
-\begin{alignedat}{2}
-&\cos{3 \theta} = -\frac{24}{A^3} = -\frac{3}{5\sqrt{5}} \\ \\
-&\theta = \pm\frac{1}{3} \operatorname{Arccos}{\left(-\frac{3}{5\sqrt{5}}\right)} + \frac{2k}{3}\pi \quad (k \in \mathbb{Z})
-\end{alignedat}
+\begin{gather*}
+\cos{3 \theta} = -\frac{24}{A^3} = -\frac{3}{5\sqrt{5}} \\ \\
+\theta = \pm\frac{1}{3} \operatorname{Arccos}{\left(-\frac{3}{5\sqrt{5}}\right)} + \frac{2k}{3}\pi \quad (k \in \mathbb{Z})
+\end{gather*}
 $$
 
 よって解は
