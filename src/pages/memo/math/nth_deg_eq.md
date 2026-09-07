@@ -284,7 +284,7 @@ $$
 よって、3次方程式 $a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0$ の解は
 
 $$
-x = -\frac{b_2}{3} + t = -\frac{b_2}{3} + A \cos{\left(\frac{1}{3}\operatorname{Arccos}{\left(\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}\right) + \frac{2n}{3}}\pi\right)} \quad (n = 0, 1, 2)
+x = -\frac{b_2}{3} + t = -\frac{b_2}{3} + 2\sqrt{-\frac{c_1}{3}} \cos{\left(\frac{1}{3}\operatorname{Arccos}{\left(\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}\right) + \frac{2n}{3}}\pi\right)} \quad (n = 0, 1, 2)
 $$
 
 ただし、
@@ -391,7 +391,7 @@ $\dfrac{15}{A^2} = \dfrac{3}{4}$ より、 $A = 2\sqrt{5}$ である。したが
 $$
 \begin{alignedat}{2}
 &\cos{3 \theta} = -\frac{24}{A^3} = -\frac{3}{5\sqrt{5}} \\ \\
-&\theta = \frac{1}{3} \operatorname{Arccos}{\left(-\frac{3}{5\sqrt{5}}\right)} + \frac{2k}{3}\pi \quad (k = 0, 1, 2)
+&\theta = \pm\frac{1}{3} \operatorname{Arccos}{\left(-\frac{3}{5\sqrt{5}}\right)} + \frac{2k}{3}\pi \quad (k \in \mathbb{Z})
 \end{alignedat}
 $$
 
