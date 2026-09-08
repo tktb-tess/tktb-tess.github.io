@@ -4,9 +4,11 @@ title: n次方程式の解法まとめ
 description: よくクソ長い解みたいな感じで話題になる 3, 4 次方程式の解ですけど、一つ一つ順を追っていけば別にそこまで難しいものでもなくないですか?
 ---
 
-最高次係数は常に非零とする。
-
 ### 目次
+
+## 備考
+
+最高次係数は常に非零とする。
 
 ## 1次方程式
 
@@ -30,8 +32,8 @@ $a_2$ で割り、平方完成する。
 $$
 \begin{gather*}
 &x^2 + \frac{a_1}{a_2} x + \frac{a_0}{a_2} = 0 \\ \\
-& \left(x + \frac{a_1}{2 a_2} \right)^2 - \frac{a_1^2}{4a_2^2} + \frac{a_0}{a_2} = 0 \\ \\
-& \left(x + \frac{a_1}{2 a_2} \right)^2 = \frac{a_1^2 - 4a_0a_2}{4a_2^2}
+& \left( x + \frac{a_1}{2 a_2} \right)^2 - \frac{a_1^2}{4a_2^2} + \frac{a_0}{a_2} = 0 \\ \\
+& \left( x + \frac{a_1}{2 a_2} \right)^2 = \frac{a_1^2 - 4a_0a_2}{4a_2^2}
 \end{gather*}
 $$
 
@@ -52,15 +54,15 @@ $$
 a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0
 $$
 
-### 立方完成
+### 立方完成（Tschirnhaus変換）
 
-$a_3$ で割り、$b_k = \dfrac{a_k}{a_3} \ (k = 0, 1, 2)$ とおくと、
+$a_3$ で割り、$b_k = \dfrac{a_k}{a_3} \ (k = 0, 1, 2)$ とおくと
 
 $$
 x^3 + b_2 x^2 + b_1 x + b_0 = 0
 $$
 
-立方完成して、2次の項を消す。3次の項は $\left(x + \dfrac{b_2}{3}\right)^3$ となるので、 $x = t - \dfrac{b_2}{3}$ と変換する。代入して整理すると、
+立方完成して、2次の項を消す。3次の項は $\left(x + \dfrac{b_2}{3}\right)^3$ となるので、 $x = t - \dfrac{b_2}{3}$ と変換する。代入して整理すると
 
 $$
 \begin{alignedat}{2}
@@ -71,7 +73,7 @@ $$
 \end{alignedat}
 $$
 
-が得られ、
+が得られ
 
 $$
 \begin{alignedat}{2}
@@ -84,7 +86,7 @@ $$
 
 ### Tartaglia–Cardano–del Ferroの解法
 
-$t = u + v$ とおくと、
+まず $t = u + v$ とおく。すると
 
 $$
 \begin{alignedat}{2}
@@ -94,7 +96,7 @@ $$
 \end{alignedat}
 $$
 
-ここで、$\text{(A)}$ が成り立つためには、
+ここで、$\text{(A)}$ が成り立つためには、以下の2式が成立すれば十分である。
 
 $$
 \left\{
@@ -105,7 +107,7 @@ u^3 + v^3 + c_0 &= 0 \\
 \right.
 $$
 
-の2式が成立すれば十分である。変形して、
+変形して
 
 $$
 \left\{
@@ -122,7 +124,7 @@ $$
 s^2 + c_0 s - \left(\frac{c_1}{3}\right)^3 = 0
 $$
 
-の解になる。これを解いて、
+の解になる。これを解いて
 
 $$
 s = -\frac{c_0}{2} \pm \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}
@@ -137,7 +139,7 @@ v^3 &= -\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}
 \end{alignedat}
 $$
 
-とする。1の原始3乗根 $-\dfrac{1}{2} + \dfrac{\sqrt{3}}{2}i$ を $\omega$ とおいて、3乗根をとると、
+とする。1の原始3乗根 $-\dfrac{1}{2} + \dfrac{\sqrt{3}}{2}i$ を $\omega$ とおいて、3乗根をとると
 
 $$
 \begin{alignedat}{2}
@@ -158,21 +160,25 @@ $$
 \end{alignedat}
 $$
 
-であるので、
+であるので
 
 $$
-t = u + v = \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} + \omega^{-k} \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \qquad (k = 0, 1, 2)
+\begin{alignedat}{2}
+t &= u + v \\ \\
+&= \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} + \omega^{-k} \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \qquad (k = 0, 1, 2)
+\end{alignedat}
 $$
 
-となる。よって3次方程式 $a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0$ の解は、
+となる。よって3次方程式 $a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0$ の解は
 
 $$
-\begin{gather*}
-x = - \frac{b_2}{3} + t = -\frac{b_2}{3} + \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} + \omega^{-k} \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \quad (k = 0, 1, 2)
-\end{gather*}
+\begin{alignedat}{2}
+x &= - \frac{b_2}{3} + t \\ \\
+&= -\frac{b_2}{3} + \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} + \omega^{-k} \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \quad (k = 0, 1, 2)
+\end{alignedat}
 $$
 
-ただし、
+ただし
 
 $$
 \begin{alignedat}{2}
@@ -184,7 +190,7 @@ $$
 
 ### 還元不能
 
-上の $\left(\dfrac{c_0}{2}\right)^2 + \left(\dfrac{c_1}{3}\right)^3$ の値が負のとき、$u^3, v^3$ は虚数となる。不等式を立てて変形すると、
+上の $\left(\dfrac{c_0}{2}\right)^2 + \left(\dfrac{c_1}{3}\right)^3$ の値が負のとき、$u^3, v^3$ は虚数となる。不等式を立てて変形すると
 
 $$
 \begin{alignedat}{2}
@@ -202,7 +208,7 @@ $$
 D = -4a_1^3 a_3 + a_1^2 a_2^2 - 4a_0 a_2^3 + 18a_0 a_1 a_2 a_3 - 27 a_0^2 a_3^2
 $$
 
-である。これに $a_0 = c_0, \ a_1 = c_1, \ a_2 = 0, \ a_3 = 1$ を代入すると、
+である。これに $a_0 = c_0, \ a_1 = c_1, \ a_2 = 0, \ a_3 = 1$ を代入すると
 
 $$
 D = -4c_1^3 - 27c_0^2
@@ -212,7 +218,9 @@ $$
 
 ### Vièteの解法
 
-代数的な解法に拘らなければ、$D > 0$ の場合に虚数を避けることもできる。立方完成までは同じなので $t^3 + c_1 t + c_0 = 0$ の形から始める。$c_0, c_1$ は実数とし、また $c_1 \ge 0$ のときは $D = -4c_1^3 - 27c_0^2 \le 0$ となるので $c_1 < 0$ とする。
+代数的な解法に拘らなければ、$D > 0$ の場合に虚数を避けることもできる。立方完成までは同じなので $t^3 + c_1 t + c_0 = 0$ の形から始める。
+
+$c_0, c_1$ は実数とし、また $c_1 \ge 0$ のときは $D = -4c_1^3 - 27c_0^2 \le 0$ となるので $c_1 < 0$ とする。
 
 $\cos$ の3倍角の公式 $\cos{3\theta} = 4\cos^3{\theta} - 3\cos{\theta}$ を変形して
 
@@ -253,13 +261,13 @@ $\cos$ の逆関数で値域を $[0, \pi]$ に制限したものを $\operatorna
 $$
 \begin{alignedat}{2}
 3\theta &= \pm \operatorname{Arccos}{\left(\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}\right)} + 2k \pi \\ \\
-\theta &= \pm \frac{1}{3} \operatorname{Arccos}{\left(\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}\right)} + \frac{2k}{3} \pi \quad (k \in \mathbb{Z})
+\theta &= \pm \frac{1}{3} \operatorname{Arccos}{\left(\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}\right)} + \frac{2}{3} k\pi \quad (k \in \mathbb{Z})
 \end{alignedat}
 $$
 
 と求められる。
 
-ここで、$\operatorname{Arccos}$ の定義域は $[-1, 1]$ なので、$\dfrac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}$ がこの範囲内になるのかの確認が必要だが、$D = -4c_1^3 - 27c_0^2 > 0$ より $0 \le 27 c_0^2 < 4(-c_1)^3$ がわかり、したがって、
+ここで、$\operatorname{Arccos}$ の定義域は $[-1, 1]$ なので、$\dfrac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}$ がこの範囲内になるのかの確認が必要だが、$D = -4c_1^3 - 27c_0^2 > 0$ より $0 \le 27 c_0^2 < 4(-c_1)^3$ がわかり、したがって
 
 $$
 0 \le \frac{27c_0^2}{4(-c_1)^3} < 1
@@ -276,16 +284,19 @@ $$
 さて、上で求めた $\theta$ は無限個あるが、$\cos$ の周期性と偶関数性から、複数の $\theta$ が同じ $t$ の値に対応する場合がある。そのような $\theta$ を除きつつ、 $t = A \cos{\theta}$ を求めると次の3つになる。
 
 $$
-t = 2\sqrt{-\dfrac{c_1}{3}} \cos{\left(\frac{1}{3}\operatorname{Arccos}{\left(\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}\right) + \frac{2k}{3}}\pi\right)} \quad (k = 0, 1, 2)
+t = A \cos{\left(\frac{1}{3}\operatorname{Arccos}{\left(\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}\right) + \frac{2}{3}}k\pi\right)} \quad (k = 0, 1, 2)
 $$
 
 よって、3次方程式 $a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0$ の解は
 
 $$
-x = -\frac{b_2}{3} + t = -\frac{b_2}{3} + 2\sqrt{-\dfrac{c_1}{3}} \cos{\left(\frac{1}{3}\operatorname{Arccos}{\left(\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}\right) + \frac{2n}{3}}\pi\right)} \quad (n = 0, 1, 2)
+\begin{alignedat}{2}
+x &= -\frac{b_2}{3} + t \\ \\
+&= -\frac{b_2}{3} + 2\sqrt{-\dfrac{c_1}{3}} \cos{\left(\frac{1}{3}\operatorname{Arccos}{\left(\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}\right) + \frac{2}{3}}k\pi\right)} \quad (k = 0, 1, 2)
+\end{alignedat}
 $$
 
-ただし、
+ただし
 
 $$
 \begin{alignedat}{2}
@@ -346,13 +357,13 @@ u^3v^3 &= 125
 \right.
 $$
 
-よって $u^3, v^3$ は 2次方程式 $s^2 + 6s + 125 = 0$ の解になる。これを解いて、
+よって $u^3, v^3$ は 2次方程式 $s^2 + 6s + 125 = 0$ の解になる。これを解いて
 
 $$
 s = -3 \pm \sqrt{3^2 - 125} = -3 \pm 2\sqrt{29} i
 $$
 
-2つの解を $u^3, v^2$ それぞれに割り当てても問題ないので、
+2つの解を $u^3, v^2$ それぞれに割り当てても問題ないので
 
 $$
 \begin{alignedat}{2}
@@ -364,13 +375,13 @@ $$
 とする。1の原始3乗根 $-\dfrac{1}{2} + \dfrac{\sqrt{3}}{2}i$ を $\omega$ とおくと、$t$ は
 
 $$
-t = u + v = \omega^k \sqrt[3]{-3 + 2\sqrt{29} i} + \omega^{-k} \sqrt[3]{-3 - 2\sqrt{29} i} \quad (k = 0, 1, 2)
+t = \omega^k \sqrt[3]{-3 + 2\sqrt{29} i} + \omega^{-k} \sqrt[3]{-3 - 2\sqrt{29} i} \quad (k = 0, 1, 2)
 $$
 
 よって解は
 
 $$
-x = 2 + t = 2 + \omega^k \sqrt[3]{-3 + 2\sqrt{29} i} + \omega^{-k} \sqrt[3]{-3 - 2\sqrt{29} i} \quad (k = 0, 1, 2)
+x = 2 + \omega^k \sqrt[3]{-3 + 2\sqrt{29} i} + \omega^{-k} \sqrt[3]{-3 - 2\sqrt{29} i} \quad (k = 0, 1, 2)
 $$
 
 である。3つの解は全て実数であるが、この式から虚数単位 $i$ を除去することはできない（還元不能）。
@@ -384,19 +395,29 @@ $$
 \end{alignedat}
 $$
 
-$\dfrac{15}{A^2} = \dfrac{3}{4}$ より、 $A = 2\sqrt{5}$ である。したがって、
+$\cos^3{\theta} - \dfrac{3}{4}\cos{\theta} - \dfrac{1}{4}\cos{3\theta} = 0$ と係数比較して
+
+$$
+\begin{alignedat}{2}
+-\dfrac{15}{A^2} &= -\dfrac{3}{4} \\ \\
+\dfrac{6}{A^3} &= -\dfrac{1}{4}\cos{3\theta}
+\end{alignedat}
+$$
+
+よって1つ目の式より $A = \pm 2\sqrt{5}$ である。ここでは負の方を採用する。2つ目に代入して
 
 $$
 \begin{gather*}
-\cos{3 \theta} = -\frac{24}{A^3} = -\frac{3}{5\sqrt{5}} \\ \\
-\theta = \pm\frac{1}{3} \operatorname{Arccos}{\left(-\frac{3}{5\sqrt{5}}\right)} + \frac{2k}{3}\pi \quad (k \in \mathbb{Z})
+\cos{3 \theta} = -\frac{24}{A^3} = \frac{3}{5\sqrt{5}} \\ \\
+\theta = \pm\frac{1}{3} \operatorname{Arccos}{\frac{3}{5\sqrt{5}}} + \frac{2}{3}k\pi \quad (k \in \mathbb{Z}) \\ \\
+t = -2\sqrt{5}\cos{\left(\frac{1}{3} \operatorname{Arccos}{\frac{3}{5\sqrt{5}}} + \frac{2}{3}k\pi\right)} \quad (k = 0, 1, 2)
 \end{gather*}
 $$
 
 よって解は
 
 $$
-x = 2 + 2\sqrt{5} \cos{\left(\frac{1}{3}\operatorname{Arccos}{\left(-\frac{3}{5\sqrt{5}}\right) + \frac{2k}{3}\pi}\right)} \quad (k = 0, 1, 2)
+x = 2 - 2\sqrt{5} \cos{\left(\frac{1}{3}\operatorname{Arccos}{\frac{3}{5\sqrt{5}}} + \frac{2}{3}k\pi \right)} \quad (k = 0, 1, 2)
 $$
 
 である。
@@ -407,7 +428,7 @@ $$
 a_4x^4 + a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0
 $$
 
-### 3次の項の消去
+### 3次の項の消去（Tschirnhaus変換）
 
 まず $a_4$ で割り、$b_k = \dfrac{a_k}{a_4} \ (k = 0, 1, 2, 3)$ とおくと、
 
@@ -415,7 +436,7 @@ $$
 x^4 + b_3 x^3 + b_2 x^2 + b_1 x + b_0 = 0
 $$
 
-3次方程式と同様の方法で3次の項を消す。4次の項は $\left( x + \dfrac{b_3}{4} \right)^4$ となるので $x = t - \dfrac{b_3}{4}$ と変換する。代入して整理すると、
+3次方程式と同様の方法で3次の項を消す。4次の項は $\left( x + \dfrac{b_3}{4} \right)^4$ となるので $x = t - \dfrac{b_3}{4}$ と変換する。代入して整理すると
 
 $$
 \begin{alignedat}{2}
@@ -426,7 +447,7 @@ $$
 \end{alignedat}
 $$
 
-となり、
+となり
 
 $$
 \begin{alignedat}{2}
@@ -468,7 +489,7 @@ $$
 
 を満たす。これを解いて $\mu$ を求める。
 
-2次方程式 $ax^2 + bx + c = 0$ が重解をもつとき、
+2次方程式 $ax^2 + bx + c = 0$ が重解をもつとき
 
 $$
 \begin{alignedat}{2}
@@ -506,13 +527,13 @@ $$
 \end{alignedat}
 $$
 
-と分解できる。$t^2 + d_1 t + \mu + d_2 = 0$ の解は
+と分解できる。$t^2 + d_1 t + d_2 + \mu = 0$ の解は
 
 $$
 t = -\frac{d_1}{2} \pm \sqrt{\frac{d_1^2}{4} - d_2 - \mu}
 $$
 
-$t^2 - d_1 t + \mu - d_2 = 0$ の解も同様に求めて、
+$t^2 - d_1 t - d_2 + \mu = 0$ の解も同様に求めて
 
 $$
 t = \frac{d_1}{2} \pm \sqrt{\frac{d_1^2}{4} + d_2 - \mu}
@@ -545,7 +566,5 @@ $$
 ## 5次方程式
 
 皆さんご存知の通り、5次以降の方程式には任意の方程式に対して使える代数的解法は存在しない。だが代数的解法に拘らなければ解く方法はある。楕円モジュラー関数を使う方法・正20面体方程式を使う方法・超冪根を用いる方法などがある。
-
-### Tschirnhaus変換による 2, 3, 4 次の項の消去
 
 工事中……
