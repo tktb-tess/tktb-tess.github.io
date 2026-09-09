@@ -54,7 +54,7 @@ $$
 a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0
 $$
 
-### 立方完成（Tschirnhaus変換）
+### 立方完成
 
 $a_3$ で割り、$b_k = \dfrac{a_k}{a_3} \ (k = 0, 1, 2)$ とおくと
 
@@ -260,8 +260,8 @@ $\cos$ の逆関数で値域を $[0, \pi]$ に制限したものを $\operatorna
 
 $$
 \begin{alignedat}{2}
-3\theta &= \pm \operatorname{Arccos}{\left(\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}\right)} + 2k \pi \\ \\
-\theta &= \pm \frac{1}{3} \operatorname{Arccos}{\left(\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}\right)} + \frac{2}{3} k\pi \quad (k \in \mathbb{Z})
+3\theta &= \pm \operatorname{Arccos}{\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}} + 2k \pi \\ \\
+\theta &= \pm \frac{1}{3} \operatorname{Arccos}{\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}} + \frac{2}{3} k\pi \quad (k \in \mathbb{Z})
 \end{alignedat}
 $$
 
@@ -284,7 +284,7 @@ $$
 さて、上で求めた $\theta$ は無限個あるが、$\cos$ の周期性と偶関数性から、複数の $\theta$ が同じ $t$ の値に対応する場合がある。そのような $\theta$ を除きつつ、 $t = A \cos{\theta}$ を求めると次の3つになる。
 
 $$
-t = A \cos{\left(\frac{1}{3}\operatorname{Arccos}{\left(\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}\right) + \frac{2}{3}}k\pi\right)} \quad (k = 0, 1, 2)
+t = 2\sqrt{-\frac{c_1}{3}} \cos{\left(\frac{1}{3}\operatorname{Arccos}{\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}} + \frac{2}{3}}k\pi\right)} \quad (k = 0, 1, 2)
 $$
 
 よって、3次方程式 $a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0$ の解は
@@ -292,7 +292,7 @@ $$
 $$
 \begin{alignedat}{2}
 x &= -\frac{b_2}{3} + t \\ \\
-&= -\frac{b_2}{3} + 2\sqrt{-\dfrac{c_1}{3}} \cos{\left(\frac{1}{3}\operatorname{Arccos}{\left(\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}\right) + \frac{2}{3}}k\pi\right)} \quad (k = 0, 1, 2)
+&= -\frac{b_2}{3} + 2\sqrt{-\dfrac{c_1}{3}} \cos{\left(\frac{1}{3}\operatorname{Arccos}{\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}} + \frac{2}{3}}k\pi\right)} \quad (k = 0, 1, 2)
 \end{alignedat}
 $$
 
@@ -428,7 +428,7 @@ $$
 a_4x^4 + a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0
 $$
 
-### 3次の項の消去（Tschirnhaus変換）
+### 3次の項の消去
 
 まず $a_4$ で割り、$b_k = \dfrac{a_k}{a_4} \ (k = 0, 1, 2, 3)$ とおくと、
 
@@ -520,7 +520,7 @@ $$
 
 $$
 \begin{alignedat}{2}
-&(t^2 + \mu)^2 - ((2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0) = 0 \\
+&(t^2 + \mu)^2 - \{(2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0\} = 0 \\
 &(t^2 + \mu)^2 - \left(d_1t + d_2\right)^2 = 0 \\
 &\{(t^2 + \mu) + (d_1 t + d_2)\}\{(t^2 + \mu) - (d_1 t + d_2)\} = 0 \\
 &(t^2 + d_1 t + d_2 + \mu)(t^2 - d_1 t - d_2 + \mu) = 0
