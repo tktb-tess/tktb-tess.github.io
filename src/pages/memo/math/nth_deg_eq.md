@@ -9,7 +9,7 @@ description: よくクソ長い解みたいな感じで話題になる 3, 4 次�
 ## 備考
 
 - 最高次係数は常に非零とする。
-- 複素数 $\alpha$ に対する冪根記号 $\sqrt[n]{\alpha}$ は $\sqrt[n]{|\alpha|}e^{\frac{\arg{\alpha}}{n}i}$ と定義する。ただし、 $\arg{\alpha}$ は $\alpha$ の偏角であり、範囲は $0 \le \arg{\alpha} < 2\pi$ とする。
+- 複素数 $\alpha$ に対する冪根記号 $\sqrt[n]{\alpha}$ は $\sqrt[n]{|\alpha|}e^{(i\arg{\alpha})/n}$ と定義する。ただし、 $\arg{\alpha}$ は $\alpha$ の偏角であり、範囲は $0 \le \arg{\alpha} < 2\pi$ とする。
 
 ## 1次方程式
 
