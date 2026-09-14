@@ -8,7 +8,8 @@ description: よくクソ長い解みたいな感じで話題になる 3, 4 次�
 
 ## 備考
 
-最高次係数は常に非零とする。
+- 最高次係数は常に非零とする。
+- 複素数 $\alpha$ に対する冪根記号 $\sqrt[n]{\alpha}$ は $\sqrt[n]{|\alpha|}e^{\frac{\arg{\alpha}}{n}i}$ と定義する。ただし、 $\arg{\alpha}$ は $\alpha$ の偏角であり、範囲は $0 \le \arg{\alpha} < 2\pi$ とする。
 
 ## 1次方程式
 
@@ -311,17 +312,17 @@ $$
 次の3次方程式を解いてみる。
 
 $$
-x^3 - 9x^2 - 42x - 4 = 0
+x^3 - 6x^2 + 3x + 6 = 0
 $$
 
-$x = t + 3$ とおいて2次の項を消す。
+$x = t + 2$ とおいて2次の項を消す。
 
 $$
 \begin{alignedat}{2}
-& (t + 3)^3 - 9(t + 3)^2 - 42(t + 3) - 4 = 0 \\
-& (t^3 + 9t^2 + 27t + 27) - 9(t^2 + 6t + 9) - 42(t + 3) - 4 = 0 \\
-& t^3 + 27t + 27 - 54t - 81 - 42t - 126 - 4 = 0 \\
-& t^3 - 69t - 184 = 0 \\
+(&t + 2)^3 - 6(t + 2)^2 + 3(t + 2) + 6 = 0 \\
+(&t^3 + 6t^2 + 12t + 8) - 6(t^2 + 4t + 4) + 3(t + 2) + 6 = 0 \\
+&t^3 + 12t + 8 - 24t - 24 + 3t + 6 + 6 = 0 \\
+&t^3 - 9t - 4 = 0
 \end{alignedat}
 $$
 
@@ -331,9 +332,8 @@ $t = u + v$ とおいて整理。
 
 $$
 \begin{alignedat}{2}
-& (u + v)^3 - 69(u + v) - 184 = 0 \\
-& u^3 + v^3 + 3uv(u + v) - 69(u + v) - 184 = 0 \\
-& u^3 + v^3 - 184 + (3uv - 69)(u + v) = 0
+&(u + v)^3 - 9(u + v) - 4 = 0 \\
+&u^3 + v^3 - 4 + (3uv - 9)(u + v) = 0
 \end{alignedat}
 $$
 
@@ -342,8 +342,8 @@ $$
 $$
 \left\{
 \begin{alignedat}{2}
-u^3 + v^3 - 184 &= 0 \\
-3uv - 69 &= 0
+u^3 + v^3 - 4 &= 0 \\
+3uv - 9 &= 0
 \end{alignedat}
 \right.
 $$
@@ -353,21 +353,18 @@ $$
 $$
 \left\{
 \begin{alignedat}{2}
-u^3 + v^3 &= 184 \\
-u^3v^3 &= 23^3
+u^3 + v^3 &= 4 \\
+u^3v^3 &= 27
 \end{alignedat}
 \right.
 $$
 
-よって $u^3, v^3$ は 2次方程式 $s^2 - 184s - 23^3 = 0$ の解になる。これを解いて
+よって $u^3, v^3$ は 2次方程式 $s^2 - 4s + 27 = 0$ の解になる。これを解いて
 
 $$
 \begin{alignedat}{2}
-s &= 92 \pm \sqrt{92^2 - 23^3} \\
-&= 92 \pm \sqrt{4^2\cdot23^2 - 23^3} \\
-&= 92 \pm 23\sqrt{4^2 - 23} \\
-&= 92 \pm 23\sqrt{7} i \\
-&= 23(4 \pm \sqrt{7}i)
+s &= 2 \pm \sqrt{(-2)^2 - 27} \\
+&= 2 \pm \sqrt{23}i
 \end{alignedat}
 $$
 
@@ -375,21 +372,21 @@ $$
 
 $$
 \begin{alignedat}{2}
-u^3 &= 23(4 + \sqrt{7}i) \\
-v^3 &= 23(4 - \sqrt{7}i)
+u^3 &= 2 + \sqrt{23}i \\
+v^3 &= 2 - \sqrt{23}i
 \end{alignedat}
 $$
 
-とする。1の原始3乗根 $-\dfrac{1}{2} + \dfrac{\sqrt{3}}{2}i$ を $\omega$ とすると、$t$ は
+とする。1の原始3乗根 $\dfrac{-1 + \sqrt{3}i}{2}$ を $\omega$ とすると、$t$ は
 
 $$
-t = \sqrt[3]{23}\left(\omega^k \sqrt[3]{4 + \sqrt{7}i} + \omega^{-k} \sqrt[3]{4 + \sqrt{7}i}\right) \quad (k = 0, 1, 2)
+t = \omega^k \sqrt[3]{2 + \sqrt{23}i} + \omega^{-k} \sqrt[3]{2 - \sqrt{23}i} \quad (k = 0, 1, 2)
 $$
 
-よって $x^3 - 9x^2 - 42x - 4 = 0$ の解は
+よって $x^3 - 6x^2 + 3x + 6 = 0$ の解は
 
 $$
-x = 3 + \sqrt[3]{23}\left(\omega^k \sqrt[3]{4 + \sqrt{7}i} + \omega^{-k} \sqrt[3]{4 + \sqrt{7}i}\right) \quad (k = 0, 1, 2)
+x = 2 + \omega^k \sqrt[3]{2 + \sqrt{23}i} + \omega^{-k} \sqrt[3]{2 - \sqrt{23}i} \quad (k = 0, 1, 2)
 $$
 
 である。3つの解は全て実数であるが、この式から虚数単位 $i$ を除去することはできない（還元不能）。
@@ -398,8 +395,8 @@ Vièteの解法でも求めてみる。$t = A\cos{\theta}$ とおいて代入。
 
 $$
 \begin{alignedat}{2}
-&(A\cos{\theta})^3 - 69A\cos{\theta} - 184 = 0 \\ \\
-&\cos^3{\theta} - \frac{69}{A^2} \cos{\theta} - \frac{184}{A^3} = 0
+&(A\cos{\theta})^3 - 9A\cos{\theta} - 4 = 0 \\ \\
+&\cos^3{\theta} - \frac{9}{A^2} \cos{\theta} - \frac{4}{A^3} = 0
 \end{alignedat}
 $$
 
@@ -407,25 +404,24 @@ $\cos^3{\theta} - \dfrac{3}{4}\cos{\theta} - \dfrac{1}{4}\cos{3\theta} = 0$ と�
 
 $$
 \begin{alignedat}{2}
--\dfrac{69}{A^2} &= -\dfrac{3}{4} \\ \\
--\dfrac{184}{A^3} &= -\dfrac{1}{4}\cos{3\theta}
+-\dfrac{9}{A^2} &= -\dfrac{3}{4} \\ \\
+-\dfrac{4}{A^3} &= -\dfrac{1}{4}\cos{3\theta}
 \end{alignedat}
 $$
 
-よって1つ目の式より $A = \pm \sqrt{92} = \pm 2\sqrt{23}$ である。ここでは正の方を採用する。2つ目に代入して
+よって1つ目の式より $A = \pm 2\sqrt{3}$ である。ここでは正の方を採用する。2つ目に代入して
 
 $$
 \begin{gather*}
-\cos{3 \theta} = \frac{184\cdot4}{A^3} = \frac{32\cdot23}{8 \cdot23\sqrt{23}} = \frac{4}{\sqrt{23}} \\ \\
-\theta = \pm\frac{1}{3} \operatorname{Arccos}{\frac{4}{\sqrt{23}}} + \frac{2}{3}k\pi \quad (k \in \mathbb{Z}) \\ \\
-t = 2\sqrt{23}\cos{\left(\frac{1}{3} \operatorname{Arccos}{\frac{4}{\sqrt{23}}} + \frac{2}{3}k\pi\right)} \quad (k = 0, 1, 2)
+\cos{3\theta} = \frac{16}{A^3} = \frac{16}{8\cdot3\sqrt{3}} = \frac{2}{3\sqrt3} \\ \\
+t = 2\sqrt{3} \cos{\left(\frac{1}{3} \operatorname{Arccos}{\frac{2}{3\sqrt{3}}} + \frac{2}{3} k\pi\right)} \quad (k = 0, 1, 2)
 \end{gather*}
 $$
 
-よって $x^3 - 9x^2 - 42x - 4 = 0$ の解は
+よって $x^3 - 6x^2 + 3x + 6 = 0$ の解は
 
 $$
-x = 3 + 2\sqrt{23}\cos{\left(\frac{1}{3} \operatorname{Arccos}{\frac{4}{\sqrt{23}}} + \frac{2}{3}k\pi\right)} \quad (k = 0, 1, 2)
+x = 2 + 2\sqrt{3} \cos{\left(\frac{1}{3} \operatorname{Arccos}{\frac{2}{3\sqrt{3}}} + \frac{2}{3} k\pi\right)} \quad (k = 0, 1, 2)
 $$
 
 である。
