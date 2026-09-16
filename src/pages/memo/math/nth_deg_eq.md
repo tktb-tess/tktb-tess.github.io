@@ -9,7 +9,8 @@ description: よくクソ長い解みたいな感じで話題になる 3, 4 次�
 ## 備考
 
 - 最高次係数は常に非零とする。
-- 複素数 $\alpha$ に対する根号 $\sqrt[n]{\alpha}$ は $\sqrt[n]{|\alpha|}\,e^{i\theta/n}$ と定義する。ただし、 $\theta$ は $\alpha$ の偏角であり、範囲は $0 \le \theta < 2\pi$ とする。
+- 複素数 $\alpha$ を極座標形式で $|\alpha|e^{i\theta}$ と表す。ただし、 $\theta$ は $\alpha$ の偏角であり、範囲は $-\pi < \theta \le \pi$ とする。このとき根号 $\sqrt[n]{\alpha}$ の値を $\sqrt[n]{|\alpha|}\,e^{i\theta/n}$ と定義する。また $\alpha^{1/n}$ の値も同様に定義する。
+- 1の原始3乗根 $e^{2\pi i/3} = \dfrac{-1 + \sqrt{3}i}{2}$ を $\omega$ とおく。
 
 ## 1次方程式
 
@@ -119,44 +120,52 @@ u^3v^3 &= -\left(\frac{c_1}{3}\right)^3
 \right.
 $$
 
-解と係数の関係より、 $u^3, v^3$ は2次方程式
+解と係数の関係より、 $u^3, v^3$ は以下の2次方程式の解になる。
 
 $$
 s^2 + c_0 s - \left(\frac{c_1}{3}\right)^3 = 0
 $$
 
-の解になる。これを解いて
+これを解くと
 
 $$
 s = -\frac{c_0}{2} \pm \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}
 $$
 
-$u, v$ は対称なので、2つの解をそれぞれに割り当てても問題ない。よって
+二つの解のうちいずれか一つを選んで $u^3$ とする。ここでは符号が正の方を選ぶ。
 
 $$
 \begin{alignedat}{2}
-u^3 &= -\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3} \\ \\
-v^3 &= -\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}
+u^3 &= -\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}
 \end{alignedat}
 $$
 
-とする。1の原始3乗根 $\dfrac{-1 + \sqrt{3}i}{2}$ を $\omega$ とし、3乗根をとると
+3乗根をとると
 
 $$
 \begin{alignedat}{2}
-u &= \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \\ \\
-v &= \omega^k \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \qquad (k = 0, 1, 2)
+u &= \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \quad (k = 0, 1, 2)
 \end{alignedat}
 $$
 
-のように、それぞれ3つの解が得られる。
+のように、3つの解が得られる。
 
-$uv = -\dfrac{c_1}{3}$ となるように組み合わせを選ぶと、以下の3つの解が得られる。
+$uv = -\dfrac{c_1}{3}$ より、
+
+$$
+\begin{alignedat}{2}
+v = -\frac{c_1}{3u} = -\frac{c_1\omega^{-k}}{3}\left(-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}\right)^{-1/3} \quad (k = 0, 1, 2)
+\end{alignedat}
+$$
+
+
+よって、以下の3つの解が得られる。
 
 $$
 \begin{alignedat}{2}
 t &= u + v \\ \\
-&= \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} + \omega^{-k} \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \qquad (k = 0, 1, 2)
+&= \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}}
+-\frac{c_1\omega^{-k}}{3}\left(-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}\right)^{-1/3} \quad (k = 0, 1, 2)
 \end{alignedat}
 $$
 
@@ -165,7 +174,8 @@ $$
 $$
 \begin{alignedat}{2}
 x &= - \frac{b_2}{3} + t \\ \\
-&= -\frac{b_2}{3} + \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} + \omega^{-k} \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \quad (k = 0, 1, 2)
+&= -\frac{b_2}{3} + \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}}
+-\frac{c_1\omega^{-k}}{3}\left(-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}\right)^{-1/3} \quad (k = 0, 1, 2)
 \end{alignedat}
 $$
 
@@ -179,7 +189,79 @@ c_1 &= b_1 - \frac{b_2^2}{3}
 \end{alignedat}
 $$
 
+である。
+
+また、積と3乗根の交換をしても値が保たれる場合、つまり
+
+$$
+\begin{alignedat}{2}
+&\sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}}
+\times \sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \\ \\
+&= \sqrt[3]{\left(-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}\right)
+\left(-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}\right)}
+\end{alignedat}
+$$
+
+が成り立つときは
+
+$$
+\begin{alignedat}{2}
+v &= -\frac{c_1\omega^{-k}}{3\sqrt[3]{-c_0/2 + \sqrt{(c_0/2)^2 + (c_1/3)^3}}} \\ \\
+&= -\frac{c_1\omega^{-k}\sqrt[3]{-c_0/2 - \sqrt{(c_0/2)^2 + (c_1/3)^3}}}
+{3\sqrt[3]{\left(-c_0/2 + \sqrt{(c_0/2)^2 + (c_1/3)^3}\right)\left(-c_0/2 - \sqrt{(c_0/2)^2 + (c_1/3)^3}\right)}} \\ \\
+&= -\frac{c_1\omega^{-k}\sqrt[3]{-c_0/2 - \sqrt{(c_0/2)^2 + (c_1/3)^3}}}
+{3\sqrt[3]{(-c_0/2)^2 - \left((c_0/2)^2 + (c_1/3)^3\right)}} \\ \\
+&= -\frac{c_1\omega^{-k}}{3\sqrt[3]{-(c_1/3)^3}}\sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \\ \\
+&= -\frac{c_1\omega^{-k}}{\sqrt[3]{-c_1^3}}\sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}}
+\end{alignedat}
+$$
+
+さらに $c_1$ が0以下の実数であるなら、$\sqrt[3]{-c_1^3} = -c_1$ が成立するので
+
+$$
+\begin{alignedat}{2}
+v &= -\frac{c_1\omega^{-k}}{-c_1}\sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \\ \\
+&= \omega^{-k}\sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}}
+\end{alignedat}
+$$
+
+と表せ、解を
+
+$$
+\begin{alignedat}{2}
+x &= -\frac{b_2}{3} + \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}}
++ \omega^{-k}\sqrt[3]{-\frac{c_0}{2} - \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}\right)^3}} \quad (k = 0, 1, 2)
+\end{alignedat}
+$$
+
+という形にできる。特に、$c_0, c_1$ が共に0以下の実数である場合、3乗根の中身は共に正の実数か互いに共役な虚数となり、この形に変形できる。正の実数の場合は自明であるので互いに共役な場合の説明をすると
+
+任意の複素数 $\alpha = |\alpha|e^{i\arg{\alpha}}$ に対し、その複素共役を $\overline{\alpha}$ とすると、$\overline{\alpha} = |\alpha|e^{-i\arg{\alpha}}$ である。
+
+$$
+\begin{alignedat}{2}
+\sqrt[3]{\overline{\alpha}} &= \sqrt[3]{|\alpha|}e^{-i(\arg{\alpha})/3} \\
+&= \left|\sqrt[3]{\alpha}\right|e^{-i(\arg{\alpha})/3} \\
+&= \overline{\sqrt[3]{\alpha}}
+\end{alignedat}
+$$ 
+
+が成り立つ。よって
+
+$$
+\begin{alignedat}{2}
+\sqrt[3]{\alpha}\sqrt[3]{\overline{\alpha}} &= \sqrt[3]{\alpha}\overline{\sqrt[3]{\alpha}} \\
+&= |\sqrt[3]{\alpha}|^2 \\
+&= \sqrt[3]{|\alpha|^2} \\
+&= \sqrt[3]{\alpha\overline{\alpha}}
+\end{alignedat}
+$$
+
+となり、3乗根と積を交換しても等しいことが分かる。
+
 ### 還元不能
+
+以下 $c_0, c_1$ を実数とする。
 
 上の $\left(\dfrac{c_0}{2}\right)^2 + \left(\dfrac{c_1}{3}\right)^3$ の値が負のとき、$u^3, v^3$ は虚数となる。不等式を立てて変形すると
 
@@ -247,18 +329,18 @@ $$
 \end{alignedat}
 $$
 
-$\cos$ の逆関数で値域を $[0, \pi]$ に制限したものを $\operatorname{Arccos}$ とすると、$\theta$ は
+$\cos$ の逆関数で値域を $[0, \pi]$ に制限したものを $\operatorname{Cos}^{-1}$ とすると、$\theta$ は
 
 $$
 \begin{alignedat}{2}
-3\theta &= \pm \operatorname{Arccos}{\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}} + 2k \pi \\ \\
-\theta &= \pm \frac{1}{3} \operatorname{Arccos}{\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}} + \frac{2}{3} k\pi \quad (k \in \mathbb{Z})
+3\theta &= \pm \operatorname{Cos}^{-1}{\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}} + 2k \pi \\ \\
+\theta &= \pm \frac{1}{3} \operatorname{Cos}^{-1}{\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}} + \frac{2}{3} k\pi \quad (k \in \mathbb{Z})
 \end{alignedat}
 $$
 
 と求められる。
 
-ここで $\operatorname{Arccos}$ の定義域は $[-1, 1]$ なので、$\dfrac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}$ がこの範囲内になるのかの確認が必要だが、$\Delta = -4c_1^3 - 27c_0^2 > 0$ より $0 \le 27 c_0^2 < 4(-c_1)^3$ がわかり、したがって
+ここで $\operatorname{Cos}^{-1}$ の定義域は $[-1, 1]$ なので、$\dfrac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}$ がこの範囲内になるのかの確認が必要だが、$\Delta = -4c_1^3 - 27c_0^2 > 0$ より $0 \le 27 c_0^2 < 4(-c_1)^3$ がわかり、したがって
 
 $$
 0 \le \frac{27c_0^2}{4(-c_1)^3} < 1
@@ -275,7 +357,7 @@ $$
 さて、上で求めた $\theta$ は無限個あるが、$\cos$ の周期性と偶関数性から、複数の $\theta$ が同じ $t$ の値に対応する場合がある。そのような重複する $\theta$ を除きつつ、 $t = A \cos{\theta}$ を求めると次の3つになる。
 
 $$
-t = 2\sqrt{-\frac{c_1}{3}} \cos{\left(\frac{1}{3}\operatorname{Arccos}{\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}} + \frac{2}{3}}k\pi\right)} \quad (k = 0, 1, 2)
+t = 2\sqrt{-\frac{c_1}{3}} \cos{\left(\frac{1}{3}\operatorname{Cos}^{-1}{\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}} + \frac{2}{3}}k\pi\right)} \quad (k = 0, 1, 2)
 $$
 
 よって $a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0$ の解は
@@ -283,7 +365,7 @@ $$
 $$
 \begin{alignedat}{2}
 x &= -\frac{b_2}{3} + t \\ \\
-&= -\frac{b_2}{3} + 2\sqrt{-\dfrac{c_1}{3}} \cos{\left(\frac{1}{3}\operatorname{Arccos}{\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}} + \frac{2}{3}}k\pi\right)} \quad (k = 0, 1, 2)
+&= -\frac{b_2}{3} + 2\sqrt{-\dfrac{c_1}{3}} \cos{\left(\frac{1}{3}\operatorname{Cos}^{-1}{\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}} + \frac{2}{3}}k\pi\right)} \quad (k = 0, 1, 2)
 \end{alignedat}
 $$
 
@@ -354,29 +436,53 @@ $$
 $$
 \begin{alignedat}{2}
 s &= 2 \pm \sqrt{(-2)^2 - 27} \\
-&= 2 \pm \sqrt{23}i
+&= 2 \pm i\sqrt{23}
 \end{alignedat}
 $$
 
-2つの解を $u^3, v^2$ それぞれに割り当てても問題ないので
+二つある内のどちらか片方を $u^3$ とする。ここでは符号が正の方を選ぶ。
 
 $$
 \begin{alignedat}{2}
-u^3 &= 2 + \sqrt{23}i \\
-v^3 &= 2 - \sqrt{23}i
+u^3 &= 2 + i\sqrt{23}
 \end{alignedat}
 $$
 
-とする。1の原始3乗根 $\dfrac{-1 + \sqrt{3}i}{2}$ を $\omega$ とすると、$t$ は
+よって
 
 $$
-t = \omega^k \sqrt[3]{2 + \sqrt{23}i} + \omega^{-k} \sqrt[3]{2 - \sqrt{23}i} \quad (k = 0, 1, 2)
+u = \omega^k \sqrt[3]{2 + i\sqrt{23}} \quad (k = 0, 1, 2)
+$$
+
+$uv = 3$ より
+
+$$
+\begin{alignedat}{2}
+v &= \frac{3}{u} \\ \\
+&= \frac{3\omega^{-k}}{\sqrt[3]{2 + i\sqrt{23}}} \quad (k = 0, 1, 2)
+\end{alignedat}
+$$
+
+分母分子に $\sqrt[3]{2 - i\sqrt{23}}$ をかける。$2 + i\sqrt{23}$ と $2 - i\sqrt{23}$ は共役な虚数であるので、$\sqrt[3]{2 + i\sqrt{23}}\sqrt[3]{2 - i\sqrt{23}} = \sqrt[3]{(2 + i\sqrt{23})(2 - i\sqrt{23})} = \sqrt[3]{27} = 3$ が成立する。よって
+
+$$
+\begin{alignedat}{2}
+v &= \frac{3\omega^{-k}\sqrt[3]{2 - i\sqrt{23}}}{\sqrt[3]{2 + i\sqrt{23}}\sqrt[3]{2 - i\sqrt{23}}} \\ \\
+&= \frac{3\omega^{-k}\sqrt[3]{2 - i\sqrt{23}}}{3} \\ \\
+&= \omega^{-k}\sqrt[3]{2 - i\sqrt{23}} \quad (k = 0, 1, 2)
+\end{alignedat}
+$$
+
+したがって $t$ は以下のようになる。
+
+$$
+t = \omega^k \sqrt[3]{2 + i\sqrt{23}} + \omega^{-k} \sqrt[3]{2 - i\sqrt{23}} \quad (k = 0, 1, 2)
 $$
 
 よって $x^3 - 6x^2 + 3x + 6 = 0$ の解は
 
 $$
-x = 2 + \omega^k \sqrt[3]{2 + \sqrt{23}i} + \omega^{-k} \sqrt[3]{2 - \sqrt{23}i} \quad (k = 0, 1, 2)
+x = 2 + \omega^k \sqrt[3]{2 + i\sqrt{23}} + \omega^{-k} \sqrt[3]{2 - i\sqrt{23}} \quad (k = 0, 1, 2)
 $$
 
 である。3つの解は全て実数であるが、この式から虚数単位 $i$ を除去することはできない（還元不能）。
@@ -404,14 +510,14 @@ $$
 $$
 \begin{gather*}
 \cos{3\theta} = \frac{16}{A^3} = \frac{16}{8\cdot3\sqrt{3}} = \frac{2}{3\sqrt3} \\ \\
-t = 2\sqrt{3} \cos{\left(\frac{1}{3} \operatorname{Arccos}{\frac{2}{3\sqrt{3}}} + \frac{2}{3} k\pi\right)} \quad (k = 0, 1, 2)
+t = 2\sqrt{3} \cos{\left(\frac{1}{3} \operatorname{Cos}^{-1}{\frac{2}{3\sqrt{3}}} + \frac{2}{3} k\pi\right)} \quad (k = 0, 1, 2)
 \end{gather*}
 $$
 
 よって $x^3 - 6x^2 + 3x + 6 = 0$ の解は
 
 $$
-x = 2 + 2\sqrt{3} \cos{\left(\frac{1}{3} \operatorname{Arccos}{\frac{2}{3\sqrt{3}}} + \frac{2}{3} k\pi\right)} \quad (k = 0, 1, 2)
+x = 2 + 2\sqrt{3} \cos{\left(\frac{1}{3} \operatorname{Cos}^{-1}{\frac{2}{3\sqrt{3}}} + \frac{2}{3} k\pi\right)} \quad (k = 0, 1, 2)
 $$
 
 である。
@@ -453,7 +559,7 @@ $$
 
 とおけば、$t^4 + c_2 t^2 + c_1 t + c_0 = 0$ を得る。
 
-### *Ferrari* の解法
+### *Ferrari*の解法
 
 $\mu$ をある複素数（値は後で求める）として、$2\mu t^2 +\mu^2 - 2\mu t^2 - \mu^2$ を加える。$t^4 + 2\mu t^2 +\mu^2 = (t^2 + \mu)^2$ であることを使って変形すると
 
