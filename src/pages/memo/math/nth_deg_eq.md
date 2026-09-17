@@ -86,7 +86,7 @@ $$
 
 とおけば、$t^3 + c_1t + c_0 = 0$ を得る。
 
-### *Tartaglia–Cardano–del Ferro*の解法
+### *Cardano*の解法
 
 まず $t = u + v$ とおく。すると
 
@@ -234,7 +234,7 @@ x &= -\frac{b_2}{3} + \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{
 \end{alignedat}
 $$
 
-という形にできる。特に、$c_0, c_1$ が共に0以下の実数である場合、3乗根の中身は共に正の実数か互いに共役な虚数となり、この形に変形できる。正の実数の場合は自明であるので互いに共役な場合の説明をすると
+という形にできる。特に、$c_0, c_1$ が共に0以下の実数である場合、3乗根の中身は共に正の実数か互いに共役な虚数となり、この形に変形できる。正の実数の場合は自明であるので互いに共役な場合について説明する。
 
 任意の複素数 $\alpha = |\alpha|e^{i\arg{\alpha}}$ に対し、その複素共役を $\overline{\alpha}$ とすると、$\overline{\alpha} = |\alpha|e^{-i\arg{\alpha}}$ である。
 
@@ -398,7 +398,7 @@ $$
 \end{alignedat}
 $$
 
-まず*Tartaglia–Cardano–del Ferro*の解法で解いてみる。
+まず*Cardano*の解法で解いてみる。
 
 $t = u + v$ とおいて整理。
 
@@ -734,8 +734,8 @@ $$
 
 $$
 \begin{alignedat}{2}
-x &= 1 + \sqrt{7} \pm \sqrt{5 + \sqrt{7}}, \\
-&= 1 - \sqrt{7} \pm \sqrt{5 - \sqrt{7}}
+x = 1 &+ \sqrt{7} \pm \sqrt{5 + \sqrt{7}}, \\
+1 &- \sqrt{7} \pm \sqrt{5 - \sqrt{7}}
 \end{alignedat}
 $$
 
