@@ -473,7 +473,7 @@ v &= \frac{3\omega^{-k}\sqrt[3]{2 - i\sqrt{23}}}{\sqrt[3]{2 + i\sqrt{23}}\sqrt[3
 \end{alignedat}
 $$
 
-したがって $t$ は以下のようになる。
+したがって $t$ は以下のように表せる。
 
 $$
 t = \omega^k \sqrt[3]{2 + i\sqrt{23}} + \omega^{-k} \sqrt[3]{2 - i\sqrt{23}} \quad (k = 0, 1, 2)
