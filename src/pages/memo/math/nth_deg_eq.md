@@ -9,8 +9,10 @@ description: よくクソ長い解みたいな感じで話題になる 3, 4 次�
 ## 備考
 
 - 最高次係数は常に非零とする。
-- 複素数 $\alpha$ を極座標形式で $|\alpha|e^{i\theta}$ と表す。ただし、 $\theta$ は $\alpha$ の偏角であり、範囲は $-\pi < \theta \le \pi$ とする。このとき根号 $\sqrt[n]{\alpha}$ の値を $\sqrt[n]{|\alpha|}\,e^{i\theta/n}$ と定義する。また $\alpha^{1/n}$ の値も同様に定義する。
 - 1の原始3乗根 $e^{2\pi i/3} = \dfrac{-1 + \sqrt{3}i}{2}$ を $\omega$ とおく。
+- 複素数 $\alpha$ を極座標形式で $|\alpha|e^{i\theta}$ と表す。ただし、 $\theta$ は $\alpha$ の偏角であり、範囲は $-\pi < \theta \le \pi$ とする。このとき、根号 $\sqrt[n]{\alpha}$ の値を $\sqrt[n]{|\alpha|}\,e^{i\theta/n}$ と定義する。また $\alpha^{1/n}$ の値も同様に定義する。
+
+  - 実数に対する冪根の定義とは値が異なる場合があることに注意。例えば正の実数 $a$ に対する $\sqrt[3]{-a}$ は $-\sqrt[3]{a}$ ではなく $e^{\pi i/3}\sqrt[3]{a}$ となる。
 
 ## 1次方程式
 
@@ -234,9 +236,9 @@ x &= -\frac{b_2}{3} + \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{
 \end{alignedat}
 $$
 
-という形にできる。特に、$c_0, c_1$ が共に0以下の実数である場合、3乗根の中身は共に正の実数か互いに共役な虚数となり、この形に変形できる。正の実数の場合は自明であるので互いに共役な場合について説明する。
+という形にできる。特に、$c_0, c_1$ が共に0以下の実数である場合、3乗根の中身は共に正の実数か互いに共役な虚数となり、この形に変形できる。正の実数の場合は自明であるので互いに共役な虚数の場合について説明する。
 
-任意の複素数 $\alpha = |\alpha|e^{i\arg{\alpha}}$ に対し、その複素共役を $\overline{\alpha}$ とすると、$\overline{\alpha} = |\alpha|e^{-i\arg{\alpha}}$ である。
+任意の虚数 $\alpha = |\alpha|e^{i\arg{\alpha}}$ に対し、その複素共役を $\overline{\alpha}$ とすると、$\overline{\alpha} = |\alpha|e^{-i\arg{\alpha}}$ である。
 
 $$
 \begin{alignedat}{2}
@@ -463,7 +465,13 @@ v &= \frac{3}{u} \\ \\
 \end{alignedat}
 $$
 
-分母分子に $\sqrt[3]{2 - i\sqrt{23}}$ をかける。$2 + i\sqrt{23}$ と $2 - i\sqrt{23}$ は共役な虚数であるので、$\sqrt[3]{2 + i\sqrt{23}}\sqrt[3]{2 - i\sqrt{23}} = \sqrt[3]{(2 + i\sqrt{23})(2 - i\sqrt{23})} = \sqrt[3]{27} = 3$ が成立する。よって
+分母分子に $\sqrt[3]{2 - i\sqrt{23}}$ をかける。$2 + i\sqrt{23}$ と $2 - i\sqrt{23}$ は互いに共役な虚数であるので
+
+$$
+\sqrt[3]{2 + i\sqrt{23}}\sqrt[3]{2 - i\sqrt{23}} = \sqrt[3]{(2 + i\sqrt{23})(2 - i\sqrt{23})} = \sqrt[3]{27} = 3
+$$
+
+が成立する。よって
 
 $$
 \begin{alignedat}{2}

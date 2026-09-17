@@ -15,7 +15,7 @@
     "dist"
   ],
   "devDependencies": {
-    "@astrojs/markdown-remark": "^7.2.4",
+    "@astrojs/markdown-remark": "^7.3.1",
     "@astrojs/svelte": "^9.0.1",
     "@shikijs/transformers": "^4.4.3",
     "@tailwindcss/vite": "^4.3.3",
@@ -23,8 +23,8 @@
     "@tktb-tess/xenharmonic-tool": "^0.6.1",
     "@types/hast": "^3.0.5",
     "@types/mdast": "^4.0.4",
-    "@types/node": "^24.13.3",
-    "astro": "^7.2.9",
+    "@types/node": "^24.13.4",
+    "astro": "^7.3.2",
     "hast-util-from-html-isomorphic": "^2.0.0",
     "hastscript": "^9.0.1",
     "mdast-util-directive": "^3.1.0",
@@ -41,7 +41,7 @@
     "remark-toc": "^9.0.0",
     "svelte": "^5.57.0",
     "tailwindcss": "^4.3.3",
-    "type-fest": "^5.8.0",
+    "type-fest": "^5.9.0",
     "typescript": "^6.0.3",
     "unified": "^11.0.5"
   },
