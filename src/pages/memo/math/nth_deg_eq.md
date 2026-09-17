@@ -11,7 +11,6 @@ description: よくクソ長い解みたいな感じで話題になる 3, 4 次�
 - 最高次係数は常に非零とする。
 - 1の原始3乗根 $e^{2\pi i/3} = \dfrac{-1 + \sqrt{3}i}{2}$ を $\omega$ とおく。
 - 複素数 $\alpha$ を極座標形式で $|\alpha|e^{i\theta}$ と表す。ただし、 $\theta$ は $\alpha$ の偏角であり、範囲は $-\pi < \theta \le \pi$ とする。このとき、根号 $\sqrt[n]{\alpha}$ の値を $\sqrt[n]{|\alpha|}\,e^{i\theta/n}$ と定義する。また $\alpha^{1/n}$ の値も同様に定義する。
-
   - 実数に対する冪根の定義とは値が異なる場合があることに注意。例えば正の実数 $a$ に対する $\sqrt[3]{-a}$ は $-\sqrt[3]{a}$ ではなく $e^{\pi i/3}\sqrt[3]{a}$ となる。
 
 ## 1次方程式
@@ -73,7 +72,7 @@ $$
 & x^3 + b_2 x^2 + b_1 x + b_0 = 0 \\ \\
 & \left(t - \frac{b_2}{3}\right)^3 + b_2 \left(t - \frac{b_2}{3}\right)^2 + b_1 \left(t - \frac{b_2}{3}\right) + b_0 = 0 \\ \\
 & t^3 - b_2 t^2 + \frac{b_2^2}{3} t - \frac{b_2^3}{27} + b_2 \left(t^2 - \frac{2b_2}{3} t + \frac{b_2^2}{9} \right) + b_1 \left(t - \frac{b_2}{3}\right) + b_0 = 0 \\ \\
-& t^3 + \left(b_1 - \frac{b_2^2}{3} \right) t + b_0 + \frac{2b_2^3}{27} - \frac{b_1b_2}{3} = 0 \\ \\
+& t^3 + \left(b_1 - \frac{b_2^2}{3} \right) t + b_0 + \frac{2b_2^3}{27} - \frac{b_1b_2}{3} = 0
 \end{alignedat}
 $$
 
@@ -585,7 +584,7 @@ $$
 \begin{alignedat}{2}
 \Delta &= (-c_1)^2 - 4(2\mu - c_2)(\mu^2 - c_0) \\
 &= - 4(2\mu^3 - c_2\mu^2 - 2c_0\mu + c_0c_2) + c_1^2 \\
-&= -8\mu^3 + 4c_2\mu^2 + 8c_0\mu - 4c_0c_2 + c_1^2 \\
+&= -8\mu^3 + 4c_2\mu^2 + 8c_0\mu - 4c_0c_2 + c_1^2
 \end{alignedat}
 $$
 
