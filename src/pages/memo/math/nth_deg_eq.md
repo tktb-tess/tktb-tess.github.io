@@ -65,7 +65,7 @@ $$
 x^3 + b_2 x^2 + b_1 x + b_0 = 0
 $$
 
-立方完成して、2次の項を消す。3次の項は $\left(x + \dfrac{b_2}{3}\right)^3$ となるので、 $x = t - \dfrac{b_2}{3}$ と変換する。代入して整理すると
+立方完成して、2次の項を消す。立方完成後の3次の項は $\left(x + \dfrac{b_2}{3}\right)^3$ となるので、 $x = t - \dfrac{b_2}{3}$ と変換する。代入して整理すると
 
 $$
 \begin{alignedat}{2}
@@ -86,6 +86,8 @@ c_1 &= b_1 - \frac{b_2^2}{3}
 $$
 
 とおけば、$t^3 + c_1t + c_0 = 0$ を得る。
+
+$c_1 = 0$ のときは立方根をとるだけで済み、また $c_0 = 0$ のときは2次式以下に因数分解できるため、以降 $c_0 \ne 0,\ c_1 \ne 0$ とする。
 
 ### *Cardano*の解法
 
@@ -141,7 +143,7 @@ u^3 &= -\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{2}\right)^2 + \left(\frac{c_1}{3}
 \end{alignedat}
 $$
 
-3乗根をとると
+立方根をとると
 
 $$
 \begin{alignedat}{2}
@@ -160,7 +162,7 @@ v = -\frac{c_1}{3u} = -\frac{c_1\omega^{-k}}{3}\left(-\frac{c_0}{2} + \sqrt{\lef
 $$
 
 
-よって、以下の3つの解が得られる。
+よって、以下の三つの解が得られる。
 
 $$
 \begin{alignedat}{2}
@@ -192,7 +194,7 @@ $$
 
 である。
 
-また、積と3乗根の交換をしても値が保たれる場合、つまり
+また、積と立方根の交換をしても値が保たれる場合、つまり
 
 $$
 \begin{alignedat}{2}
@@ -217,7 +219,7 @@ v &= -\frac{c_1\omega^{-k}}{3\sqrt[3]{-c_0/2 + \sqrt{(c_0/2)^2 + (c_1/3)^3}}} \\
 \end{alignedat}
 $$
 
-さらに $c_1$ が0以下の実数であるなら、$\sqrt[3]{-c_1^3} = -c_1$ が成立するので
+さらに $c_1$ が負の実数であるなら、$\sqrt[3]{-c_1^3} = -c_1$ が成立するので
 
 $$
 \begin{alignedat}{2}
@@ -235,19 +237,11 @@ x &= -\frac{b_2}{3} + \omega^k \sqrt[3]{-\frac{c_0}{2} + \sqrt{\left(\frac{c_0}{
 \end{alignedat}
 $$
 
-という形にできる。特に、$c_0, c_1$ が共に0以下の実数である場合、3乗根の中身は共に正の実数か互いに共役な虚数となり、この形に変形できる。正の実数の場合は自明であるので互いに共役な虚数の場合について説明する。
+という形にできる。特に、$c_0, c_1$ が共に負の実数である場合、立方根の中身は共に正の実数か互いに共役な虚数となり、この形に変形できる。以下軽く理由を説明する。
 
-任意の虚数 $\alpha = |\alpha|e^{i\arg{\alpha}}$ に対し、その複素共役を $\overline{\alpha}$ とすると、$\overline{\alpha} = |\alpha|e^{-i\arg{\alpha}}$ である。
+立方根は偏角を1/3倍し、複素共役は-1倍する。これらの操作をどの順で適用しても、範囲 $\left(-\pi, \pi \right]$ の外に偏角の値がはみ出ることはない。正確には偏角が $\pi$ のとき、複素共役をとる操作で範囲をはみ出るが、これは負の実数であるので条件に合致しない。つまり、$\alpha$ が正の実数あるいは虚数であるとき、$\sqrt[3]{\overline{\alpha}} = \overline{\sqrt[3]{\alpha}}$ が成り立つ。
 
-$$
-\begin{alignedat}{2}
-\sqrt[3]{\overline{\alpha}} &= \sqrt[3]{|\alpha|}e^{-i(\arg{\alpha})/3} \\
-&= \left|\sqrt[3]{\alpha}\right|e^{-i(\arg{\alpha})/3} \\
-&= \overline{\sqrt[3]{\alpha}}
-\end{alignedat}
-$$ 
-
-が成り立つ。よって
+よって
 
 $$
 \begin{alignedat}{2}
@@ -258,9 +252,9 @@ $$
 \end{alignedat}
 $$
 
-となり、3乗根と積を交換しても等しいことが分かる。
+となり、立方根と積を交換しても等しいことが分かる。
 
-### 還元不能
+### 還元不能 (casus irreducibilis)
 
 以下 $c_0, c_1$ を実数とする。
 
@@ -288,13 +282,13 @@ $$
 \Delta = -4c_1^3 - 27c_0^2
 $$
 
-つまり $u^3, v^3$ が虚数であることと、$\Delta > 0$ すなわち3次方程式が3つの実数解をもつことは、実は同値なのである。さらに3次方程式が既約な場合、虚数を避けて代数的に解を書き下すことはできないことが分かっており、これを **還元不能** という。解が全て実数解なのに虚数の立方根の和でしか書けないというのはなかなか不思議であると私は思う。
+つまり $u^3, v^3$ が虚数であることと、$\Delta > 0$ すなわち3次方程式が3つの実数解をもつことは、実は同値なのである。さらに3次方程式が既約な場合、虚数を避けて代数的に解を書き下すことはできないことが分かっており、これを **還元不能 (casus irreducibilis)** という。
 
 ### *Viète*の解法
 
 代数的な解法に拘らなければ、$\Delta > 0$ の場合に虚数を避けることもできる。立方完成までは同じなので $t^3 + c_1 t + c_0 = 0$ の形から始める。
 
-$c_0, c_1$ は実数とし $\Delta > 0$ とする。またこのとき $c_1 < 0$ である。なぜなら $c_1 \ge 0$ であれば $\Delta = -4c_1^3 - 27c_0^2 \le 0$ となるため。
+$c_0, c_1$ を $0$ ではない実数とし $\Delta > 0$ とする。またこのとき $c_1 < 0$ である。なぜなら $c_1 > 0$ であれば $\Delta = -4c_1^3 - 27c_0^2 < 0$ となるため。
 
 $\cos$ の3倍角の公式 $\cos{3\theta} = 4\cos^3{\theta} - 3\cos{\theta}$ を変形して
 
@@ -341,10 +335,10 @@ $$
 
 と求められる。
 
-ここで $\operatorname{Cos}^{-1}$ の定義域は $[-1, 1]$ なので、$\dfrac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}$ がこの範囲内になるのかの確認が必要だが、$\Delta = -4c_1^3 - 27c_0^2 > 0$ より $0 \le 27 c_0^2 < 4(-c_1)^3$ がわかり、したがって
+ここで $\operatorname{Cos}^{-1}$ の定義域は $[-1, 1]$ なので、$\dfrac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}}$ がこの範囲内になるのかの確認が必要だが、$\Delta = -4c_1^3 - 27c_0^2 > 0$ より $0 < 27 c_0^2 < 4(-c_1)^3$ がわかり、したがって
 
 $$
-0 \le \frac{27c_0^2}{4(-c_1)^3} < 1
+0 < \frac{27c_0^2}{4(-c_1)^3} < 1
 $$
 
 また
@@ -355,7 +349,7 @@ $$
 
 であるので、$-1 < \dfrac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}} < 1$ であることが分かる。
 
-さて、上で求めた $\theta$ は無限個あるが、$\cos$ の周期性と偶関数性から、複数の $\theta$ が同じ $t$ の値に対応する場合がある。そのような重複する $\theta$ を除きつつ、 $t = A \cos{\theta}$ を求めると次の3つになる。
+さて、上で求めた $\theta$ は無限個あるが、$\cos$ の周期性と偶関数性から、複数の $\theta$ が同じ $t$ の値に対応する。そのような重複する $\theta$ を除きつつ、 $t = A \cos{\theta}$ を求めると次の三つになる。
 
 $$
 t = 2\sqrt{-\frac{c_1}{3}} \cos{\left(\frac{1}{3}\operatorname{Cos}^{-1}{\frac{3\sqrt{3}c_0}{2c_1\sqrt{-c_1}} + \frac{2}{3}}k\pi\right)} \quad (k = 0, 1, 2)
@@ -516,15 +510,15 @@ $$
 
 $$
 \begin{gather*}
-\cos{3\theta} = \frac{16}{A^3} = \frac{16}{8\cdot3\sqrt{3}} = \frac{2}{3\sqrt3} \\ \\
-t = 2\sqrt{3} \cos{\left(\frac{1}{3} \operatorname{Cos}^{-1}{\frac{2}{3\sqrt{3}}} + \frac{2}{3} k\pi\right)} \quad (k = 0, 1, 2)
+\cos{3\theta} = \frac{16}{A^3} = \frac{16}{8\cdot3\sqrt{3}} = \frac{2\sqrt{3}}{9} \\ \\
+t = 2\sqrt{3} \cos{\left(\frac{1}{3} \operatorname{Cos}^{-1}{\frac{2\sqrt{3}}{9}} + \frac{2}{3} k\pi\right)} \quad (k = 0, 1, 2)
 \end{gather*}
 $$
 
 よって $x^3 - 6x^2 + 3x + 6 = 0$ の解は
 
 $$
-x = 2 + 2\sqrt{3} \cos{\left(\frac{1}{3} \operatorname{Cos}^{-1}{\frac{2}{3\sqrt{3}}} + \frac{2}{3} k\pi\right)} \quad (k = 0, 1, 2)
+x = 2 + 2\sqrt{3} \cos{\left(\frac{1}{3} \operatorname{Cos}^{-1}{\frac{2\sqrt{3}}{9}} + \frac{2}{3} k\pi\right)} \quad (k = 0, 1, 2)
 $$
 
 である。
@@ -564,37 +558,37 @@ c_2 &= b_2 - \frac{3b_3^2}{8}
 \end{alignedat}
 $$
 
-とおけば、$t^4 + c_2 t^2 + c_1 t + c_0 = 0$ を得る。
+とおけば、$t^4 + c_2 t^2 + c_1 t + c_0 = 0$ を得る。$c_1 = 0$ のときは複二次式になり、また $c_0 = 0$ のときは3次式以下に因数分解できるので、以降 $c_0 \ne 0,\ c_1 \ne 0$ とする。
 
 ### *Ferrari*の解法
 
-$\mu$ をある複素数（値は後で求める）として、$2\mu t^2 +\mu^2 - 2\mu t^2 - \mu^2$ を加える。$t^4 + 2\mu t^2 +\mu^2 = (t^2 + \mu)^2$ であることを使って変形すると
+$\lambda$ をある複素数（値は後で求める）として、$2\lambda t^2 + \lambda^2 - 2 \lambda t^2 - \lambda^2$ を加える。$t^4 + 2\lambda t^2 + \lambda^2 = (t^2 + \lambda)^2$ であることを使って変形すると
 
 $$
 \begin{alignedat}{2}
-& t^4 + 2\mu t^2 + \mu^2 - 2\mu t^2 - \mu^2 + c_2 t^2 + c_1 t + c_0 = 0 \\
-& (t^2 + \mu)^2 + (c_2 - 2\mu) t^2 + c_1 t + c_0 - \mu^2 = 0 \\
-& (t^2 + \mu)^2 - \{(2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0\} = 0
+& t^4 + 2\lambda t^2 + \lambda^2 - 2\lambda t^2 - \lambda^2 + c_2 t^2 + c_1 t + c_0 = 0 \\
+& (t^2 + \lambda)^2 + (c_2 - 2\lambda) t^2 + c_1 t + c_0 - \lambda^2 = 0 \\
+& (t^2 + \lambda)^2 - \{(2\lambda - c_2)t^2 - c_1 t + \lambda^2 - c_0\} = 0
 \end{alignedat}
 $$
 
-ここで、左辺が (2乗) - (2乗) の形になれば、左辺は2つの2次式に因数分解出来て2次方程式に帰着できる。よって第2項 $(2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0$ が完全平方になるように $\mu$ の値を決める。これは2次方程式 $(2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0 = 0$ が重解をもつこと、またその判別式が0であることと同値。判別式を $\Delta$ とすると
+ここで、左辺が (2乗) - (2乗) の形になれば、左辺は二つの2次式に因数分解出来て2次方程式に帰着できる。よって第2項 $(2\lambda - c_2)t^2 - c_1 t + \lambda^2 - c_0$ が完全平方になるように $\lambda$ の値を決める。これは2次方程式 $(2\lambda - c_2)t^2 - c_1 t + \lambda^2 - c_0 = 0$ が重解をもつこと、またその判別式が0であることと同値。判別式を $\Delta$ とすると
 
 $$
 \begin{alignedat}{2}
-\Delta &= (-c_1)^2 - 4(2\mu - c_2)(\mu^2 - c_0) \\
-&= - 4(2\mu^3 - c_2\mu^2 - 2c_0\mu + c_0c_2) + c_1^2 \\
-&= -8\mu^3 + 4c_2\mu^2 + 8c_0\mu - 4c_0c_2 + c_1^2
+\Delta &= (-c_1)^2 - 4(2\lambda - c_2)(\lambda^2 - c_0) \\
+&= - 4(2\lambda^3 - c_2\lambda^2 - 2c_0\lambda + c_0c_2) + c_1^2 \\
+&= -8\lambda^3 + 4c_2\lambda^2 + 8c_0\lambda - 4c_0c_2 + c_1^2
 \end{alignedat}
 $$
 
-であるので、$\mu$ は3次方程式
+であるので、$\lambda$ は3次方程式
 
 $$
-8\mu^3 - 4c_2\mu^2 - 8c_0\mu + 4c_0c_2 - c_1^2 = 0
+8\lambda^3 - 4c_2\lambda^2 - 8c_0\lambda + 4c_0c_2 - c_1^2 = 0
 $$
 
-を満たす。これを解いて $\mu$ を求める。
+を満たす。これを解いて $\lambda$ を求める。
 
 2次方程式 $ax^2 + bx + c = 0$ が重解をもつとき
 
@@ -609,8 +603,8 @@ $$
 
 $$
 \begin{alignedat}{2}
-&(2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0 \\ \\
-&= \left(\sqrt{2\mu - c_2}t - \frac{c_1}{2\sqrt{2\mu - c_2}}\right)^2
+&(2\lambda - c_2)t^2 - c_1 t + \lambda^2 - c_0 \\ \\
+&= \left(\sqrt{2\lambda - c_2}t - \frac{c_1}{2\sqrt{2\lambda - c_2}}\right)^2
 \end{alignedat}
 $$
 
@@ -618,7 +612,7 @@ $$
 
 $$
 \begin{alignedat}{2}
-d_1 &= \sqrt{2\mu - c_2} \\ \\
+d_1 &= \sqrt{2\lambda - c_2} \\ \\
 d_2 &= -\frac{c_1}{2d_1}
 \end{alignedat}
 $$
@@ -627,35 +621,35 @@ $$
 
 $$
 \begin{alignedat}{2}
-&(t^2 + \mu)^2 - \{(2\mu - c_2)t^2 - c_1 t + \mu^2 - c_0\} = 0 \\
-&(t^2 + \mu)^2 - \left(d_1t + d_2\right)^2 = 0 \\
-\{&(t^2 + \mu) + (d_1 t + d_2)\}\{(t^2 + \mu) - (d_1 t + d_2)\} = 0 \\
-&(t^2 + d_1 t + d_2 + \mu)(t^2 - d_1 t - d_2 + \mu) = 0
+&(t^2 + \lambda)^2 - \{(2\lambda - c_2)t^2 - c_1 t + \lambda^2 - c_0\} = 0 \\
+&(t^2 + \lambda)^2 - \left(d_1t + d_2\right)^2 = 0 \\
+\{&(t^2 + \lambda) + (d_1 t + d_2)\}\{(t^2 + \lambda) - (d_1 t + d_2)\} = 0 \\
+&(t^2 + d_1 t + d_2 + \lambda)(t^2 - d_1 t - d_2 + \lambda) = 0
 \end{alignedat}
 $$
 
-と分解できる。$t^2 + d_1 t + d_2 + \mu = 0$ の解は
+と分解できる。$t^2 + d_1 t + d_2 + \lambda = 0$ の解は
 
 $$
-t = -\frac{d_1}{2} \pm \sqrt{\frac{d_1^2}{4} - d_2 - \mu}
+t = -\frac{d_1}{2} \pm \sqrt{\frac{d_1^2}{4} - d_2 - \lambda}
 $$
 
-$t^2 - d_1 t - d_2 + \mu = 0$ の解も同様に求めて
+$t^2 - d_1 t - d_2 + \lambda = 0$ の解も同様に求めて
 
 $$
-t = \frac{d_1}{2} \pm \sqrt{\frac{d_1^2}{4} + d_2 - \mu}
+t = \frac{d_1}{2} \pm \sqrt{\frac{d_1^2}{4} + d_2 - \lambda}
 $$
 
 よって $a_4 x^4 + a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0$ の解は
 
 $$
 \begin{alignedat}{2}
-x = - &\frac{d_1}{2} - \frac{b_3}{4} \pm \sqrt{\frac{d_1^2}{4} - d_2 - \mu}, \\ \\
-&\frac{d_1}{2} - \frac{b_3}{4} \pm \sqrt{\frac{d_1^2}{4} + d_2 - \mu}
+x = - &\frac{d_1}{2} - \frac{b_3}{4} \pm \sqrt{\frac{d_1^2}{4} - d_2 - \lambda}, \\ \\
+&\frac{d_1}{2} - \frac{b_3}{4} \pm \sqrt{\frac{d_1^2}{4} + d_2 - \lambda}
 \end{alignedat}
 $$
 
-ただし、$\mu$ は3次方程式 $8\mu^3 - 4c_2\mu^2 - 8c_0\mu + 4c_0c_2 - c_1^2 = 0$ の解であり、また
+ただし、$\lambda$ は3次方程式 $8\lambda^3 - 4c_2\lambda^2 - 8c_0\lambda + 4c_0c_2 - c_1^2 = 0$ の解であり、また
 
 $$
 \begin{alignedat}{2}
@@ -663,7 +657,7 @@ b_l &= \frac{a_l}{a_4} \ \ (l = 0, 1, 2, 3) \\ \\
 c_0 &= b_0 - \frac{3b_3^4}{256} + \frac{b_2b_3^2}{16} - \frac{b_1b_3}{4} \\ \\
 c_1 &= b_1 + \frac{b_3^3}{8} - \frac{b_2b_3}{2} \\ \\
 c_2 &= b_2 - \frac{3b_3^2}{8} \\ \\
-d_1 &= \sqrt{2\mu - c_2} \\ \\
+d_1 &= \sqrt{2\lambda - c_2} \\ \\
 d_2 &= -\frac{c_1}{2d_1}
 \end{alignedat}
 $$
@@ -689,34 +683,34 @@ $$
 \end{alignedat}
 $$
 
-$\mu^2 + 2\mu t^2 - \mu^2 - 2\mu t^2$ を加えて整理する。
+$\lambda^2 + 2\lambda t^2 - \lambda^2 - 2\lambda t^2$ を加えて整理する。
 
 $$
 \begin{alignedat}{2}
-&t^4 + 2\mu t^2 + \mu^2 - 24 t^2 - 2\mu t^2 - 28t - \mu^2 - 3 = 0 \\
-&(t^2 + \mu)^2 - (2\mu + 24)t^2 - 28t - \mu^2 - 3 = 0 \\
-&(t^2 + \mu)^2 - \{(2\mu + 24)t^2 + 28t + \mu^2 + 3\} = 0
+&t^4 + 2\lambda t^2 + \lambda^2 - 24 t^2 - 2\lambda t^2 - 28t - \lambda^2 - 3 = 0 \\
+&(t^2 + \lambda)^2 - (2\lambda + 24)t^2 - 28t - \lambda^2 - 3 = 0 \\
+&(t^2 + \lambda)^2 - \{(2\lambda + 24)t^2 + 28t + \lambda^2 + 3\} = 0
 \end{alignedat}
 $$
 
-これの第2項が完全平方になればよい。$t$ についての2次方程式 $(2\mu + 24)t^2 + 28t + \mu^2 + 3 = 0$ の判別式を $\Delta$ とおくと
+これの第2項が完全平方になればよい。$t$ についての2次方程式 $(2\lambda + 24)t^2 + 28t + \lambda^2 + 3 = 0$ の判別式を $\Delta$ とおくと
 
 $$
 \begin{alignedat}{2}
-\Delta &= 14^2 - (2\mu + 24)(\mu^2 + 3) \\
-&= 196 - (2\mu^3 + 6\mu + 24\mu^2 + 72) \\
-&= -2\mu^3 - 24\mu^2 - 6\mu + 124 \\
-&= -2(\mu^3 + 12\mu^2 + 3\mu - 62)
+\Delta &= 14^2 - (2\lambda + 24)(\lambda^2 + 3) \\
+&= 196 - (2\lambda^3 + 6\lambda + 24\lambda^2 + 72) \\
+&= -2\lambda^3 - 24\lambda^2 - 6\lambda + 124 \\
+&= -2(\lambda^3 + 12\lambda^2 + 3\lambda - 62)
 \end{alignedat}
 $$
 
-よって $\mu$ は3次方程式 $\mu^3 + 12\mu^2 + 3\mu - 62 = 0$ を満たす。
+よって $\lambda$ は3次方程式 $\lambda^3 + 12\lambda^2 + 3\lambda - 62 = 0$ を満たす。
 
-解を一つ（がんばって）探すと、$\mu = 2$ が解になる事が分かる。よって、元の4次方程式は
+解を一つ（がんばって）探すと、$\lambda = 2$ が解になる事が分かる。よって、元の4次方程式は
 
 $$
 \begin{alignedat}{2}
-&(t^2 + \mu)^2 - \{(2\mu + 24)t^2 + 28t + \mu^2 + 3\} = 0 \\
+&(t^2 + \lambda)^2 - \{(2\lambda + 24)t^2 + 28t + \lambda^2 + 3\} = 0 \\
 &(t^2 + 2)^2 - (28t^2 + 28t + 7) = 0 \\
 &(t^2 + 2)^2 - 7(2t + 1)^2 = 0 \\
 \{&(t^2 + 2) - \sqrt{7}(2t + 1)\}\{(t^2 + 2) + \sqrt{7}(2t + 1)\} = 0 \\
