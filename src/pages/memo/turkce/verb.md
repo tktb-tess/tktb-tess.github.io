@@ -58,7 +58,7 @@ title: トルコ語 動詞
 
 - 可能/推量接辞 -(y)Abil の i は母音調和しない。後ろに来る接辞は必ず i - e 系になる。
 - アオリスト形 -\[I/A/∅\]r は -ir になる。
-- 不可能の意味には不能接辞 *-(y)AmA* を使う。推量の否定の場合は *-(y)AmA* と *-(y)Abil* を組み合わせる。
+- 不可能の意味には不能接辞 -(y)AmA を使う。推量の否定の場合は -(y)AmA と -(y)Abil を組み合わせる。
 
   e.g. gör- + -(y)AmA + dI + -m → göremedim 「私は見られなかった」
 
@@ -112,14 +112,16 @@ title: トルコ語 動詞
 
 ## 不定形, 分詞接辞
 
-|                         |        | 接辞      | iç-       | gör-       | yıka-       | otur-       |
-| ----------------------- | ------ | --------- | --------- | ---------- | ----------- | ----------- |
-| :s[不定詞]{c=2}         | :e     | -mAk      | iç-mek    | gör-mek    | yıka-mak    | otur-mak    |
-| :s[動名詞]{c=2}         | :e     | -mA       | iç-me     | gör-me     | yıka-ma     | otur-ma     |
-| :s[アオリスト分詞]{r=3} | 肯定   | -\[I/A\]r | iç-er     | gör-ür     | yık-ar      | otur-ur     |
-| :e                      | 否定   | -mAz      | iç-mez    | gör-mez    | yıka-maz    | otur-maz    |
-| :e                      | 不能   | -(y)AmAz  | iç-emez   | gör-emez   | yıka-yamaz  | otur-amaz   |
-| :s[未完了分詞]{c=2}     | :e     | -(y)An    | iç-en     | gör-en     | yıka-yan    | otur-an     |
-| :s[過去分詞]{r=2}       | 非人称 | -mIş      | iç-miş    | gör-müş    | yıka-mış    | otur-muş    |
-| :e                      | 人称   | -dIk      | iç-diğ-im | gör-düğ-üm | yıka-dığ-ım | otur-duğ-um |
-| :s[未来分詞]{c=2}       | :e     | -(y)AcAk  | iç-ecek   | gör-ecek   | yıka-yacak  | otur-acak   |
+|                         |        | 接辞        | iç-       | gör-       | yıka-       | otur-       |
+| ----------------------- | ------ | ----------- | --------- | ---------- | ----------- | ----------- |
+| :s[不定詞]{c=2}         | :e     | -mAk        | iç-mek    | gör-mek    | yıka-mak    | otur-mak    |
+| :s[動名詞]{c=2}         | :e     | -mA         | iç-me     | gör-me     | yıka-ma     | otur-ma     |
+| :s[アオリスト分詞]{r=3} | 肯定   | -\[I/A/∅\]r | iç-er     | gör-ür     | yıka-r      | otur-ur     |
+| :e                      | 否定   | -mAz        | iç-mez    | gör-mez    | yıka-maz    | otur-maz    |
+| :e                      | 不能   | -(y)AmAz    | iç-emez   | gör-emez   | yıka-yamaz  | otur-amaz   |
+| :s[未完了分詞]{c=2}     | :e     | -(y)An      | iç-en     | gör-en     | yıka-yan    | otur-an     |
+| :s[過去分詞]{r=2}       | 非人称 | -mIş        | iç-miş    | gör-müş    | yıka-mış    | otur-muş    |
+| :e                      | 人称   | -dIk        | iç-diğ-im | gör-düğ-üm | yıka-dığ-ım | otur-duğ-um |
+| :s[未来分詞]{c=2}       | :e     | -(y)AcAk    | iç-ecek   | gör-ecek   | yıka-yacak  | otur-acak   |
+
+- アオリスト分詞 -\[I/A/∅\]r の使い分けはアオリスト形と同様。
