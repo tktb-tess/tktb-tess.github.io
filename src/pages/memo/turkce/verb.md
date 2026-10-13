@@ -7,62 +7,81 @@ title: トルコ語 動詞
 
 ## 概要
 
-4グループの母音それぞれに対応する動詞
-
-- içmek「飲む」i - e
-- görmek「見る」ü - e
-- yıkamak「洗う」ı - a
-- oturmak「座る」u - a
-
-を例にみていく。
-
 トルコ語の動詞の接辞は概ね以下の順番になる。
 
-- \[語幹\](-\[否定, 不能\])(-\[可能/推量\])-\[活用形 1つ以上\]\-\[述語\]
+- \[語幹\](-\[否定, 不能\])(-\[可能/推量\])-\[相\]\-\[述語\]
 - \[語幹\](-\[否定, 不能\])(-\[可能/推量\])-\[分詞\](-\[所有\])
-
-全体に共通する事項は以下の通り。
-
-- カッコの中の子音は、直前の語幹・接辞が母音で終わる場合、追加でつく。
-
-  e.g. uyu- + -(y)AcAk + -sIn → uyu*y*acaksın
-
-- 母音終わりの語幹・接辞に、母音始まりの接辞が後続する際、前の母音が脱落する。
-
-  e.g. dinl*e*- + -Iyor + -(y)Iz → dinliyoruz
-
-  iç- + -m*A* + -Iyor + -sIn → içmiyorsun
-
-- 無声子音に有声子音始まりの接辞が後続する際、子音が無声化する。
-
-  e.g. kes- + -dI + -k → kes*t*ik
-
-- 末子音に母音が後続すると、有声化することがある。
-
-  e.g. öğret- + -(y)AcAk + -(y)Iz → öğretece*ğ*iz (cf. öğreteceksin)
 
 ## 否定, 不能接辞
 
-|      | 接辞    | iç-     | gör-     | yıka-      | otur-     |
-| ---- | ------- | ------- | -------- | ---------- | --------- |
-| 否定 | -mA     | iç-me-  | gör-me-  | yıka-ma-   | otur-ma-  |
-| 不能 | -(y)AmA | iç-eme- | gör-eme- | yıka-yama- | otur-ama- |
+|      | 接辞     | 例1     | 例2       |
+| ---- | -------- | ------- | --------- |
+| 否定 | -mA-     | iç-me-  | yıka-ma-  |
+| 不能 | -(y)AmA- | iç-eme- | yıka-ama- |
 
-- アオリスト形と共に使う場合は独自の形をとる（下記参照）。
+- 中立形と共に使う場合は独自の形をとる（下記参照）。
 
-## 可能/推量接辞
+## 可能・推量接辞
 
-|           | 接辞     | iç-      | gör-      | yıka-       | otur-      |
-| --------- | -------- | -------- | --------- | ----------- | ---------- |
-| 可能/推量 | -(y)Abil | iç-ebil- | gör-ebil- | yıka-yabil- | otur-abil- |
+|           | 接辞      | 例1      | 例2         |
+| --------- | --------- | -------- | ----------- |
+| 可能/推量 | -(y)Abil- | iç-ebil- | yıka-yabil- |
 
-- 可能/推量接辞 -(y)Abil の i は母音調和しない。後ろに来る接辞は必ず i - e 系になる。
-- アオリスト形 -\[I/A/∅\]r は -ir になる。
+- 可能・推量接辞 -(y)Abil の i は母音調和しない。後ろに来る接辞は必ず i - e 系になる。
+
+- 中立形 -Vr は -ir になる。
+
 - 不可能の意味には不能接辞 -(y)AmA を使う。推量の否定の場合は -(y)AmA と -(y)Abil を組み合わせる。
 
   e.g. gör- + -(y)AmA + dI + -m → göremedim 「私は見られなかった」
 
   vs gör- + -mA + -(y)Abil + -dI + -m → görmeyebildim 「私は見なかったかもしれない」
+
+## 相接辞
+
+|                     |      | 接辞     | タイプ | 例1          | 例2            |
+| ------------------- | ---- | -------- | ------ | ------------ | -------------- |
+| :s[中立形]{r=3}     | 肯定 | -Vr      | 1      | iç-er-iz     | yıka-r-ız      |
+| :e                  | 否定 | -mAz     | 1\*    | iç-meyiz     | yıka-mayız     |
+| :e                  | 不能 | -(y)AmAz | 1\*    | iç-emeyiz    | yıka-yamayız   |
+| :s[継続形]{c=2}     | :e   | -Iyor    | 1      | iç-iyor-uz   | yık-ıyor-uz    |
+| :s[過去形]{c=2}     | :e   | -dI      | 2      | iç-ti-k      | yıka-dı-k      |
+| :s[推量過去形]{c=2} | :e   | -mIş     | 1      | iç-miş-iz    | yıka-mış-ız    |
+| :s[未来形]{c=2}     | :e   | -(y)AcAk | 1      | iç-eceğ-iz   | yıka-yacağ-ız  |
+| :s[進行形]{c=2}     | :e   | -mAktA   | 1      | iç-mekte-yiz | yıka-makta-yız |
+| :s[必要形]{c=2}     | :e   | -mAlI    | 1      | iç-meli-yiz  | yıka-malı-yız  |
+| :s[条件形]{c=2}     | :e   | -sA      | 2      | iç-se-k      | yıka-sa-k      |
+
+動詞の時制・相を指定する接辞に対する日本語の総称が見当たらなかったので、ここではそれを「相接辞」ということにする。したがってこのサイト独自の呼称であり、ここ以外で使用しても通じないので注意。
+
+相接辞に後続する人称接辞には2種類あり、相接辞の種類によってどちらを用いるかが異なる。ここではそれらをタイプ1・タイプ2と呼ぶ。どちらが来るかも表内に示している。
+
+ここでは述語人称接辞の例として1人称複数のものを付けている。
+
+- 中立形 -Vr は動詞によってどれが来るか異なる。以下のルールで決まる。
+  - 語幹が母音終わりの場合 -r となる。
+
+    e.g. uyu- → uyur
+
+  - 語幹が子音終わりで、かつ1音節の動詞は、一部の動詞を除いて -Ar となる。
+
+    e.g. yüz- → yüzer
+
+  - 語幹が子音終わりで、かつ2音節以上の動詞と一部の1音節の動詞は -Ir となる。
+
+    e.g. otur- → oturur
+
+  - 語幹が1音節であるが -Ir をとる例外的な動詞は以下の14種である。
+    - *almak, bilmek, bulmak, denmek, durmak, gelmek, görmek, kalmak, olmak, ölmek, sanmak, varmak, vermek, vurmak*
+
+- 継続形 -Iyor の o は母音調和しない。後ろに来る接辞は必ず u - a 系になる。
+
+- 否定中立形 -mAz と不能中立形 -(y)AmAz は例外的に一つの特殊な接辞となる。
+  - 1人称単数の場合 -mAm, -(y)AmAm、1人称複数の場合 -mAyIz, -(y)AmAyIz という例外的な形をとる。
+
+    e.g. at- → at*mam*, at*mayız*, atmazsın, atmazsınız, atmaz, atmazlar
+
+
 
 ## 人称接辞
 
@@ -74,54 +93,40 @@ title: トルコ語 動詞
 | 願望形     | -(y)AyIm       | -(y)AlIm | -(y)AsIn       | -(y)AsInIz | -(y)A          | -(y)AlAr |
 | 命令形     | ／             | ／       | -∅             | -In        | -sIn           | -sInlAr  |
 
-基本的な述語人称接辞には2タイプあり、前に来る活用形接辞によってどちらを用いるかが異なる。ここではそれらをタイプ1・タイプ2と呼ぶ。
+| :s[人称・数]{c=2} | :e   | タイプ1       | タイプ2 | 願望形     | 命令形      |
+| ----------------- | ---- | ------------- | ------- | ---------- | ----------- |
+| :s[1人称]{r=2}    | 単数 | -(y)Im        | -m      | -(y)AyIm   | :s[／]{r=2} |
+| :e                | 複数 | -(y)Iz        | -k      | -(y)AlIm   | :e          |
+| :s[2人称]{r=2}    | 単数 | -sIn          | -n      | -(y)AsIn   | -∅          |
+| :e                | 複数 | -sInIz        | -nIz    | -(y)AsInIz | -In         |
+| :s[3人称]{r=2}    | 単数 | :s[-∅]{c=2}   | :e      | -(y)A      | -sIn        |
+| :e                | 複数 | :s[-lAr]{c=2} | :e      | -(y)AlAr   | -sInlAr     |
 
-また、願望形と命令形は独自の人称接辞をとる。
+### 例
 
-## 活用形接辞
+| :s[人称・数]{c=2} | :e   | タイプ1 (継続形) | タイプ2 (過去形) | 願望形    | 命令形      |
+| ----------------- | ---- | ---------------- | ---------------- | --------- | ----------- |
+| :s[1人称]{r=2}    | 単数 | iç-iyor-um       | iç-ti-m          | iç-eyim   | :s[／]{r=2} |
+| :e                | 複数 | iç-iyor-uz       | iç-ti-k          | iç-elim   | :e          |
+| :s[2人称]{r=2}    | 単数 | iç-iyor-sun      | iç-ti-n          | iç-esin   | iç          |
+| :e                | 複数 | iç-iyor-sunuz    | iç-ti-niz        | iç-esiniz | iç-in       |
+| :s[3人称]{r=2}    | 単数 | iç-iyor          | iç-ti            | iç-e      | iç-sin      |
+| :e                | 複数 | iç-iyor-lar      | içti-ler         | iç-eler   | iç-sinler   |
 
-|                       |      | 接辞        | タイプ | iç-          | gör-          | yıka-          | otur-          |
-| --------------------- | ---- | ----------- | ------ | ------------ | ------------- | -------------- | -------------- |
-| :s[アオリスト形]{r=3} | 肯定 | -\[I/A/∅\]r | 1      | iç-er-im     | gör-ür-üm     | yıka-r-ım      | otur-ur-um     |
-| :e                    | 否定 | -mAz        | 1(\*)  | iç-mem       | gör-mem       | yıka-mam       | otur-mam       |
-| :e                    | 不能 | -(y)AmAz    | 1(\*)  | iç-emem      | gör-emem      | yıka-yamam     | otur-amam      |
-| :s[継続形]{c=2}       | :e   | -Iyor       | 1      | iç-iyor-um   | gör-üyor-um   | yık-ıyor-um    | otur-uyor-um   |
-| :s[直接過去形]{c=2}   | :e   | -dI         | 2      | iç-ti-m      | gör-dü-m      | yıka-dı-m      | otur-du-m      |
-| :s[伝聞過去形]{c=2}   | :e   | -mIş        | 1      | iç-miş-im    | gör-müş-üm    | yıka-mış-ım    | otur-muş-um    |
-| :s[未来形]{c=2}       | :e   | -(y)AcAk    | 1      | iç-eceğ-im   | gör-eceğ-im   | yıka-yacağ-ım  | otur-acağ-ım   |
-| :s[進行形]{c=2}       | :e   | -mAktA      | 1      | iç-mekte-yim | gör-mekte-yim | yıka-makta-yım | otur-makta-yım |
-| :s[必要形]{c=2}       | :e   | -mAlI       | 1      | iç-meli-yim  | gör-meli-yim  | yıka-malı-yım  | otur-malı-yım  |
-| :s[条件形]{c=2}       | :e   | -sA         | 2      | iç-se-m      | gör-se-m      | yıka-sa-m      | otur-sa-m      |
+タイプに関しては先ほど説明した通り。また、願望形と命令形は独自の人称接辞をとる。
 
-ここでは述語人称接辞の例として1人称単数のものを付けている。
+## 不定詞, 分詞接辞
 
-- アオリスト形 -\[I/A/∅\]r は動詞によってどれが来るか異なる。以下のルールで決まる。
-  - 語幹母音終わりの場合 -r となる。
-  - 語幹が1音節の動詞は、一部の動詞を除いて -Ar となる。
-  - 語幹が2音節以上の動詞と一部の1音節の動詞は -Ir となる。
+|                     |             | 接辞     | 例1       | 例2         |
+| ------------------- | ----------- | -------- | --------- | ----------- |
+| :s[不定詞]{c=2}     | :e          | -mAk     | iç-mek    | yıka-mak    |
+| :s[動名詞]{c=2}     | :e          | -mA      | iç-me     | yıka-ma     |
+| :s[中立分詞]{r=3}   | 肯定        | -Vr      | iç-er     | yıka-r      |
+| :e                  | 否定        | -mAz     | iç-mez    | yıka-maz    |
+| :e                  | 不能        | -(y)AmAz | iç-emez   | yıka-yamaz  |
+| :s[未完了分詞]{c=2} | :e          | -(y)An   | iç-en     | yıka-yan    |
+| :s[過去分詞]{r=2}   | 非人称      | -mIş     | iç-miş    | yıka-mış    |
+| :e                  | 人称        | -dIk     | iç-tiğ-im | yıka-dığ-ım |
+| 未来分詞            | 人称/非人称 | -(y)AcAk | iç-ecek   | yıka-yacak  |
 
-  語幹が1音節であるが -Ir をとる例外的な動詞は以下の14種である。
-
-  - *almak, bilmek, bulmak, denmek, durmak, gelmek, görmek, kalmak, olmak, ölmek, sanmak, varmak, vermek, vurmak*
-
-- 継続形 -Iyor の o は母音調和しない。後ろに来る接辞は必ず u - a 系になる。
-
-- 否定アオリスト形 -mAz と不能アオリスト形 -(y)AmAz は例外的に一つの特殊な接辞となる。また1人称単数の場合 -mAm, -(y)AmAm、1人称複数の場合 -mAyIz, -(y)AmAyIz という例外的な形をとる。
-
-  e.g. at- → at*mam*, at*mayız*, atmazsın, atmazsınız, atmaz, atmazlar
-
-## 不定形, 分詞接辞
-
-|                         |        | 接辞        | iç-       | gör-       | yıka-       | otur-       |
-| ----------------------- | ------ | ----------- | --------- | ---------- | ----------- | ----------- |
-| :s[不定詞]{c=2}         | :e     | -mAk        | iç-mek    | gör-mek    | yıka-mak    | otur-mak    |
-| :s[動名詞]{c=2}         | :e     | -mA         | iç-me     | gör-me     | yıka-ma     | otur-ma     |
-| :s[アオリスト分詞]{r=3} | 肯定   | -\[I/A/∅\]r | iç-er     | gör-ür     | yıka-r      | otur-ur     |
-| :e                      | 否定   | -mAz        | iç-mez    | gör-mez    | yıka-maz    | otur-maz    |
-| :e                      | 不能   | -(y)AmAz    | iç-emez   | gör-emez   | yıka-yamaz  | otur-amaz   |
-| :s[未完了分詞]{c=2}     | :e     | -(y)An      | iç-en     | gör-en     | yıka-yan    | otur-an     |
-| :s[過去分詞]{r=2}       | 非人称 | -mIş        | iç-miş    | gör-müş    | yıka-mış    | otur-muş    |
-| :e                      | 人称   | -dIk        | iç-diğ-im | gör-düğ-üm | yıka-dığ-ım | otur-duğ-um |
-| :s[未来分詞]{c=2}       | :e     | -(y)AcAk    | iç-ecek   | gör-ecek   | yıka-yacak  | otur-acak   |
-
-- アオリスト分詞 -\[I/A/∅\]r の使い分けはアオリスト形と同様。
+- 中立分詞 -Vr の使い分けは中立形と同様。
