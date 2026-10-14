@@ -16,7 +16,7 @@ title: トルコ語 動詞
 
 その他動詞に関する事項は以下の通り。
 
-- *yemek, demek* は、yで始まる接辞が続く際、 ye- → -yi, de- → di- と母音が変化する。
+- *yemek, demek* は、yで始まる接辞が続く際、 ye- → yi-, de- → di- と母音が変化する。
 
   e.g. ye- + -(y)Abil + -Vr + -sIn → y*i*yebilirsin
 
