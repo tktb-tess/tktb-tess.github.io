@@ -9,6 +9,10 @@ title: Baillie–PSW primality test
 
 ### Legendre記号, Jacobi記号
 
+$$
+
+$$
+
 ### Lucas数列
 
 ## Miller–Rabin primality test
