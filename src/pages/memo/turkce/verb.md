@@ -3,6 +3,8 @@ layout: ../../../layouts/MdLayout.astro
 title: トルコ語 動詞
 ---
 
+<div class="contents [&_:where(table_td)]:text-start">
+
 ### 目次
 
 ## 概要
@@ -12,12 +14,18 @@ title: トルコ語 動詞
 - \[語幹\](-\[否定, 不能\])(-\[可能/推量\])-\[相\]\-\[述語\]
 - \[語幹\](-\[否定, 不能\])(-\[可能/推量\])-\[分詞\](-\[所有\])
 
+その他動詞に関する事項は以下の通り。
+
+- *yemek, demek* は、yで始まる接辞が続く際、 ye- → -yi, de- → di- と母音が変化する。
+
+  e.g. ye- + -(y)Abil + -Vr + -sIn → y*i*yebilirsin
+
 ## 否定, 不能接辞
 
-|      | 接辞     | 例1     | 例2       |
-| ---- | -------- | ------- | --------- |
-| 否定 | -mA-     | iç-me-  | yıka-ma-  |
-| 不能 | -(y)AmA- | iç-eme- | yıka-ama- |
+|      | 接辞     | 例1     | 例2        |
+| ---- | -------- | ------- | ---------- |
+| 否定 | -mA-     | iç-me-  | yıka-ma-   |
+| 不能 | -(y)AmA- | iç-eme- | yıka-yama- |
 
 - 中立形と共に使う場合は独自の形をとる（下記参照）。
 
@@ -27,7 +35,7 @@ title: トルコ語 動詞
 | --------- | --------- | -------- | ----------- |
 | 可能/推量 | -(y)Abil- | iç-ebil- | yıka-yabil- |
 
-- 可能・推量接辞 -(y)Abil の i は母音調和しない。後ろに来る接辞は必ず i - e 系になる。
+- 可能・推量接辞 -(y)Abil の i は母音調和しない。後ろに来る接辞は必ず i/e 系になる。
 
 - 中立形 -Vr は -ir になる。
 
@@ -56,7 +64,7 @@ title: トルコ語 動詞
 
 相接辞に後続する人称接辞には2種類あり、相接辞の種類によってどちらを用いるかが異なる。ここではそれらをタイプ1・タイプ2と呼ぶ。どちらが来るかも表内に示している。
 
-ここでは述語人称接辞の例として1人称複数のものを付けている。
+ここでは人称接辞の例として1人称複数のものを付けている。
 
 - 中立形 -Vr は動詞によってどれが来るか異なる。以下のルールで決まる。
   - 語幹が母音終わりの場合 -r となる。
@@ -72,18 +80,19 @@ title: トルコ語 動詞
     e.g. otur- → oturur
 
   - 語幹が1音節であるが -Ir をとる例外的な動詞は以下の14種である。
-    - *almak, bilmek, bulmak, denmek, durmak, gelmek, görmek, kalmak, olmak, ölmek, sanmak, varmak, vermek, vurmak*
 
-- 継続形 -Iyor の o は母音調和しない。後ろに来る接辞は必ず u - a 系になる。
+    *almak, bilmek, bulmak, denmek, durmak, gelmek, görmek, kalmak, olmak, ölmek, sanmak, varmak, vermek, vurmak*
+
+- 継続形 -Iyor の o は母音調和しない。後ろに来る接辞は必ず u/a 系になる。
 
 - 否定中立形 -mAz と不能中立形 -(y)AmAz は例外的に一つの特殊な接辞となる。
   - 1人称単数の場合 -mAm, -(y)AmAm、1人称複数の場合 -mAyIz, -(y)AmAyIz という例外的な形をとる。
 
     e.g. at- → at*mam*, at*mayız*, atmazsın, atmazsınız, atmaz, atmazlar
 
-
-
 ## 人称接辞
+
+<div class="contents [&_:where(tbody_tr:first-child_td):last-child]:text-center">
 
 | :s[人称・数]{c=2} | :e   | タイプ1       | タイプ2 | 願望形     | 命令形      |
 | ----------------- | ---- | ------------- | ------- | ---------- | ----------- |
@@ -94,7 +103,13 @@ title: トルコ語 動詞
 | :s[3人称]{r=2}    | 単数 | :s[-∅]{c=2}   | :e      | -(y)A      | -sIn        |
 | :e                | 複数 | :s[-lAr]{c=2} | :e      | -(y)AlAr   | -sInlAr     |
 
+</div>
+
+タイプに関しては先ほど説明した通り。また、願望形と命令形は独自の人称接辞をとる。
+
 ### 例
+
+<div class="contents [&_:where(tbody_tr:first-child_td):last-child]:text-center">
 
 | :s[人称・数]{c=2} | :e   | タイプ1 (継続形) | タイプ2 (過去形) | 願望形    | 命令形      |
 | ----------------- | ---- | ---------------- | ---------------- | --------- | ----------- |
@@ -103,9 +118,9 @@ title: トルコ語 動詞
 | :s[2人称]{r=2}    | 単数 | iç-iyor-sun      | iç-ti-n          | iç-esin   | iç          |
 | :e                | 複数 | iç-iyor-sunuz    | iç-ti-niz        | iç-esiniz | iç-in       |
 | :s[3人称]{r=2}    | 単数 | iç-iyor          | iç-ti            | iç-e      | iç-sin      |
-| :e                | 複数 | iç-iyor-lar      | içti-ler         | iç-eler   | iç-sinler   |
+| :e                | 複数 | iç-iyor-lar      | iç-ti-ler        | iç-eler   | iç-sinler   |
 
-タイプに関しては先ほど説明した通り。また、願望形と命令形は独自の人称接辞をとる。
+</div>
 
 ## 不定詞, 分詞接辞
 
@@ -122,3 +137,5 @@ title: トルコ語 動詞
 | 未来分詞            | 人称/非人称 | -(y)AcAk | iç-ecek   | yıka-yacak  |
 
 - 中立分詞 -Vr の使い分けは中立形と同様。
+
+</div>
