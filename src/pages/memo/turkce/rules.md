@@ -17,13 +17,13 @@ title: トルコ語 基本ルール
 
 接辞の中には、中に子音か母音が入った括弧が付いたものがある。括弧の中の子音は、直前の語幹・接辞が母音で終わる場合に追加で付き、そうでない場合は無視される。
  
-> kedi + -(y)I → kedi*y*i
+> kedi + -(y)I → kedi**y**i
 >
 > fil + -(y)I → fili
 
 また、括弧の中の母音は、直前の語幹・接辞が子音で終わる場合に追加で付き、そうでない場合は無視される。
 
-> tuz + -(I)m → tuz*u*m
+> tuz + -(I)m → tuz**u**m
 >
 > çorba + -(I)m → çorbam
 
@@ -31,9 +31,9 @@ title: トルコ語 基本ルール
 
 母音で終わる語幹・接辞に、子音入り括弧がない母音で始まる接辞が後続する場合、前の母音が脱落する。
 
-> dinl*e*- + -Iyor + -(y)Iz → dinliyoruz
+> dinl**e**- + -Iyor → dinliyor
 > 
-> okur- + -(y)Am*A*- + -Iyor + -sInIz → okuramıyorsunuz
+> okur- + -(y)Am**A**- + -Iyor → okuramıyor
 
 ## 無声化・有声化
 
@@ -42,9 +42,9 @@ title: トルコ語 基本ルール
 - d → t
 - c → ç
 
-> kes- + -dI + -k → kes*t*ik
+> kes- + -dI → kes**t**i
 > 
-> iş + -cI → iş*ç*i
+> iş + -cI → iş**ç**i
 
 また、語幹・接辞の末子音に母音で始まる接辞が後続すると、有声化する**ことがある**。具体的には以下のように変化する。
 
@@ -53,13 +53,13 @@ title: トルコ語 基本ルール
 - ç → c
 - k → ğ, (nの後で) g
 
-> ekmek + -(y)I → ekme*ğ*i
+> ekmek + -(y)I → ekme**ğ**i
 > 
-> git- + -Iyor + -(y)Im → gi*d*iyorum
+> git- + -Iyor → gi**d**iyor
 
 **しないこともある**ので、都度覚える。
 
-> süt + -(y)I → sütü (❌ sü*d*ü)
+> süt + -(y)I → sütü (❌ sü**d**ü)
 >
-> at- + -Iyor + -(y)Im → atıyorum (❌ a*d*ıyorum)
+> at- + -Iyor → atıyor (❌ a**d**ıyor)
 

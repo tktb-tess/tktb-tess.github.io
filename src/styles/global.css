@@ -197,7 +197,8 @@
     @apply mbs-paragraph;
   }
 
-  :where(li) + li {
+  li > * + :where(p, ul, ol, pre),
+  * + li {
     @apply mbs-1;
   }
 
@@ -218,7 +219,7 @@
   }
 
   blockquote {
-    @apply my-figure mx-3 px-3 py-1 border-s-2 border-accent bg-quote-bg;
+    @apply my-4 mx-3 px-3 py-1 border-s-2 border-accent bg-quote-bg;
   }
 
   a:where(:any-link:not([aria-disabled='true'])) {

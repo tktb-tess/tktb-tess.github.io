@@ -17,7 +17,7 @@ title: トルコ語 動詞
 
 - *yemek, demek* は、yで始まる接辞が続く際、 ye- → yi-, de- → di- と母音が変化する。
 
-  > ye- + -(y)Abil + -Vr + -sIn → y*i*yebilirsin
+  > ye- + -(y)Abil + -Vr → y**i**yebilir
 
 ## 否定, 不能接辞
 
@@ -71,15 +71,15 @@ title: トルコ語 動詞
 
   - 語幹が母音で終わる場合 -r となる。
 
-    > uyu- → uyur
+    > uyu- → uyu**r**
 
   - 語幹が子音で終わり、かつ1音節の動詞は、一部の動詞を除いて -Ar となる。
 
-    > yüz- → yüzer
+    > yüz- → yüz**er**
 
   - 語幹が子音で終わり、かつ2音節以上の動詞と一部の1音節の動詞は -Ir となる。
 
-    > otur- → oturur
+    > otur- → otur**ur**
 
   - 語幹が1音節であるが -Ir をとる例外的な動詞は以下の14種である。
 
@@ -91,7 +91,7 @@ title: トルコ語 動詞
 
   - 1人称単数の場合 -mAm, -(y)AmAm、1人称複数の場合 -mAyIz, -(y)AmAyIz という例外的な形をとる。
 
-    > at- → at*mam*, at*mayız*, atmazsın, atmazsınız, atmaz, atmazlar
+    > at- → at**mam**, at**mayız**, atmazsın, atmazsınız, atmaz, atmazlar
 
 ## 人称接辞
 
