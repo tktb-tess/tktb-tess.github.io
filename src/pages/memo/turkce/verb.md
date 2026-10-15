@@ -11,14 +11,13 @@ title: トルコ語 動詞
 
 トルコ語の動詞の接辞は概ね以下の順番になる。
 
-- \[語幹\](-\[否定, 不能\])(-\[可能/推量\])-\[相\]\-\[述語\]
-- \[語幹\](-\[否定, 不能\])(-\[可能/推量\])-\[分詞\](-\[所有\])
+- \[語幹\](-\[否定, 不能\])(-\[可能・推量\])-\[相\](\-\[繋辞相\])\-\[人称\]
 
 その他動詞に関する事項は以下の通り。
 
 - *yemek, demek* は、yで始まる接辞が続く際、 ye- → yi-, de- → di- と母音が変化する。
 
-  e.g. ye- + -(y)Abil + -Vr + -sIn → y*i*yebilirsin
+  > ye- + -(y)Abil + -Vr + -sIn → y*i*yebilirsin
 
 ## 否定, 不能接辞
 
@@ -41,9 +40,11 @@ title: トルコ語 動詞
 
 - 不可能の意味には不能接辞 -(y)AmA を使う。推量の否定の場合は -(y)AmA と -(y)Abil を組み合わせる。
 
-  e.g. gör- + -(y)AmA + dI + -m → göremedim 「私は見られなかった」
-
-  vs gör- + -mA + -(y)Abil + -dI + -m → görmeyebildim 「私は見なかったかもしれない」
+  > gör- + -(y)AmA + dI + -m → göremedim 「私は見られなかった」
+  >
+  > vs
+  >
+  > gör- + -mA + -(y)Abil + -dI + -m → görmeyebildim 「私は見なかったかもしれない」
 
 ## 相接辞
 
@@ -52,11 +53,11 @@ title: トルコ語 動詞
 | :s[中立形]{r=3}     | 肯定 | -Vr      | I      | iç-er-iz     | yıka-r-ız      |
 | :e                  | 否定 | -mAz     | I\*    | iç-meyiz     | yıka-mayız     |
 | :e                  | 不能 | -(y)AmAz | I\*    | iç-emeyiz    | yıka-yamayız   |
-| :s[継続形]{c=2}     | :e   | -Iyor    | I      | iç-iyor-uz   | yık-ıyor-uz    |
+| :s[継続形]{r=2}     | 口語 | -Iyor    | I      | iç-iyor-uz   | yık-ıyor-uz    |
+| :e                  | 文語 | -mAktA   | I      | iç-mekte-yiz | yıka-makta-yız |
 | :s[過去形]{c=2}     | :e   | -dI      | II     | iç-ti-k      | yıka-dı-k      |
 | :s[推量過去形]{c=2} | :e   | -mIş     | I      | iç-miş-iz    | yıka-mış-ız    |
 | :s[未来形]{c=2}     | :e   | -(y)AcAk | I      | iç-eceğ-iz   | yıka-yacağ-ız  |
-| :s[進行形]{c=2}     | :e   | -mAktA   | I      | iç-mekte-yiz | yıka-makta-yız |
 | :s[必要形]{c=2}     | :e   | -mAlI    | I      | iç-meli-yiz  | yıka-malı-yız  |
 | :s[条件形]{c=2}     | :e   | -sA      | II     | iç-se-k      | yıka-sa-k      |
 
@@ -67,41 +68,43 @@ title: トルコ語 動詞
 ここでは人称接辞の例として1人称複数のものを付けている。
 
 - 中立形 -Vr は動詞によってどれが来るか異なる。以下のルールで決まる。
+
   - 語幹が母音で終わる場合 -r となる。
 
-    e.g. uyu- → uyur
+    > uyu- → uyur
 
   - 語幹が子音で終わり、かつ1音節の動詞は、一部の動詞を除いて -Ar となる。
 
-    e.g. yüz- → yüzer
+    > yüz- → yüzer
 
   - 語幹が子音で終わり、かつ2音節以上の動詞と一部の1音節の動詞は -Ir となる。
 
-    e.g. otur- → oturur
+    > otur- → oturur
 
   - 語幹が1音節であるが -Ir をとる例外的な動詞は以下の14種である。
 
-    *almak, bilmek, bulmak, denmek, durmak, gelmek, görmek, kalmak, olmak, ölmek, sanmak, varmak, vermek, vurmak*
+    > *almak, bilmek, bulmak, denmek, durmak, gelmek, görmek, kalmak, olmak, ölmek, sanmak, varmak, vermek, vurmak*
 
 - 継続形 -Iyor の o は母音調和しない。後ろに来る接辞は必ず u/a 系になる。
 
 - 否定中立形 -mAz と不能中立形 -(y)AmAz は例外的に一つの特殊な接辞となる。
+
   - 1人称単数の場合 -mAm, -(y)AmAm、1人称複数の場合 -mAyIz, -(y)AmAyIz という例外的な形をとる。
 
-    e.g. at- → at*mam*, at*mayız*, atmazsın, atmazsınız, atmaz, atmazlar
+    > at- → at*mam*, at*mayız*, atmazsın, atmazsınız, atmaz, atmazlar
 
 ## 人称接辞
 
 <div class="contents [&_:where(tbody_tr:first-child_td):last-child]:text-center">
 
-| :s[人称・数]{c=2} | :e   | タイプI       | タイプII | 願望形     | 命令形      |
-| ----------------- | ---- | ------------- | -------- | ---------- | ----------- |
-| :s[1人称]{r=2}    | 単数 | -(y)Im        | -m       | -(y)AyIm   | :s[／]{r=2} |
-| :e                | 複数 | -(y)Iz        | -k       | -(y)AlIm   | :e          |
-| :s[2人称]{r=2}    | 単数 | -sIn          | -n       | -(y)AsIn   | -∅          |
-| :e                | 複数 | -sInIz        | -nIz     | -(y)AsInIz | -In         |
-| :s[3人称]{r=2}    | 単数 | :s[-∅]{c=2}   | :e       | -(y)A      | -sIn        |
-| :e                | 複数 | :s[-lAr]{c=2} | :e       | -(y)AlAr   | -sInlAr     |
+| :s[人称・数]{c=2} | :e  | タイプI       | タイプII | 願望形     | 命令形      |
+| ----------------- | --- | ------------- | -------- | ---------- | ----------- |
+| :s[1]{r=2}        | 単  | -(y)Im        | -m       | -(y)AyIm   | :s[／]{r=2} |
+| :e                | 複  | -(y)Iz        | -k       | -(y)AlIm   | :e          |
+| :s[2]{r=2}        | 単  | -sIn          | -n       | -(y)AsIn   | -∅          |
+| :e                | 複  | -sInIz        | -nIz     | -(y)AsInIz | -In         |
+| :s[3]{r=2}        | 単  | :s[-∅]{c=2}   | :e       | -(y)A      | -sIn        |
+| :e                | 複  | :s[-lAr]{c=2} | :e       | -(y)AlAr   | -sInlAr     |
 
 </div>
 
@@ -111,14 +114,14 @@ title: トルコ語 動詞
 
 <div class="contents [&_:where(tbody_tr:first-child_td):last-child]:text-center">
 
-| :s[人称・数]{c=2} | :e   | タイプI (継続形) | タイプII (過去形) | 願望形    | 命令形      |
-| ----------------- | ---- | ---------------- | ----------------- | --------- | ----------- |
-| :s[1人称]{r=2}    | 単数 | iç-iyor-um       | iç-ti-m           | iç-eyim   | :s[／]{r=2} |
-| :e                | 複数 | iç-iyor-uz       | iç-ti-k           | iç-elim   | :e          |
-| :s[2人称]{r=2}    | 単数 | iç-iyor-sun      | iç-ti-n           | iç-esin   | iç          |
-| :e                | 複数 | iç-iyor-sunuz    | iç-ti-niz         | iç-esiniz | iç-in       |
-| :s[3人称]{r=2}    | 単数 | iç-iyor          | iç-ti             | iç-e      | iç-sin      |
-| :e                | 複数 | iç-iyor-lar      | iç-ti-ler         | iç-eler   | iç-sinler   |
+| :s[人称・数]{c=2} | :e  | タイプI (継続形) | タイプII (過去形) | 願望形    | 命令形      |
+| ----------------- | --- | ---------------- | ----------------- | --------- | ----------- |
+| :s[1]{r=2}        | 単  | iç-iyor-um       | iç-ti-m           | iç-eyim   | :s[／]{r=2} |
+| :e                | 複  | iç-iyor-uz       | iç-ti-k           | iç-elim   | :e          |
+| :s[2]{r=2}        | 単  | iç-iyor-sun      | iç-ti-n           | iç-esin   | iç          |
+| :e                | 複  | iç-iyor-sunuz    | iç-ti-niz         | iç-esiniz | iç-in       |
+| :s[3]{r=2}        | 単  | iç-iyor          | iç-ti             | iç-e      | iç-sin      |
+| :e                | 複  | iç-iyor-lar      | iç-ti-ler         | iç-eler   | iç-sinler   |
 
 </div>
 

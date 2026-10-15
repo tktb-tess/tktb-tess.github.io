@@ -53,6 +53,7 @@
   --color-textinv: canvas;
   --color-accent: light-dark(var(--color-violet-950), var(--color-violet-100));
   --color-accent-lighter: color-mix(in oklab, var(--color-accent) 60%, Canvas);
+  --color-quote-bg: light-dark(hsl(200 100 70 / 8%), hsl(200 100 70 / 15%));
   --color-border: light-dark(hsl(0 0 0 / 25%), hsl(0 0 100 / 25%));
   --color-border-2: light-dark(hsl(0 0 0 / 40%), hsl(0 0 100 / 40%));
   --color-link: light-dark(var(--color-blue-700), #10ff10);
@@ -196,6 +197,10 @@
     @apply mbs-paragraph;
   }
 
+  :where(li) + li {
+    @apply mbs-1;
+  }
+
   :not(li) > :where(ul, ol) {
     @apply ms-7;
   }
@@ -210,6 +215,10 @@
 
   ol {
     @apply list-decimal;
+  }
+
+  blockquote {
+    @apply my-figure mx-3 px-3 py-1 border-s-2 border-accent bg-quote-bg;
   }
 
   a:where(:any-link:not([aria-disabled='true'])) {
