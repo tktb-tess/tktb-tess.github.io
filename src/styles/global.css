@@ -50,6 +50,7 @@
   --color-side: light-dark(var(--color-violet-100), var(--color-violet-950));
   --color-main: canvas;
   --color-text: canvasText;
+  --color-textpale: color-mix(in oklab, canvasText 60%, transparent);
   --color-textinv: canvas;
   --color-accent: light-dark(var(--color-violet-950), var(--color-violet-100));
   --color-accent-lighter: color-mix(in oklab, var(--color-accent) 60%, Canvas);
