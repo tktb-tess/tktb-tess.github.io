@@ -49,8 +49,10 @@ title: トルコ語 名詞
 | 属格   | -(n)In | göz-ün  | çorba-nın |
 | (具格) | -(y)lA | göz-le  | çorba-yla |
 
-- 3人称単数および複数所有接辞 -(s)I, -lArI の後に格接辞が来るとき、間にnが挟まる。
+- 3人称単数および複数所有接辞 -(s)I, -lArI の後に具格以外の格接辞が来るとき、間にnが挟まる。具格は括弧のyをつける。
 
   > kedi + -(s)I + -dA → kedisi**n**de
+  >
+  > kedi + -(s)I + -(y)lA → kedisi**y**le (❌ kedisi**n**le)
 
 </div>
