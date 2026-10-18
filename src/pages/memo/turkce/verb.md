@@ -48,7 +48,7 @@ title: トルコ語 動詞
 
 ## 相接辞
 
-|                     |      | 接辞     | タイプ | 例1          | 例2            |
+| :s[]{c=2}           | :e   | 接辞     | タイプ | 例1          | 例2            |
 | ------------------- | ---- | -------- | ------ | ------------ | -------------- |
 | :s[中立形]{r=3}     | 肯定 | -Vr      | I      | iç-er-iz     | yıka-r-ız      |
 | :e                  | 否定 | -mAz     | I\*    | iç-meyiz     | yıka-mayız     |
@@ -95,16 +95,16 @@ title: トルコ語 動詞
 
 ## 人称接辞
 
-<div class="contents [&_:where(tbody_tr:first-child_td):last-child]:text-center">
+<div class="contents [&_:where(tbody>tr:nth-child(-n+2)>td):last-child]:text-center">
 
-| :s[人称・数]{c=2} | :e  | タイプI       | タイプII | 願望形     | 命令形      |
-| ----------------- | --- | ------------- | -------- | ---------- | ----------- |
-| :s[1]{r=2}        | 単  | -(y)Im        | -m       | -(y)AyIm   | :s[／]{r=2} |
-| :e                | 複  | -(y)Iz        | -k       | -(y)AlIm   | :e          |
-| :s[2]{r=2}        | 単  | -sIn          | -n       | -(y)AsIn   | -∅          |
-| :e                | 複  | -sInIz        | -nIz     | -(y)AsInIz | -In         |
-| :s[3]{r=2}        | 単  | :s[-∅]{c=2}   | :e       | -(y)A      | -sIn        |
-| :e                | 複  | :s[-lAr]{c=2} | :e       | -(y)AlAr   | -sInlAr     |
+| :s[人称・数]{c=2} | :e  | タイプI       | タイプII | 願望形     | 命令形  |
+| ----------------- | --- | ------------- | -------- | ---------- | ------- |
+| :s[1]{r=2}        | 単  | -(y)Im        | -m       | -(y)AyIm   | ／      |
+| :e                | 複  | -(y)Iz        | -k       | -(y)AlIm   | ／      |
+| :s[2]{r=2}        | 単  | -sIn          | -n       | -(y)AsIn   | -∅      |
+| :e                | 複  | -sInIz        | -nIz     | -(y)AsInIz | -In     |
+| :s[3]{r=2}        | 単  | :s[-∅]{c=2}   | :e       | -(y)A      | -sIn    |
+| :e                | 複  | :s[-lAr]{c=2} | :e       | -(y)AlAr   | -sInlAr |
 
 </div>
 
@@ -112,22 +112,22 @@ title: トルコ語 動詞
 
 ### 例
 
-<div class="contents [&_:where(tbody_tr:first-child_td):last-child]:text-center">
+<div class="contents [&_:where(tbody>tr:nth-child(-n+2)>td):last-child]:text-center">
 
-| :s[人称・数]{c=2} | :e  | タイプI (継続形) | タイプII (過去形) | 願望形    | 命令形      |
-| ----------------- | --- | ---------------- | ----------------- | --------- | ----------- |
-| :s[1]{r=2}        | 単  | iç-iyor-um       | iç-ti-m           | iç-eyim   | :s[／]{r=2} |
-| :e                | 複  | iç-iyor-uz       | iç-ti-k           | iç-elim   | :e          |
-| :s[2]{r=2}        | 単  | iç-iyor-sun      | iç-ti-n           | iç-esin   | iç          |
-| :e                | 複  | iç-iyor-sunuz    | iç-ti-niz         | iç-esiniz | iç-in       |
-| :s[3]{r=2}        | 単  | iç-iyor          | iç-ti             | iç-e      | iç-sin      |
-| :e                | 複  | iç-iyor-lar      | iç-ti-ler         | iç-eler   | iç-sinler   |
+| :s[人称・数]{c=2} | :e  | タイプI (継続形) | タイプII (過去形) | 願望形    | 命令形    |
+| ----------------- | --- | ---------------- | ----------------- | --------- | --------- |
+| :s[1]{r=2}        | 単  | iç-iyor-um       | iç-ti-m           | iç-eyim   | ／        |
+| :e                | 複  | iç-iyor-uz       | iç-ti-k           | iç-elim   | ／        |
+| :s[2]{r=2}        | 単  | iç-iyor-sun      | iç-ti-n           | iç-esin   | iç        |
+| :e                | 複  | iç-iyor-sunuz    | iç-ti-niz         | iç-esiniz | iç-in     |
+| :s[3]{r=2}        | 単  | iç-iyor          | iç-ti             | iç-e      | iç-sin    |
+| :e                | 複  | iç-iyor-lar      | iç-ti-ler         | iç-eler   | iç-sinler |
 
 </div>
 
 ## 不定詞, 分詞接辞
 
-|                     |             | 接辞     | 例1       | 例2         |
+| :s[]{c=2}           | :e          | 接辞     | 例1       | 例2         |
 | ------------------- | ----------- | -------- | --------- | ----------- |
 | :s[不定詞]{c=2}     | :e          | -mAk     | iç-mek    | yıka-mak    |
 | :s[動名詞]{c=2}     | :e          | -mA      | iç-me     | yıka-ma     |

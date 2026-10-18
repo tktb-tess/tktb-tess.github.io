@@ -63,9 +63,10 @@
   --color-code-bg: light-dark(hsl(210 10 90), hsl(210 10 20));
   --default-transition-duration: 80ms;
   --default-transition-timing-function: cubic-bezier(0.25, 0, 0.1, 1);
+
+  /* contextual-alt, alt-1, l-with-tail, I-with-serif, G-with-spur, alt-eszet, round-quotes-commas */
   --default-font-feature-settings:
     'calt', 'cv01', 'cv05', 'cv08', 'cv10', 'cv07', 'ss03';
-  /* contextual-alt, alt-1, l-with-tail, I-with-serif, G-with-spur, alt-eszet, round-quotes-commas */
 
   --features-tnum:
     var(--default-font-feature-settings), 'tnum'; /* tabular-figures */
@@ -254,6 +255,10 @@
 
     :where(& > :is(thead, tbody) > tr:not(:last-child)) {
       @apply border-be border-border;
+    }
+
+    :where(& > :is(thead, tbody) > tr > :is(td, th):not(:last-child)) {
+      @apply border-e border-border;
     }
 
     :where(td, th) {

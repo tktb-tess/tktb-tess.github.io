@@ -27,7 +27,9 @@ const tabTitle = path === '/' ? title : `${title} | tktb-tess.github.io`;
     </header>
     <main>
       {path !== '/' && <BreadCrumb {path} />}
-      <slot />
+      <div>
+	<slot />
+      </div>
     </main>
     <ToTopBtn />
   </body>
