@@ -3,8 +3,6 @@ layout: ../../../layouts/MdLayout.astro
 title: ゲルマン祖語 名詞
 ---
 
-<div class="contents [&_:where(table_td)]:text-start">
-
 ### 目次
 
 ## 概要
@@ -450,8 +448,6 @@ controversialなKlugeの法則「破裂音・流音・鼻音 + *n* の同化に�
 | 属格 | \*birniz | \*birnǫ̂           |
 | 与格 | \*birni  | \*birnumaz        |
 | 具格 | \*birnē? | \*birnumiz        |
-
-</div>
 
 <div class="sr-only"></div>
 

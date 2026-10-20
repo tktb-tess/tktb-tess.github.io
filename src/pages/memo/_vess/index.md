@@ -1,6 +1,6 @@
 ---
 layout: ../../../layouts/MdLayout.astro
-title: Vessenzlendisç データ
+title: Venzlendisç データ
 ---
 
 - [正書法](/memo/vess/orthography/)

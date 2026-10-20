@@ -3,8 +3,6 @@ layout: ../../../layouts/MdLayout.astro
 title: トルコ語 名詞
 ---
 
-<div class="contents [&_:where(table_td)]:text-start">
-
 ### 目次
 
 ## 概要
@@ -54,5 +52,3 @@ title: トルコ語 名詞
   > kedi + -(s)I + -dA → kedisi**n**de
   >
   > kedi + -(s)I + -(y)lA → kedisi**y**le (❌ kedisi**n**le)
-
-</div>

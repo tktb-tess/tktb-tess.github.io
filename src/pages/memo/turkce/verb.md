@@ -3,8 +3,6 @@ layout: ../../../layouts/MdLayout.astro
 title: トルコ語 動詞
 ---
 
-<div class="contents [&_:where(table_td)]:text-start">
-
 ### 目次
 
 ## 概要
@@ -140,5 +138,3 @@ title: トルコ語 動詞
 | 未来分詞            | 人称/非人称 | -(y)AcAk | iç-ecek   | yıka-yacak  |
 
 - 中立分詞 -Vr の使い分けは中立形と同様。
-
-</div>

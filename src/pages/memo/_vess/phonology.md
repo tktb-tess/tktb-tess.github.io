@@ -1,6 +1,6 @@
 ---
 layout: ../../../layouts/MdLayout.astro
-title: Vessenzlendisç 音韻論
+title: Venzlendisç 音韻論
 ---
 
 ### 目次

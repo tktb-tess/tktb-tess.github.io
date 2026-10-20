@@ -1,13 +1,13 @@
 ---
 layout: ../../../layouts/MdLayout.astro
-title: Vessenzlendisç 正書法
+title: Venzlendisç 正書法
 ---
 
 ### 目次
 
 ## 母音
 
-ヴェッセンズラン語の母音字には **tense vowel** と **lax vowel** の2通りの読み方がある。概ね長母音と短母音のような関係である。
+ヴェンズラン語の母音字には **tense vowel** と **lax vowel** の2通りの読み方がある。概ね長母音と短母音のような関係である。
 
 主な母音字の *tense, lax* の音は以下の通り。
 
@@ -34,15 +34,11 @@ u, ó の発音に注意。
 
 である。
 
-- e.g.
-  
-  fnut :ipa[/fnyːtʰ/] vs. hund :ipa[/ɦʏn/]
+> fnut :ipa[/fnyːtʰ/] vs hund :ipa[/ɦʏn/]
 
 ただし、前置詞や代名詞など使用頻度の高い機能語はこの限りではない。また、 ‹gh› 等の digraph が後ろに続く場合、必ずしも *lax* とは限らない。
 
-- e.g.
-  
-  iç :ipa[/ɪɕ/], hvat :ipa[/fätʰ/]
+> iç :ipa[/ɪɕ/], hvat :ipa[/fätʰ/]
 
 *tense* 母音の対応する二重音字も存在する。
 

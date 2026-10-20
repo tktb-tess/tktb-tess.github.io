@@ -257,12 +257,12 @@
       @apply border-be border-border;
     }
 
-    :where(& > :is(thead, tbody) > tr > :is(td, th):not(:last-child)) {
-      @apply border-e border-border;
+    :where(& > :is(thead, tbody) > tr > :is(td, th):is(:not(:first-child), .need-border)) {
+      @apply border-s border-border;
     }
 
     :where(td, th) {
-      @apply text-base py-1.25 px-2.5 text-center;
+      @apply text-base py-1.25 px-2.5;
     }
   }
 

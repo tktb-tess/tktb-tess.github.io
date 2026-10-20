@@ -6,7 +6,7 @@ description: AstroとMarkdownを使用して、静的なサイトを構築し、
 
 Astroは静的サイト生成(SSG)を主としたフレームワークで、ビルド時にすべてのHTML, CSSを良しなに生成してくれるので、GitHub Pagesなどの静的サイトホスティングサービスなどでも利用できる[^1]。また、追加プラグインなしでMarkdownをHTMLに変換できるところも魅力である。
 
-[^1]: AstroではSSRも利用できるが、GitHub Pagesでは使えないので、今回は使わない。SSRを利用したい場合、Cloudflare Workers、Vercelなどのサービスが必要となる。
+[^1]: AstroではSSRも利用できるが、GitHub Pagesでは使えないので、今回は使わない。SSRを利用したい場合、Cloudflare WorkersやVercelなどのサービスが必要となる。
 
 このサイトもそれで作っている。ここではその手順について備忘録もかねて書く。
 
@@ -77,7 +77,7 @@ pnpm run dev
 
 既に `src` ディレクトリ内に色々おかれていると思う。エントリポイントとなるページは `pages` 内におく。それ以外は好きにおいていいが、`components`, `modules`, `styles`, `assets` などと分けると良いのかも。
 
-ディレクトリ構造がそのままパスになる。例えば `pages/foo/bar.html` は `<basepath>/foo/bar` になる。ただし、`index.html` という名前の場合は、`index` を抜いた部分がパスになる。つまり `pages/foo/bar/index.html` も同じパスになる。また、HTMLの代わりにMarkdownを置くだけで、自動でビルド時にHTMLに変換してくれる。パスのルールはHTMLの場合と同じ。
+ディレクトリ構造がそのままパスになる。例えば `pages/foo/bar.html` は `<BASE>/foo/bar` になる。ただし、`index.html` という名前の場合は、`index` を抜いた部分がパスになる。つまり `pages/foo/bar/index.html` も同じパスになる。また、HTMLの代わりにMarkdownを置くだけで、自動でビルド時にHTMLに変換してくれる。パスのルールはHTMLの場合と同じ。
 
 ## config
 
@@ -98,7 +98,7 @@ export default defineConfig({
 を追加すればよい。
 
 
-## Tailwind CSS を入れる(オプション)
+## Tailwind CSS を入れる (オプション)
 
 まず必要な依存関係をインストールする。
 

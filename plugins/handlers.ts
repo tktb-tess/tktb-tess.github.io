@@ -23,11 +23,20 @@ const safeToHast = (tree: Mdast.Nodes) => {
   return hast;
 };
 
-const _tdHandler = (node: TextDirective) => {
-  if (node.name === 'ipa') {
-    return h('span.font-ipa', node.children.map(phrasingToHast));
-  } else {
-    return safeToHast(node);
+const _tdHandler = (node: TextDirective): Hast.ElementContent => {
+  switch (node.name) {
+    case 'ipa': {
+      return h('span.font-ipa', node.children.map(phrasingToHast));
+    }
+    case 'sup': {
+      return h('sup', node.children.map(phrasingToHast));
+    }
+    case 'sub': {
+      return h('sub', node.children.map(phrasingToHast));
+    }
+    default: {
+      return safeToHast(node);
+    }
   }
 };
 
@@ -54,27 +63,29 @@ const tcHandler = (tc: Mdast.TableCell, tag: 'td' | 'th') => {
     return h(tag, tc.children.map(phrasingToHast));
   }
 
-  if (ph.name === 's') {
-    const parse = (v: string) => {
-      const n = Number.parseInt(v);
-      return Number.isFinite(n) && n >= 0 ? n : 1;
-    };
+  switch (ph.name) {
+    case 's': {
+      const parse = (v: string) => {
+        const n = Number.parseInt(v);
+        return Number.isFinite(n) && n >= 0 ? n : 1;
+      };
 
-    const rowspan = parse(ph.attributes?.r ?? '1');
-    const colspan = parse(ph.attributes?.c ?? '1');
+      const rowspan = parse(ph.attributes?.r ?? '1');
+      const colspan = parse(ph.attributes?.c ?? '1');
 
-    if (rowspan === 0 || colspan === 0) {
+      if (rowspan === 0 || colspan === 0) {
+        return null;
+      }
+
+      return h(tag, { rowspan, colspan }, ph.children.map(phrasingToHast));
+    }
+    case 'e': {
       return null;
     }
-
-    return h(tag, { rowspan, colspan }, ph.children.map(phrasingToHast));
+    default: {
+      return h(tag, tc.children.map(phrasingToHast));
+    }
   }
-
-  if (ph.name === 'e') {
-    return null;
-  }
-
-  return h(tag, tc.children.map(phrasingToHast));
 };
 
 export const tableHandler: Handler = (_, node: Mdast.Table) => {
@@ -84,23 +95,44 @@ export const tableHandler: Handler = (_, node: Mdast.Table) => {
     throw TypeError('unexpected: `head` is undefined');
   }
 
-  const ths = head.children
+  const headThs = head.children
     .map((th) => tcHandler(th, 'th'))
     .filter((e) => e != null);
 
-  const cond = ths.some((th) => th.children.length > 0);
+  const cond = headThs.some((th) => th.children.length > 0);
 
-  const thead = cond ? h('thead', h('tr', ths)) : null;
+  const thead = cond ? h('thead', h('tr', headThs)) : null;
 
   const bodyTrs = body.map((row) => {
-    const children = row.children
+    return row.children
       .map((td) => tcHandler(td, 'td'))
       .filter((e) => e != null);
-
-    return h('tr', children);
   });
 
-  const tbody = h('tbody', bodyTrs);
+  // 左罫線が正しく表示されるようにする
+  bodyTrs.forEach((row, i) => {
+    const first = row[0];
+    let rowSpan = first?.properties.rowSpan;
+    if (rowSpan == null) return;
+    if (typeof rowSpan === 'string') {
+      rowSpan = Number.parseInt(rowSpan);
+    }
+
+    if (!Number.isFinite(rowSpan) || rowSpan <= 1) return;
+
+    const indices = [...Array(rowSpan - 1)].map((_, j) => j + 1);
+    indices.forEach((j) => {
+      const fir = bodyTrs[i + j]?.[0];
+      if (fir == null) return;
+      fir.properties.className ??= [];
+      fir.properties.className.push('need-border');
+    });
+  });
+
+  const tbody = h(
+    'tbody',
+    bodyTrs.map((tds) => h('tr', tds)),
+  );
   const table = h('table', thead ? [thead, tbody] : tbody);
 
   return h('div.table-container', table);

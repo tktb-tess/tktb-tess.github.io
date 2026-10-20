@@ -8,7 +8,7 @@ description: めも。
 
 ## Links
 
-- [Vessenzlendisç データ](/memo/vess/)
+<!-- - [Venzlendisç データ](/memo/vess/) -->
 - [??? データ](/memo/sxl/)
 - [沖縄語 ラテン文字表記](/memo/ocinaaguti/)
 - [フィンランド語syllabics表記](/memo/finnish_syllabics/)
