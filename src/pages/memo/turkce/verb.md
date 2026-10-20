@@ -93,35 +93,27 @@ title: トルコ語 動詞
 
 ## 人称接辞
 
-<div class="contents [&_:where(tbody>tr:nth-child(-n+2)>td):last-child]:text-center">
-
-| :s[人称・数]{c=2} | :e  | タイプI       | タイプII | 願望形     | 命令形  |
-| ----------------- | --- | ------------- | -------- | ---------- | ------- |
-| :s[1]{r=2}        | 単  | -(y)Im        | -m       | -(y)AyIm   | ／      |
-| :e                | 複  | -(y)Iz        | -k       | -(y)AlIm   | ／      |
-| :s[2]{r=2}        | 単  | -sIn          | -n       | -(y)AsIn   | -∅      |
-| :e                | 複  | -sInIz        | -nIz     | -(y)AsInIz | -In     |
-| :s[3]{r=2}        | 単  | :s[-∅]{c=2}   | :e       | -(y)A      | -sIn    |
-| :e                | 複  | :s[-lAr]{c=2} | :e       | -(y)AlAr   | -sInlAr |
-
-</div>
+| :s[人称・数]{c=2} | :e  | タイプI       | タイプII | 願望形     | 命令形      |
+| ----------------- | --- | ------------- | -------- | ---------- | ----------- |
+| :s[1]{r=2}        | 単  | -(y)Im        | -m       | -(y)AyIm   | :s[／]{r=2} |
+| :e                | 複  | -(y)Iz        | -k       | -(y)AlIm   | :e          |
+| :s[2]{r=2}        | 単  | -sIn          | -n       | -(y)AsIn   | -∅          |
+| :e                | 複  | -sInIz        | -nIz     | -(y)AsInIz | -In         |
+| :s[3]{r=2}        | 単  | :s[-∅]{c=2}   | :e       | -(y)A      | -sIn        |
+| :e                | 複  | :s[-lAr]{c=2} | :e       | -(y)AlAr   | -sInlAr     |
 
 タイプに関しては先ほど説明した通り。また、願望形と命令形は独自の人称接辞をとる。
 
 ### 例
 
-<div class="contents [&_:where(tbody>tr:nth-child(-n+2)>td):last-child]:text-center">
-
-| :s[人称・数]{c=2} | :e  | タイプI (継続形) | タイプII (過去形) | 願望形    | 命令形    |
-| ----------------- | --- | ---------------- | ----------------- | --------- | --------- |
-| :s[1]{r=2}        | 単  | iç-iyor-um       | iç-ti-m           | iç-eyim   | ／        |
-| :e                | 複  | iç-iyor-uz       | iç-ti-k           | iç-elim   | ／        |
-| :s[2]{r=2}        | 単  | iç-iyor-sun      | iç-ti-n           | iç-esin   | iç        |
-| :e                | 複  | iç-iyor-sunuz    | iç-ti-niz         | iç-esiniz | iç-in     |
-| :s[3]{r=2}        | 単  | iç-iyor          | iç-ti             | iç-e      | iç-sin    |
-| :e                | 複  | iç-iyor-lar      | iç-ti-ler         | iç-eler   | iç-sinler |
-
-</div>
+| :s[人称・数]{c=2} | :e  | タイプI (継続形) | タイプII (過去形) | 願望形    | 命令形      |
+| ----------------- | --- | ---------------- | ----------------- | --------- | ----------- |
+| :s[1]{r=2}        | 単  | iç-iyor-um       | iç-ti-m           | iç-eyim   | :s[／]{r=2} |
+| :e                | 複  | iç-iyor-uz       | iç-ti-k           | iç-elim   | :e          |
+| :s[2]{r=2}        | 単  | iç-iyor-sun      | iç-ti-n           | iç-esin   | iç          |
+| :e                | 複  | iç-iyor-sunuz    | iç-ti-niz         | iç-esiniz | iç-in       |
+| :s[3]{r=2}        | 単  | iç-iyor          | iç-ti             | iç-e      | iç-sin      |
+| :e                | 複  | iç-iyor-lar      | iç-ti-ler         | iç-eler   | iç-sinler   |
 
 ## 不定詞, 分詞接辞
 
