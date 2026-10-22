@@ -10,7 +10,12 @@ const emptyText: Hast.Text = {
   value: '',
 };
 
-const safeToHast = (tree: Mdast.Nodes) => {
+/**
+ * 危険なデータは消しつつhastに変換
+ * @param tree
+ * @returns
+ */
+function safeToHast(tree: Mdast.Nodes) {
   const hast = toHast(tree, { allowDangerousHtml: true });
   if (
     hast.type === 'root' ||
@@ -21,9 +26,9 @@ const safeToHast = (tree: Mdast.Nodes) => {
   }
 
   return hast;
-};
+}
 
-const _tdHandler = (node: TextDirective): Hast.ElementContent => {
+function _tdHandler(node: TextDirective): Hast.ElementContent {
   switch (node.name) {
     case 'ipa': {
       return h('span.font-ipa', node.children.map(phrasingToHast));
@@ -38,27 +43,29 @@ const _tdHandler = (node: TextDirective): Hast.ElementContent => {
       return safeToHast(node);
     }
   }
-};
+}
 
-const phrasingToHast = (mdNode: Mdast.PhrasingContent): Hast.ElementContent => {
+function phrasingToHast(mdNode: Mdast.PhrasingContent): Hast.ElementContent {
   if (mdNode.type === 'textDirective') {
     return _tdHandler(mdNode);
   } else {
     return safeToHast(mdNode);
   }
-};
+}
 
 export const tdHandler: Handler = (_, node: TextDirective) => {
   return _tdHandler(node);
 };
 
-const tcHandler = (tc: Mdast.TableCell, tag: 'td' | 'th') => {
+function tcHandler(tc: Mdast.TableCell, tag: 'td' | 'th') {
+  // 子要素は1個だけを想定
   if (tc.children.length !== 1) {
     return h(tag, tc.children.map(phrasingToHast));
   }
 
   const ph = tc.children[0];
 
+  // TextDirective以外は除外
   if (ph == null || ph.type !== 'textDirective') {
     return h(tag, tc.children.map(phrasingToHast));
   }
@@ -86,7 +93,7 @@ const tcHandler = (tc: Mdast.TableCell, tag: 'td' | 'th') => {
       return h(tag, tc.children.map(phrasingToHast));
     }
   }
-};
+}
 
 export const tableHandler: Handler = (_, node: Mdast.Table) => {
   const [head, ...body] = node.children;
@@ -120,13 +127,12 @@ export const tableHandler: Handler = (_, node: Mdast.Table) => {
 
     if (!Number.isFinite(rowSpan) || rowSpan <= 1) return;
 
-    const indices = [...Array(rowSpan - 1)].map((_, j) => j + 1);
-    indices.forEach((j) => {
-      const fir = bodyTrs[i + j]?.[0];
-      if (fir == null) return;
-      fir.properties.className ??= [];
-      fir.properties.className.push('need-border');
-    });
+    for (let j = 1; j < rowSpan; j++) {
+      const first = bodyTrs[i + j]?.[0];
+      if (first == null) continue;
+      first.properties.className ??= [];
+      first.properties.className.push('need-border');
+    }
   });
 
   const tbody = h(
