@@ -6,5 +6,5 @@ export interface PageData {
 export const pageData: ReadonlyMap<string, PageData> = new Map([
   ['/notepad/', { title: 'Notepad', description: 'メモ帳。' }],
   ['/xprmnt/', { title: 'Experiment' }],
-  ['/memo/math/4n_1_sum_of_sq/', { title: '素数を2平方和に分解' }],
+  ['/memo/math/4n_1_sum_of_sq/', { title: '4n + 1型素数を2平方和に分解' }],
 ]);
