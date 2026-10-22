@@ -38,7 +38,7 @@
     type="number"
     id="__input"
     class="__input"
-    min="2"
+    min="0"
     max="9007199254740991"
     bind:value={
       () => p?.toString() ?? '',
@@ -46,7 +46,16 @@
         if (_p === '') {
           p = null;
         } else {
-          p = BigInt(_p);
+          const __p = BigInt(_p);
+          const MAX = BigInt(Number.MAX_SAFE_INTEGER);
+
+          if (__p < 0n) {
+            p = 0n;
+          } else if (__p > MAX) {
+            p = MAX;
+          } else {
+            p = __p;
+          }
         }
       }
     }
@@ -67,10 +76,10 @@
 
   @layer components {
     .__cornacchia {
-      @apply flex flex-col gap-y-4 max-inline-180 mx-auto;
+      @apply flex flex-col gap-y-4 max-inline-180 mx-auto my-4;
 
       .__input {
-        @apply block min-inline-0 border border-border rounded-sm px-2 font-mono;
+        @apply block min-inline-0 inline-full max-inline-80 mx-auto border border-border rounded-sm px-1 font-mono;
       }
     }
   }
