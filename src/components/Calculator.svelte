@@ -1,6 +1,7 @@
 <script lang="ts">
   import { cornacchia, bailliePSW } from '@tktb-tess/util-fns/baillie_psw';
   import { Failed, Success, Unidentified } from '../modules/result';
+  import { renderToString } from 'katex';
   import type { Result } from '../modules/result';
 
   type CalcResult = Result<[bigint, bigint], Error>;
@@ -32,29 +33,45 @@
   });
 </script>
 
-<input
-  type="number"
-  name="num"
-  id="num"
-  min="2"
-  max="9007199254740991"
-  bind:value={
-    () => p?.toString() ?? '',
-    (_p) => {
-      if (_p === '') {
-        p = null;
-      } else {
-        p = BigInt(_p);
+<div class="__cornacchia">
+  <input
+    type="number"
+    id="__input"
+    class="__input"
+    min="2"
+    max="9007199254740991"
+    bind:value={
+      () => p?.toString() ?? '',
+      (_p) => {
+        if (_p === '') {
+          p = null;
+        } else {
+          p = BigInt(_p);
+        }
+      }
+    }
+  />
+  <p class="__result">
+    {#if result.status === 'success'}
+      {@const [m, n] = result.value}
+      {@html renderToString(`${p} = ${m}^2 + ${n}^2`, { displayMode: true })}
+    {:else if result.status === 'failed'}
+      {@const msg = result.error.message}
+      {@html renderToString(`\\text\{${msg}\}`, { displayMode: true })}
+    {/if}
+  </p>
+</div>
+
+<style lang="postcss">
+  @reference '../styles/global.css';
+
+  @layer components {
+    .__cornacchia {
+      @apply flex flex-col gap-y-4 max-inline-180 mx-auto;
+
+      .__input {
+        @apply block min-inline-0 border border-border rounded-sm px-2 font-mono;
       }
     }
   }
-/>
-
-<p>
-  {#if result.status === 'success'}
-    {@const [m, n] = result.value}
-    {p} = {m}² + {n}²
-  {:else if result.status === 'failed'}
-    {result.error.message}
-  {/if}
-</p>
+</style>
