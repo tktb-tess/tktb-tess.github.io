@@ -1,11 +1,12 @@
 ---
-import { renderToString } from 'katex';
+import { renderToString, type KatexOptions } from 'katex';
 
 interface Props {
   source: string;
+  options?: KatexOptions;
 }
 
-const { source } = Astro.props;
+const { source, options } = Astro.props;
 ---
 
-{renderToString(source)}
+<Fragment set:html={renderToString(source, options)} />
