@@ -7,7 +7,12 @@
   let n: bigint = $state(0n);
   const p = $derived((n << 2n) | 1n);
 
-  type CalcResult = Result<[bigint, bigint], Error>;
+  interface SumObj {
+    sum: [bigint, bigint];
+    pyth: [bigint, bigint];
+  }
+
+  type CalcResult = Result<SumObj, Error>;
 
   const result: CalcResult = $derived.by(() => {
     if (!bailliePSW(p)) {
@@ -23,7 +28,13 @@
       if (r == null) {
         return Failed(new Error('unexpected error'));
       }
-      return Success(r);
+      const [m, n] = r;
+      const a: [bigint, bigint] = [m * m - n * n, (m * n) << 1n];
+      a.sort((a, b) => Number(a - b));
+      return Success({
+        sum: [m, n],
+        pyth: a,
+      });
     } catch (cause) {
       return Failed(new Error('unexpected error', { cause }));
     }
@@ -60,8 +71,12 @@
 
   <p class="__result">
     {#if result.status === 'success'}
-      {@const [m, n] = result.value}
+      {@const {
+        sum: [m, n],
+        pyth: [x, y],
+      } = result.value}
       {@html renderToString(`${p} = ${m}^2 + ${n}^2`, { displayMode: true })}
+      {@html renderToString(`${x}^2 + ${y}^2 = ${p}^2`, { displayMode: true })}
     {:else if result.status === 'failed'}
       {@const msg = result.error.message}
       {@html renderToString(`\\text\{${msg}\}`, { displayMode: true })}
