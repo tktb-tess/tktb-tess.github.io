@@ -15,16 +15,16 @@
     "dist"
   ],
   "devDependencies": {
-    "@astrojs/markdown-remark": "^7.3.2",
-    "@astrojs/svelte": "^9.0.1",
+    "@astrojs/markdown-remark": "^7.3.3",
+    "@astrojs/svelte": "^9.1.0",
     "@shikijs/transformers": "^4.5.0",
     "@tailwindcss/vite": "^4.3.3",
     "@tktb-tess/util-fns": "^0.13.7",
     "@tktb-tess/xenharmonic-tool": "^0.6.1",
     "@types/hast": "^3.0.5",
     "@types/mdast": "^4.0.4",
-    "@types/node": "^24.19.1",
-    "astro": "^7.3.6",
+    "@types/node": "^24.19.2",
+    "astro": "^7.4.1",
     "hast-util-from-html-isomorphic": "^2.0.0",
     "hastscript": "^9.0.1",
     "katex": "~0.16.47",
@@ -49,7 +49,7 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "11.28.6",
+      "version": "11.28.8",
       "onFail": "download"
     }
   }
