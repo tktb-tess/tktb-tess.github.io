@@ -6,6 +6,13 @@ minimumReleaseAge: 4320
 
 minimumReleaseAgeExclude:
   - '@tktb-tess/*'
+  - '@pnpm/exe@11.28.8'
+  - '@pnpm/linux-arm64@11.28.8'
+  - '@pnpm/linux-x64@11.28.8'
+  - '@pnpm/linuxstatic-x64@11.28.8'
+  - '@pnpm/macos-arm64@11.28.8'
+  - '@pnpm/win-arm64@11.28.8'
+  - '@pnpm/win-x64@11.28.8'
 
 onlyBuiltDependencies:
   - '@tailwindcss/oxide'
