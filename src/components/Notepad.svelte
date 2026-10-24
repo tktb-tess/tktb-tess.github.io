@@ -6,7 +6,10 @@
   } from '@tktb-tess/util-fns/compression';
   import type { MtoH } from '../modules/convert';
 
-  let timer: ReturnType<typeof setTimeout> | null = null;
+  type Timer = ReturnType<typeof setTimeout> | undefined;
+
+  let timer: Timer;
+  let timer2: Timer;
   let pro: MtoH | undefined;
   const key = 'd';
   const delay = 500;
@@ -16,9 +19,15 @@
   let output = $state('');
 
   const getProcessor = async () => {
-    if (!pro) {
-      pro = (await import('../modules/convert')).processor;
-    }
+    clearTimeout(timer2);
+    pro ??= (await import('../modules/convert')).processor;
+    timer2 = setTimeout(
+      () => {
+        pro = undefined;
+        timer2 = undefined;
+      },
+      5 * 60 * 1000,
+    );
     return pro;
   };
 
@@ -64,13 +73,13 @@
         console.error(e);
       }
 
-      timer = null;
+      timer = undefined;
     }, delay);
 
     return () => {
       if (timer != null) {
         clearTimeout(timer);
-        timer = null;
+        timer = undefined;
       }
     };
   });
@@ -95,10 +104,7 @@
       () => input,
       (_in) => {
         input = _in;
-
-        if (timer != null) {
-          clearTimeout(timer);
-        }
+        clearTimeout(timer);
 
         timer = setTimeout(async () => {
           const res = await Promise.allSettled([updateOutput(), updateURL()]);
@@ -107,11 +113,10 @@
             .filter((r) => r.status === 'rejected')
             .forEach((r) => console.log(r.reason));
 
-          timer = null;
+          timer = undefined;
         }, delay);
       }
-    }
-  ></textarea>
+    }></textarea>
 </div>
 
 <div class="preview {isPreview ? 'flex' : 'hidden'}">

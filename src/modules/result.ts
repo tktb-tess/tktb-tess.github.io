@@ -34,5 +34,4 @@ function Unidentified(): Unidentified {
   };
 }
 
-export { Success, Failed, Unidentified };
-export type { Result };
+export { Success, Failed, Unidentified, type Result };
