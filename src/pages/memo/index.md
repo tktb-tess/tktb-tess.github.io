@@ -14,5 +14,6 @@ description: めも。
 - [フィンランド語syllabics表記](/memo/finnish_syllabics/)
 - [ゲルマン祖語 データ（未完成）](/memo/pgmc/)
 - [トルコ語 データ（未完成）](/memo/turkce/)
+- [フィンランド語 データ（未完成）](/memo/suomi/)
 - [数学など](/memo/math/)
 - [いろんなヨーロッパの言語でラトビア・リトアニア](/memo/lv_lt/)
