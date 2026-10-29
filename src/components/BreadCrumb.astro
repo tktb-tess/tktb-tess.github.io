@@ -1,6 +1,6 @@
 ---
 import HomeIcon from '../assets/HomeIcon.svg';
-import { pageData, type PageData } from '../modules/data';
+import type { PageData } from '../modules/data';
 
 interface Props {
   readonly path: string;
@@ -27,9 +27,9 @@ const mds: ReadonlyMap<string, PageData> = new Map(
 
 const getTitle = (href: string) => {
   if (href === '/') {
-    return null;
+    return undefined;
   }
-  return mds.get(href)?.title ?? pageData.get(href)?.title ?? '[NO DATA]';
+  return mds.get(href)?.title;
 };
 
 const { path } = Astro.props;

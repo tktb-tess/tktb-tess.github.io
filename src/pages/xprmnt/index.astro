@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout>
+<Layout title='Experiment'>
   <p>?????</p>
 </Layout>
 
@@ -33,7 +33,7 @@ import Layout from '../../layouts/Layout.astro';
       enumerable: true,
     },
   });
-  
+
   const f = (o: unknown) => Object.prototype.toString.call(o);
   [mod1, mod2].forEach((m) => {
     console.log(f(m) + ':\n', m);
