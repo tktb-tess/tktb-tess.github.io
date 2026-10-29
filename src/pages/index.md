@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/MdLayout.astro
-title: tktb-tess.github.io
+title: ''
 ---
 
 ```javascript

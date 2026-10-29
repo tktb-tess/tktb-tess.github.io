@@ -8,11 +8,11 @@ interface Failed<E> {
   error: E;
 }
 
-interface Unidentified {
-  status: 'unidentified';
+interface Indefinite {
+  status: 'indefinite';
 }
 
-type Result<T, E> = Success<T> | Failed<E> | Unidentified;
+type Result<T, E> = Success<T> | Failed<E> | Indefinite;
 
 function Success<T>(value: T): Success<T> {
   return {
@@ -28,10 +28,10 @@ function Failed<E>(error: E): Failed<E> {
   };
 }
 
-function Unidentified(): Unidentified {
+function Indefinite(): Indefinite {
   return {
-    status: 'unidentified',
+    status: 'indefinite',
   };
 }
 
-export { Success, Failed, Unidentified, type Result };
+export { Success, Failed, Indefinite, type Result };

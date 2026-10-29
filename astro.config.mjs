@@ -34,6 +34,12 @@ export default defineConfig({
         remarkDirective,
         [remarkToc, { heading: '目次' }],
       ],
+      remarkRehype: {
+        handlers: {
+          table: H.tableHandler,
+          textDirective: H.tdHandler,
+        },
+      },
       rehypePlugins: [
         rehypeKatex,
         rehypeHeadingIds,
@@ -48,12 +54,6 @@ export default defineConfig({
           },
         ],
       ],
-      remarkRehype: {
-        handlers: {
-          table: H.tableHandler,
-          textDirective: H.tdHandler,
-        },
-      },
     }),
     shikiConfig: {
       theme: 'github-dark',

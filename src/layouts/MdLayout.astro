@@ -7,10 +7,9 @@ type Props = MarkdownLayoutProps<{
   readonly description?: string;
 }>;
 
-const { frontmatter } = Astro.props;
-const { title, description } = frontmatter;
+const { title, description } = Astro.props.frontmatter;
 ---
 
-<Layout pageData={{ title, description }}>
+<Layout {title} {description}>
   <slot />
 </Layout>
