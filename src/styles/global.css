@@ -262,7 +262,7 @@
     }
 
     :where(td, th) {
-      @apply text-base py-1.25 px-2.5;
+      @apply text-base text-start py-1.25 px-2.5;
     }
   }
 

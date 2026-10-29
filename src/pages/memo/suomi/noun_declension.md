@@ -5,6 +5,10 @@ title: フィンランド語 名詞 格変化
 
 ### 目次
 
+## 概要
+
+フィンランド語の名詞の格変化全パターンの表。
+
 ## 表
 
 | No.       | 例              | :s[単数]{c=4}  | :e                | :e                 | :e                | :s[複数]{c=4}     | :e                              | :e                 | :e                                 | 備考                                                  | 階梯   |
@@ -64,9 +68,9 @@ title: フィンランド語 名詞 格変化
 
 
 
-| No. | 単数      |             |             |               | 複数        |                                |              |                 |                                |
-| --- | --------- | ----------- | ----------- | ------------- | ----------- | ------------------------------ | ------------ | --------------- | ------------------------------ |
-|     | 主        | 属          | 分          | 入            | 主          | 属                             | 分           | 入              |                                |
-| 50  | isoäiti   | isoäidin    | isoäitiä    | isoäitiin     | isoäidit    | isoäitien                      | isoäitejä    | isoäiteihin     | 最後の部分のみ格変化する複合語 |
-| 51  | nuoripari | nuorenparin | nuortaparia | nuoreenpariin | nuoretparit | nuortenparien<br>nuorienparien | nuoriapareja | nuoriinpareihin | 全ての部分が格変化する複合語   |
+| No. | :s[単数]{c=4} | :e          | :e          | :e            | :s[複数]{c=4} | :e                             | :e           | :e              | 備考                           |
+| --- | ------------- | ----------- | ----------- | ------------- | ------------- | ------------------------------ | ------------ | --------------- | ------------------------------ |
+|     | 主            | 属          | 分          | 入            | 主            | 属                             | 分           | 入              |                                |
+| 50  | isoäiti       | isoäidin    | isoäitiä    | isoäitiin     | isoäidit      | isoäitien                      | isoäitejä    | isoäiteihin     | 最後の部分のみ格変化する複合語 |
+| 51  | nuoripari     | nuorenparin | nuortaparia | nuoreenpariin | nuoretparit   | nuortenparien<br>nuorienparien | nuoriapareja | nuoriinpareihin | 全ての部分が格変化する複合語   |
 
