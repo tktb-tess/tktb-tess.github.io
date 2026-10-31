@@ -3,14 +3,18 @@ import '../styles/global.css';
 import Head from '../components/Head.astro';
 import BreadCrumb from '../components/BreadCrumb.astro';
 import ToTopBtn from '../components/ToTopBtn.astro';
-import type { PageData } from '../modules/data';
+import { type PageData, getPageData } from '../modules/data';
 import { SITE_NAME } from '../modules/consts';
 
-type Props = PageData;
+interface Props {
+  readonly pageData?: PageData;
+}
 
 const path = Astro.originPathname;
-const { title, description } = Astro.props;
+const { title, description }: PageData =
+  Astro.props.pageData ?? getPageData(path);
 const fullTitle = path === '/' ? SITE_NAME : `${title} | ${SITE_NAME}`;
+const h1Title = path === '/' ? SITE_NAME : title;
 ---
 
 <!doctype html>
@@ -19,7 +23,7 @@ const fullTitle = path === '/' ? SITE_NAME : `${title} | ${SITE_NAME}`;
   <body>
     <header>
       <h1 class='title'>
-        {title}
+        {h1Title}
       </h1>
     </header>
     <main>

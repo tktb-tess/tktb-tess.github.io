@@ -21,6 +21,7 @@ title: トルコ語 名詞
 
 ## 所有接辞
 
+<div class="contents [&_:where(tr>td:first-child)]:font-features-tnum">
 
 | :s[人称・数]{c=2} | :e  | 接辞    | 例1      | 例2        |
 | ----------------- | --- | ------- | -------- | ---------- |
@@ -30,6 +31,8 @@ title: トルコ語 名詞
 | :e                | 複  | -(I)nIz | göz-ünüz | çorba-nız  |
 | :s[3]{r=2}        | 単  | -(s)I   | göz-ü    | çorba-sı   |
 | :e                | 複  | -lArI   | göz-leri | çorba-ları |
+
+</div>
 
 - 「3人称複数所有接辞」と「複数形接辞 + 3人称単数所有接辞」は両方 -lArI となり、区別できない。
 

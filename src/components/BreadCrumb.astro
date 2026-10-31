@@ -1,36 +1,33 @@
 ---
 import HomeIcon from '../assets/HomeIcon.svg';
-import type { PageData } from '../modules/data';
+import type { PageData, PageDataMap } from '../modules/data';
+import { getPageData } from '../modules/data';
+import type { MarkdownLayoutProps } from 'astro';
 
 interface Props {
   readonly path: string;
 }
 
-interface MdProps {
-  readonly url: string;
-  readonly frontmatter: {
-    readonly title: string;
-    readonly description?: string;
-  };
-}
+type MdProps = MarkdownLayoutProps<PageData>;
 
 const values = Object.values(
   import.meta.glob<MdProps>('../pages/**/*.md', { eager: true }),
 );
 
-const mds: ReadonlyMap<string, PageData> = new Map(
+const mdPageData: PageDataMap = new Map(
   values.map((md) => {
     const { title, description } = md.frontmatter;
     return [`${md.url}/`, { title, description }];
   }),
 );
 
-const getTitle = (href: string) => {
+function getTitle(href: string) {
   if (href === '/') {
-    return undefined;
+    return 'Home';
   }
-  return mds.get(href)?.title;
-};
+
+  return mdPageData.get(href)?.title ?? getPageData(href).title;
+}
 
 const { path } = Astro.props;
 const dirs = path.split('/').filter((s) => s !== '');
@@ -42,17 +39,21 @@ const pages = dirs.map((_, i) => {
   return { href, title } as const;
 });
 
-const currentText = getTitle(path) ?? '[NO DATA]';
+const currentText = getTitle(path);
 ---
 
-<nav class='breadcrumb' aria-label='パンくずリスト'>
+<nav class='__breadcrumb' aria-label='パンくずリスト'>
   <ol>
     {
       pages.map(({ href, title }) => {
         return (
           <li>
-            <a {href} title={title ?? 'Home'}>
-              {title ?? <HomeIcon class='inline-4 block-auto' />}
+            <a {href} {title}>
+              {title !== 'Home' ? (
+                title
+              ) : (
+                <HomeIcon class='inline-4 block-auto' />
+              )}
             </a>
           </li>
         );
@@ -67,7 +68,7 @@ const currentText = getTitle(path) ?? '[NO DATA]';
 <style lang="postcss">
   @reference '../styles/global.css';
   @layer components {
-    .breadcrumb {
+    .__breadcrumb {
       @apply my-4 block;
     }
 

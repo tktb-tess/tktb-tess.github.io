@@ -22,11 +22,9 @@ title: フィンランド語 名詞 格変化
 | N    | n, l, r                            |
 
 
-
-
 ## 表
 
-<div class="contents [&_:where(tr>td:nth-child(8))]:whitespace-normal">
+<div class="contents [&_:where(tr>td:nth-child(8))]:whitespace-normal [&_:where(tr>td:first-child)]:font-features-tnum">
 
 | No.         | 例                       | 数   | :s[格]{c=4}       | :e                              | :e                 | :e                                 | 備考                                                                 | 階梯            |
 | ----------- | ------------------------ | ---- | ----------------- | ------------------------------- | ------------------ | ---------------------------------- | -------------------------------------------------------------------- | --------------- |
@@ -105,11 +103,11 @@ title: フィンランド語 名詞 格変化
 | :e          | :e                       | 複数 | -mmAt             | -mpien<br>-nten                 | -mpiA              | -mpiin                             | :e                                                                   | :e              |
 | :s[37]{r=2} | :s[vasen]{r=2}           | 単数 | -n                | -mman                           | -nta<br>-mpaa      | -mpaan                             | :s[*vasen* のみ, ⟨-mpa-⟩, (単主 ⟨-n⟩), 3音節+]{r=2}                  | :s[penult]{r=2} |
 | :e          | :e                       | 複数 | -mmat             | -mpien<br>-nten                 | -mpia              | -mpiin                             | :e                                                                   | :e              |
-| :s[38]{r=2} | :s[nainen]{r=2}          | 単数 | -nen              | -sen                            | -stA               | -seen                              | :s[⟨-se-⟩, (単主 ⟨-nen⟩), 2音節+]{r=2}                                              | :s[none]{r=2}   |
+| :s[38]{r=2} | :s[nainen]{r=2}          | 単数 | -nen              | -sen                            | -stA               | -seen                              | :s[⟨-se-⟩, (単主 ⟨-nen⟩), 2音節+]{r=2}                               | :s[none]{r=2}   |
 | :e          | :e                       | 複数 | -set              | -sten<br>-sien                  | -siA               | -siin                              | :e                                                                   | :e              |
-| :s[39]{r=2} | :s[vastaus]{r=2}         | 単数 | -s                | -ksen                           | -sta               | -kseen                             | :s[⟨-kse-⟩, (単主 ⟨-s⟩), 3音節+]{r=2}                                             | :s[none]{r=2}   |
+| :s[39]{r=2} | :s[vastaus]{r=2}         | 単数 | -s                | -ksen                           | -sta               | -kseen                             | :s[⟨-kse-⟩, (単主 ⟨-s⟩), 3音節+]{r=2}                                | :s[none]{r=2}   |
 | :e          | :e                       | 複数 | -kset             | -sten<br>-ksien                 | -ksia              | -ksiin                             | :e                                                                   | :e              |
-| :s[40]{r=2} | :s[kalleus]{r=2}         | 単数 | -s                | -den                            | -tta               | -teen                              | :s[⟨-te-⟩, (単主 ⟨-s⟩), 3音節+]{r=2}                                              | :s[final]{r=2}  |
+| :s[40]{r=2} | :s[kalleus]{r=2}         | 単数 | -s                | -den                            | -tta               | -teen                              | :s[⟨-te-⟩, (単主 ⟨-s⟩), 3音節+]{r=2}                                 | :s[final]{r=2}  |
 | :e          | :e                       | 複数 | -det              | -ksien                          | -ksia              | -ksiin                             | :e                                                                   | :e              |
 | :s[41]{r=2} | :s[vieras]{r=2}          | 単数 | -ĈVs              | -CVVn                           | -CVstA             | -CVVseen                           | :s[長母音, 2音節]{r=2}                                               | :s[penult]{r=2} |
 | :e          | :e                       | 複数 | -CVVt             | -CViden                         | -CVitA             | -CVisiin                           | :e                                                                   | :e              |
@@ -130,9 +128,6 @@ title: フィンランド語 名詞 格変化
 | :s[49]{r=2} | :s[askel<br>askele]{r=2} | 単数 | -ĈVN<br>-CVNe     | -CVNen<br>-CVNeen               | -ĈVNtA<br>-CVNetta | -CVNeeseen                         | :s[*hame, sisar* どちらの変化形もとれる]{r=2}                        | :s[penult]{r=2} |
 | :e          | :e                       | 複数 | -CVNet<br>-CVNeet | -CVNien<br>-ĈVNten<br>-CVNeiden | -CVNia<br>-CVNeita | -CVNiin<br>-CVNeisiin<br>-CVNeihin | :e                                                                   | :e              |
 
-</div>
-
-<div class="contents [&_:where(tr>td:nth-child(8))]:whitespace-normal">
 
 | No.         | 例                 | 数   | :s[格]{c=4} | :e                             | :e           | :e              | 備考                                    |
 | ----------- | ------------------ | ---- | ----------- | ------------------------------ | ------------ | --------------- | --------------------------------------- |

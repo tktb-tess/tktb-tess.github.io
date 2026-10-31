@@ -10,6 +10,6 @@ type Props = MarkdownLayoutProps<{
 const { title, description } = Astro.props.frontmatter;
 ---
 
-<Layout {title} {description}>
+<Layout pageData={{ title, description }}>
   <slot />
 </Layout>

@@ -93,6 +93,8 @@ title: トルコ語 動詞
 
 ## 人称接辞
 
+<div class="contents [&_:where(tr>td:first-child)]:font-features-tnum">
+
 | :s[人称・数]{c=2} | :e  | タイプI       | タイプII | 願望形     | 命令形      |
 | ----------------- | --- | ------------- | -------- | ---------- | ----------- |
 | :s[1]{r=2}        | 単  | -(y)Im        | -m       | -(y)AyIm   | :s[／]{r=2} |
@@ -102,9 +104,13 @@ title: トルコ語 動詞
 | :s[3]{r=2}        | 単  | :s[-∅]{c=2}   | :e       | -(y)A      | -sIn        |
 | :e                | 複  | :s[-lAr]{c=2} | :e       | -(y)AlAr   | -sInlAr     |
 
+</div>
+
 タイプに関しては先ほど説明した通り。また、願望形と命令形は独自の人称接辞をとる。
 
 ### 例
+
+<div class="contents [&_:where(tr>td:first-child)]:font-features-tnum">
 
 | :s[人称・数]{c=2} | :e  | タイプI (継続形) | タイプII (過去形) | 願望形    | 命令形      |
 | ----------------- | --- | ---------------- | ----------------- | --------- | ----------- |
@@ -114,6 +120,8 @@ title: トルコ語 動詞
 | :e                | 複  | iç-iyor-sunuz    | iç-ti-niz         | iç-esiniz | iç-in       |
 | :s[3]{r=2}        | 単  | iç-iyor          | iç-ti             | iç-e      | iç-sin      |
 | :e                | 複  | iç-iyor-lar      | iç-ti-ler         | iç-eler   | iç-sinler   |
+
+</div>
 
 ## 不定詞, 分詞接辞
 
