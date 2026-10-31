@@ -11,15 +11,15 @@ title: フィンランド語 名詞 格変化
 
 ## 凡例
 
-| 記号 | 意味                                                           |
-| ---- | -------------------------------------------------------------- |
-| C    | 任意の子音（強階梯）あるいは備考に書かれたうちのいずれかの子音 |
-| Ĉ    | 任意の子音（弱階梯）                                           |
-| V    | 任意の母音                                                     |
-| U    | u, y                                                           |
-| O    | o, ö                                                           |
-| A    | a, ä                                                           |
-| N    | n, l, r                                                        |
+| 記号 | 意味                               |
+| ---- | ---------------------------------- |
+| C    | 任意の備考に書かれた子音（強階梯） |
+| Ĉ    | 任意の備考に書かれた子音（弱階梯） |
+| V    | 任意の備考に書かれた母音           |
+| U    | u, y                               |
+| O    | o, ö                               |
+| A    | a, ä                               |
+| N    | n, l, r                            |
 
 
 
@@ -37,7 +37,7 @@ title: フィンランド語 名詞 格変化
 | :e          | :e                       | 複数 | -Vt               | -Vjen<br>-Viden                 | -VjA<br>-VitA      | -Vihin                             | :e                                                             | :e              |
 | :s[3]{r=2}  | :s[valtio]{r=2}          | 単数 | -V₁V₂             | -V₁V₂n                          | -V₁V₂tA            | -V₁V₂V₂n                           | :s[⟨-ao⟩, ⟨-eo⟩, ⟨-iO⟩, ⟨-ie⟩, ⟨-oe⟩]{r=2}                     | :s[none]{r=2}   |
 | :e          | :e                       | 複数 | -V₁V₂t            | -V₁V₂iden                       | -V₁V₂itA           | -V₁V₂ihin                          | :e                                                             | :e              |
-| :s[4]{r=2}  | :s[laatikko]{r=2}        | 単数 | -CCO              | -COn                            | -COA               | -CCOOn                             | :s[C = t, k<br>⟨-kkO⟩, ⟨-tto⟩, 3音節+]{r=2}                    | :s[final]{r=2}  |
+| :s[4]{r=2}  | :s[laatikko]{r=2}        | 単数 | -CCO              | -COn                            | -COA               | -CCOOn                             | :s[⟨-kkO⟩, ⟨-tto⟩, 3音節+]{r=2}                                | :s[final]{r=2}  |
 | :e          | :e                       | 複数 | -COt              | -CCOjen<br>-COiden              | -CCOja<br>-COita   | -COihin<br>-CCOihin                | :e                                                             | :e              |
 | :s[5]{r=2}  | :s[risti]{r=2}           | 単数 | -Ci or<br>-C      | -Ĉin                            | -CiA               | -Ciin                              | :s[⟨-i⟩ (単主で ⟨-∅⟩ の場合あり), 2音節]{r=2}                  | :s[final]{r=2}  |
 | :e          | :e                       | 複数 | -Ĉit              | -Cien                           | -CejA              | -Ceihin                            | :e                                                             | :e              |
@@ -57,7 +57,7 @@ title: フィンランド語 名詞 格変化
 | :e          | :e                       | 複数 | -At               | -Oiden                          | -Oita              | -Oihin                             | :e                                                             | :e              |
 | :s[13]{r=2} | :s[katiska]{r=2}         | 単数 | -A                | -An                             | -AA                | -AAn                               | :s[⟨-A⟩, 3音節+]{r=2}                                          | :s[none]{r=2}   |
 | :e          | :e                       | 複数 | -At               | -Oiden<br>-Ojen                 | -Oita<br>-OitA     | -Oihin                             | :e                                                             | :e              |
-| :s[14]{r=2} | :s[solakka]{r=2}         | 単数 | -CCA              | -CAn                            | -CCAA              | -CCAAn                             | :s[C = p, t, k<br>⟨-ppA⟩, ⟨-ttA⟩, ⟨-kkA⟩ 3音節+]{r=2}          | :s[final]{r=2}  |
+| :s[14]{r=2} | :s[solakka]{r=2}         | 単数 | -CCA              | -CAn                            | -CCAA              | -CCAAn                             | :s[⟨-ppA⟩, ⟨-ttA⟩, ⟨-kkA⟩ 3音節+]{r=2}                         | :s[final]{r=2}  |
 | :e          | :e                       | 複数 | -CAt              | -COiden<br>-CCOjen              | -KOitA<br>-KKOjA   | -CCOihin<br>-COihin                | :e                                                             | :e              |
 | :s[15]{r=2} | :s[korkea]{r=2}          | 単数 | -VA               | -VAn                            | -VAA<br>-VAtA      | -VAAn                              | :s[⟨-eA⟩, ⟨-oa⟩]{r=2}                                          | :s[none]{r=2}   |
 | :e          | :e                       | 複数 | -VAt              | -Viden                          | -VitA              | -Visiin<br>-Vihin                  | :e                                                             | :e              |
@@ -87,7 +87,7 @@ title: フィンランド語 名詞 格変化
 | :e          | :e                       | 複数 | -det              | -sien                           | -siA               | -siin                              | :e                                                             | :e              |
 | :s[28]{r=2} | :s[kynsi]{r=2}           | 単数 | -Nsi              | -NNen                           | -NttA              | -Nteen                             | :s[⟨-lte-⟩, ⟨-nte-⟩, ⟨-rte-⟩, 2音節]{r=2}                      | :s[final]{r=2}  |
 | :e          | :e                       | 複数 | -NNet             | -Nsien                          | -NsiA              | -Nsiin                             | :e                                                             | :e              |
-| :s[29]{r=2} | :s[lapsi]{r=2}           | 単数 | -Csi              | -Csen                           | -stA               | -Cseen                             | :s[C = p, k<br>⟨-pse-⟩, ⟨-kse-⟩, 2音節]{r=2}                   | :s[none]{r=2}   |
+| :s[29]{r=2} | :s[lapsi]{r=2}           | 単数 | -Csi              | -Csen                           | -stA               | -Cseen                             | :s[⟨-pse-⟩, ⟨-kse-⟩, 2音節]{r=2}                               | :s[none]{r=2}   |
 | :e          | :e                       | 複数 | -Cset             | -Csien<br>-sten                 | -Csia              | -Csiin                             | :e                                                             | :e              |
 | :s[30]{r=2} | :s[veitsi]{r=2}          | 単数 | -tsi              | -tsen                           | -stA               | -tseen                             | :s[⟨-tse-⟩, 2音節]{r=2}                                        | :s[none]{r=2}   |
 | :e          | :e                       | 複数 | -tset             | -tsien                          | -tsiA              | -tsiin                             | :e                                                             | :e              |
