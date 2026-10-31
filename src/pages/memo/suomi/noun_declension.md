@@ -26,9 +26,11 @@ title: フィンランド語 名詞 格変化
 
 ## 表
 
+<div class="contents [&_:where(tr>td:nth-child(8))]:whitespace-normal">
+
 | No.         | 例                       | 数   | :s[格]{c=4}       | :e                              | :e                 | :e                                 | 備考                                                           | 階梯            |
 | ----------- | ------------------------ | ---- | ----------------- | ------------------------------- | ------------------ | ---------------------------------- | -------------------------------------------------------------- | --------------- |
-| :s[]{c=2}   | :e                       |      | 主                | 属                              | 分                 | 入                                 | :s[]{c=2}                                                      | :e              |
+|             |                          |      | 主                | 属                              | 分                 | 入                                 |                                                                |                 |
 | :s[1]{r=2}  | :s[valo]{r=2}            | 単数 | -CV               | -ĈVn                            | -CVA               | -CVVn                              | :s[⟨-O⟩, ⟨-U⟩, 2音節 & 過去受動分詞]{r=2}                      | :s[final]{r=2}  |
 | :e          | :e                       | 複数 | -ĈVt              | -CVjen                          | -CVjA              | -CVihin                            | :e                                                             | :e              |
 | :s[2]{r=2}  | :s[palvelu]{r=2}         | 単数 | -V                | -Vn                             | -VA                | -VVn                               | :s[⟨-O⟩, ⟨-U⟩, 3音節+]{r=2}                                    | :s[none]{r=2}   |
@@ -71,7 +73,7 @@ title: フィンランド語 名詞 格変化
 | :e          | :e                       | 複数 | -VVt              | -Viden                          | -VitA              | -Vihin<br>-Visiin                  | :e                                                             | :e              |
 | :s[21]{r=2} | :s[rosé]{r=2}            | 単数 | -V                | -Vn                             | -Vta               | -VhVn                              | :s[母音終わりの外来語]{r=2}                                    | :s[none]{r=2}   |
 | :e          | :e                       | 複数 | -Vt               | -Viden                          | -Vita              | -Vihin                             | :e                                                             | :e              |
-| :s[22]{r=2} | :s[parfait]{r=2}         | 単数 | -VC               | -VC’n                           | -VC’ta             | -VC’hVn                            | :s[母音終わりの外来語（語末黙字付き）]{r=2}                     | :s[none]{r=2}   |
+| :s[22]{r=2} | :s[parfait]{r=2}         | 単数 | -VC               | -VC’n                           | -VC’ta             | -VC’hVn                            | :s[母音終わりの外来語（語末黙字付き）]{r=2}                    | :s[none]{r=2}   |
 | :e          | :e                       | 複数 | -VC’t             | -VC’iden                        | -VC’ita            | -VC’ihin                           | :e                                                             | :e              |
 | :s[23]{r=2} | :s[tiili]{r=2}           | 単数 | -i                | -en                             | -tA                | -een                               | :s[⟨-he-⟩, ⟨-le-⟩, (稀 ⟨-ne-⟩), 2音節]{r=2}                    | :s[none]{r=2}   |
 | :e          | :e                       | 複数 | -et               | -ien                            | -iA                | -iin                               | :e                                                             | :e              |
@@ -128,13 +130,16 @@ title: フィンランド語 名詞 格変化
 | :s[49]{r=2} | :s[askel<br>askele]{r=2} | 単数 | -ĈVN<br>-CVNe     | -CVNen<br>-CVNeen               | -ĈVNtA<br>-CVNetta | -CVNeeseen                         | :s[*hame, sisar* どちらの変化形もとれる]{r=2}                  | :s[penult]{r=2} |
 | :e          | :e                       | 複数 | -CVNet<br>-CVNeet | -CVNien<br>-ĈVNten<br>-CVNeiden | -CVNia<br>-CVNeita | -CVNiin<br>-CVNeisiin<br>-CVNeihin | :e                                                             | :e              |
 
+</div>
 
+<div class="contents [&_:where(tr>td:nth-child(8))]:whitespace-normal">
 
-| No.         | 例                 |      | :s[単数]{c=4} | :e                             | :e           | :e              | 備考                                    |
-| ----------- | ------------------ | ---- | ------------- | ------------------------------ | ------------ | --------------- | --------------------------------------- |
-|             |                    |      | 主            | 属                             | 分           | 入              |                                         |
-| :s[50]{r=2} | :s[isoäiti]{r=2}   | 単数 | isoäiti       | isoäidin                       | isoäitiä     | isoäitiin       | :s[最後の部分のみ格変化する複合語]{r=2} |
-| :e          | :e                 | 複数 | isoäidit      | isoäitien                      | isoäitejä    | isoäiteihin     | :e                                      |
-| :s[51]{r=2} | :s[nuoripari]{r=2} | 単数 | nuoripari     | nuorenparin                    | nuortaparia  | nuoreenpariin   | :s[全ての部分が格変化する複合語]{r=2}   |
-| :e          | :e                 | 複数 | nuoretparit   | nuortenparien<br>nuorienparien | nuoriapareja | nuoriinpareihin | :e                                      |
+| No.         | 例                 | 数   | :s[格]{c=4} | :e                             | :e           | :e              | 備考                                    |
+| ----------- | ------------------ | ---- | ----------- | ------------------------------ | ------------ | --------------- | --------------------------------------- |
+|             |                    |      | 主          | 属                             | 分           | 入              |                                         |
+| :s[50]{r=2} | :s[isoäiti]{r=2}   | 単数 | isoäiti     | isoäidin                       | isoäitiä     | isoäitiin       | :s[最後の部分のみ格変化する複合語]{r=2} |
+| :e          | :e                 | 複数 | isoäidit    | isoäitien                      | isoäitejä    | isoäiteihin     | :e                                      |
+| :s[51]{r=2} | :s[nuoripari]{r=2} | 単数 | nuoripari   | nuorenparin                    | nuortaparia  | nuoreenpariin   | :s[全ての部分が格変化する複合語]{r=2}   |
+| :e          | :e                 | 複数 | nuoretparit | nuortenparien<br>nuorienparien | nuoriapareja | nuoriinpareihin | :e                                      |
 
+</div>
