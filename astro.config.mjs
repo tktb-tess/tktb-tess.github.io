@@ -1,7 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-import svelte from '@astrojs/svelte';
 import { rehypeHeadingIds, unified } from '@astrojs/markdown-remark';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
@@ -17,7 +16,6 @@ const linkSvgContent = fromHtmlIsomorphic(linkSvg, { fragment: true }).children;
 
 export default defineConfig({
   output: 'static',
-  integrations: [svelte()],
   vite: {
     plugins: [tailwindcss()],
   },

@@ -16,7 +16,6 @@
   ],
   "devDependencies": {
     "@astrojs/markdown-remark": "^7.3.3",
-    "@astrojs/svelte": "^9.1.0",
     "@shikijs/transformers": "^4.5.0",
     "@tailwindcss/vite": "^4.3.3",
     "@tktb-tess/util-fns": "^0.13.7",
@@ -40,7 +39,6 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "remark-toc": "^9.0.0",
-    "svelte": "^5.57.2",
     "tailwindcss": "^4.3.3",
     "type-fest": "^5.10.0",
     "typescript": "^6.0.3",
@@ -49,7 +47,7 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "12.16.0",
+      "version": "12.18.0",
       "onFail": "download"
     }
   }

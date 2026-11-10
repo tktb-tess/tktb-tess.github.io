@@ -36,10 +36,6 @@ if (gruss != null) {
 
   コンマのデータ
 
-- [memo](/memo/)
-
-  めも
-
 - [BF Playground](/bf-playground/)
 
   Brainf\*ck の簡易実行環境
