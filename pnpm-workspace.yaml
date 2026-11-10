@@ -4,23 +4,8 @@ allowBuilds:
 
 minimumReleaseAge: 4320
 
-minimumReleaseAgeExclude:
-  - '@tktb-tess/*'
-  - '@pnpm/exe@11.28.8'
-  - '@pnpm/linux-arm64@11.28.8'
-  - '@pnpm/linux-x64@11.28.8'
-  - '@pnpm/linuxstatic-x64@11.28.8'
-  - '@pnpm/macos-arm64@11.28.8'
-  - '@pnpm/win-arm64@11.28.8'
-  - '@pnpm/win-x64@11.28.8'
-
 onlyBuiltDependencies:
   - '@tailwindcss/oxide'
   - esbuild
   - sharp
 
-overrides:
-  devalue@>=5.1.0 <5.6.2: '>=5.6.2'
-  devalue@>=5.3.0 <=5.6.1: '>=5.6.2'
-  diff@>=5.0.0 <5.2.2: '>=5.2.2'
-  h3@<=1.15.4: '>=1.15.5'
